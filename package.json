@@ -1,6 +1,15 @@
 {
   "name": "flowbite-svelte-icons",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "description": "Svelte SVG boxicons components",
+  "author": {
+    "name": "Shinichi Okada",
+    "email": "connect@codewithshin.com",
+    "url": "https://blog.codewithshin.com"
+  },
+  "bugs": "https://github.com/shinokada/flowbite-svelte-icons/issues",
+  "homepage": "https://svelte-boxicons.codewithshin.com",
+  "license": "MIT",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",
@@ -12,7 +21,10 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "test:unit": "vitest",
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
-    "format": "prettier --plugin-search-dir . --write ."
+    "format": "prettier --plugin-search-dir . --write .",
+    "write-package-json": "node ./scripts/package-json-writer.js",
+    "add-exports": "node ./scripts/add-exports-to-package-json.js",
+    "package:publish": "standard-version && git push --follow-tags origin main && npm run package && npm run add-exports && npm run write-package-json && npm publish"
   },
   "exports": {
     ".": {
@@ -26,7 +38,7 @@
     "!dist/**/*.spec.*"
   ],
   "peerDependencies": {
-    "svelte": "^4.0.0"
+    "svelte": "^3.54.0 || ^4.0.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.35.1",
@@ -59,5 +71,16 @@
   },
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "type": "module"
+  "type": "module",
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "flowbite-icons",
+    "icons",
+    "svg"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinokada/flowbite-svelte-icons"
+  }
 }
