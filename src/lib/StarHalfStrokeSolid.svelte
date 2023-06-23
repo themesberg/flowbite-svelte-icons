@@ -1,0 +1,75 @@
+<script lang="ts">
+  import { twMerge } from 'tailwind-merge';
+  export let size: string = '20';
+  export let role: string = 'img';
+  export let svgClass: string = 'text-gray-800 dark:text-white';
+  let svgCls: string = twMerge(svgClass, $$props.class);
+  export let ariaLabel = 'star half stroke solid';
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  fill="currentColor"
+  class={svgCls}
+  {...$$restProps}
+  {role}
+  aria-label={ariaLabel}
+  viewBox="0 0 22 20"
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+>
+  <path
+    fill="currentColor"
+    d="M10 .8a1.5 1.5 0 0 0-.376.468L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L10 17.558V.8Zm10.925 6.825a1.526 1.526 0 0 0-1.239-1.044l-5.051-.734-2.259-4.577A1.51 1.51 0 0 0 12 .8v16.758l3.518 1.85a1.533 1.533 0 0 0 2.225-1.617l-.862-5.03L20.535 9.2a1.526 1.526 0 0 0 .39-1.575Z"
+  />
+</svg>
+
+<!--
+  @component
+  [Go to Document](https://shinokada.github.io/flowbite-svelte-icons/)
+
+  ## Props
+  @prop size = "20";
+  @prop role = "img";
+  @prop svgClass = "text-gray-800 dark:text-white";
+  @prop ariaLabel = 'icon file name';
+  - Use the `class` prop to overwrite `svgClass`.
+  ## Event
+  - on:click
+  - on:keydown
+  - on:keyup
+  - on:focus
+  - on:blur
+  - on:mouseenter
+  - on:mouseleave
+  - on:mouseover
+  - on:mouseout
+-->
+<!--
+@component
+[Go to Document](https://svelte-ant-design-icons.codewithshin.com/)
+## Props
+@prop size = '24';
+@prop role = 'img';
+@prop color = 'currentColor';
+@prop ariaLabel = 'icon name';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->
