@@ -221,7 +221,7 @@
   <Icon.FaceMindBlowSolid size="40" class={random_hex_color_code()} />
   <Icon.FaceStarStruckSolid size="40" class={random_hex_color_code()} />
   <Icon.FacebookSolid size="40" class={random_hex_color_code()} />
-  <Icon.FileVideoSolid size="40" class={random_hex_color_code()} />
+
   <Icon.FileChartBarOutline size="40" class={random_hex_color_code()} />
   <Icon.FileChartBarSolid size="40" class={random_hex_color_code()} />
   <Icon.FileCheckOutline size="40" class={random_hex_color_code()} />

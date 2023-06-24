@@ -2,7 +2,6 @@
   import { twMerge } from 'tailwind-merge';
   export let size: string = '20';
   export let role: string = 'img';
-
   export let svgClass: string = 'text-gray-800 dark:text-white';
   let svgCls: string = twMerge(svgClass, $$props.class);
   export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = 'round';
@@ -67,23 +66,4 @@
   - on:mouseleave
   - on:mouseover
   - on:mouseout
--->
-<!--
-@component
-[Go to Document](https://svelte-ant-design-icons.codewithshin.com/)
-## Props
-@prop size = '24';
-@prop role = 'img';
-@prop color = 'currentColor';
-@prop ariaLabel = 'icon name';
-## Event
-- on:click
-- on:keydown
-- on:keyup
-- on:focus
-- on:blur
-- on:mouseenter
-- on:mouseleave
-- on:mouseover
-- on:mouseout
 -->

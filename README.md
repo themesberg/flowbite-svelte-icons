@@ -12,12 +12,12 @@
 <a href="https://www.npmjs.com/package/flowbite-svelte-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/flowbite-svelte-icons.svg" alt="npm" height="25"></a>
 </p>
 
-1500+ SVG [boxicons](https://github.com/atisawd/boxicons/tree/master) components for Svelte. flowbite-svelte-icons support major CSS frameworks using the `class` props.
+480+ SVG [Flowbite icons](https://github.com/themesberg/flowbite-icons) components for Svelte. 
 
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
 <p align="center">
-<img width="450" src="https://raw.githubusercontent.com/shinokada/flowbite-svelte-icons/main/static/images/boxicons-450.webp" />
+<img width="450" src="https://raw.githubusercontent.com/shinokada/flowbite-svelte-icons/main/static/images/flowbite-svelte-icons.png" />
 </p>
 
 ## Installation
