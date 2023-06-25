@@ -32,13 +32,14 @@
 >
   <path
     d="M12.555 5.11696L15.383 7.94496M14 16V20M12 18H16M3 5.99996V9.99996M1 7.99996H5M16.01 1.66113L18.8384 4.48956L3.98915 19.3388L1.16072 16.5104L16.01 1.66113Z"
-    stroke="#111928"
+    stroke="currentColor"
     stroke-width={strokeWidth}
     stroke-linecap={strokeLinecap}
     stroke-linejoin={strokeLinejoin}
-  /> <path d="M17 12H15V14H17V12Z" fill="#111928" /> <path d="M11 1H9V3H11V1Z" fill="#111928" />
-  <path d="M8 3H6V5H8V3Z" fill="#111928" /> <path d="M5 1H3V3H5V1Z" fill="#111928" />
-  <path d="M20 9H18V11H20V9Z" fill="#111928" /> <path d="M20 14H18V16H20V14Z" fill="#111928" />
+  /> <path d="M17 12H15V14H17V12Z" fill="currentColor" />
+  <path d="M11 1H9V3H11V1Z" fill="currentColor" /> <path d="M8 3H6V5H8V3Z" fill="currentColor" />
+  <path d="M5 1H3V3H5V1Z" fill="currentColor" /> <path d="M20 9H18V11H20V9Z" fill="currentColor" />
+  <path d="M20 14H18V16H20V14Z" fill="currentColor" />
 </svg>
 
 <!--

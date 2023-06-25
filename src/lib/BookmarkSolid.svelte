@@ -28,7 +28,7 @@
   on:mouseout
 >
   <path
-    fill="#2F3039"
+    fill="currentColor"
     d="M13 20a1 1 0 0 1-.64-.231L7 15.3l-5.36 4.469A1 1 0 0 1 0 19V2a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v17a1 1 0 0 1-1 1Z"
   />
 </svg>

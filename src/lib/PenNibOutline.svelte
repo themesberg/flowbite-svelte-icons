@@ -30,7 +30,10 @@
   on:mouseover
   on:mouseout
 >
-  <path fill="#111928" d="M9.338 12.276a1.614 1.614 0 1 0 0-3.228 1.614 1.614 0 0 0 0 3.228Z" />
+  <path
+    fill="currentColor"
+    d="M9.338 12.276a1.614 1.614 0 1 0 0-3.228 1.614 1.614 0 0 0 0 3.228Z"
+  />
   <path
     stroke="currentColor"
     stroke-linecap={strokeLinecap}
