@@ -1,7 +1,9 @@
 <script>
-  import * as Icon from '$lib';
+  import * as Icon from '$lib/index.js';
+  import DarkMode from 'flowbite-svelte/DarkMode.svelte';
 </script>
 
+<DarkMode />
 <div class="p-8">
   <Icon.AddressCardSolid size="100" class="text-red-500" />
   <Icon.AdjustmentsHorizontalOutline size="100" class="text-blue-400" />

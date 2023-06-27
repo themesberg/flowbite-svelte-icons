@@ -1,21 +1,19 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  export let size: string = "20";
-  export let role: string = "img";
-  export let svgClass: string = "text-gray-800 dark:text-white";
-  let svgCls: string = twMerge(
-    svgClass,
-    $$props.class
-  )
-export let ariaLabel="minus solid" </script>
+  export let size: string = '20';
+  export let role: string = 'img';
+  export let svgClass: string = 'text-gray-800 dark:text-white';
+  let svgCls: string = twMerge(svgClass, $$props.class);
+  export let ariaLabel = 'minus solid';
+</script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
   fill="currentColor"
-  class={svgCls}
   {...$$restProps}
+  class={svgCls}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 18 2"
@@ -29,9 +27,8 @@ export let ariaLabel="minus solid" </script>
   on:mouseover
   on:mouseout
 >
-    <path fill="currentColor" d="M17 0H1a1 1 0 0 0 0 2h16a1 1 0 1 0 0-2Z"/> 
+  <path fill="currentColor" d="M17 0H1a1 1 0 0 0 0 2h16a1 1 0 1 0 0-2Z" />
 </svg>
-
 
 <!--
   @component

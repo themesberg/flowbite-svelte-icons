@@ -1,21 +1,19 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  export let size: string = "20";
-  export let role: string = "img";
-  export let svgClass: string = "text-gray-800 dark:text-white";
-  let svgCls: string = twMerge(
-    svgClass,
-    $$props.class
-  )
-export let ariaLabel="papper clip solid" </script>
+  export let size: string = '20';
+  export let role: string = 'img';
+  export let svgClass: string = 'text-gray-800 dark:text-white';
+  let svgCls: string = twMerge(svgClass, $$props.class);
+  export let ariaLabel = 'papper clip solid';
+</script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
   fill="currentColor"
-  class={svgCls}
   {...$$restProps}
+  class={svgCls}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 12 20"
@@ -29,9 +27,11 @@ export let ariaLabel="papper clip solid" </script>
   on:mouseover
   on:mouseout
 >
-    <path fill="currentColor" d="M6 20a6.006 6.006 0 0 1-6-6V6a1 1 0 0 1 2 0v8a4 4 0 1 0 8 0V4.5a2.5 2.5 0 1 0-5 0V14a1 1 0 1 0 2 0V6a1 1 0 0 1 2 0v8a3 3 0 0 1-6 0V4.5a4.5 4.5 0 0 1 9 0V14a6.006 6.006 0 0 1-6 6Z"/> 
+  <path
+    fill="currentColor"
+    d="M6 20a6.006 6.006 0 0 1-6-6V6a1 1 0 0 1 2 0v8a4 4 0 1 0 8 0V4.5a2.5 2.5 0 1 0-5 0V14a1 1 0 1 0 2 0V6a1 1 0 0 1 2 0v8a3 3 0 0 1-6 0V4.5a4.5 4.5 0 0 1 9 0V14a6.006 6.006 0 0 1-6 6Z"
+  />
 </svg>
-
 
 <!--
   @component

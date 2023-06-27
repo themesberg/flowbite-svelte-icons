@@ -1,8 +1,10 @@
 <script>
-  import * as Icon from '$lib';
-  let myClass = "inline m-1"
+  import * as Icon from '$lib/index.js';
+  import DarkMode from 'flowbite-svelte/DarkMode.svelte';
+  let myClass = 'inline m-1';
 </script>
 
+<DarkMode />
 <div class="p-8">
   <Icon.AdjustmentsHorizontalOutline size="40" class={myClass} />
   <Icon.AdjustmentsVerticalOutline size="40" class={myClass} />
