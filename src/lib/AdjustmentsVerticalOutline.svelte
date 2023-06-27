@@ -1,14 +1,16 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  export let size: string = '20';
-  export let role: string = 'img';
-  export let svgClass: string = 'text-gray-800 dark:text-white';
-  let svgCls: string = twMerge(svgClass, $$props.class);
-  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = 'round';
-  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined = 'round';
-  export let strokeWidth = '2';
-  export let ariaLabel = 'adjustments vertical outline';
-</script>
+  export let size: string = "20";
+  export let role: string = "img";
+  export let svgClass: string = "text-gray-800 dark:text-white";
+  let svgCls: string = twMerge(
+    svgClass,
+    $$props.class
+  )
+export let strokeLinecap: "round" | "inherit" | "butt" | "square" | null | undefined = "round";
+export let strokeLinejoin:"round" | "inherit" | "miter" | "bevel" | null | undefined = "round";
+export let strokeWidth= "2";
+export let ariaLabel="adjustments vertical outline" </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -30,14 +32,9 @@
   on:mouseover
   on:mouseout
 >
-  <path
-    stroke="currentColor"
-    stroke-linecap={strokeLinecap}
-    stroke-linejoin={strokeLinejoin}
-    stroke-width={strokeWidth}
-    d="M4 12.25V1m0 11.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M4 19v-2.25m6-13.5V1m0 2.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M10 19V7.75m6 4.5V1m0 11.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM16 19v-2"
-  />
+    <path stroke="currentColor" stroke-linecap="{strokeLinecap}" stroke-linejoin="{strokeLinejoin}" stroke-width="{strokeWidth}" d="M4 12.25V1m0 11.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M4 19v-2.25m6-13.5V1m0 2.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M10 19V7.75m6 4.5V1m0 11.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM16 19v-2"/> 
 </svg>
+
 
 <!--
   @component

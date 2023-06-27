@@ -1,14 +1,16 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  export let size: string = '20';
-  export let role: string = 'img';
-  export let svgClass: string = 'text-gray-800 dark:text-white';
-  let svgCls: string = twMerge(svgClass, $$props.class);
-  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = 'round';
-  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined = 'round';
-  export let strokeWidth = '2';
-  export let ariaLabel = 'envelope outline';
-</script>
+  export let size: string = "20";
+  export let role: string = "img";
+  export let svgClass: string = "text-gray-800 dark:text-white";
+  let svgCls: string = twMerge(
+    svgClass,
+    $$props.class
+  )
+export let strokeLinecap: "round" | "inherit" | "butt" | "square" | null | undefined = "round";
+export let strokeLinejoin:"round" | "inherit" | "miter" | "bevel" | null | undefined = "round";
+export let strokeWidth= "2";
+export let ariaLabel="envelope outline" </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -30,14 +32,9 @@
   on:mouseover
   on:mouseout
 >
-  <path
-    stroke="currentColor"
-    stroke-linecap={strokeLinecap}
-    stroke-linejoin={strokeLinejoin}
-    stroke-width={strokeWidth}
-    d="m19 2-8.4 7.05a1 1 0 0 1-1.2 0L1 2m18 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1m18 0v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2"
-  />
+    <path stroke="currentColor" stroke-linecap="{strokeLinecap}" stroke-linejoin="{strokeLinejoin}" stroke-width="{strokeWidth}" d="m19 2-8.4 7.05a1 1 0 0 1-1.2 0L1 2m18 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1m18 0v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2"/> 
 </svg>
+
 
 <!--
   @component

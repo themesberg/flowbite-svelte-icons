@@ -1,14 +1,16 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  export let size: string = '20';
-  export let role: string = 'img';
-  export let svgClass: string = 'text-gray-800 dark:text-white';
-  let svgCls: string = twMerge(svgClass, $$props.class);
-  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = 'round';
-  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined = 'round';
-  export let strokeWidth = '2';
-  export let ariaLabel = 'angle left outline';
-</script>
+  export let size: string = "20";
+  export let role: string = "img";
+  export let svgClass: string = "text-gray-800 dark:text-white";
+  let svgCls: string = twMerge(
+    svgClass,
+    $$props.class
+  )
+export let strokeLinecap: "round" | "inherit" | "butt" | "square" | null | undefined = "round";
+export let strokeLinejoin:"round" | "inherit" | "miter" | "bevel" | null | undefined = "round";
+export let strokeWidth= "2";
+export let ariaLabel="angle left outline" </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -30,14 +32,9 @@
   on:mouseover
   on:mouseout
 >
-  <path
-    stroke="currentColor"
-    stroke-linecap={strokeLinecap}
-    stroke-linejoin={strokeLinejoin}
-    stroke-width={strokeWidth}
-    d="M7 1.654 1.3 6.7a.865.865 0 0 0-.22.29.823.823 0 0 0 0 .698.85.85 0 0 0 .22.29L7 13.026"
-  />
+    <path stroke="currentColor" stroke-linecap="{strokeLinecap}" stroke-linejoin="{strokeLinejoin}" stroke-width="{strokeWidth}" d="M7 1.654 1.3 6.7a.865.865 0 0 0-.22.29.823.823 0 0 0 0 .698.85.85 0 0 0 .22.29L7 13.026"/> 
 </svg>
+
 
 <!--
   @component
