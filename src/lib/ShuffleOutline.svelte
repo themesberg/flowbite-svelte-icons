@@ -1,24 +1,22 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  export let size: string = "20";
-  export let role: string = "img";
-  export let svgClass: string = "text-gray-800 dark:text-white";
-  let svgCls: string = twMerge(
-    svgClass,
-    $$props.class
-  )
-export let strokeLinecap: "round" | "inherit" | "butt" | "square" | null | undefined = "round";
-export let strokeLinejoin:"round" | "inherit" | "miter" | "bevel" | null | undefined = "round";
-export let strokeWidth= "2";
-export let ariaLabel="shuffle outline" </script>
+  export let size: string = '20';
+  export let role: string = 'img';
+  export let svgClass: string = 'text-gray-800 dark:text-white';
+  let svgCls: string = twMerge(svgClass, $$props.class);
+  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = 'round';
+  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined = 'round';
+  export let strokeWidth = '2';
+  export let ariaLabel = 'shuffle outline';
+</script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
   fill="none"
-  class={svgCls}
   {...$$restProps}
+  class={svgCls}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 20 18"
@@ -32,9 +30,14 @@ export let ariaLabel="shuffle outline" </script>
   on:mouseover
   on:mouseout
 >
-    <path stroke="currentColor" stroke-linecap="{strokeLinecap}" stroke-linejoin="{strokeLinejoin}" stroke-width="{strokeWidth}" d="M11.484 6.166 13 4h6m0 0-3-3m3 3-3 3M1 14h5l1.577-2.253M1 4h5l7 10h6m0 0-3 3m3-3-3-3"/> 
+  <path
+    stroke="currentColor"
+    stroke-linecap={strokeLinecap}
+    stroke-linejoin={strokeLinejoin}
+    stroke-width={strokeWidth}
+    d="M11.484 6.166 13 4h6m0 0-3-3m3 3-3 3M1 14h5l1.577-2.253M1 4h5l7 10h6m0 0-3 3m3-3-3-3"
+  />
 </svg>
-
 
 <!--
   @component

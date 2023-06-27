@@ -1,24 +1,22 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  export let size: string = "20";
-  export let role: string = "img";
-  export let svgClass: string = "text-gray-800 dark:text-white";
-  let svgCls: string = twMerge(
-    svgClass,
-    $$props.class
-  )
-export let strokeLinecap: "round" | "inherit" | "butt" | "square" | null | undefined = "round";
-export let strokeLinejoin:"round" | "inherit" | "miter" | "bevel" | null | undefined = "round";
-export let strokeWidth= "2";
-export let ariaLabel="clapperboard play outline" </script>
+  export let size: string = '20';
+  export let role: string = 'img';
+  export let svgClass: string = 'text-gray-800 dark:text-white';
+  let svgCls: string = twMerge(svgClass, $$props.class);
+  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = 'round';
+  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined = 'round';
+  export let strokeWidth = '2';
+  export let ariaLabel = 'clapperboard play outline';
+</script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
   fill="none"
-  class={svgCls}
   {...$$restProps}
+  class={svgCls}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 20 20"
@@ -32,9 +30,14 @@ export let ariaLabel="clapperboard play outline" </script>
   on:mouseover
   on:mouseout
 >
-    <path stroke="currentColor" stroke-linecap="{strokeLinecap}" stroke-linejoin="{strokeLinejoin}" stroke-width="{strokeWidth}" d="M1 5h18M1 5v14h18V5M1 5V1h18v4M5 5l3-4m1.215 4 3-4m1.215 4 3-4M8.007 8v8l5.416-4-5.416-4Z"/> 
+  <path
+    stroke="currentColor"
+    stroke-linecap={strokeLinecap}
+    stroke-linejoin={strokeLinejoin}
+    stroke-width={strokeWidth}
+    d="M1 5h18M1 5v14h18V5M1 5V1h18v4M5 5l3-4m1.215 4 3-4m1.215 4 3-4M8.007 8v8l5.416-4-5.416-4Z"
+  />
 </svg>
-
 
 <!--
   @component

@@ -1,24 +1,22 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  export let size: string = "20";
-  export let role: string = "img";
-  export let svgClass: string = "text-gray-800 dark:text-white";
-  let svgCls: string = twMerge(
-    svgClass,
-    $$props.class
-  )
-export let strokeLinecap: "round" | "inherit" | "butt" | "square" | null | undefined = "round";
-export let strokeLinejoin:"round" | "inherit" | "miter" | "bevel" | null | undefined = "round";
-export let strokeWidth= "2";
-export let ariaLabel="code merge outline" </script>
+  export let size: string = '20';
+  export let role: string = 'img';
+  export let svgClass: string = 'text-gray-800 dark:text-white';
+  let svgCls: string = twMerge(svgClass, $$props.class);
+  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = 'round';
+  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined = 'round';
+  export let strokeWidth = '2';
+  export let ariaLabel = 'code merge outline';
+</script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
   fill="none"
-  class={svgCls}
   {...$$restProps}
+  class={svgCls}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 14 20"
@@ -32,9 +30,14 @@ export let ariaLabel="code merge outline" </script>
   on:mouseover
   on:mouseout
 >
-    <path stroke="currentColor" stroke-linecap="{strokeLinecap}" stroke-linejoin="{strokeLinejoin}" stroke-width="{strokeWidth}" d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm6-3.976-2-.01A4.015 4.015 0 0 1 3 7m10 4a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/> 
+  <path
+    stroke="currentColor"
+    stroke-linecap={strokeLinecap}
+    stroke-linejoin={strokeLinejoin}
+    stroke-width={strokeWidth}
+    d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm6-3.976-2-.01A4.015 4.015 0 0 1 3 7m10 4a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+  />
 </svg>
-
 
 <!--
   @component

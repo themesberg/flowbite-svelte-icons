@@ -1,24 +1,22 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  export let size: string = "20";
-  export let role: string = "img";
-  export let svgClass: string = "text-gray-800 dark:text-white";
-  let svgCls: string = twMerge(
-    svgClass,
-    $$props.class
-  )
-export let strokeLinecap: "round" | "inherit" | "butt" | "square" | null | undefined = "round";
-export let strokeLinejoin:"round" | "inherit" | "miter" | "bevel" | null | undefined = "round";
-export let strokeWidth= "2";
-export let ariaLabel="volume up outline" </script>
+  export let size: string = '20';
+  export let role: string = 'img';
+  export let svgClass: string = 'text-gray-800 dark:text-white';
+  let svgCls: string = twMerge(svgClass, $$props.class);
+  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = 'round';
+  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined = 'round';
+  export let strokeWidth = '2';
+  export let ariaLabel = 'volume up outline';
+</script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
   fill="none"
-  class={svgCls}
   {...$$restProps}
+  class={svgCls}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 20 18"
@@ -32,9 +30,14 @@ export let ariaLabel="volume up outline" </script>
   on:mouseover
   on:mouseout
 >
-    <path stroke="currentColor" stroke-linecap="{strokeLinecap}" stroke-linejoin="{strokeLinejoin}" stroke-width="{strokeWidth}" d="M14.111 5.889a5.888 5.888 0 0 1 0 6.222M17.173 2.7A11.372 11.372 0 0 1 19 9a11.4 11.4 0 0 1-1.777 6.222M9.349 1.415 4 6H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h2l5.349 4.585A1 1 0 0 0 11 15.826V2.174a1 1 0 0 0-1.651-.759Z"/> 
+  <path
+    stroke="currentColor"
+    stroke-linecap={strokeLinecap}
+    stroke-linejoin={strokeLinejoin}
+    stroke-width={strokeWidth}
+    d="M14.111 5.889a5.888 5.888 0 0 1 0 6.222M17.173 2.7A11.372 11.372 0 0 1 19 9a11.4 11.4 0 0 1-1.777 6.222M9.349 1.415 4 6H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h2l5.349 4.585A1 1 0 0 0 11 15.826V2.174a1 1 0 0 0-1.651-.759Z"
+  />
 </svg>
-
 
 <!--
   @component

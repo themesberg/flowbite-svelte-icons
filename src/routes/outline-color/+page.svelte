@@ -1,14 +1,16 @@
 <script>
-  import * as Icon from '$lib';
+  import * as Icon from '$lib/index.js';
+  import DarkMode from 'flowbite-svelte/DarkMode.svelte';
   const random_tailwind_color = () => {
     const colors = ['red', 'yellow', 'green', 'blue', 'indigo', 'purple', 'pink'];
     const shades = ['300', '400', '500'];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     const randomShade = shades[Math.floor(Math.random() * shades.length)];
-    return `text-${randomColor}-${randomShade} inline m-1`;
+    return `text-${randomColor}-${randomShade} dark:text-${randomColor}-${randomShade} inline m-1`;
   };
 </script>
 
+<DarkMode />
 <div class="p-8">
   <Icon.AdjustmentsHorizontalOutline size="40" class={random_tailwind_color()} />
   <Icon.AdjustmentsVerticalOutline size="40" class={random_tailwind_color()} />

@@ -1,21 +1,19 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  export let size: string = "20";
-  export let role: string = "img";
-  export let svgClass: string = "text-gray-800 dark:text-white";
-  let svgCls: string = twMerge(
-    svgClass,
-    $$props.class
-  )
-export let ariaLabel="trash bin solid" </script>
+  export let size: string = '20';
+  export let role: string = 'img';
+  export let svgClass: string = 'text-gray-800 dark:text-white';
+  let svgCls: string = twMerge(svgClass, $$props.class);
+  export let ariaLabel = 'trash bin solid';
+</script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
   fill="currentColor"
-  class={svgCls}
   {...$$restProps}
+  class={svgCls}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 18 20"
@@ -29,9 +27,11 @@ export let ariaLabel="trash bin solid" </script>
   on:mouseover
   on:mouseout
 >
-    <path fill="currentColor" d="M17 4h-4V2a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v2H1a1 1 0 0 0 0 2h1v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1a1 1 0 1 0 0-2ZM7 2h4v2H7V2Zm1 14a1 1 0 1 1-2 0V8a1 1 0 0 1 2 0v8Zm4 0a1 1 0 0 1-2 0V8a1 1 0 0 1 2 0v8Z"/> 
+  <path
+    fill="currentColor"
+    d="M17 4h-4V2a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v2H1a1 1 0 0 0 0 2h1v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1a1 1 0 1 0 0-2ZM7 2h4v2H7V2Zm1 14a1 1 0 1 1-2 0V8a1 1 0 0 1 2 0v8Zm4 0a1 1 0 0 1-2 0V8a1 1 0 0 1 2 0v8Z"
+  />
 </svg>
-
 
 <!--
   @component
