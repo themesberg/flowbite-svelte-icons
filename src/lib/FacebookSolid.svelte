@@ -1,11 +1,13 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  export let size: string = '20';
-  export let role: string = 'img';
-  export let svgClass: string = 'text-gray-800 dark:text-white';
-  let svgCls: string = twMerge(svgClass, $$props.class);
-  export let ariaLabel = 'facebook solid';
-</script>
+  export let size: string = "20";
+  export let role: string = "img";
+  export let svgClass: string = "text-gray-800 dark:text-white";
+  let svgCls: string = twMerge(
+    svgClass,
+    $$props.class
+  )
+export let ariaLabel="facebook solid" </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -27,13 +29,9 @@
   on:mouseover
   on:mouseout
 >
-  <path
-    fill="currentColor"
-    fill-rule="evenodd"
-    d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
-    clip-rule="evenodd"
-  />
+    <path fill="currentColor" fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/> 
 </svg>
+
 
 <!--
   @component

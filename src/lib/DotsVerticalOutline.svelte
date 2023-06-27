@@ -1,12 +1,14 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  export let size: string = '20';
-  export let role: string = 'img';
-  export let svgClass: string = 'text-gray-800 dark:text-white';
-  let svgCls: string = twMerge(svgClass, $$props.class);
-  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = 'round';
-  export let ariaLabel = 'dots vertical outline';
-</script>
+  export let size: string = "20";
+  export let role: string = "img";
+  export let svgClass: string = "text-gray-800 dark:text-white";
+  let svgCls: string = twMerge(
+    svgClass,
+    $$props.class
+  )
+export let strokeLinecap: "round" | "inherit" | "butt" | "square" | null | undefined = "round";
+export let ariaLabel="dots vertical outline" </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -28,13 +30,9 @@
   on:mouseover
   on:mouseout
 >
-  <path
-    stroke="currentColor"
-    stroke-linecap={strokeLinecap}
-    stroke-width="3"
-    d="M1.5 2h.01M1.5 8h.01m-.01 6h.01"
-  />
+    <path stroke="currentColor" stroke-linecap="{strokeLinecap}" stroke-width="3" d="M1.5 2h.01M1.5 8h.01m-.01 6h.01"/> 
 </svg>
+
 
 <!--
   @component

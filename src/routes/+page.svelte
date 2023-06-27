@@ -1,494 +1,488 @@
 <script>
   import * as Icon from '$lib';
-  const random_tailwind_color = () => {
-    const colors = ['red', 'yellow', 'green', 'blue', 'indigo', 'purple', 'pink'];
-    const shades = ['300', '400', '500'];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    const randomShade = shades[Math.floor(Math.random() * shades.length)];
-    return `text-${randomColor}-${randomShade} inline m-1`;
-  };
+  let myClass = "inline m-1"
 </script>
 
-<div>
-  <Icon.AddressCardSolid size="40" class={random_tailwind_color()} />
-  <Icon.AdjustmentsHorizontalOutline size="40" class={random_tailwind_color()} />
-  <Icon.AdjustmentsHorizontalSolid size="40" class={random_tailwind_color()} />
-  <Icon.AdjustmentsVerticalOutline size="40" class={random_tailwind_color()} />
-  <Icon.AdjustmentsVerticalSolid size="40" class={random_tailwind_color()} />
-  <Icon.AdressBookOutline size="40" class={random_tailwind_color()} />
-  <Icon.AdressBookSolid size="40" class={random_tailwind_color()} />
-  <Icon.AlignCenterOutline size="40" class={random_tailwind_color()} />
-  <Icon.AngleDownOutline size="40" class={random_tailwind_color()} />
-  <Icon.AngleDownSolid size="40" class={random_tailwind_color()} />
-  <Icon.AngleLeftOutline size="40" class={random_tailwind_color()} />
-  <Icon.AngleLeftSolid size="40" class={random_tailwind_color()} />
-  <Icon.AngleRightOutline size="40" class={random_tailwind_color()} />
-  <Icon.AngleRightSolid size="40" class={random_tailwind_color()} />
-  <Icon.AngleTopOutline size="40" class={random_tailwind_color()} />
-  <Icon.AngleUpSolid size="40" class={random_tailwind_color()} />
-  <Icon.AnnotationOutline size="40" class={random_tailwind_color()} />
-  <Icon.AnnotationSolid size="40" class={random_tailwind_color()} />
-  <Icon.ArchiveOutline size="40" class={random_tailwind_color()} />
-  <Icon.ArchiveSolid size="40" class={random_tailwind_color()} />
-  <Icon.ArrowDownOutline size="40" class={random_tailwind_color()} />
-  <Icon.ArrowDownSolid size="40" class={random_tailwind_color()} />
-  <Icon.ArrowDownToBracketOutline size="40" class={random_tailwind_color()} />
-  <Icon.ArrowDownToBraketSolid size="40" class={random_tailwind_color()} />
-  <Icon.ArrowLeftOutline size="40" class={random_tailwind_color()} />
-  <Icon.ArrowLeftSolid size="40" class={random_tailwind_color()} />
-  <Icon.ArrowLeftToBracketOutline size="40" class={random_tailwind_color()} />
-  <Icon.ArrowRightArrowLeftOutline size="40" class={random_tailwind_color()} />
-  <Icon.ArrowRightFromBracketSolid size="40" class={random_tailwind_color()} />
-  <Icon.ArrowRightOutline size="40" class={random_tailwind_color()} />
-  <Icon.ArrowRightSolid size="40" class={random_tailwind_color()} />
-  <Icon.ArrowRightToBracketOutline size="40" class={random_tailwind_color()} />
-  <Icon.ArrowRightToBracketSolid size="40" class={random_tailwind_color()} />
-  <Icon.ArrowSortLettersOutline size="40" class={random_tailwind_color()} />
-  <Icon.ArrowSortLettersSolid size="40" class={random_tailwind_color()} />
-  <Icon.ArrowUpDownOutline size="40" class={random_tailwind_color()} />
-  <Icon.ArrowUpDownSolid size="40" class={random_tailwind_color()} />
-  <Icon.ArrowUpOutline size="40" class={random_tailwind_color()} />
-  <Icon.ArrowUpRightFromSquareOutline size="40" class={random_tailwind_color()} />
-  <Icon.ArrowUpRightSquareSolid size="40" class={random_tailwind_color()} />
-  <Icon.ArrowUpSolid size="40" class={random_tailwind_color()} />
-  <Icon.ArrowsRepeat1Outline size="40" class={random_tailwind_color()} />
-  <Icon.ArrowsRepeat1Solid size="40" class={random_tailwind_color()} />
-  <Icon.ArrowsRepeatOutline size="40" class={random_tailwind_color()} />
-  <Icon.ArrowsRepeatSolid size="40" class={random_tailwind_color()} />
-  <Icon.AtomOutline size="40" class={random_tailwind_color()} />
-  <Icon.AtomSolid size="40" class={random_tailwind_color()} />
-  <Icon.BackwardStepOutline size="40" class={random_tailwind_color()} />
-  <Icon.BackwardStepSolid size="40" class={random_tailwind_color()} />
-  <Icon.BadgeCheckOutline size="40" class={random_tailwind_color()} />
-  <Icon.BadgeCheckSolid size="40" class={random_tailwind_color()} />
-  <Icon.BagSolid size="40" class={random_tailwind_color()} />
-  <Icon.BarsOutline size="40" class={random_tailwind_color()} />
-  <Icon.BarsSolid size="40" class={random_tailwind_color()} />
-  <Icon.BellActiveAltOutline size="40" class={random_tailwind_color()} />
-  <Icon.BellActiveAltSolid size="40" class={random_tailwind_color()} />
-  <Icon.BellActiveOutline size="40" class={random_tailwind_color()} />
-  <Icon.BellActiveSolid size="40" class={random_tailwind_color()} />
-  <Icon.BellOutline size="40" class={random_tailwind_color()} />
-  <Icon.BellRingOutline size="40" class={random_tailwind_color()} />
-  <Icon.BellRingSolid size="40" class={random_tailwind_color()} />
-  <Icon.BellSolid size="40" class={random_tailwind_color()} />
-  <Icon.BlenderPhoneOutline size="40" class={random_tailwind_color()} />
-  <Icon.BlenderPhoneSolid size="40" class={random_tailwind_color()} />
-  <Icon.BoldSolid size="40" class={random_tailwind_color()} />
-  <Icon.BookOpenOutline size="40" class={random_tailwind_color()} />
-  <Icon.BookOutline size="40" class={random_tailwind_color()} />
-  <Icon.BookSolid size="40" class={random_tailwind_color()} />
-  <Icon.BookmarkOutline size="40" class={random_tailwind_color()} />
-  <Icon.BookmarkSolid size="40" class={random_tailwind_color()} />
-  <Icon.BrainOutline size="40" class={random_tailwind_color()} />
-  <Icon.BrainSolid size="40" class={random_tailwind_color()} />
-  <Icon.BriefcaseOutline size="40" class={random_tailwind_color()} />
-  <Icon.BriefcaseSolid size="40" class={random_tailwind_color()} />
-  <Icon.BugOutline size="40" class={random_tailwind_color()} />
-  <Icon.BugSolid size="40" class={random_tailwind_color()} />
-  <Icon.BullhornOutline size="40" class={random_tailwind_color()} />
-  <Icon.BullhornSolid size="40" class={random_tailwind_color()} />
-  <Icon.CalendarEditOutline size="40" class={random_tailwind_color()} />
-  <Icon.CalendarEditSolid size="40" class={random_tailwind_color()} />
-  <Icon.CalendarMonthOutline size="40" class={random_tailwind_color()} />
-  <Icon.CalendarMonthSolid size="40" class={random_tailwind_color()} />
-  <Icon.CalendarWeekOutline size="40" class={random_tailwind_color()} />
-  <Icon.CalendarWeekSolid size="40" class={random_tailwind_color()} />
-  <Icon.CameraFotoOutline size="40" class={random_tailwind_color()} />
-  <Icon.CameraFotoSolid size="40" class={random_tailwind_color()} />
-  <Icon.CaptioningOutline size="40" class={random_tailwind_color()} />
-  <Icon.CaptioningSolid size="40" class={random_tailwind_color()} />
-  <Icon.CaretDownOutline size="40" class={random_tailwind_color()} />
-  <Icon.CaretDownSolid size="40" class={random_tailwind_color()} />
-  <Icon.CaretLeftOutline size="40" class={random_tailwind_color()} />
-  <Icon.CaretLeftSolid size="40" class={random_tailwind_color()} />
-  <Icon.CaretRightOutline size="40" class={random_tailwind_color()} />
-  <Icon.CaretRightSolid size="40" class={random_tailwind_color()} />
-  <Icon.CaretSortOutline size="40" class={random_tailwind_color()} />
-  <Icon.CaretSortSolid size="40" class={random_tailwind_color()} />
-  <Icon.CaretUpOutline size="40" class={random_tailwind_color()} />
-  <Icon.CaretUpSolid size="40" class={random_tailwind_color()} />
-  <Icon.CartOutline size="40" class={random_tailwind_color()} />
-  <Icon.CartPlusAltOutline size="40" class={random_tailwind_color()} />
-  <Icon.CartPlusAltSolid size="40" class={random_tailwind_color()} />
-  <Icon.CartPlusOutline size="40" class={random_tailwind_color()} />
-  <Icon.CartPlusSolid size="40" class={random_tailwind_color()} />
-  <Icon.CashOutline size="40" class={random_tailwind_color()} />
-  <Icon.CashSolid size="40" class={random_tailwind_color()} />
-  <Icon.ChartLineDownSolid size="40" class={random_tailwind_color()} />
-  <Icon.ChartLineUpOutline size="40" class={random_tailwind_color()} />
-  <Icon.ChartLineUpSolid size="40" class={random_tailwind_color()} />
-  <Icon.ChartMixedOutline size="40" class={random_tailwind_color()} />
-  <Icon.ChartMixedSolid size="40" class={random_tailwind_color()} />
-  <Icon.ChartOutline size="40" class={random_tailwind_color()} />
-  <Icon.ChartPieOutline size="40" class={random_tailwind_color()} />
-  <Icon.ChartPieSolid size="40" class={random_tailwind_color()} />
-  <Icon.ChartSolid size="40" class={random_tailwind_color()} />
-  <Icon.CheckCircleOutline size="40" class={random_tailwind_color()} />
-  <Icon.CheckCircleSolid size="40" class={random_tailwind_color()} />
-  <Icon.CheckOutline size="40" class={random_tailwind_color()} />
-  <Icon.CheckSolid size="40" class={random_tailwind_color()} />
-  <Icon.ChervonDoubleDownSolid size="40" class={random_tailwind_color()} />
-  <Icon.ChervonDoubleLeftSolid size="40" class={random_tailwind_color()} />
-  <Icon.ChervonDoubleRightSolid size="40" class={random_tailwind_color()} />
-  <Icon.ChervonDoubleUpSolid size="40" class={random_tailwind_color()} />
-  <Icon.ChevronDoubleDownOutline size="40" class={random_tailwind_color()} />
-  <Icon.ChevronDoubleLeftOutline size="40" class={random_tailwind_color()} />
-  <Icon.ChevronDoubleRightOutline size="40" class={random_tailwind_color()} />
-  <Icon.ChevronDoubleUpOutline size="40" class={random_tailwind_color()} />
-  <Icon.ChevronDownOutline size="40" class={random_tailwind_color()} />
-  <Icon.ChevronDownSolid size="40" class={random_tailwind_color()} />
-  <Icon.ChevronLeftOutline size="40" class={random_tailwind_color()} />
-  <Icon.ChevronLeftSolid size="40" class={random_tailwind_color()} />
-  <Icon.ChevronRightOutline size="40" class={random_tailwind_color()} />
-  <Icon.ChevronRightSolid size="40" class={random_tailwind_color()} />
-  <Icon.ChevronSortOutline size="40" class={random_tailwind_color()} />
-  <Icon.ChevronSortSolid size="40" class={random_tailwind_color()} />
-  <Icon.ChevronUpOutline size="40" class={random_tailwind_color()} />
-  <Icon.ChevronUpSolid size="40" class={random_tailwind_color()} />
-  <Icon.ClapperboardPlayOutline size="40" class={random_tailwind_color()} />
-  <Icon.ClapperboardPlaySolid size="40" class={random_tailwind_color()} />
-  <Icon.ClipboardCheckOutline size="40" class={random_tailwind_color()} />
-  <Icon.ClipboardCheckSolid size="40" class={random_tailwind_color()} />
-  <Icon.ClipboardListOutline size="40" class={random_tailwind_color()} />
-  <Icon.ClipboardListSolid size="40" class={random_tailwind_color()} />
-  <Icon.ClipboardOutline size="40" class={random_tailwind_color()} />
-  <Icon.ClipboardSolid size="40" class={random_tailwind_color()} />
-  <Icon.ClockOutline size="40" class={random_tailwind_color()} />
-  <Icon.ClockSolid size="40" class={random_tailwind_color()} />
-  <Icon.CloneSolid size="40" class={random_tailwind_color()} />
-  <Icon.CloseCircleSolid size="40" class={random_tailwind_color()} />
-  <Icon.CloseOutline size="40" class={random_tailwind_color()} />
-  <Icon.CloseSolid size="40" class={random_tailwind_color()} />
-  <Icon.CloudArrowUpOutline size="40" class={random_tailwind_color()} />
-  <Icon.CloudArrowUpSolid size="40" class={random_tailwind_color()} />
-  <Icon.CodeBranchOutline size="40" class={random_tailwind_color()} />
-  <Icon.CodeBranchSolid size="40" class={random_tailwind_color()} />
-  <Icon.CodeForkOutline size="40" class={random_tailwind_color()} />
-  <Icon.CodeForkSolid size="40" class={random_tailwind_color()} />
-  <Icon.CodeMergeOutline size="40" class={random_tailwind_color()} />
-  <Icon.CodeMergeSolid size="40" class={random_tailwind_color()} />
-  <Icon.CodeOutline size="40" class={random_tailwind_color()} />
-  <Icon.CodePullRequestOutline size="40" class={random_tailwind_color()} />
-  <Icon.CodePullRequestSolid size="40" class={random_tailwind_color()} />
-  <Icon.CodeSolid size="40" class={random_tailwind_color()} />
-  <Icon.CogOutline size="40" class={random_tailwind_color()} />
-  <Icon.CompressOutline size="40" class={random_tailwind_color()} />
-  <Icon.CompressSolid size="40" class={random_tailwind_color()} />
-  <Icon.ComputerSpeakerOutline size="40" class={random_tailwind_color()} />
-  <Icon.ComputerSpeakerSolid size="40" class={random_tailwind_color()} />
-  <Icon.CopySolid size="40" class={random_tailwind_color()} />
-  <Icon.CotateSolid size="40" class={random_tailwind_color()} />
-  <Icon.CreditCardOutline size="40" class={random_tailwind_color()} />
-  <Icon.CreditCardSolid size="40" class={random_tailwind_color()} />
-  <Icon.DatabaseOutline size="40" class={random_tailwind_color()} />
-  <Icon.DatabaseSolid size="40" class={random_tailwind_color()} />
-  <Icon.DesktopPcOutline size="40" class={random_tailwind_color()} />
-  <Icon.DesktopPcSolid size="40" class={random_tailwind_color()} />
-  <Icon.DiscordSolid size="40" class={random_tailwind_color()} />
-  <Icon.DnaOutline size="40" class={random_tailwind_color()} />
-  <Icon.DnaSolid size="40" class={random_tailwind_color()} />
-  <Icon.DollarOutline size="40" class={random_tailwind_color()} />
-  <Icon.DollarSolid size="40" class={random_tailwind_color()} />
-  <Icon.DotsHorizontalOutline size="40" class={random_tailwind_color()} />
-  <Icon.DotsVerticalOutline size="40" class={random_tailwind_color()} />
-  <Icon.DownloadOutline size="40" class={random_tailwind_color()} />
-  <Icon.DownloadSolid size="40" class={random_tailwind_color()} />
-  <Icon.DrawSquareOutline size="40" class={random_tailwind_color()} />
-  <Icon.DrawSquareSolid size="40" class={random_tailwind_color()} />
-  <Icon.DribbbleSolid size="40" class={random_tailwind_color()} />
-  <Icon.DropboxSolid size="40" class={random_tailwind_color()} />
-  <Icon.EditOutline size="40" class={random_tailwind_color()} />
-  <Icon.EllipseHorizontalSolid size="40" class={random_tailwind_color()} />
-  <Icon.EllipseVerticalSolid size="40" class={random_tailwind_color()} />
-  <Icon.EnvelopeOpenOutline size="40" class={random_tailwind_color()} />
-  <Icon.EnvelopeOpenSolid size="40" class={random_tailwind_color()} />
-  <Icon.EnvelopeOutline size="40" class={random_tailwind_color()} />
-  <Icon.EnvelopeSolid size="40" class={random_tailwind_color()} />
-  <Icon.EuroOutline size="40" class={random_tailwind_color()} />
-  <Icon.EuroSolid size="40" class={random_tailwind_color()} />
-  <Icon.ExclamationCircleOutline size="40" class={random_tailwind_color()} />
-  <Icon.ExclamationCircleSolid size="40" class={random_tailwind_color()} />
-  <Icon.ExpandOutline size="40" class={random_tailwind_color()} />
-  <Icon.ExpandSolid size="40" class={random_tailwind_color()} />
-  <Icon.EyeOutline size="40" class={random_tailwind_color()} />
-  <Icon.EyeSlashOutline size="40" class={random_tailwind_color()} />
-  <Icon.EyeSlashSolid size="40" class={random_tailwind_color()} />
-  <Icon.EyeSolid size="40" class={random_tailwind_color()} />
-  <Icon.FaceExplodeOutline size="40" class={random_tailwind_color()} />
-  <Icon.FaceGrinOutline size="40" class={random_tailwind_color()} />
-  <Icon.FaceGrinSolid size="40" class={random_tailwind_color()} />
-  <Icon.FaceGrinStarsOutline size="40" class={random_tailwind_color()} />
-  <Icon.FaceLaughOutline size="40" class={random_tailwind_color()} />
-  <Icon.FaceLaughSolid size="40" class={random_tailwind_color()} />
-  <Icon.FaceMindBlowSolid size="40" class={random_tailwind_color()} />
-  <Icon.FaceStarStruckSolid size="40" class={random_tailwind_color()} />
-  <Icon.FacebookSolid size="40" class={random_tailwind_color()} />
+<div class="p-8">
+  <Icon.AddressCardSolid size="40" class={myClass}/>
+  <Icon.AdjustmentsHorizontalOutline size="40" class={myClass}/>
+  <Icon.AdjustmentsHorizontalSolid size="40" class={myClass}/>
+  <Icon.AdjustmentsVerticalOutline size="40" class={myClass}/>
+  <Icon.AdjustmentsVerticalSolid size="40" class={myClass}/>
+  <Icon.AdressBookOutline size="40" class={myClass}/>
+  <Icon.AdressBookSolid size="40" class={myClass}/>
+  <Icon.AlignCenterOutline size="40" class={myClass}/>
+  <Icon.AngleDownOutline size="40" class={myClass}/>
+  <Icon.AngleDownSolid size="40" class={myClass}/>
+  <Icon.AngleLeftOutline size="40" class={myClass}/>
+  <Icon.AngleLeftSolid size="40" class={myClass}/>
+  <Icon.AngleRightOutline size="40" class={myClass}/>
+  <Icon.AngleRightSolid size="40" class={myClass}/>
+  <Icon.AngleTopOutline size="40" class={myClass}/>
+  <Icon.AngleUpSolid size="40" class={myClass}/>
+  <Icon.AnnotationOutline size="40" class={myClass}/>
+  <Icon.AnnotationSolid size="40" class={myClass}/>
+  <Icon.ArchiveOutline size="40" class={myClass}/>
+  <Icon.ArchiveSolid size="40" class={myClass}/>
+  <Icon.ArrowDownOutline size="40" class={myClass}/>
+  <Icon.ArrowDownSolid size="40" class={myClass}/>
+  <Icon.ArrowDownToBracketOutline size="40" class={myClass}/>
+  <Icon.ArrowDownToBraketSolid size="40" class={myClass}/>
+  <Icon.ArrowLeftOutline size="40" class={myClass}/>
+  <Icon.ArrowLeftSolid size="40" class={myClass}/>
+  <Icon.ArrowLeftToBracketOutline size="40" class={myClass}/>
+  <Icon.ArrowRightArrowLeftOutline size="40" class={myClass}/>
+  <Icon.ArrowRightFromBracketSolid size="40" class={myClass}/>
+  <Icon.ArrowRightOutline size="40" class={myClass}/>
+  <Icon.ArrowRightSolid size="40" class={myClass}/>
+  <Icon.ArrowRightToBracketOutline size="40" class={myClass}/>
+  <Icon.ArrowRightToBracketSolid size="40" class={myClass}/>
+  <Icon.ArrowSortLettersOutline size="40" class={myClass}/>
+  <Icon.ArrowSortLettersSolid size="40" class={myClass}/>
+  <Icon.ArrowUpDownOutline size="40" class={myClass}/>
+  <Icon.ArrowUpDownSolid size="40" class={myClass}/>
+  <Icon.ArrowUpOutline size="40" class={myClass}/>
+  <Icon.ArrowUpRightFromSquareOutline size="40" class={myClass}/>
+  <Icon.ArrowUpRightSquareSolid size="40" class={myClass}/>
+  <Icon.ArrowUpSolid size="40" class={myClass}/>
+  <Icon.ArrowsRepeat1Outline size="40" class={myClass}/>
+  <Icon.ArrowsRepeat1Solid size="40" class={myClass}/>
+  <Icon.ArrowsRepeatOutline size="40" class={myClass}/>
+  <Icon.ArrowsRepeatSolid size="40" class={myClass}/>
+  <Icon.AtomOutline size="40" class={myClass}/>
+  <Icon.AtomSolid size="40" class={myClass}/>
+  <Icon.BackwardStepOutline size="40" class={myClass}/>
+  <Icon.BackwardStepSolid size="40" class={myClass}/>
+  <Icon.BadgeCheckOutline size="40" class={myClass}/>
+  <Icon.BadgeCheckSolid size="40" class={myClass}/>
+  <Icon.BagSolid size="40" class={myClass}/>
+  <Icon.BarsOutline size="40" class={myClass}/>
+  <Icon.BarsSolid size="40" class={myClass}/>
+  <Icon.BellActiveAltOutline size="40" class={myClass}/>
+  <Icon.BellActiveAltSolid size="40" class={myClass}/>
+  <Icon.BellActiveOutline size="40" class={myClass}/>
+  <Icon.BellActiveSolid size="40" class={myClass}/>
+  <Icon.BellOutline size="40" class={myClass}/>
+  <Icon.BellRingOutline size="40" class={myClass}/>
+  <Icon.BellRingSolid size="40" class={myClass}/>
+  <Icon.BellSolid size="40" class={myClass}/>
+  <Icon.BlenderPhoneOutline size="40" class={myClass}/>
+  <Icon.BlenderPhoneSolid size="40" class={myClass}/>
+  <Icon.BoldSolid size="40" class={myClass}/>
+  <Icon.BookOpenOutline size="40" class={myClass}/>
+  <Icon.BookOutline size="40" class={myClass}/>
+  <Icon.BookSolid size="40" class={myClass}/>
+  <Icon.BookmarkOutline size="40" class={myClass}/>
+  <Icon.BookmarkSolid size="40" class={myClass}/>
+  <Icon.BrainOutline size="40" class={myClass}/>
+  <Icon.BrainSolid size="40" class={myClass}/>
+  <Icon.BriefcaseOutline size="40" class={myClass}/>
+  <Icon.BriefcaseSolid size="40" class={myClass}/>
+  <Icon.BugOutline size="40" class={myClass}/>
+  <Icon.BugSolid size="40" class={myClass}/>
+  <Icon.BullhornOutline size="40" class={myClass}/>
+  <Icon.BullhornSolid size="40" class={myClass}/>
+  <Icon.CalendarEditOutline size="40" class={myClass}/>
+  <Icon.CalendarEditSolid size="40" class={myClass}/>
+  <Icon.CalendarMonthOutline size="40" class={myClass}/>
+  <Icon.CalendarMonthSolid size="40" class={myClass}/>
+  <Icon.CalendarWeekOutline size="40" class={myClass}/>
+  <Icon.CalendarWeekSolid size="40" class={myClass}/>
+  <Icon.CameraFotoOutline size="40" class={myClass}/>
+  <Icon.CameraFotoSolid size="40" class={myClass}/>
+  <Icon.CaptioningOutline size="40" class={myClass}/>
+  <Icon.CaptioningSolid size="40" class={myClass}/>
+  <Icon.CaretDownOutline size="40" class={myClass}/>
+  <Icon.CaretDownSolid size="40" class={myClass}/>
+  <Icon.CaretLeftOutline size="40" class={myClass}/>
+  <Icon.CaretLeftSolid size="40" class={myClass}/>
+  <Icon.CaretRightOutline size="40" class={myClass}/>
+  <Icon.CaretRightSolid size="40" class={myClass}/>
+  <Icon.CaretSortOutline size="40" class={myClass}/>
+  <Icon.CaretSortSolid size="40" class={myClass}/>
+  <Icon.CaretUpOutline size="40" class={myClass}/>
+  <Icon.CaretUpSolid size="40" class={myClass}/>
+  <Icon.CartOutline size="40" class={myClass}/>
+  <Icon.CartPlusAltOutline size="40" class={myClass}/>
+  <Icon.CartPlusAltSolid size="40" class={myClass}/>
+  <Icon.CartPlusOutline size="40" class={myClass}/>
+  <Icon.CartPlusSolid size="40" class={myClass}/>
+  <Icon.CashOutline size="40" class={myClass}/>
+  <Icon.CashSolid size="40" class={myClass}/>
+  <Icon.ChartLineDownSolid size="40" class={myClass}/>
+  <Icon.ChartLineUpOutline size="40" class={myClass}/>
+  <Icon.ChartLineUpSolid size="40" class={myClass}/>
+  <Icon.ChartMixedOutline size="40" class={myClass}/>
+  <Icon.ChartMixedSolid size="40" class={myClass}/>
+  <Icon.ChartOutline size="40" class={myClass}/>
+  <Icon.ChartPieOutline size="40" class={myClass}/>
+  <Icon.ChartPieSolid size="40" class={myClass}/>
+  <Icon.ChartSolid size="40" class={myClass}/>
+  <Icon.CheckCircleOutline size="40" class={myClass}/>
+  <Icon.CheckCircleSolid size="40" class={myClass}/>
+  <Icon.CheckOutline size="40" class={myClass}/>
+  <Icon.CheckSolid size="40" class={myClass}/>
+  <Icon.ChervonDoubleDownSolid size="40" class={myClass}/>
+  <Icon.ChervonDoubleLeftSolid size="40" class={myClass}/>
+  <Icon.ChervonDoubleRightSolid size="40" class={myClass}/>
+  <Icon.ChervonDoubleUpSolid size="40" class={myClass}/>
+  <Icon.ChevronDoubleDownOutline size="40" class={myClass}/>
+  <Icon.ChevronDoubleLeftOutline size="40" class={myClass}/>
+  <Icon.ChevronDoubleRightOutline size="40" class={myClass}/>
+  <Icon.ChevronDoubleUpOutline size="40" class={myClass}/>
+  <Icon.ChevronDownOutline size="40" class={myClass}/>
+  <Icon.ChevronDownSolid size="40" class={myClass}/>
+  <Icon.ChevronLeftOutline size="40" class={myClass}/>
+  <Icon.ChevronLeftSolid size="40" class={myClass}/>
+  <Icon.ChevronRightOutline size="40" class={myClass}/>
+  <Icon.ChevronRightSolid size="40" class={myClass}/>
+  <Icon.ChevronSortOutline size="40" class={myClass}/>
+  <Icon.ChevronSortSolid size="40" class={myClass}/>
+  <Icon.ChevronUpOutline size="40" class={myClass}/>
+  <Icon.ChevronUpSolid size="40" class={myClass}/>
+  <Icon.ClapperboardPlayOutline size="40" class={myClass}/>
+  <Icon.ClapperboardPlaySolid size="40" class={myClass}/>
+  <Icon.ClipboardCheckOutline size="40" class={myClass}/>
+  <Icon.ClipboardCheckSolid size="40" class={myClass}/>
+  <Icon.ClipboardListOutline size="40" class={myClass}/>
+  <Icon.ClipboardListSolid size="40" class={myClass}/>
+  <Icon.ClipboardOutline size="40" class={myClass}/>
+  <Icon.ClipboardSolid size="40" class={myClass}/>
+  <Icon.ClockOutline size="40" class={myClass}/>
+  <Icon.ClockSolid size="40" class={myClass}/>
+  <Icon.CloneSolid size="40" class={myClass}/>
+  <Icon.CloseCircleSolid size="40" class={myClass}/>
+  <Icon.CloseOutline size="40" class={myClass}/>
+  <Icon.CloseSolid size="40" class={myClass}/>
+  <Icon.CloudArrowUpOutline size="40" class={myClass}/>
+  <Icon.CloudArrowUpSolid size="40" class={myClass}/>
+  <Icon.CodeBranchOutline size="40" class={myClass}/>
+  <Icon.CodeBranchSolid size="40" class={myClass}/>
+  <Icon.CodeForkOutline size="40" class={myClass}/>
+  <Icon.CodeForkSolid size="40" class={myClass}/>
+  <Icon.CodeMergeOutline size="40" class={myClass}/>
+  <Icon.CodeMergeSolid size="40" class={myClass}/>
+  <Icon.CodeOutline size="40" class={myClass}/>
+  <Icon.CodePullRequestOutline size="40" class={myClass}/>
+  <Icon.CodePullRequestSolid size="40" class={myClass}/>
+  <Icon.CodeSolid size="40" class={myClass}/>
+  <Icon.CogOutline size="40" class={myClass}/>
+  <Icon.CompressOutline size="40" class={myClass}/>
+  <Icon.CompressSolid size="40" class={myClass}/>
+  <Icon.ComputerSpeakerOutline size="40" class={myClass}/>
+  <Icon.ComputerSpeakerSolid size="40" class={myClass}/>
+  <Icon.CopySolid size="40" class={myClass}/>
+  <Icon.CotateSolid size="40" class={myClass}/>
+  <Icon.CreditCardOutline size="40" class={myClass}/>
+  <Icon.CreditCardSolid size="40" class={myClass}/>
+  <Icon.DatabaseOutline size="40" class={myClass}/>
+  <Icon.DatabaseSolid size="40" class={myClass}/>
+  <Icon.DesktopPcOutline size="40" class={myClass}/>
+  <Icon.DesktopPcSolid size="40" class={myClass}/>
+  <Icon.DiscordSolid size="40" class={myClass}/>
+  <Icon.DnaOutline size="40" class={myClass}/>
+  <Icon.DnaSolid size="40" class={myClass}/>
+  <Icon.DollarOutline size="40" class={myClass}/>
+  <Icon.DollarSolid size="40" class={myClass}/>
+  <Icon.DotsHorizontalOutline size="40" class={myClass}/>
+  <Icon.DotsVerticalOutline size="40" class={myClass}/>
+  <Icon.DownloadOutline size="40" class={myClass}/>
+  <Icon.DownloadSolid size="40" class={myClass}/>
+  <Icon.DrawSquareOutline size="40" class={myClass}/>
+  <Icon.DrawSquareSolid size="40" class={myClass}/>
+  <Icon.DribbbleSolid size="40" class={myClass}/>
+  <Icon.DropboxSolid size="40" class={myClass}/>
+  <Icon.EditOutline size="40" class={myClass}/>
+  <Icon.EllipseHorizontalSolid size="40" class={myClass}/>
+  <Icon.EllipseVerticalSolid size="40" class={myClass}/>
+  <Icon.EnvelopeOpenOutline size="40" class={myClass}/>
+  <Icon.EnvelopeOpenSolid size="40" class={myClass}/>
+  <Icon.EnvelopeOutline size="40" class={myClass}/>
+  <Icon.EnvelopeSolid size="40" class={myClass}/>
+  <Icon.EuroOutline size="40" class={myClass}/>
+  <Icon.EuroSolid size="40" class={myClass}/>
+  <Icon.ExclamationCircleOutline size="40" class={myClass}/>
+  <Icon.ExclamationCircleSolid size="40" class={myClass}/>
+  <Icon.ExpandOutline size="40" class={myClass}/>
+  <Icon.ExpandSolid size="40" class={myClass}/>
+  <Icon.EyeOutline size="40" class={myClass}/>
+  <Icon.EyeSlashOutline size="40" class={myClass}/>
+  <Icon.EyeSlashSolid size="40" class={myClass}/>
+  <Icon.EyeSolid size="40" class={myClass}/>
+  <Icon.FaceExplodeOutline size="40" class={myClass}/>
+  <Icon.FaceGrinOutline size="40" class={myClass}/>
+  <Icon.FaceGrinSolid size="40" class={myClass}/>
+  <Icon.FaceGrinStarsOutline size="40" class={myClass}/>
+  <Icon.FaceLaughOutline size="40" class={myClass}/>
+  <Icon.FaceLaughSolid size="40" class={myClass}/>
+  <Icon.FaceMindBlowSolid size="40" class={myClass}/>
+  <Icon.FaceStarStruckSolid size="40" class={myClass}/>
+  <Icon.FacebookSolid size="40" class={myClass}/>
 
-  <Icon.FileChartBarOutline size="40" class={random_tailwind_color()} />
-  <Icon.FileChartBarSolid size="40" class={random_tailwind_color()} />
-  <Icon.FileCheckOutline size="40" class={random_tailwind_color()} />
-  <Icon.FileCheckSolid size="40" class={random_tailwind_color()} />
-  <Icon.FileCirclePlusOutline size="40" class={random_tailwind_color()} />
-  <Icon.FileCloneOutline size="40" class={random_tailwind_color()} />
-  <Icon.FileCodeOutline size="40" class={random_tailwind_color()} />
-  <Icon.FileCodeSolid size="40" class={random_tailwind_color()} />
-  <Icon.FileCopyOutline size="40" class={random_tailwind_color()} />
-  <Icon.FileCopySolid size="40" class={random_tailwind_color()} />
-  <Icon.FileCsvOutline size="40" class={random_tailwind_color()} />
-  <Icon.FileCsvSolid size="40" class={random_tailwind_color()} />
-  <Icon.FileEditSolid size="40" class={random_tailwind_color()} />
-  <Icon.FileExportOutline size="40" class={random_tailwind_color()} />
-  <Icon.FileExportSolid size="40" class={random_tailwind_color()} />
-  <Icon.FileImageOutline size="40" class={random_tailwind_color()} />
-  <Icon.FileImageSolid size="40" class={random_tailwind_color()} />
-  <Icon.FileImportOutline size="40" class={random_tailwind_color()} />
-  <Icon.FileImportSolid size="40" class={random_tailwind_color()} />
-  <Icon.FileLinesOutline size="40" class={random_tailwind_color()} />
-  <Icon.FileLinesSolid size="40" class={random_tailwind_color()} />
-  <Icon.FileMusicOutline size="40" class={random_tailwind_color()} />
-  <Icon.FileMusicSolid size="40" class={random_tailwind_color()} />
-  <Icon.FileOutline size="40" class={random_tailwind_color()} />
-  <Icon.FilePasteOutline size="40" class={random_tailwind_color()} />
-  <Icon.FilePasteSolid size="40" class={random_tailwind_color()} />
-  <Icon.FilePdfOutline size="40" class={random_tailwind_color()} />
-  <Icon.FilePdfSolid size="40" class={random_tailwind_color()} />
-  <Icon.FilePenOutline size="40" class={random_tailwind_color()} />
-  <Icon.FilePlusSolid size="40" class={random_tailwind_color()} />
-  <Icon.FilePowerpointSolid size="40" class={random_tailwind_color()} />
-  <Icon.FilePptOutline size="40" class={random_tailwind_color()} />
-  <Icon.FileShieldOutline size="40" class={random_tailwind_color()} />
-  <Icon.FileShieldSolid size="40" class={random_tailwind_color()} />
-  <Icon.FileSolid size="40" class={random_tailwind_color()} />
-  <Icon.FileVideoOutline size="40" class={random_tailwind_color()} />
-  <Icon.FileWordOutline size="40" class={random_tailwind_color()} />
-  <Icon.FileWordpressSolid size="40" class={random_tailwind_color()} />
-  <Icon.FileZipOutline size="40" class={random_tailwind_color()} />
-  <Icon.FileZipperSolid size="40" class={random_tailwind_color()} />
-  <Icon.FilterOutline size="40" class={random_tailwind_color()} />
-  <Icon.FilterSolid size="40" class={random_tailwind_color()} />
-  <Icon.FingerprintOutline size="40" class={random_tailwind_color()} />
-  <Icon.FingerprintSolid size="40" class={random_tailwind_color()} />
-  <Icon.FireOutline size="40" class={random_tailwind_color()} />
-  <Icon.FireSolid size="40" class={random_tailwind_color()} />
-  <Icon.FolderDuplicateOutline size="40" class={random_tailwind_color()} />
-  <Icon.FolderDuplicateSolid size="40" class={random_tailwind_color()} />
-  <Icon.FolderOpenOutline size="40" class={random_tailwind_color()} />
-  <Icon.FolderOpenSolid size="40" class={random_tailwind_color()} />
-  <Icon.FolderOutline size="40" class={random_tailwind_color()} />
-  <Icon.FolderPlusOutline size="40" class={random_tailwind_color()} />
-  <Icon.FolderPlusSolid size="40" class={random_tailwind_color()} />
-  <Icon.FolderSolid size="40" class={random_tailwind_color()} />
-  <Icon.ForwardOutline size="40" class={random_tailwind_color()} />
-  <Icon.ForwardSolid size="40" class={random_tailwind_color()} />
-  <Icon.ForwardStepOutline size="40" class={random_tailwind_color()} />
-  <Icon.ForwardStepSolid size="40" class={random_tailwind_color()} />
-  <Icon.GearSolid size="40" class={random_tailwind_color()} />
-  <Icon.GiftBoxOutline size="40" class={random_tailwind_color()} />
-  <Icon.GiftBoxSolid size="40" class={random_tailwind_color()} />
-  <Icon.GithubSolid size="40" class={random_tailwind_color()} />
-  <Icon.GlobeOutline size="40" class={random_tailwind_color()} />
-  <Icon.GlobeSolid size="40" class={random_tailwind_color()} />
-  <Icon.GoogleSolid size="40" class={random_tailwind_color()} />
-  <Icon.GridOutline size="40" class={random_tailwind_color()} />
-  <Icon.GridPlusOutline size="40" class={random_tailwind_color()} />
-  <Icon.GridPlusSolid size="40" class={random_tailwind_color()} />
-  <Icon.GridSolid size="40" class={random_tailwind_color()} />
-  <Icon.HeadphonesOutline size="40" class={random_tailwind_color()} />
-  <Icon.HeadphonesSolid size="40" class={random_tailwind_color()} />
-  <Icon.HeartOutline size="40" class={random_tailwind_color()} />
-  <Icon.HeartSolid size="40" class={random_tailwind_color()} />
-  <Icon.HomeOutline size="40" class={random_tailwind_color()} />
-  <Icon.HomeSolid size="40" class={random_tailwind_color()} />
-  <Icon.HourglassOutline size="40" class={random_tailwind_color()} />
-  <Icon.HourglassSolid size="40" class={random_tailwind_color()} />
-  <Icon.ImageOutline size="40" class={random_tailwind_color()} />
-  <Icon.ImageSolid size="40" class={random_tailwind_color()} />
-  <Icon.InboxFullOutline size="40" class={random_tailwind_color()} />
-  <Icon.InboxFullSolid size="40" class={random_tailwind_color()} />
-  <Icon.InboxOutline size="40" class={random_tailwind_color()} />
-  <Icon.InboxSolid size="40" class={random_tailwind_color()} />
-  <Icon.InfoCircleOutline size="40" class={random_tailwind_color()} />
-  <Icon.InfoCircleSolid size="40" class={random_tailwind_color()} />
-  <Icon.ItalicSolid size="40" class={random_tailwind_color()} />
-  <Icon.KeyboardOutline size="40" class={random_tailwind_color()} />
-  <Icon.KeyboardSolid size="40" class={random_tailwind_color()} />
-  <Icon.LandmarkOutline size="40" class={random_tailwind_color()} />
-  <Icon.LandmarkSolid size="40" class={random_tailwind_color()} />
-  <Icon.LayersOutline size="40" class={random_tailwind_color()} />
-  <Icon.LayersSolid size="40" class={random_tailwind_color()} />
-  <Icon.LetterBoldOutline size="40" class={random_tailwind_color()} />
-  <Icon.LetterItalicOutline size="40" class={random_tailwind_color()} />
-  <Icon.LetterUnderlineOutline size="40" class={random_tailwind_color()} />
-  <Icon.LifeBuoyOutline size="40" class={random_tailwind_color()} />
-  <Icon.LifeBuoySolid size="40" class={random_tailwind_color()} />
-  <Icon.LinkOutline size="40" class={random_tailwind_color()} />
-  <Icon.LinkSolid size="40" class={random_tailwind_color()} />
-  <Icon.LinkedinSolid size="40" class={random_tailwind_color()} />
-  <Icon.ListMusicOutline size="40" class={random_tailwind_color()} />
-  <Icon.ListMusicSolid size="40" class={random_tailwind_color()} />
-  <Icon.ListOrdoredSolid size="40" class={random_tailwind_color()} />
-  <Icon.ListOutline size="40" class={random_tailwind_color()} />
-  <Icon.ListSolid size="40" class={random_tailwind_color()} />
-  <Icon.LockOpenOutline size="40" class={random_tailwind_color()} />
-  <Icon.LockOpenSolid size="40" class={random_tailwind_color()} />
-  <Icon.LockOutline size="40" class={random_tailwind_color()} />
-  <Icon.LockSolid size="40" class={random_tailwind_color()} />
-  <Icon.MailBoxOutline size="40" class={random_tailwind_color()} />
-  <Icon.MailBoxSolid size="40" class={random_tailwind_color()} />
-  <Icon.MapLocationOutline size="40" class={random_tailwind_color()} />
-  <Icon.MapPinAltSolid size="40" class={random_tailwind_color()} />
-  <Icon.MapPinOutline size="40" class={random_tailwind_color()} />
-  <Icon.MapPinSolid size="40" class={random_tailwind_color()} />
-  <Icon.MessageCaptionOutline size="40" class={random_tailwind_color()} />
-  <Icon.MessageCaptionSolid size="40" class={random_tailwind_color()} />
-  <Icon.MessageDotsOutline size="40" class={random_tailwind_color()} />
-  <Icon.MessagesOutline size="40" class={random_tailwind_color()} />
-  <Icon.MessagesSolid size="40" class={random_tailwind_color()} />
-  <Icon.MicrophoneOutline size="40" class={random_tailwind_color()} />
-  <Icon.MicrophoneSolid size="40" class={random_tailwind_color()} />
-  <Icon.MinimizeOutline size="40" class={random_tailwind_color()} />
-  <Icon.MinimizeSolid size="40" class={random_tailwind_color()} />
-  <Icon.MinusOutline size="40" class={random_tailwind_color()} />
-  <Icon.MinusSolid size="40" class={random_tailwind_color()} />
-  <Icon.MobilePhoneOutline size="40" class={random_tailwind_color()} />
-  <Icon.MobilePhoneSolid size="40" class={random_tailwind_color()} />
-  <Icon.MoonOutline size="40" class={random_tailwind_color()} />
-  <Icon.MoonSolid size="40" class={random_tailwind_color()} />
-  <Icon.NewspaperSolid size="40" class={random_tailwind_color()} />
-  <Icon.NewspapperOutline size="40" class={random_tailwind_color()} />
-  <Icon.OpenBookSolid size="40" class={random_tailwind_color()} />
-  <Icon.OrdoredListOutline size="40" class={random_tailwind_color()} />
-  <Icon.PaletteOutline size="40" class={random_tailwind_color()} />
-  <Icon.PalleteSolid size="40" class={random_tailwind_color()} />
-  <Icon.PaperClipOutline size="40" class={random_tailwind_color()} />
-  <Icon.PapperClipSolid size="40" class={random_tailwind_color()} />
-  <Icon.PapperPlaneOutline size="40" class={random_tailwind_color()} />
-  <Icon.PapperPlaneSolid size="40" class={random_tailwind_color()} />
-  <Icon.PauseOutline size="40" class={random_tailwind_color()} />
-  <Icon.PauseSolid size="40" class={random_tailwind_color()} />
-  <Icon.PenNibOutline size="40" class={random_tailwind_color()} />
-  <Icon.PenNibSolid size="40" class={random_tailwind_color()} />
-  <Icon.PenOutline size="40" class={random_tailwind_color()} />
-  <Icon.PenSolid size="40" class={random_tailwind_color()} />
-  <Icon.PenToSquareSolid size="40" class={random_tailwind_color()} />
-  <Icon.PhoneOutline size="40" class={random_tailwind_color()} />
-  <Icon.PhoneSolid size="40" class={random_tailwind_color()} />
-  <Icon.PlayOutline size="40" class={random_tailwind_color()} />
-  <Icon.PlaySolid size="40" class={random_tailwind_color()} />
-  <Icon.PlusOutline size="40" class={random_tailwind_color()} />
-  <Icon.PlusSolid size="40" class={random_tailwind_color()} />
-  <Icon.PrintSolid size="40" class={random_tailwind_color()} />
-  <Icon.PrinterOutline size="40" class={random_tailwind_color()} />
-  <Icon.ProfileCardOutline size="40" class={random_tailwind_color()} />
-  <Icon.QuestionCircleOutline size="40" class={random_tailwind_color()} />
-  <Icon.QuestionCircleSolid size="40" class={random_tailwind_color()} />
-  <Icon.QuoteOutline size="40" class={random_tailwind_color()} />
-  <Icon.QuoteSolid size="40" class={random_tailwind_color()} />
-  <Icon.ReceiptOutline size="40" class={random_tailwind_color()} />
-  <Icon.ReceiptSolid size="40" class={random_tailwind_color()} />
-  <Icon.RectangleListOutline size="40" class={random_tailwind_color()} />
-  <Icon.RectangleListSolid size="40" class={random_tailwind_color()} />
-  <Icon.ReplyAllOutline size="40" class={random_tailwind_color()} />
-  <Icon.ReplyAllSolid size="40" class={random_tailwind_color()} />
-  <Icon.RestoreWindowSolid size="40" class={random_tailwind_color()} />
-  <Icon.RocketOutline size="40" class={random_tailwind_color()} />
-  <Icon.RocketSolid size="40" class={random_tailwind_color()} />
-  <Icon.RotateOutline size="40" class={random_tailwind_color()} />
-  <Icon.RuleCombinedOutline size="40" class={random_tailwind_color()} />
-  <Icon.RulerCombinedSolid size="40" class={random_tailwind_color()} />
-  <Icon.SalePercentOutline size="40" class={random_tailwind_color()} />
-  <Icon.SalePercentSolid size="40" class={random_tailwind_color()} />
-  <Icon.ScaleBalanceSolid size="40" class={random_tailwind_color()} />
-  <Icon.ScaleBalancedOutline size="40" class={random_tailwind_color()} />
-  <Icon.SearchOutline size="40" class={random_tailwind_color()} />
-  <Icon.SearchSolid size="40" class={random_tailwind_color()} />
-  <Icon.ShareAllOutline size="40" class={random_tailwind_color()} />
-  <Icon.ShareAllSolid size="40" class={random_tailwind_color()} />
-  <Icon.ShareNodesOutline size="40" class={random_tailwind_color()} />
-  <Icon.ShareNodesSolid size="40" class={random_tailwind_color()} />
-  <Icon.ShieldOutline size="40" class={random_tailwind_color()} />
-  <Icon.ShieldSolid size="40" class={random_tailwind_color()} />
-  <Icon.ShoppingBagOutline size="40" class={random_tailwind_color()} />
-  <Icon.ShoppingCartSolid size="40" class={random_tailwind_color()} />
-  <Icon.ShuffleOutline size="40" class={random_tailwind_color()} />
-  <Icon.ShuffleSolid size="40" class={random_tailwind_color()} />
-  <Icon.SortHorizontalSolid size="40" class={random_tailwind_color()} />
-  <Icon.SortOutline size="40" class={random_tailwind_color()} />
-  <Icon.SortVerticalSolid size="40" class={random_tailwind_color()} />
-  <Icon.StackoverflowSolid size="40" class={random_tailwind_color()} />
-  <Icon.StarHalfOutline size="40" class={random_tailwind_color()} />
-  <Icon.StarHalfSolid size="40" class={random_tailwind_color()} />
-  <Icon.StarHalfStrokeOutline size="40" class={random_tailwind_color()} />
-  <Icon.StarHalfStrokeSolid size="40" class={random_tailwind_color()} />
-  <Icon.StarOutline size="40" class={random_tailwind_color()} />
-  <Icon.StarSolid size="40" class={random_tailwind_color()} />
-  <Icon.StoreOutline size="40" class={random_tailwind_color()} />
-  <Icon.StoreSolid size="40" class={random_tailwind_color()} />
-  <Icon.SunOutline size="40" class={random_tailwind_color()} />
-  <Icon.SunSolid size="40" class={random_tailwind_color()} />
-  <Icon.SwatchbookOutline size="40" class={random_tailwind_color()} />
-  <Icon.SwatchbookSolid size="40" class={random_tailwind_color()} />
-  <Icon.TableColumnOutline size="40" class={random_tailwind_color()} />
-  <Icon.TableColumnSolid size="40" class={random_tailwind_color()} />
-  <Icon.TableRowOutline size="40" class={random_tailwind_color()} />
-  <Icon.TableSolid size="40" class={random_tailwind_color()} />
-  <Icon.TabletOutline size="40" class={random_tailwind_color()} />
-  <Icon.TabletSolid size="40" class={random_tailwind_color()} />
-  <Icon.TagOutline size="40" class={random_tailwind_color()} />
-  <Icon.TagSolid size="40" class={random_tailwind_color()} />
-  <Icon.TerminalOutline size="40" class={random_tailwind_color()} />
-  <Icon.TerminalSolid size="40" class={random_tailwind_color()} />
-  <Icon.TextCenterSolid size="40" class={random_tailwind_color()} />
-  <Icon.ThumbsDownOutline size="40" class={random_tailwind_color()} />
-  <Icon.ThumbsUpOutline size="40" class={random_tailwind_color()} />
-  <Icon.TicketOutline size="40" class={random_tailwind_color()} />
-  <Icon.TicketSolid size="40" class={random_tailwind_color()} />
-  <Icon.TrashBinOutline size="40" class={random_tailwind_color()} />
-  <Icon.TrashBinSolid size="40" class={random_tailwind_color()} />
-  <Icon.TruckOutline size="40" class={random_tailwind_color()} />
-  <Icon.TruckSolid size="40" class={random_tailwind_color()} />
-  <Icon.TumbDownSolid size="40" class={random_tailwind_color()} />
-  <Icon.TumbUpSolid size="40" class={random_tailwind_color()} />
-  <Icon.TwitterSolid size="40" class={random_tailwind_color()} />
-  <Icon.UnderlineSolid size="40" class={random_tailwind_color()} />
-  <Icon.UploadOutline size="40" class={random_tailwind_color()} />
-  <Icon.UploadSolid size="40" class={random_tailwind_color()} />
-  <Icon.UserAddOutline size="40" class={random_tailwind_color()} />
-  <Icon.UserCircleOutline size="40" class={random_tailwind_color()} />
-  <Icon.UserCircleSolid size="40" class={random_tailwind_color()} />
-  <Icon.UserEditOutline size="40" class={random_tailwind_color()} />
-  <Icon.UserEditSolid size="40" class={random_tailwind_color()} />
-  <Icon.UserGroupSolid size="40" class={random_tailwind_color()} />
-  <Icon.UserHeadsetOutline size="40" class={random_tailwind_color()} />
-  <Icon.UserHeadsetSolid size="40" class={random_tailwind_color()} />
-  <Icon.UserOutline size="40" class={random_tailwind_color()} />
-  <Icon.UserPlusSolid size="40" class={random_tailwind_color()} />
-  <Icon.UserRemoveOutline size="40" class={random_tailwind_color()} />
-  <Icon.UserRemoveSolid size="40" class={random_tailwind_color()} />
-  <Icon.UserSettingsOutline size="40" class={random_tailwind_color()} />
-  <Icon.UserSettingsSolid size="40" class={random_tailwind_color()} />
-  <Icon.UserSolid size="40" class={random_tailwind_color()} />
-  <Icon.UsersGroupOutline size="40" class={random_tailwind_color()} />
-  <Icon.UsersOutline size="40" class={random_tailwind_color()} />
-  <Icon.UsersSolid size="40" class={random_tailwind_color()} />
-  <Icon.VideoCameraOutline size="40" class={random_tailwind_color()} />
-  <Icon.VideoSolid size="40" class={random_tailwind_color()} />
-  <Icon.VolumeDownOutline size="40" class={random_tailwind_color()} />
-  <Icon.VolumeDownSolid size="40" class={random_tailwind_color()} />
-  <Icon.VolumeUpOutline size="40" class={random_tailwind_color()} />
-  <Icon.VolumeUpSolid size="40" class={random_tailwind_color()} />
-  <Icon.WalletOutline size="40" class={random_tailwind_color()} />
-  <Icon.WalletSolid size="40" class={random_tailwind_color()} />
-  <Icon.WandMagicSparklesOutline size="40" class={random_tailwind_color()} />
-  <Icon.WandSparklesSolid size="40" class={random_tailwind_color()} />
-  <Icon.WindowOutline size="40" class={random_tailwind_color()} />
-  <Icon.WindowRestoreOutline size="40" class={random_tailwind_color()} />
-  <Icon.WindowSolid size="40" class={random_tailwind_color()} />
-  <Icon.XCircleOutline size="40" class={random_tailwind_color()} />
-  <Icon.YoutubeSolid size="40" class={random_tailwind_color()} />
-  <Icon.ZoomInOutline size="40" class={random_tailwind_color()} />
-  <Icon.ZoomInSolid size="40" class={random_tailwind_color()} />
-  <Icon.ZoomOutOutline size="40" class={random_tailwind_color()} />
-  <Icon.ZoomOutSolid size="40" class={random_tailwind_color()} />
+  <Icon.FileChartBarOutline size="40" class={myClass}/>
+  <Icon.FileChartBarSolid size="40" class={myClass}/>
+  <Icon.FileCheckOutline size="40" class={myClass}/>
+  <Icon.FileCheckSolid size="40" class={myClass}/>
+  <Icon.FileCirclePlusOutline size="40" class={myClass}/>
+  <Icon.FileCloneOutline size="40" class={myClass}/>
+  <Icon.FileCodeOutline size="40" class={myClass}/>
+  <Icon.FileCodeSolid size="40" class={myClass}/>
+  <Icon.FileCopyOutline size="40" class={myClass}/>
+  <Icon.FileCopySolid size="40" class={myClass}/>
+  <Icon.FileCsvOutline size="40" class={myClass}/>
+  <Icon.FileCsvSolid size="40" class={myClass}/>
+  <Icon.FileEditSolid size="40" class={myClass}/>
+  <Icon.FileExportOutline size="40" class={myClass}/>
+  <Icon.FileExportSolid size="40" class={myClass}/>
+  <Icon.FileImageOutline size="40" class={myClass}/>
+  <Icon.FileImageSolid size="40" class={myClass}/>
+  <Icon.FileImportOutline size="40" class={myClass}/>
+  <Icon.FileImportSolid size="40" class={myClass}/>
+  <Icon.FileLinesOutline size="40" class={myClass}/>
+  <Icon.FileLinesSolid size="40" class={myClass}/>
+  <Icon.FileMusicOutline size="40" class={myClass}/>
+  <Icon.FileMusicSolid size="40" class={myClass}/>
+  <Icon.FileOutline size="40" class={myClass}/>
+  <Icon.FilePasteOutline size="40" class={myClass}/>
+  <Icon.FilePasteSolid size="40" class={myClass}/>
+  <Icon.FilePdfOutline size="40" class={myClass}/>
+  <Icon.FilePdfSolid size="40" class={myClass}/>
+  <Icon.FilePenOutline size="40" class={myClass}/>
+  <Icon.FilePlusSolid size="40" class={myClass}/>
+  <Icon.FilePowerpointSolid size="40" class={myClass}/>
+  <Icon.FilePptOutline size="40" class={myClass}/>
+  <Icon.FileShieldOutline size="40" class={myClass}/>
+  <Icon.FileShieldSolid size="40" class={myClass}/>
+  <Icon.FileSolid size="40" class={myClass}/>
+  <Icon.FileVideoOutline size="40" class={myClass}/>
+  <Icon.FileWordOutline size="40" class={myClass}/>
+  <Icon.FileWordpressSolid size="40" class={myClass}/>
+  <Icon.FileZipOutline size="40" class={myClass}/>
+  <Icon.FileZipperSolid size="40" class={myClass}/>
+  <Icon.FilterOutline size="40" class={myClass}/>
+  <Icon.FilterSolid size="40" class={myClass}/>
+  <Icon.FingerprintOutline size="40" class={myClass}/>
+  <Icon.FingerprintSolid size="40" class={myClass}/>
+  <Icon.FireOutline size="40" class={myClass}/>
+  <Icon.FireSolid size="40" class={myClass}/>
+  <Icon.FolderDuplicateOutline size="40" class={myClass}/>
+  <Icon.FolderDuplicateSolid size="40" class={myClass}/>
+  <Icon.FolderOpenOutline size="40" class={myClass}/>
+  <Icon.FolderOpenSolid size="40" class={myClass}/>
+  <Icon.FolderOutline size="40" class={myClass}/>
+  <Icon.FolderPlusOutline size="40" class={myClass}/>
+  <Icon.FolderPlusSolid size="40" class={myClass}/>
+  <Icon.FolderSolid size="40" class={myClass}/>
+  <Icon.ForwardOutline size="40" class={myClass}/>
+  <Icon.ForwardSolid size="40" class={myClass}/>
+  <Icon.ForwardStepOutline size="40" class={myClass}/>
+  <Icon.ForwardStepSolid size="40" class={myClass}/>
+  <Icon.GearSolid size="40" class={myClass}/>
+  <Icon.GiftBoxOutline size="40" class={myClass}/>
+  <Icon.GiftBoxSolid size="40" class={myClass}/>
+  <Icon.GithubSolid size="40" class={myClass}/>
+  <Icon.GlobeOutline size="40" class={myClass}/>
+  <Icon.GlobeSolid size="40" class={myClass}/>
+  <Icon.GoogleSolid size="40" class={myClass}/>
+  <Icon.GridOutline size="40" class={myClass}/>
+  <Icon.GridPlusOutline size="40" class={myClass}/>
+  <Icon.GridPlusSolid size="40" class={myClass}/>
+  <Icon.GridSolid size="40" class={myClass}/>
+  <Icon.HeadphonesOutline size="40" class={myClass}/>
+  <Icon.HeadphonesSolid size="40" class={myClass}/>
+  <Icon.HeartOutline size="40" class={myClass}/>
+  <Icon.HeartSolid size="40" class={myClass}/>
+  <Icon.HomeOutline size="40" class={myClass}/>
+  <Icon.HomeSolid size="40" class={myClass}/>
+  <Icon.HourglassOutline size="40" class={myClass}/>
+  <Icon.HourglassSolid size="40" class={myClass}/>
+  <Icon.ImageOutline size="40" class={myClass}/>
+  <Icon.ImageSolid size="40" class={myClass}/>
+  <Icon.InboxFullOutline size="40" class={myClass}/>
+  <Icon.InboxFullSolid size="40" class={myClass}/>
+  <Icon.InboxOutline size="40" class={myClass}/>
+  <Icon.InboxSolid size="40" class={myClass}/>
+  <Icon.InfoCircleOutline size="40" class={myClass}/>
+  <Icon.InfoCircleSolid size="40" class={myClass}/>
+  <Icon.ItalicSolid size="40" class={myClass}/>
+  <Icon.KeyboardOutline size="40" class={myClass}/>
+  <Icon.KeyboardSolid size="40" class={myClass}/>
+  <Icon.LandmarkOutline size="40" class={myClass}/>
+  <Icon.LandmarkSolid size="40" class={myClass}/>
+  <Icon.LayersOutline size="40" class={myClass}/>
+  <Icon.LayersSolid size="40" class={myClass}/>
+  <Icon.LetterBoldOutline size="40" class={myClass}/>
+  <Icon.LetterItalicOutline size="40" class={myClass}/>
+  <Icon.LetterUnderlineOutline size="40" class={myClass}/>
+  <Icon.LifeBuoyOutline size="40" class={myClass}/>
+  <Icon.LifeBuoySolid size="40" class={myClass}/>
+  <Icon.LinkOutline size="40" class={myClass}/>
+  <Icon.LinkSolid size="40" class={myClass}/>
+  <Icon.LinkedinSolid size="40" class={myClass}/>
+  <Icon.ListMusicOutline size="40" class={myClass}/>
+  <Icon.ListMusicSolid size="40" class={myClass}/>
+  <Icon.ListOrdoredSolid size="40" class={myClass}/>
+  <Icon.ListOutline size="40" class={myClass}/>
+  <Icon.ListSolid size="40" class={myClass}/>
+  <Icon.LockOpenOutline size="40" class={myClass}/>
+  <Icon.LockOpenSolid size="40" class={myClass}/>
+  <Icon.LockOutline size="40" class={myClass}/>
+  <Icon.LockSolid size="40" class={myClass}/>
+  <Icon.MailBoxOutline size="40" class={myClass}/>
+  <Icon.MailBoxSolid size="40" class={myClass}/>
+  <Icon.MapLocationOutline size="40" class={myClass}/>
+  <Icon.MapPinAltSolid size="40" class={myClass}/>
+  <Icon.MapPinOutline size="40" class={myClass}/>
+  <Icon.MapPinSolid size="40" class={myClass}/>
+  <Icon.MessageCaptionOutline size="40" class={myClass}/>
+  <Icon.MessageCaptionSolid size="40" class={myClass}/>
+  <Icon.MessageDotsOutline size="40" class={myClass}/>
+  <Icon.MessagesOutline size="40" class={myClass}/>
+  <Icon.MessagesSolid size="40" class={myClass}/>
+  <Icon.MicrophoneOutline size="40" class={myClass}/>
+  <Icon.MicrophoneSolid size="40" class={myClass}/>
+  <Icon.MinimizeOutline size="40" class={myClass}/>
+  <Icon.MinimizeSolid size="40" class={myClass}/>
+  <Icon.MinusOutline size="40" class={myClass}/>
+  <Icon.MinusSolid size="40" class={myClass}/>
+  <Icon.MobilePhoneOutline size="40" class={myClass}/>
+  <Icon.MobilePhoneSolid size="40" class={myClass}/>
+  <Icon.MoonOutline size="40" class={myClass}/>
+  <Icon.MoonSolid size="40" class={myClass}/>
+  <Icon.NewspaperSolid size="40" class={myClass}/>
+  <Icon.NewspapperOutline size="40" class={myClass}/>
+  <Icon.OpenBookSolid size="40" class={myClass}/>
+  <Icon.OrdoredListOutline size="40" class={myClass}/>
+  <Icon.PaletteOutline size="40" class={myClass}/>
+  <Icon.PalleteSolid size="40" class={myClass}/>
+  <Icon.PaperClipOutline size="40" class={myClass}/>
+  <Icon.PapperClipSolid size="40" class={myClass}/>
+  <Icon.PapperPlaneOutline size="40" class={myClass}/>
+  <Icon.PapperPlaneSolid size="40" class={myClass}/>
+  <Icon.PauseOutline size="40" class={myClass}/>
+  <Icon.PauseSolid size="40" class={myClass}/>
+  <Icon.PenNibOutline size="40" class={myClass}/>
+  <Icon.PenNibSolid size="40" class={myClass}/>
+  <Icon.PenOutline size="40" class={myClass}/>
+  <Icon.PenSolid size="40" class={myClass}/>
+  <Icon.PenToSquareSolid size="40" class={myClass}/>
+  <Icon.PhoneOutline size="40" class={myClass}/>
+  <Icon.PhoneSolid size="40" class={myClass}/>
+  <Icon.PlayOutline size="40" class={myClass}/>
+  <Icon.PlaySolid size="40" class={myClass}/>
+  <Icon.PlusOutline size="40" class={myClass}/>
+  <Icon.PlusSolid size="40" class={myClass}/>
+  <Icon.PrintSolid size="40" class={myClass}/>
+  <Icon.PrinterOutline size="40" class={myClass}/>
+  <Icon.ProfileCardOutline size="40" class={myClass}/>
+  <Icon.QuestionCircleOutline size="40" class={myClass}/>
+  <Icon.QuestionCircleSolid size="40" class={myClass}/>
+  <Icon.QuoteOutline size="40" class={myClass}/>
+  <Icon.QuoteSolid size="40" class={myClass}/>
+  <Icon.ReceiptOutline size="40" class={myClass}/>
+  <Icon.ReceiptSolid size="40" class={myClass}/>
+  <Icon.RectangleListOutline size="40" class={myClass}/>
+  <Icon.RectangleListSolid size="40" class={myClass}/>
+  <Icon.ReplyAllOutline size="40" class={myClass}/>
+  <Icon.ReplyAllSolid size="40" class={myClass}/>
+  <Icon.RestoreWindowSolid size="40" class={myClass}/>
+  <Icon.RocketOutline size="40" class={myClass}/>
+  <Icon.RocketSolid size="40" class={myClass}/>
+  <Icon.RotateOutline size="40" class={myClass}/>
+  <Icon.RuleCombinedOutline size="40" class={myClass}/>
+  <Icon.RulerCombinedSolid size="40" class={myClass}/>
+  <Icon.SalePercentOutline size="40" class={myClass}/>
+  <Icon.SalePercentSolid size="40" class={myClass}/>
+  <Icon.ScaleBalanceSolid size="40" class={myClass}/>
+  <Icon.ScaleBalancedOutline size="40" class={myClass}/>
+  <Icon.SearchOutline size="40" class={myClass}/>
+  <Icon.SearchSolid size="40" class={myClass}/>
+  <Icon.ShareAllOutline size="40" class={myClass}/>
+  <Icon.ShareAllSolid size="40" class={myClass}/>
+  <Icon.ShareNodesOutline size="40" class={myClass}/>
+  <Icon.ShareNodesSolid size="40" class={myClass}/>
+  <Icon.ShieldOutline size="40" class={myClass}/>
+  <Icon.ShieldSolid size="40" class={myClass}/>
+  <Icon.ShoppingBagOutline size="40" class={myClass}/>
+  <Icon.ShoppingCartSolid size="40" class={myClass}/>
+  <Icon.ShuffleOutline size="40" class={myClass}/>
+  <Icon.ShuffleSolid size="40" class={myClass}/>
+  <Icon.SortHorizontalSolid size="40" class={myClass}/>
+  <Icon.SortOutline size="40" class={myClass}/>
+  <Icon.SortVerticalSolid size="40" class={myClass}/>
+  <Icon.StackoverflowSolid size="40" class={myClass}/>
+  <Icon.StarHalfOutline size="40" class={myClass}/>
+  <Icon.StarHalfSolid size="40" class={myClass}/>
+  <Icon.StarHalfStrokeOutline size="40" class={myClass}/>
+  <Icon.StarHalfStrokeSolid size="40" class={myClass}/>
+  <Icon.StarOutline size="40" class={myClass}/>
+  <Icon.StarSolid size="40" class={myClass}/>
+  <Icon.StoreOutline size="40" class={myClass}/>
+  <Icon.StoreSolid size="40" class={myClass}/>
+  <Icon.SunOutline size="40" class={myClass}/>
+  <Icon.SunSolid size="40" class={myClass}/>
+  <Icon.SwatchbookOutline size="40" class={myClass}/>
+  <Icon.SwatchbookSolid size="40" class={myClass}/>
+  <Icon.TableColumnOutline size="40" class={myClass}/>
+  <Icon.TableColumnSolid size="40" class={myClass}/>
+  <Icon.TableRowOutline size="40" class={myClass}/>
+  <Icon.TableSolid size="40" class={myClass}/>
+  <Icon.TabletOutline size="40" class={myClass}/>
+  <Icon.TabletSolid size="40" class={myClass}/>
+  <Icon.TagOutline size="40" class={myClass}/>
+  <Icon.TagSolid size="40" class={myClass}/>
+  <Icon.TerminalOutline size="40" class={myClass}/>
+  <Icon.TerminalSolid size="40" class={myClass}/>
+  <Icon.TextCenterSolid size="40" class={myClass}/>
+  <Icon.ThumbsDownOutline size="40" class={myClass}/>
+  <Icon.ThumbsUpOutline size="40" class={myClass}/>
+  <Icon.TicketOutline size="40" class={myClass}/>
+  <Icon.TicketSolid size="40" class={myClass}/>
+  <Icon.TrashBinOutline size="40" class={myClass}/>
+  <Icon.TrashBinSolid size="40" class={myClass}/>
+  <Icon.TruckOutline size="40" class={myClass}/>
+  <Icon.TruckSolid size="40" class={myClass}/>
+  <Icon.TumbDownSolid size="40" class={myClass}/>
+  <Icon.TumbUpSolid size="40" class={myClass}/>
+  <Icon.TwitterSolid size="40" class={myClass}/>
+  <Icon.UnderlineSolid size="40" class={myClass}/>
+  <Icon.UploadOutline size="40" class={myClass}/>
+  <Icon.UploadSolid size="40" class={myClass}/>
+  <Icon.UserAddOutline size="40" class={myClass}/>
+  <Icon.UserCircleOutline size="40" class={myClass}/>
+  <Icon.UserCircleSolid size="40" class={myClass}/>
+  <Icon.UserEditOutline size="40" class={myClass}/>
+  <Icon.UserEditSolid size="40" class={myClass}/>
+  <Icon.UserGroupSolid size="40" class={myClass}/>
+  <Icon.UserHeadsetOutline size="40" class={myClass}/>
+  <Icon.UserHeadsetSolid size="40" class={myClass}/>
+  <Icon.UserOutline size="40" class={myClass}/>
+  <Icon.UserPlusSolid size="40" class={myClass}/>
+  <Icon.UserRemoveOutline size="40" class={myClass}/>
+  <Icon.UserRemoveSolid size="40" class={myClass}/>
+  <Icon.UserSettingsOutline size="40" class={myClass}/>
+  <Icon.UserSettingsSolid size="40" class={myClass}/>
+  <Icon.UserSolid size="40" class={myClass}/>
+  <Icon.UsersGroupOutline size="40" class={myClass}/>
+  <Icon.UsersOutline size="40" class={myClass}/>
+  <Icon.UsersSolid size="40" class={myClass}/>
+  <Icon.VideoCameraOutline size="40" class={myClass}/>
+  <Icon.VideoSolid size="40" class={myClass}/>
+  <Icon.VolumeDownOutline size="40" class={myClass}/>
+  <Icon.VolumeDownSolid size="40" class={myClass}/>
+  <Icon.VolumeUpOutline size="40" class={myClass}/>
+  <Icon.VolumeUpSolid size="40" class={myClass}/>
+  <Icon.WalletOutline size="40" class={myClass}/>
+  <Icon.WalletSolid size="40" class={myClass}/>
+  <Icon.WandMagicSparklesOutline size="40" class={myClass}/>
+  <Icon.WandSparklesSolid size="40" class={myClass}/>
+  <Icon.WindowOutline size="40" class={myClass}/>
+  <Icon.WindowRestoreOutline size="40" class={myClass}/>
+  <Icon.WindowSolid size="40" class={myClass}/>
+  <Icon.XCircleOutline size="40" class={myClass}/>
+  <Icon.YoutubeSolid size="40" class={myClass}/>
+  <Icon.ZoomInOutline size="40" class={myClass}/>
+  <Icon.ZoomInSolid size="40" class={myClass}/>
+  <Icon.ZoomOutOutline size="40" class={myClass}/>
+  <Icon.ZoomOutSolid size="40" class={myClass}/>
 </div>

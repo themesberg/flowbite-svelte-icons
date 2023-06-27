@@ -1,14 +1,16 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  export let size: string = '20';
-  export let role: string = 'img';
-  export let svgClass: string = 'text-gray-800 dark:text-white';
-  let svgCls: string = twMerge(svgClass, $$props.class);
-  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = 'round';
-  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined = 'round';
-  export let strokeWidth = '2';
-  export let ariaLabel = 'map location outline';
-</script>
+  export let size: string = "20";
+  export let role: string = "img";
+  export let svgClass: string = "text-gray-800 dark:text-white";
+  let svgCls: string = twMerge(
+    svgClass,
+    $$props.class
+  )
+export let strokeLinecap: "round" | "inherit" | "butt" | "square" | null | undefined = "round";
+export let strokeLinejoin:"round" | "inherit" | "miter" | "bevel" | null | undefined = "round";
+export let strokeWidth= "2";
+export let ariaLabel="map location outline" </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -30,18 +32,9 @@
   on:mouseover
   on:mouseout
 >
-  <g
-    stroke="currentColor"
-    stroke-linecap={strokeLinecap}
-    stroke-linejoin={strokeLinejoin}
-    stroke-width={strokeWidth}
-  >
-    <path d="M8 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-    <path
-      d="M13.8 12.938h-.01a7 7 0 1 0-11.465.144h-.016l.141.171c.1.127.2.251.3.371L8 20l5.13-6.248c.193-.209.373-.429.54-.659l.13-.155Z"
-    />
-  </g>
+    <g stroke="currentColor" stroke-linecap="{strokeLinecap}" stroke-linejoin="{strokeLinejoin}" stroke-width="{strokeWidth}">     <path d="M8 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>     <path d="M13.8 12.938h-.01a7 7 0 1 0-11.465.144h-.016l.141.171c.1.127.2.251.3.371L8 20l5.13-6.248c.193-.209.373-.429.54-.659l.13-.155Z"/>   </g> 
 </svg>
+
 
 <!--
   @component

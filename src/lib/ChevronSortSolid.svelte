@@ -1,11 +1,13 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  export let size: string = '20';
-  export let role: string = 'img';
-  export let svgClass: string = 'text-gray-800 dark:text-white';
-  let svgCls: string = twMerge(svgClass, $$props.class);
-  export let ariaLabel = 'chevron sort solid';
-</script>
+  export let size: string = "20";
+  export let role: string = "img";
+  export let svgClass: string = "text-gray-800 dark:text-white";
+  let svgCls: string = twMerge(
+    svgClass,
+    $$props.class
+  )
+export let ariaLabel="chevron sort solid" </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -27,11 +29,9 @@
   on:mouseover
   on:mouseout
 >
-  <path
-    fill="currentColor"
-    d="M2.707 5.707 6 2.414l3.293 3.293a1 1 0 0 0 1.414-1.414l-4-4a1 1 0 0 0-1.414 0l-4 4a1 1 0 1 0 1.414 1.414Zm6.586 4.586L6 13.586l-3.293-3.293a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414Z"
-  />
+    <path fill="currentColor" d="M2.707 5.707 6 2.414l3.293 3.293a1 1 0 0 0 1.414-1.414l-4-4a1 1 0 0 0-1.414 0l-4 4a1 1 0 1 0 1.414 1.414Zm6.586 4.586L6 13.586l-3.293-3.293a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414Z"/> 
 </svg>
+
 
 <!--
   @component

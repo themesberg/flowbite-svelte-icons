@@ -17,7 +17,7 @@
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
 <p align="center">
-<img width="450" src="https://raw.githubusercontent.com/shinokada/flowbite-svelte-icons/main/static/images/flowbite-svelte-icons.png" />
+<img width="450" src="https://raw.githubusercontent.com/shinokada/flowbite-svelte-icons/main/static/images/outline-mono-450.png" />
 </p>
 
 ## Installation
