@@ -26,6 +26,59 @@
     "add-exports": "node ./scripts/add-exports-to-package-json.js",
     "package:publish": "standard-version && git push --follow-tags origin main && npm run package && npm run add-exports && npm run write-package-json && npm publish"
   },
+  "files": [
+    "dist",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*"
+  ],
+  "peerDependencies": {
+    "svelte": "^3.54.0 || ^4.0.0",
+    "tailwind-merge": "^1.13.2",
+    "tailwindcss": "^3.3.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.35.1",
+    "@popperjs/core": "^2.11.8",
+    "@sveltejs/adapter-auto": "^2.1.0",
+    "@sveltejs/kit": "^1.20.4",
+    "@sveltejs/package": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-svelte": "^2.31.0",
+    "flowbite": "^1.6.6",
+    "flowbite-svelte": "^0.38.5",
+    "postcss": "^8.4.24",
+    "postcss-load-config": "^4.0.1",
+    "prettier": "^2.8.8",
+    "prettier-plugin-svelte": "^2.10.1",
+    "publint": "^0.1.12",
+    "svelte": "^4.0.0",
+    "svelte-check": "^3.4.4",
+    "svelte-preprocess": "^5.0.4",
+    "tailwind-merge": "^1.13.2",
+    "tailwindcss": "^3.3.2",
+    "tslib": "^2.5.3",
+    "typescript": "^5.1.3",
+    "vite": "^4.3.9",
+    "vitest": "^0.32.2"
+  },
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "flowbite-icons",
+    "icons",
+    "svg"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/themesberg/flowbite-svelte-icons/"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -1755,9 +1808,17 @@
       "types": "./dist/ThumbsDownOutline.svelte.d.ts",
       "svelte": "./dist/ThumbsDownOutline.svelte"
     },
+    "./ThumbsDownSolid.svelte": {
+      "types": "./dist/ThumbsDownSolid.svelte.d.ts",
+      "svelte": "./dist/ThumbsDownSolid.svelte"
+    },
     "./ThumbsUpOutline.svelte": {
       "types": "./dist/ThumbsUpOutline.svelte.d.ts",
       "svelte": "./dist/ThumbsUpOutline.svelte"
+    },
+    "./ThumbsUpSolid.svelte": {
+      "types": "./dist/ThumbsUpSolid.svelte.d.ts",
+      "svelte": "./dist/ThumbsUpSolid.svelte"
     },
     "./TicketOutline.svelte": {
       "types": "./dist/TicketOutline.svelte.d.ts",
@@ -1782,14 +1843,6 @@
     "./TruckSolid.svelte": {
       "types": "./dist/TruckSolid.svelte.d.ts",
       "svelte": "./dist/TruckSolid.svelte"
-    },
-    "./TumbDownSolid.svelte": {
-      "types": "./dist/TumbDownSolid.svelte.d.ts",
-      "svelte": "./dist/TumbDownSolid.svelte"
-    },
-    "./TumbUpSolid.svelte": {
-      "types": "./dist/TumbUpSolid.svelte.d.ts",
-      "svelte": "./dist/TumbUpSolid.svelte"
     },
     "./TwitterSolid.svelte": {
       "types": "./dist/TwitterSolid.svelte.d.ts",
@@ -1955,58 +2008,5 @@
       "types": "./dist/ZoomOutSolid.svelte.d.ts",
       "svelte": "./dist/ZoomOutSolid.svelte"
     }
-  },
-  "files": [
-    "dist",
-    "!dist/**/*.test.*",
-    "!dist/**/*.spec.*"
-  ],
-  "peerDependencies": {
-    "svelte": "^3.54.0 || ^4.0.0",
-    "tailwind-merge": "^1.13.2",
-    "tailwindcss": "^3.3.2"
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.35.1",
-    "@popperjs/core": "^2.11.8",
-    "@sveltejs/adapter-auto": "^2.1.0",
-    "@sveltejs/kit": "^1.20.4",
-    "@sveltejs/package": "^2.1.0",
-    "@typescript-eslint/eslint-plugin": "^5.60.0",
-    "@typescript-eslint/parser": "^5.60.0",
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.43.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-svelte": "^2.31.0",
-    "flowbite": "^1.6.6",
-    "flowbite-svelte": "^0.38.5",
-    "postcss": "^8.4.24",
-    "postcss-load-config": "^4.0.1",
-    "prettier": "^2.8.8",
-    "prettier-plugin-svelte": "^2.10.1",
-    "publint": "^0.1.12",
-    "svelte": "^4.0.0",
-    "svelte-check": "^3.4.4",
-    "svelte-preprocess": "^5.0.4",
-    "tailwind-merge": "^1.13.2",
-    "tailwindcss": "^3.3.2",
-    "tslib": "^2.5.3",
-    "typescript": "^5.1.3",
-    "vite": "^4.3.9",
-    "vitest": "^0.32.2"
-  },
-  "svelte": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "type": "module",
-  "keywords": [
-    "svelte",
-    "sveltekit",
-    "flowbite-icons",
-    "icons",
-    "svg"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/themesberg/flowbite-svelte-icons/"
   }
 }
