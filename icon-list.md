@@ -214,7 +214,6 @@
 - FaceMindBlowSolid
 - FaceStarStruckSolid
 - FacebookSolid
-- File VideoSolid
 - FileChartBarOutline
 - FileChartBarSolid
 - FileCheckOutline
@@ -251,6 +250,7 @@
 - FileShieldSolid
 - FileSolid
 - FileVideoOutline
+- FileVideoSolid
 - FileWordOutline
 - FileWordpressSolid
 - FileZipOutline
@@ -431,15 +431,15 @@
 - TerminalSolid
 - TextCenterSolid
 - ThumbsDownOutline
+- ThumbsDownSolid
 - ThumbsUpOutline
+- ThumbsUpSolid
 - TicketOutline
 - TicketSolid
 - TrashBinOutline
 - TrashBinSolid
 - TruckOutline
 - TruckSolid
-- TumbDownSolid
-- TumbUpSolid
 - TwitterSolid
 - UnderlineSolid
 - UploadOutline

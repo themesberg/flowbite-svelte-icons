@@ -4,7 +4,7 @@
   export let role: string = 'img';
   export let svgClass: string = 'text-gray-800 dark:text-white';
   let svgCls: string = twMerge(svgClass, $$props.class);
-  export let ariaLabel = 'tumb down solid';
+  export let ariaLabel = 'thumbs down solid';
 </script>
 
 <svg
