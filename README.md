@@ -104,18 +104,25 @@ If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, o
 Use the `size` prop to change the size of icons.
 
 ```html
-<AddressCardSolid size="40" /> 
+<AddressCardSolid size="md" />
 ```
 
-
-## Tailwind CSS suport
-
-Use the `class` prop to change size, colors and add additional css.
-
-Tailwind CSS example:
+You can overwrite the preconfigured size by adding a desired size to the `class` prop using Tailwind CSS.
 
 ```html
 <AddressCardSolid class="h-24 w-24 text-blue-700 mr-4" />
+```
+
+## Color
+
+Use the `class` prop to add Tailwind CSS color directly to the icon component or the parent tag.
+
+```html
+<AddressCardSolid size="md" class="text-red-700 dark:text-green-300 inline m-1"/>
+
+<div class="text-red-700 dark:text-green-300 inline m-1">
+  <AddressCardSolid size="md" />
+</div>
 ```
 
 ## Dark mode

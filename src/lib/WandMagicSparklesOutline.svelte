@@ -1,9 +1,14 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  export let size: string = '20';
+  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
   export let role: string = 'img';
-  export let svgClass: string = 'text-gray-800 dark:text-white';
-  let svgCls: string = twMerge(svgClass, $$props.class);
+  const sizes = {
+    xs: 'w-6 h-6',
+    sm: 'w-8 h-8',
+    md: 'w-10 h-10',
+    lg: 'w-20 h-20',
+    xl: 'w-36 h-36'
+  };
   export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = 'round';
   export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined = 'round';
   export let strokeWidth = '2';
@@ -12,11 +17,9 @@
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  width={size}
-  height={size}
   fill="none"
   {...$$restProps}
-  class={svgCls}
+  class={twMerge(sizes[size], $$props.class)}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 20 21"
@@ -32,7 +35,7 @@
 >
   <path
     d="M12.555 5.11696L15.383 7.94496M14 16V20M12 18H16M3 5.99996V9.99996M1 7.99996H5M16.01 1.66113L18.8384 4.48956L3.98915 19.3388L1.16072 16.5104L16.01 1.66113Z"
-    fill="currentColor"
+    stroke="currentColor"
     stroke-width={strokeWidth}
     stroke-linecap={strokeLinecap}
     stroke-linejoin={strokeLinejoin}
@@ -50,8 +53,8 @@
   @prop size = "20";
   @prop role = "img";
   @prop svgClass = "text-gray-800 dark:text-white";
-  @prop strokeLinecap = "round";
-  @prop strokeLinejoin = "round";
+  @prop strokeLinecap: "round" | "inherit" | "butt" | "square" | null | undefined = "round";
+  @prop strokeLinejoin:"round" | "inherit" | "miter" | "bevel" | null | undefined = "round";
   @prop strokeWidth= "2";
   @prop ariaLabel = 'icon file name';
   - Use the `class` prop to overwrite `svgClass`.

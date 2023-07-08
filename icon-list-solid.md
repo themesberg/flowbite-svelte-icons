@@ -1,246 +1,246 @@
-AddressCardSolid.svelte
-AdjustmentsHorizontalSolid.svelte
-AdjustmentsVerticalSolid.svelte
-AdressBookSolid.svelte
-AngleDownSolid.svelte
-AngleLeftSolid.svelte
-AngleRightSolid.svelte
-AngleUpSolid.svelte
-AnnotationSolid.svelte
-ArchiveSolid.svelte
-ArrowDownSolid.svelte
-ArrowDownToBraketSolid.svelte
-ArrowLeftSolid.svelte
-ArrowRightFromBracketSolid.svelte
-ArrowRightSolid.svelte
-ArrowRightToBracketSolid.svelte
-ArrowSortLettersSolid.svelte
-ArrowUpDownSolid.svelte
-ArrowUpRightSquareSolid.svelte
-ArrowUpSolid.svelte
-ArrowsRepeat1Solid.svelte
-ArrowsRepeatSolid.svelte
-AtomSolid.svelte
-BackwardStepSolid.svelte
-BadgeCheckSolid.svelte
-BagSolid.svelte
-BarsSolid.svelte
-BellActiveAltSolid.svelte
-BellActiveSolid.svelte
-BellRingSolid.svelte
-BellSolid.svelte
-BlenderPhoneSolid.svelte
-BoldSolid.svelte
-BookSolid.svelte
-BookmarkSolid.svelte
-BrainSolid.svelte
-BriefcaseSolid.svelte
-BugSolid.svelte
-BullhornSolid.svelte
-CalendarEditSolid.svelte
-CalendarMonthSolid.svelte
-CalendarWeekSolid.svelte
-CameraFotoSolid.svelte
-CaptioningSolid.svelte
-CaretDownSolid.svelte
-CaretLeftSolid.svelte
-CaretRightSolid.svelte
-CaretSortSolid.svelte
-CaretUpSolid.svelte
-CartPlusAltSolid.svelte
-CartPlusSolid.svelte
-CashSolid.svelte
-ChartLineDownSolid.svelte
-ChartLineUpSolid.svelte
-ChartMixedSolid.svelte
-ChartPieSolid.svelte
-ChartSolid.svelte
-CheckCircleSolid.svelte
-CheckSolid.svelte
-ChervonDoubleDownSolid.svelte
-ChervonDoubleLeftSolid.svelte
-ChervonDoubleRightSolid.svelte
-ChervonDoubleUpSolid.svelte
-ChevronDownSolid.svelte
-ChevronLeftSolid.svelte
-ChevronRightSolid.svelte
-ChevronSortSolid.svelte
-ChevronUpSolid.svelte
-ClapperboardPlaySolid.svelte
-ClipboardCheckSolid.svelte
-ClipboardListSolid.svelte
-ClipboardSolid.svelte
-ClockSolid.svelte
-CloneSolid.svelte
-CloseCircleSolid.svelte
-CloseSolid.svelte
-CloudArrowUpSolid.svelte
-CodeBranchSolid.svelte
-CodeForkSolid.svelte
-CodeMergeSolid.svelte
-CodePullRequestSolid.svelte
-CodeSolid.svelte
-CompressSolid.svelte
-ComputerSpeakerSolid.svelte
-CopySolid.svelte
-CotateSolid.svelte
-CreditCardSolid.svelte
-DatabaseSolid.svelte
-DesktopPcSolid.svelte
-DiscordSolid.svelte
-DnaSolid.svelte
-DollarSolid.svelte
-DownloadSolid.svelte
-DrawSquareSolid.svelte
-DribbbleSolid.svelte
-DropboxSolid.svelte
-EllipseHorizontalSolid.svelte
-EllipseVerticalSolid.svelte
-EnvelopeOpenSolid.svelte
-EnvelopeSolid.svelte
-EuroSolid.svelte
-ExclamationCircleSolid.svelte
-ExpandSolid.svelte
-EyeSlashSolid.svelte
-EyeSolid.svelte
-FaceGrinSolid.svelte
-FaceLaughSolid.svelte
-FaceMindBlowSolid.svelte
-FaceStarStruckSolid.svelte
-FacebookSolid.svelte
-FileChartBarSolid.svelte
-FileCheckSolid.svelte
-FileCodeSolid.svelte
-FileCopySolid.svelte
-FileCsvSolid.svelte
-FileEditSolid.svelte
-FileExportSolid.svelte
-FileImageSolid.svelte
-FileImportSolid.svelte
-FileLinesSolid.svelte
-FileMusicSolid.svelte
-FilePasteSolid.svelte
-FilePdfSolid.svelte
-FilePlusSolid.svelte
-FilePowerpointSolid.svelte
-FileShieldSolid.svelte
-FileSolid.svelte
-FileVideoSolid.svelte
-FileWordpressSolid.svelte
-FileZipperSolid.svelte
-FilterSolid.svelte
-FingerprintSolid.svelte
-FireSolid.svelte
-FolderDuplicateSolid.svelte
-FolderOpenSolid.svelte
-FolderPlusSolid.svelte
-FolderSolid.svelte
-ForwardSolid.svelte
-ForwardStepSolid.svelte
-GearSolid.svelte
-GiftBoxSolid.svelte
-GithubSolid.svelte
-GlobeSolid.svelte
-GoogleSolid.svelte
-GridPlusSolid.svelte
-GridSolid.svelte
-HeadphonesSolid.svelte
-HeartSolid.svelte
-HomeSolid.svelte
-HourglassSolid.svelte
-ImageSolid.svelte
-InboxFullSolid.svelte
-InboxSolid.svelte
-InfoCircleSolid.svelte
-ItalicSolid.svelte
-KeyboardSolid.svelte
-LandmarkSolid.svelte
-LayersSolid.svelte
-LifeBuoySolid.svelte
-LinkSolid.svelte
-LinkedinSolid.svelte
-ListMusicSolid.svelte
-ListOrdoredSolid.svelte
-ListSolid.svelte
-LockOpenSolid.svelte
-LockSolid.svelte
-MailBoxSolid.svelte
-MapPinAltSolid.svelte
-MapPinSolid.svelte
-MessageCaptionSolid.svelte
-MessagesSolid.svelte
-MicrophoneSolid.svelte
-MinimizeSolid.svelte
-MinusSolid.svelte
-MobilePhoneSolid.svelte
-MoonSolid.svelte
-NewspaperSolid.svelte
-OpenBookSolid.svelte
-PalleteSolid.svelte
-PapperClipSolid.svelte
-PapperPlaneSolid.svelte
-PauseSolid.svelte
-PenNibSolid.svelte
-PenSolid.svelte
-PenToSquareSolid.svelte
-PhoneSolid.svelte
-PlaySolid.svelte
-PlusSolid.svelte
-PrintSolid.svelte
-QuestionCircleSolid.svelte
-QuoteSolid.svelte
-ReceiptSolid.svelte
-RectangleListSolid.svelte
-ReplyAllSolid.svelte
-RestoreWindowSolid.svelte
-RocketSolid.svelte
-RulerCombinedSolid.svelte
-SalePercentSolid.svelte
-ScaleBalanceSolid.svelte
-SearchSolid.svelte
-ShareAllSolid.svelte
-ShareNodesSolid.svelte
-ShieldSolid.svelte
-ShoppingCartSolid.svelte
-ShuffleSolid.svelte
-SortHorizontalSolid.svelte
-SortVerticalSolid.svelte
-StackoverflowSolid.svelte
-StarHalfSolid.svelte
-StarHalfStrokeSolid.svelte
-StarSolid.svelte
-StoreSolid.svelte
-SunSolid.svelte
-SwatchbookSolid.svelte
-TableColumnSolid.svelte
-TableSolid.svelte
-TabletSolid.svelte
-TagSolid.svelte
-TerminalSolid.svelte
-TextCenterSolid.svelte
-TicketSolid.svelte
-TrashBinSolid.svelte
-TruckSolid.svelte
-TumbDownSolid.svelte
-TumbUpSolid.svelte
-TwitterSolid.svelte
-UnderlineSolid.svelte
-UploadSolid.svelte
-UserCircleSolid.svelte
-UserEditSolid.svelte
-UserGroupSolid.svelte
-UserHeadsetSolid.svelte
-UserPlusSolid.svelte
-UserRemoveSolid.svelte
-UserSettingsSolid.svelte
-UserSolid.svelte
-UsersSolid.svelte
-VideoSolid.svelte
-VolumeDownSolid.svelte
-VolumeUpSolid.svelte
-WalletSolid.svelte
-WandSparklesSolid.svelte
-WindowSolid.svelte
-YoutubeSolid.svelte
-ZoomInSolid.svelte
-ZoomOutSolid.svelte
+- AddressCardSolid
+- AdjustmentsHorizontalSolid
+- AdjustmentsVerticalSolid
+- AdressBookSolid
+- AngleDownSolid
+- AngleLeftSolid
+- AngleRightSolid
+- AngleUpSolid
+- AnnotationSolid
+- ArchiveSolid
+- ArrowDownSolid
+- ArrowDownToBraketSolid
+- ArrowLeftSolid
+- ArrowRightFromBracketSolid
+- ArrowRightSolid
+- ArrowRightToBracketSolid
+- ArrowSortLettersSolid
+- ArrowUpDownSolid
+- ArrowUpRightSquareSolid
+- ArrowUpSolid
+- ArrowsRepeat1Solid
+- ArrowsRepeatSolid
+- AtomSolid
+- BackwardStepSolid
+- BadgeCheckSolid
+- BagSolid
+- BarsSolid
+- BellActiveAltSolid
+- BellActiveSolid
+- BellRingSolid
+- BellSolid
+- BlenderPhoneSolid
+- BoldSolid
+- BookSolid
+- BookmarkSolid
+- BrainSolid
+- BriefcaseSolid
+- BugSolid
+- BullhornSolid
+- CalendarEditSolid
+- CalendarMonthSolid
+- CalendarWeekSolid
+- CameraFotoSolid
+- CaptioningSolid
+- CaretDownSolid
+- CaretLeftSolid
+- CaretRightSolid
+- CaretSortSolid
+- CaretUpSolid
+- CartPlusAltSolid
+- CartPlusSolid
+- CashSolid
+- ChartLineDownSolid
+- ChartLineUpSolid
+- ChartMixedSolid
+- ChartPieSolid
+- ChartSolid
+- CheckCircleSolid
+- CheckSolid
+- ChervonDoubleDownSolid
+- ChervonDoubleLeftSolid
+- ChervonDoubleRightSolid
+- ChervonDoubleUpSolid
+- ChevronDownSolid
+- ChevronLeftSolid
+- ChevronRightSolid
+- ChevronSortSolid
+- ChevronUpSolid
+- ClapperboardPlaySolid
+- ClipboardCheckSolid
+- ClipboardListSolid
+- ClipboardSolid
+- ClockSolid
+- CloneSolid
+- CloseCircleSolid
+- CloseSolid
+- CloudArrowUpSolid
+- CodeBranchSolid
+- CodeForkSolid
+- CodeMergeSolid
+- CodePullRequestSolid
+- CodeSolid
+- CompressSolid
+- ComputerSpeakerSolid
+- CopySolid
+- CotateSolid
+- CreditCardSolid
+- DatabaseSolid
+- DesktopPcSolid
+- DiscordSolid
+- DnaSolid
+- DollarSolid
+- DownloadSolid
+- DrawSquareSolid
+- DribbbleSolid
+- DropboxSolid
+- EllipseHorizontalSolid
+- EllipseVerticalSolid
+- EnvelopeOpenSolid
+- EnvelopeSolid
+- EuroSolid
+- ExclamationCircleSolid
+- ExpandSolid
+- EyeSlashSolid
+- EyeSolid
+- FaceGrinSolid
+- FaceLaughSolid
+- FaceMindBlowSolid
+- FaceStarStruckSolid
+- FacebookSolid
+- FileChartBarSolid
+- FileCheckSolid
+- FileCodeSolid
+- FileCopySolid
+- FileCsvSolid
+- FileEditSolid
+- FileExportSolid
+- FileImageSolid
+- FileImportSolid
+- FileLinesSolid
+- FileMusicSolid
+- FilePasteSolid
+- FilePdfSolid
+- FilePlusSolid
+- FilePowerpointSolid
+- FileShieldSolid
+- FileSolid
+- FileVideoSolid
+- FileWordpressSolid
+- FileZipperSolid
+- FilterSolid
+- FingerprintSolid
+- FireSolid
+- FolderDuplicateSolid
+- FolderOpenSolid
+- FolderPlusSolid
+- FolderSolid
+- ForwardSolid
+- ForwardStepSolid
+- GearSolid
+- GiftBoxSolid
+- GithubSolid
+- GlobeSolid
+- GoogleSolid
+- GridPlusSolid
+- GridSolid
+- HeadphonesSolid
+- HeartSolid
+- HomeSolid
+- HourglassSolid
+- ImageSolid
+- InboxFullSolid
+- InboxSolid
+- InfoCircleSolid
+- ItalicSolid
+- KeyboardSolid
+- LandmarkSolid
+- LayersSolid
+- LifeBuoySolid
+- LinkSolid
+- LinkedinSolid
+- ListMusicSolid
+- ListOrdoredSolid
+- ListSolid
+- LockOpenSolid
+- LockSolid
+- MailBoxSolid
+- MapPinAltSolid
+- MapPinSolid
+- MessageCaptionSolid
+- MessagesSolid
+- MicrophoneSolid
+- MinimizeSolid
+- MinusSolid
+- MobilePhoneSolid
+- MoonSolid
+- NewspaperSolid
+- OpenBookSolid
+- PalleteSolid
+- PapperClipSolid
+- PapperPlaneSolid
+- PauseSolid
+- PenNibSolid
+- PenSolid
+- PenToSquareSolid
+- PhoneSolid
+- PlaySolid
+- PlusSolid
+- PrintSolid
+- QuestionCircleSolid
+- QuoteSolid
+- ReceiptSolid
+- RectangleListSolid
+- ReplyAllSolid
+- RestoreWindowSolid
+- RocketSolid
+- RulerCombinedSolid
+- SalePercentSolid
+- ScaleBalanceSolid
+- SearchSolid
+- ShareAllSolid
+- ShareNodesSolid
+- ShieldSolid
+- ShoppingCartSolid
+- ShuffleSolid
+- SortHorizontalSolid
+- SortVerticalSolid
+- StackoverflowSolid
+- StarHalfSolid
+- StarHalfStrokeSolid
+- StarSolid
+- StoreSolid
+- SunSolid
+- SwatchbookSolid
+- TableColumnSolid
+- TableSolid
+- TabletSolid
+- TagSolid
+- TerminalSolid
+- TextCenterSolid
+- ThumbsDownSolid
+- ThumbsUpSolid
+- TicketSolid
+- TrashBinSolid
+- TruckSolid
+- TwitterSolid
+- UnderlineSolid
+- UploadSolid
+- UserCircleSolid
+- UserEditSolid
+- UserGroupSolid
+- UserHeadsetSolid
+- UserPlusSolid
+- UserRemoveSolid
+- UserSettingsSolid
+- UserSolid
+- UsersSolid
+- VideoSolid
+- VolumeDownSolid
+- VolumeUpSolid
+- WalletSolid
+- WandSparklesSolid
+- WindowSolid
+- YoutubeSolid
+- ZoomInSolid
+- ZoomOutSolid

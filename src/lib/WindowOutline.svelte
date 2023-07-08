@@ -1,9 +1,14 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  export let size: string = '20';
+  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
   export let role: string = 'img';
-  export let svgClass: string = 'text-gray-800 dark:text-white';
-  let svgCls: string = twMerge(svgClass, $$props.class);
+  const sizes = {
+    xs: 'w-6 h-6',
+    sm: 'w-8 h-8',
+    md: 'w-10 h-10',
+    lg: 'w-20 h-20',
+    xl: 'w-36 h-36'
+  };
   export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined = 'round';
   export let strokeWidth = '2';
   export let ariaLabel = 'window outline';
@@ -11,11 +16,9 @@
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  width={size}
-  height={size}
   fill="none"
   {...$$restProps}
-  class={svgCls}
+  class={twMerge(sizes[size], $$props.class)}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 20 18"
@@ -31,7 +34,7 @@
 >
   <path
     d="M1 7H19M2 1H18C18.5523 1 19 1.44772 19 2V16C19 16.5523 18.5523 17 18 17H2C1.44772 17 1 16.5523 1 16V2C1 1.44772 1.44772 1 2 1Z"
-    fill="currentColor"
+    stroke="currentColor"
     stroke-width={strokeWidth}
     stroke-linejoin={strokeLinejoin}
   />
@@ -57,8 +60,8 @@
   @prop size = "20";
   @prop role = "img";
   @prop svgClass = "text-gray-800 dark:text-white";
-  @prop strokeLinecap = "round";
-  @prop strokeLinejoin = "round";
+  @prop strokeLinecap: "round" | "inherit" | "butt" | "square" | null | undefined = "round";
+  @prop strokeLinejoin:"round" | "inherit" | "miter" | "bevel" | null | undefined = "round";
   @prop strokeWidth= "2";
   @prop ariaLabel = 'icon file name';
   - Use the `class` prop to overwrite `svgClass`.

@@ -11,19 +11,19 @@
 </script>
 
 <DarkMode />
-<Icon.ZoomInOutline size="40" class="inline m-1" />
-<Icon.MessagesSolid size="40" class={random_tailwind_color()} />
-<Icon.OpenBookSolid size="40" class={random_tailwind_color()} />
-<Icon.PapperClipSolid size="40" class={random_tailwind_color()} />
-<Icon.PauseSolid size="40" class={random_tailwind_color()} />
-<Icon.PenNibOutline size="40" class={random_tailwind_color()} />
-<Icon.StoreOutline size="40" class={random_tailwind_color()} />
-<Icon.TableRowOutline size="40" class={random_tailwind_color()} />
-<Icon.TicketSolid size="40" class={random_tailwind_color()} />
-<Icon.TruckSolid size="40" class={random_tailwind_color()} />
-<Icon.UserSettingsOutline size="40" class={random_tailwind_color()} />
-<Icon.WandMagicSparklesOutline size="40" class={random_tailwind_color()} />
-<Icon.WindowOutline size="40" class={random_tailwind_color()} />
+<Icon.ZoomInOutline size="md" class="inline m-1" />
+<Icon.MessagesSolid size="md" class={random_tailwind_color()} />
+<Icon.OpenBookSolid size="md" class={random_tailwind_color()} />
+<Icon.PapperClipSolid size="md" class={random_tailwind_color()} />
+<Icon.PauseSolid size="md" class={random_tailwind_color()} />
+<Icon.PenNibOutline size="md" class={random_tailwind_color()} />
+<Icon.StoreOutline size="md" class={random_tailwind_color()} />
+<Icon.TableRowOutline size="md" class={random_tailwind_color()} />
+<Icon.TicketSolid size="md" class={random_tailwind_color()} />
+<Icon.TruckSolid size="md" class={random_tailwind_color()} />
+<Icon.UserSettingsOutline size="md" class={random_tailwind_color()} />
+<Icon.WandMagicSparklesOutline size="md" class={random_tailwind_color()} />
+<Icon.WindowOutline size="md" class={random_tailwind_color()} />
 
 <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path
