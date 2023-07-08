@@ -3,11 +3,11 @@
   export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
   export let role: string = 'img';
   const sizes = {
-    xs: 'w-6 h-6',
-    sm: 'w-8 h-8',
-    md: 'w-10 h-10',
-    lg: 'w-20 h-20',
-    xl: 'w-36 h-36'
+    xs: 'w-3 h-3',
+    sm: 'w-4 h-4',
+    md: 'w-5 h-6',
+    lg: 'w-6 h-6',
+    xl: 'w-8 h-8'
   };
   export let ariaLabel = 'ruler combined solid';
 </script>
