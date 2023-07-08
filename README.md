@@ -80,9 +80,8 @@ To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleRe
 
 ### Outline
 
-- size: string = '20';
+- size:  'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
 - role: string = 'img';
-- svgClass: string = 'text-gray-800 dark:text-white';
 - strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = 'round';
 - strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined = 'round';
 - strokeWidth = '2';
@@ -90,9 +89,8 @@ To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleRe
 
 ### Solid
 
-- size: string = '20';
+- size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
 - role: string = 'img';
-- svgClass: string = 'text-gray-800 dark:text-white';
 - ariaLabel = 'icon file name';
 
 ## IDE support
@@ -101,13 +99,24 @@ If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, o
 
 ## Size
 
-Use the `size` prop to change the size of icons.
+The following table provides details about the available sizes for icons:
+
+|Size|	CSS Classes|
+|--|--|
+|xs|	'w-3 h-3'|
+|sm	|'w-4 h-4'|
+|md	|'w-5 h-6'|
+|lg	|'w-6 h-6'|
+|xl	|'w-8 h-8'|
+
+
+To change the size of an icon, use the `size` prop and specify the desired size. For example:
 
 ```html
 <AddressCardSolid size="md" />
 ```
 
-You can overwrite the preconfigured size by adding a desired size to the `class` prop using Tailwind CSS.
+If you want to override the preconfigured size, you can add a custom size using Tailwind CSS by including the desired classes in the `class` prop. For example:
 
 ```html
 <AddressCardSolid class="h-24 w-24 text-blue-700 mr-4" />
@@ -115,7 +124,7 @@ You can overwrite the preconfigured size by adding a desired size to the `class`
 
 ## Color
 
-Use the `class` prop to add Tailwind CSS color directly to the icon component or the parent tag.
+You can apply Tailwind CSS color directly to the icon component or its parent tag using the `class` prop.
 
 ```html
 <AddressCardSolid size="md" class="text-red-700 dark:text-green-300 inline m-1"/>
