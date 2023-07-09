@@ -19,7 +19,7 @@
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
   {...$$restProps}
-  class={twMerge(sizes[size], $$props.class)}
+  class={twMerge('shrink-0', sizes[size], $$props.class)}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 18 14"
