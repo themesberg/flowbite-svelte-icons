@@ -1,7 +1,7 @@
 <h1 align="center">Flowbite Svelte Icons</h1>
 
 <p align="center">
-<a href="https://shinokada.github.io/flowbite-svelte-icons/">Flowbite-Svelte-Icons</a>
+<a href="https://github.com/themesberg/flowbite-svelte-icons">Flowbite-Svelte-Icons</a>
 </p>
 
 <p align="center">
