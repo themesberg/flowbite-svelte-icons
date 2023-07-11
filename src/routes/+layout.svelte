@@ -19,9 +19,10 @@
   </NavBrand>
   <NavHamburger on:click={toggle} />
   <NavUl {hidden}>
-    <NavLi href="/" active={activeUrl === '/'} class="text-lg">Home</NavLi>
-    <NavLi href="/outline" active={activeUrl === '/outline'} class="text-lg">Outline</NavLi>
-    <NavLi href="/solid" active={activeUrl === '/solid'} class="text-lg">Solid</NavLi>
+    <NavLi href="/" active={activeUrl === '/'} >Home</NavLi>
+    <NavLi href="/outline" active={activeUrl === '/outline'} >Outline</NavLi>
+    <NavLi href="/solid" active={activeUrl === '/solid'} >Solid</NavLi>
+    <NavLi href="https://github.com/themesberg/flowbite-svelte-icons" >GitHub</NavLi>
   </NavUl>
   <DarkMode />
 </Navbar>
