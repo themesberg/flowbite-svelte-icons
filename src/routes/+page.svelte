@@ -16,11 +16,13 @@
 		let n = (Math.random() * 0xfffff * 1000000).toString(16);
 		return '#' + n.slice(0, 6);
 	};
+
+  const contentClass = 'p-4 bg-gray-50 rounded-lg dark:bg-gray-900 mt-4'
 </script>
 
-<Tabs style="pill" class="flex justify-center">
+<Tabs style="pill" class="flex justify-center" {contentClass}>
   <TabItem open>
-    <span slot="title" class="text-xl" >Mono</span>
+    <span slot="title" class="text-lg" >Mono</span>
 <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-24 dark:text-white">
   {#each Object.entries(Icons) as [name, component]}
     <div class="flex gap-4 items-center text-lg">
@@ -31,7 +33,7 @@
 </div>
 </TabItem>
 <TabItem>
-  <span slot="title" class="text-xl">Random Hex Colors</span>
+  <span slot="title" class="text-lg" >Random Hex Colors</span>
   <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-24 dark:text-white">
     {#each Object.entries(Icons) as [name, component]}
       <div class="flex gap-4 items-center text-lg">
@@ -42,7 +44,7 @@
   </div>
 </TabItem>
 <TabItem>
-  <span slot="title" class="text-xl">Random Tailwind CSS Colors</span>
+  <span slot="title" class="text-lg" >Random Tailwind CSS Colors</span>
   <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-24 dark:text-white">
     {#each Object.entries(Icons) as [name, component]}
       <div class="flex gap-4 items-center text-lg">
