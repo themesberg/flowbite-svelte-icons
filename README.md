@@ -1,8 +1,8 @@
 <h1 align="center">Flowbite Svelte Icons</h1>
 
 <p align="center">
-<a href="https://github.com/themesberg/flowbite-svelte-icons">Repo</a><br />
-<a href="https://flowbite-svelte-icons.vercel.app/">Demo</a><br />
+<a href="https://github.com/themesberg/flowbite-svelte-icons">Repo</a> | 
+<a href="https://flowbite-svelte-icons.vercel.app/">Demo</a>
 </p>
 
 <p align="center">
