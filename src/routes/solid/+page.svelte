@@ -21,7 +21,7 @@
   $: filteredEntries = Object.entries(Icons).filter(([name, component]) => {
     return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
   });
-  let divClass = 'mx-16';
+  let divClass = '';
 </script>
 
 <TableSearch

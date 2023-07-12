@@ -50,6 +50,7 @@
     "eslint-plugin-svelte": "^2.31.0",
     "flowbite": "^1.6.6",
     "flowbite-svelte": "^0.38.5",
+    "mdsvex": "^0.11.0",
     "postcss": "^8.4.24",
     "postcss-load-config": "^4.0.1",
     "prettier": "^2.8.8",

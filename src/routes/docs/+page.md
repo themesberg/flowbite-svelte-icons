@@ -1,25 +1,26 @@
-<h1 align="center">Flowbite Svelte Icons</h1>
+<script>
+  
+</script>
 
-<p align="center">
-<a href="https://github.com/themesberg/flowbite-svelte-icons">Repo</a> | 
-<a href="https://flowbite-svelte-icons.vercel.app/">Demo</a>
-</p>
+# Flowbite Svelte Icons
 
-<p align="center">
-<a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" height="25"></a>
-<a href="https://www.npmjs.com/package/flowbite-svelte-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/flowbite-svelte-icons" alt="npm" height="25"></a>
-<a href="https://twitter.com/shinokada" rel="nofollow" target="_blank"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada" height="25"></a>
-<a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/flowbite-svelte-icons" alt="License" height="25"></a>
-<a href="https://www.npmjs.com/package/flowbite-svelte-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/flowbite-svelte-icons.svg" alt="npm" height="25"></a>
-</p>
+<div class="flex justify-center gap-2 my-8">
+<a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" height="25" style="height: 25px !important;" ></a>
+<a href="https://www.npmjs.com/package/flowbite-svelte-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/flowbite-svelte-icons" alt="npm" height="25" style="height: 25px !important;" ></a>
+<a href="https://twitter.com/shinokada" rel="nofollow" target="_blank"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada" height="25" style="height: 25px !important;" ></a>
+<a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/flowbite-svelte-icons" alt="License" height="25" style="height: 25px !important;" ></a>
+<a href="https://www.npmjs.com/package/flowbite-svelte-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/flowbite-svelte-icons.svg" alt="npm" height="25" style="height: 25px !important;" ></a>
+</div>
+
 
 480+ SVG [Flowbite icons](https://github.com/themesberg/flowbite-icons) components for Svelte. 
 
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
-<p align="center">
-<img width="450" src="https://raw.githubusercontent.com/shinokada/flowbite-svelte-icons/main/static/images/outline-mono-450.png" />
-</p>
+## Repo
+
+<a href="https://github.com/themesberg/flowbite-svelte-icons">GitHub Repo</a>
+
 
 ## Installation
 
@@ -27,9 +28,6 @@ Thank you for considering my open-source package. If you use it in a commercial 
 npm i -D flowbite-svelte-icons
 ```
 
-## Icon images and names
-
-[Icons](https://flowbite-svelte-icons.vercel.app/)
 
 ## Usages
 
@@ -65,9 +63,9 @@ To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleRe
 
 ```json
 {
-
+  // more config
   "compilerOptions": {
-
+    // more config
     "moduleResolution": "nodenext"
   }
 }

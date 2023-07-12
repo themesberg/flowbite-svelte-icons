@@ -7,6 +7,10 @@
   import NavLi from 'flowbite-svelte/NavLi.svelte';
   import NavUl from 'flowbite-svelte/NavUl.svelte';
   import NavHamburger from 'flowbite-svelte/NavHamburger.svelte';
+  import Footer from 'flowbite-svelte/Footer.svelte'
+  import FooterCopyright from 'flowbite-svelte/FooterCopyright.svelte'
+  import FooterLinkGroup from 'flowbite-svelte/FooterLinkGroup.svelte'
+  import FooterLink from 'flowbite-svelte/FooterLink.svelte'
   import { MetaTags } from 'svelte-meta-tags';
 
   $: activeUrl = $page.url.pathname;
@@ -43,10 +47,24 @@
     <NavLi href="/" active={activeUrl === '/'}>Home</NavLi>
     <NavLi href="/outline" active={activeUrl === '/outline'}>Outline</NavLi>
     <NavLi href="/solid" active={activeUrl === '/solid'}>Solid</NavLi>
-    <NavLi href="https://shinokada.github.io/flowbite-svelte-icons/">Docs</NavLi>
+    <NavLi href="/docs">Docs</NavLi>
     <NavLi href="https://github.com/themesberg/flowbite-svelte-icons">GitHub</NavLi>
     <NavLi href="https://svelte-svg-icons.vercel.app/">Icon sets</NavLi>
   </NavUl>
   <DarkMode />
 </Navbar>
-<slot />
+<div class="mx-16 mb-16">
+  <slot />
+</div>
+
+
+<Footer class="dark:bg-gray-900">
+  <FooterCopyright href="/" by="Flowbite Svelte Icons" year={2023} />
+  <FooterLinkGroup ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+    <FooterLink href="/outline">Outline</FooterLink>
+    <FooterLink href="/solid">Solid</FooterLink>
+    <FooterLink href="/docs">Docs</FooterLink>
+    <FooterLink href="https://github.com/shinokada/flowbite-svelte-icons/blob/main/LICENSE">Licensing</FooterLink>
+    <FooterLink href="https://github.com/themesberg/flowbite-svelte-icons">GitHub</FooterLink>
+  </FooterLinkGroup>
+</Footer>
