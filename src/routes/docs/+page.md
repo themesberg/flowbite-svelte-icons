@@ -21,7 +21,7 @@ Thank you for considering my open-source package. If you use it in a commercial 
 ## Installation
 
 ```sh
-npm i -D flowbite-svelte-icons
+pnpm i -D flowbite-svelte-icons
 ```
 
 
