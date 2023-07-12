@@ -15,7 +15,7 @@
     let n = (Math.random() * 0xfffff * 1000000).toString(16);
     return '#' + n.slice(0, 6);
   };
-  const contentClass = ' rounded-lg dark:bg-gray-900 mt-4';
+  const contentClass = ' rounded-lg dark:bg-neutral-900 mt-4';
   let searchTerm = '';
 
   $: filteredEntries = Object.entries(Icons).filter(([name, component]) => {

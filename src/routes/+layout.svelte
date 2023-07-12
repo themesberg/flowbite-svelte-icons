@@ -36,7 +36,7 @@
     imageAlt: "Flowbite Svelte Icons"
   }} />
 
-<Navbar let:hidden let:toggle>
+<Navbar let:hidden let:toggle class="dark:bg-neutral-900">
   <NavBrand href="/">
     <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
       Flowbite Svelte Icons
@@ -58,7 +58,7 @@
 </div>
 
 
-<Footer footerType="logo" class="dark:bg-gray-900">
+<Footer footerType="logo" class="dark:bg-neutral-900">
   <div class="sm:flex sm:items-center sm:justify-between">
     <FooterBrand
     href="https://svelte-coreui-icons.vercel.app/"
