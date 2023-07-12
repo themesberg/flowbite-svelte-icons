@@ -1,7 +1,8 @@
 <h1 align="center">Flowbite Svelte Icons</h1>
 
 <p align="center">
-<a href="https://github.com/themesberg/flowbite-svelte-icons">Flowbite-Svelte-Icons</a>
+<a href="https://github.com/themesberg/flowbite-svelte-icons">Repo</a><br />
+<a href="https://flowbite-svelte-icons.vercel.app/">Demo</a><br />
 </p>
 
 <p align="center">
@@ -26,13 +27,9 @@ Thank you for considering my open-source package. If you use it in a commercial 
 npm i -D flowbite-svelte-icons
 ```
 
-## Icon names
+## Icon images and names
 
-[Icon list](/icon-list.md)
-
-## Icon images
-
-[Icon images](/icon-images.md)
+[Icons](https://flowbite-svelte-icons.vercel.app/)
 
 ## Usages
 
