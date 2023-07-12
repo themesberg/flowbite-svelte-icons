@@ -47,7 +47,7 @@
     <NavLi href="/" active={activeUrl === '/'}>Home</NavLi>
     <NavLi href="/outline" active={activeUrl === '/outline'}>Outline</NavLi>
     <NavLi href="/solid" active={activeUrl === '/solid'}>Solid</NavLi>
-    <NavLi href="/docs">Docs</NavLi>
+    <NavLi href="/docs" active={activeUrl === '/docs'}>Docs</NavLi>
     <NavLi href="https://github.com/themesberg/flowbite-svelte-icons">GitHub</NavLi>
     <NavLi href="https://svelte-svg-icons.vercel.app/">Icon sets</NavLi>
   </NavUl>
