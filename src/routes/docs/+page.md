@@ -23,6 +23,19 @@ Thank you for considering my open-source package. If you use it in a commercial 
 pnpm i -D flowbite-svelte-icons
 ```
 
+To make sure the classes used by flowbite-svelte-icons are included by the Tailwindcss, add the following to tailwind.config.cjs.
+
+
+```js
+const config = {
+  content: [
+       // more lines
+        "./node_modules/flowbite-svelte-icons/**/*.{html,js,svelte,ts}",
+    ],
+    // more lines
+}  
+```
+
 ## Usages
 
 In a svelte file:
