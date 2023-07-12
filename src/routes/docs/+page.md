@@ -15,15 +15,13 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 ## Repo
 
-<a href="https://github.com/themesberg/flowbite-svelte-icons">GitHub Repo</a>
-
+[GitHub Repo](https://github.com/themesberg/flowbite-svelte-icons)
 
 ## Installation
 
 ```sh
 pnpm i -D flowbite-svelte-icons
 ```
-
 
 ## Usages
 
