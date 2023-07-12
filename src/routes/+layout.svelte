@@ -36,7 +36,7 @@
     imageAlt: "Flowbite Svelte Icons"
   }} />
 
-<Navbar let:hidden let:toggle class="mb-8">
+<Navbar let:hidden let:toggle>
   <NavBrand href="/">
     <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
       Flowbite Svelte Icons
