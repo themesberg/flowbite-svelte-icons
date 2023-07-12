@@ -1,7 +1,3 @@
-<script>
-  
-</script>
-
 # Flowbite Svelte Icons
 
 <div class="flex justify-center gap-2 my-8">
