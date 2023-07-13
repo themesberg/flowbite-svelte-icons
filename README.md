@@ -8,7 +8,6 @@
 <a href="https://www.npmjs.com/package/flowbite-svelte-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/flowbite-svelte-icons.svg" alt="npm" height="25" style="height: 25px !important;" ></a>
 </div>
 
-
 480+ SVG [Flowbite icons](https://github.com/themesberg/flowbite-icons) components for Svelte. 
 
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
@@ -16,6 +15,16 @@ Thank you for considering my open-source package. If you use it in a commercial 
 ## Repo
 
 [GitHub Repo](https://github.com/themesberg/flowbite-svelte-icons)
+
+## Original source
+
+[themesberg/flowbite-icons](https://github.com/themesberg/flowbite-icons)
+
+## License
+
+[Flowbite-Svelte-Icons License](https://github.com/themesberg/flowbite-svelte-icons/blob/main/LICENSE)
+
+[Flowbite Icons License](https://github.com/themesberg/flowbite-icons/blob/main/LICENSE)
 
 ## Installation
 
