@@ -38,7 +38,7 @@
 
 <Navbar let:hidden let:toggle class="dark:bg-neutral-900">
   <NavBrand href="/">
-    <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+    <span class="self-center whitespace-nowrap text-xl font-semibold text-primary-700 dark:text-primary-500">
       Flowbite Svelte Icons
     </span>
   </NavBrand>
@@ -47,7 +47,7 @@
     <NavLi href="/" active={activeUrl === '/'}>Home</NavLi>
     <NavLi href="/outline" active={activeUrl === '/outline'}>Outline</NavLi>
     <NavLi href="/solid" active={activeUrl === '/solid'}>Solid</NavLi>
-    <NavLi href="/docs" active={activeUrl === '/docs'}>Docs</NavLi>
+    <NavLi href="/all" active={activeUrl === '/all'}>All</NavLi>
     <NavLi href="https://github.com/themesberg/flowbite-svelte-icons">GitHub</NavLi>
     <NavLi href="https://svelte-svg-icons.vercel.app/">Icon sets</NavLi>
   </NavUl>
@@ -58,16 +58,17 @@
 </div>
 
 
-<Footer footerType="logo" class="dark:bg-neutral-900">
+<Footer footerType="logo" class="dark:bg-neutral-900 mx-8">
   <div class="sm:flex sm:items-center sm:justify-between">
     <FooterBrand
     href="https://svelte-coreui-icons.vercel.app/"
     name="Svelte CoreUI Icons"
+    classSpan="text-primary-700 dark:text-primary-500"
   />
   <FooterLinkGroup ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
     <FooterLink href="/outline">Outline</FooterLink>
     <FooterLink href="/solid">Solid</FooterLink>
-    <FooterLink href="/docs">Docs</FooterLink>
+    <FooterLink href="/all">All</FooterLink>
     <FooterLink href="https://github.com/shinokada/flowbite-svelte-icons/blob/main/LICENSE">Licensing</FooterLink>
     <FooterLink href="https://github.com/themesberg/flowbite-svelte-icons">GitHub</FooterLink>
   </FooterLinkGroup>
