@@ -38,7 +38,7 @@
 
 <Navbar let:hidden let:toggle class="dark:bg-neutral-900">
   <NavBrand href="/">
-    <span class="self-center whitespace-nowrap text-xl font-semibold text-primary-700 dark:text-primary-500">
+    <span class="self-center whitespace-nowrap text-2xl font-semibold text-primary-700 dark:text-primary-500">
       Flowbite Svelte Icons
     </span>
   </NavBrand>
