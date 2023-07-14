@@ -28,6 +28,7 @@
   placeholder="Search by icon name"
   hoverable={true}
   bind:inputValue={searchTerm}
+  divClass='relative overflow-x-auto'
 >
   <Tabs style="pill" {contentClass} class="p-4">
     <TabItem open>
