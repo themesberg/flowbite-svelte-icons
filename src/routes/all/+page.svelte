@@ -33,7 +33,7 @@
   bind:inputValue={searchTerm}
   divClass='relative overflow-x-auto'
 >
-<div class="w-1/4 p-4">
+<div class="xl:w-1/3 lg:w-2/5 md:w-1/2 sm:w-3/4 w-full p-4">
   <Label class="text-lg py-4 ">Icon size: {size}</Label>
   <Range id="range1" min="4" max="10" bind:value={size} />
 </div>
