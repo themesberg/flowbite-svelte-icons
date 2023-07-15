@@ -1,4 +1,6 @@
 <script>
+  import Range from 'flowbite-svelte/Range.svelte';
+  import Label from 'flowbite-svelte/Label.svelte';
   import Tabs from 'flowbite-svelte/Tabs.svelte';
   import TabItem from 'flowbite-svelte/TabItem.svelte';
   import TableSearch from 'flowbite-svelte/TableSearch.svelte';
@@ -9,7 +11,7 @@
     const shades = ['300', '400', '500'];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     const randomShade = shades[Math.floor(Math.random() * shades.length)];
-    return `text-${randomColor}-${randomShade} dark:text-${randomColor}-${randomShade} shrink-0 h-8 w-8`;
+    return `text-${randomColor}-${randomShade} dark:text-${randomColor}-${randomShade}`;
   };
   const random_hex_color_code = () => {
     let n = (Math.random() * 0xfffff * 1000000).toString(16);
@@ -21,6 +23,7 @@
   $: filteredEntries = Object.entries(Icons).filter(([name, component]) => {
     return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
   });
+  $: size=6
 </script>
 
 <TableSearch
@@ -29,6 +32,10 @@
   bind:inputValue={searchTerm}
   divClass='relative overflow-x-auto'
 >
+<div class="w-1/4 p-4">
+  <Label class="text-lg py-4 ">Icon size: {size}</Label>
+  <Range id="range1" min="4" max="10" bind:value={size} />
+</div>
   <Tabs style="pill" {contentClass} class="p-4">
     <TabItem open>
       <span slot="title" class="text-lg">Mono</span>
@@ -36,7 +43,7 @@
         {#each filteredEntries as [name, component]}
           {#if name.includes('Solid')}
             <div class="flex gap-4 items-center text-lg">
-              <svelte:component this={component} class="shrink-0 h-8 w-8" />
+              <svelte:component this={component} class="shrink-0 h-{size} w-{size}" />
               {name}
             </div>
           {/if}
@@ -52,7 +59,7 @@
               <svelte:component
                 this={component}
                 color={random_hex_color_code()}
-                class="shrink-0 h-8 w-8"
+                class="shrink-0 h-{size} w-{size}"
               />
               {name}
             </div>
@@ -66,7 +73,7 @@
         {#each filteredEntries as [name, component]}
           {#if name.includes('Solid')}
             <div class="flex gap-4 items-center text-lg">
-              <svelte:component this={component} class={random_tailwind_color()} />
+              <svelte:component this={component} class="{random_tailwind_color()} shrink-0 h-{size} w-{size}" />
               {name}
             </div>
           {/if}
