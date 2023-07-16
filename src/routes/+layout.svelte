@@ -70,8 +70,8 @@
 <Footer footerType="logo" class="dark:bg-neutral-900">
   <div class="sm:flex sm:items-center sm:justify-between">
     <FooterBrand
-    href="https://svelte-coreui-icons.vercel.app/"
-    name="Svelte CoreUI Icons"
+    href="https://flowbite-svelte-icons.vercel.app/"
+    name="Flowbite Svelte Icons"
     classSpan="text-primary-700 dark:text-primary-500"
   />
   <FooterLinkGroup ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
