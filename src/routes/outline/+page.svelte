@@ -25,7 +25,7 @@
   });
   $: size=6;
 </script>
-
+<h1>Flowbite Svelte Icons: Outline</h1>
 <TableSearch
   placeholder="Search by icon name"
   hoverable={true}
