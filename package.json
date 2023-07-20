@@ -8,7 +8,7 @@
     "url": "https://blog.codewithshin.com"
   },
   "bugs": "https://github.com/themesberg/flowbite-svelte-icons/issues",
-  "homepage": "https://github.com/themesberg/flowbite-svelte-icons/",
+  "homepage": "https://flowbite-svelte-icons.vercel.app/",
   "license": "MIT",
   "scripts": {
     "dev": "vite dev",
