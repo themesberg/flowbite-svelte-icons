@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.6](https://github.com/themesberg/flowbite-svelte-icons/compare/v0.2.5...v0.2.6) (2023-07-20)
+
+
+### Features
+
+* add docs ([9d52dac](https://github.com/themesberg/flowbite-svelte-icons/commit/9d52dac7f2f699418415605203bc068fc33db0f2))
+* add docs link ([2480e06](https://github.com/themesberg/flowbite-svelte-icons/commit/2480e06def146383fccf90d8f203cfb7dd48bbb0))
+* add github link ([346448c](https://github.com/themesberg/flowbite-svelte-icons/commit/346448c9a3408f9cd06e551aa7e35b0014ba7245))
+* add MetaTags ([f699356](https://github.com/themesberg/flowbite-svelte-icons/commit/f699356eff7f7a0eec04002c4a2c8983b0ecfeb0))
+* add outline and solid page ([62c44e8](https://github.com/themesberg/flowbite-svelte-icons/commit/62c44e8b601064d4e374d0efd1f36c396956c8d9))
+* add search ([4e0f1c3](https://github.com/themesberg/flowbite-svelte-icons/commit/4e0f1c33beee9cc24639e426ab59fc2edf4f04b0))
+* add size range and remove all ([323c7a4](https://github.com/themesberg/flowbite-svelte-icons/commit/323c7a4547b8b6b719252d7dc730f4a1d275e21c))
+* add style to code ([0395e17](https://github.com/themesberg/flowbite-svelte-icons/commit/0395e17177c54f4dfd487d0dfa6061e88629b981))
+
+
+### Bug Fixes
+
+* add active to navbar docs ([00f1214](https://github.com/themesberg/flowbite-svelte-icons/commit/00f1214a3817a4037a5869fb3b4e435a7f02c8b7))
+* change npm to pnpm ([14021f1](https://github.com/themesberg/flowbite-svelte-icons/commit/14021f1de1b2518bc2fadc11bcd19b2ab3cba7fc))
+* navbar mb update ([d719ffc](https://github.com/themesberg/flowbite-svelte-icons/commit/d719ffcfc4568777c300f63f95fb4900fc61d69b))
+* range bar width update ([c1b12da](https://github.com/themesberg/flowbite-svelte-icons/commit/c1b12da1532d63637c37c699d47a4f7e9237dcec))
+* set darkmode as the default ([493228b](https://github.com/themesberg/flowbite-svelte-icons/commit/493228b7b6a19793c4873c77b5c38b5ded8db34f))
+* style update ([9d304c6](https://github.com/themesberg/flowbite-svelte-icons/commit/9d304c6e1bb3510ffad87daeb6402c4c1b7d177c))
+* typo ([a509ed1](https://github.com/themesberg/flowbite-svelte-icons/commit/a509ed11a77c745ab4cb332ca8442a7e0cb6b2ba))
+* update docs page ([3092809](https://github.com/themesberg/flowbite-svelte-icons/commit/3092809043a6bb082cf946ce5ab66b56a73a0724))
+* update flowbite-svelte v0.40.1, add @floating-ui/dom remove flowbite and popper, add tests ([904a068](https://github.com/themesberg/flowbite-svelte-icons/commit/904a068f1ed1c1120edc4a3811deaa1666fd54e9))
+* update github repo link ([8de65f8](https://github.com/themesberg/flowbite-svelte-icons/commit/8de65f83da2a75a1d35262e17c436cc5ef7e9cd0))
+* update homepage ([ecdbaf2](https://github.com/themesberg/flowbite-svelte-icons/commit/ecdbaf23279f2562842eb204cf5e33437752d248))
+* update license ([cf79aaf](https://github.com/themesberg/flowbite-svelte-icons/commit/cf79aaf06e947b128d91ab5630bb08621528519f))
+
 ### [0.2.5](https://github.com/themesberg/flowbite-svelte-icons/compare/v0.2.4...v0.2.5) (2023-07-09)
 
 
