@@ -26,6 +26,12 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 [Flowbite Icons License](https://github.com/themesberg/flowbite-icons/blob/main/LICENSE)
 
+## Dependencies
+
+- "svelte": "^3.54.0 || ^4.0.0",
+- "tailwind-merge": "^1.13.2",
+- "tailwindcss": "^3.3.2"
+
 ## Installation
 
 ```sh
@@ -51,58 +57,18 @@ In a svelte file:
 
 ```html
 <script>
-  import { AddressCardSolid } from 'flowbite-svelte-icons';
+  import { Icon } from 'flowbite-svelte-icons';
 </script>
 
-<AddressCardSolid />
-```
-
-## Faster compiling
-
-If you need only a few icons from this library in your Svelte app, import them directly. This can optimize compilation speed and improve performance by reducing the amount of code processed during compilation.
-
-```html
-<script>
-  import AddressCardSolid from 'flowbite-svelte-icons/AddressCardSolid.svelte';
-</script>
-
-<AddressCardSolid />
-```
-
-If you are a TypeScript user, install **typescript version 5.0.0 or above**.
-
-```sh
-pnpm i -D typescript@latest
-```
-
-To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleResolution` in your tsconfig.json file.
-
-```json
-{
-  // more config
-  "compilerOptions": {
-    // more config
-    "moduleResolution": "nodenext"
-  }
-}
+<Icon name="address-card-solid" />
 ```
 
 ## Props
 
-### Outline
-
-- size:  'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
-- role: string = 'img';
-- strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = 'round';
-- strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined = 'round';
-- strokeWidth = '2';
-- ariaLabel = 'icon file name';
-
-### Solid
-
-- size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
-- role: string = 'img';
-- ariaLabel = 'icon file name';
+- @prop name;
+- @prop size =  "xs" | "sm" | "md" | "lg" | "xl" = "md";
+- @prop role = "img";
+- @prop ariaLabel = 'icon file name';
 
 ## IDE support
 
@@ -124,13 +90,13 @@ The following table provides details about the available sizes for icons:
 To change the size of an icon, use the `size` prop and specify the desired size. For example:
 
 ```html
-<AddressCardSolid size="md" />
+<Icon name="address-card-solid" size="md" />
 ```
 
 If you want to override the preconfigured size, you can add a custom size using Tailwind CSS by including the desired classes in the `class` prop. For example:
 
 ```html
-<AddressCardSolid class="h-24 w-24 text-blue-700 mr-4" />
+<Icon name="address-card-solid" class="h-24 w-24 text-blue-700 mr-4" />
 ```
 
 ## Color
@@ -138,10 +104,10 @@ If you want to override the preconfigured size, you can add a custom size using 
 You can apply Tailwind CSS color directly to the icon component or its parent tag using the `class` prop.
 
 ```html
-<AddressCardSolid size="md" class="text-red-700 dark:text-green-300 inline m-1"/>
+<Icon name="address-card-solid" size="md" class="text-red-700 dark:text-green-300 inline m-1"/>
 
 <div class="text-red-700 dark:text-green-300 inline m-1">
-  <AddressCardSolid size="md" />
+  <Icon name="address-card-solid" size="md" />
 </div>
 ```
 
@@ -152,16 +118,16 @@ If you are using the dark mode on your website with Tailwind CSS, add your dark 
 Let's use `dark` for the dark mode class as an example.
 
 ```html
-<AddressCardSolid class="text-blue-700 dark:text-red-500" />
+<Icon name="address-card-solid" class="text-blue-700 dark:text-red-500" />
 ```
 
 ## aria-label
 
-All icons have aria-label. For example `BxAbacus` has `aria-label="bx abacus"`.
+All icons have aria-label. For example `address-card-solid` has `aria-label="address card solid"`.
 Use `ariaLabel` prop to modify the `aria-label` value.
 
 ```html
-<AddressCardSolid ariaLabel="address card solid" />
+<Icon name="address-card-solid" class="text-red-700" ariaLabel="red address card solid" />
 ```
 
 ## Unfocusable icon
@@ -169,7 +135,7 @@ Use `ariaLabel` prop to modify the `aria-label` value.
 If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 ```html
-<AddressCardSolid tabindex="-1" />
+<Icon name="address-card-solid" tabindex="-1" />
 ```
 
 ## Events
@@ -191,51 +157,53 @@ All icons have the following events:
 You can pass other attibutes as well.
 
 ```html
-<AddressCardSolid tabindex="0" />
+<Icon name="address-card-solid" tabindex="0" />
 ```
 
 ## Using svelte:component
 
 ```html
 <script>
-  import { AddressCardSolid } from 'flowbite-svelte-icons';
+  import { Icon } from 'flowbite-svelte-icons';
 </script>
 
-<svelte:component this="{AddressCardSolid}" />
+<svelte:component this="{Icon}" name="address-card-solid" />
 ```
 
 ## Using onMount
 
 ```html
 <script>
-  import { AddressCardSolid } from 'flowbite-svelte-icons';
+  import { Icon } from 'flowbite-svelte-icons';
   import { onMount } from 'svelte';
   const props = {
+    name: 'address-card-solid',
     size: '50',
     color: '#ff0000'
   };
   onMount(() => {
-    const icon = new AddressCardSolid({ target: document.body, props });
+    const icon = new Icon({ target: document.body, props });
   });
 </script>
 ```
 
 ## Import all
 
-Use `import * as Icon from 'flowbite-svelte-icons`.
+Use `import {Icon, icons} from 'flowbite-svelte-icons`.
 
 ```html
 <script>
-  import * as Icon from 'flowbite-svelte-icons';
+  import {Icon, icons} from 'svelte-tabler';
 </script>
 
-<Icon.AddressCardSolid />
-
-<h1>Size</h1>
-<Icon.AddressCardSolid size="30" />
-
-<h1>Tailwind CSS</h1>
-<Icon.AddressCardSolid class="text-blue-500" />
+<div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
+  {#each Object.keys(icons) as name}
+    <div class="flex gap-4 items-center text-lg inline">
+      <Icon name={name} size="md" class="inline" />
+      {name}
+    </div>
+  {/each}
+</div>
 ```
 
 ## Other icons

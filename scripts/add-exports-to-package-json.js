@@ -20,8 +20,8 @@ where <component-name> represents the name of each Svelte component file found i
 // Import the 'fs' module to access the file system
 import fs from 'fs';
 
-// Read the list of files in the "./dist" directory and filter out non-.svelte files.
-const files = fs.readdirSync('./dist').filter((file) => file.endsWith('.svelte'));
+// Read the list of files in the "./dist" directory and filter out non-.svelte and non-.js files.
+const files = fs.readdirSync('./dist').filter((file) => file.endsWith('.svelte') || file.endsWith('.js'));
 
 // Create the initial "exports" object with an entry for "./dist/index.*".
 const exports = {
@@ -31,17 +31,27 @@ const exports = {
   }
 };
 
-// Iterate over each ".svelte" file in the "./dist" directory.
-// For each file, add an entry to the "exports" object with the svelte and types paths updated.
+// Iterate over each ".svelte" or ".js" file in the "./dist" directory.
+// For each ".svelte" file, add an entry to the "exports" object with the svelte and types paths updated.
+// For each ".js" file, add an entry to the "exports" object with the js path updated.
+// For any other files, add an entry to the "exports" object as is.
 files.forEach((file) => {
-  if (file !== 'index.svelte') {
-    const name = file.replace('.svelte', '');
-    exports[`./${name}.svelte`] = {
-      types: `./dist/${name}.svelte.d.ts`,
-      svelte: `./dist/${name}.svelte`
-    };
-  } else {
-    exports[`./${file}`] = `./dist/${file}`;
+  if (file !== 'index.js') {
+    const name = file.replace(/\.svelte|\.js/, '');
+
+    if (file.endsWith('.svelte')) {
+      exports[`./${name}.svelte`] = {
+        types: `./dist/${name}.svelte.d.ts`,
+        svelte: `./dist/${name}.svelte`
+      };
+    } else if (file.endsWith('.js')) {
+      exports[`./${name}.js`] = {
+        types: `./dist/${name}.d.ts`,
+        svelte: `./dist/${file}` // Point to the original JavaScript file
+      };
+    } else {
+      exports[`./${file}`] = `./dist/${file}`;
+    }
   }
 });
 

@@ -50,9 +50,7 @@
       activeClass="md:!pl-3 md:!py-2 lg:!pl-0 lg:text-primary-700 text-white dark:text-white dark:lg:text-primary-500 bg-primary-700 lg:bg-transparent dark:bg-primary-600 lg:dark:bg-transparent cursor-default"
       >
     <NavLi href="/" active={activeUrl === '/'}>Home</NavLi>
-    <NavLi href="/outline" active={activeUrl === '/outline'}>Outline</NavLi>
-    <NavLi href="/solid" active={activeUrl === '/solid'}>Solid</NavLi>
-    <NavLi href="/all" active={activeUrl === '/all'}>All</NavLi>
+    <NavLi href="/icons" active={activeUrl === '/icons'}>Icons</NavLi>
     <NavLi href="https://github.com/themesberg/flowbite-svelte-icons">GitHub</NavLi>
     <NavLi href="https://svelte-svg-icons.vercel.app/">Icon sets</NavLi>
   </NavUl>
@@ -75,9 +73,7 @@
     classSpan="text-primary-700 dark:text-primary-500"
   />
   <FooterLinkGroup ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
-    <FooterLink href="/outline">Outline</FooterLink>
-    <FooterLink href="/solid">Solid</FooterLink>
-    <FooterLink href="/all">All</FooterLink>
+    <FooterLink href="/icons">Icons</FooterLink>
     <FooterLink href="https://github.com/shinokada/flowbite-svelte-icons/blob/main/LICENSE">Licensing</FooterLink>
     <FooterLink href="https://github.com/themesberg/flowbite-svelte-icons">GitHub</FooterLink>
   </FooterLinkGroup>
