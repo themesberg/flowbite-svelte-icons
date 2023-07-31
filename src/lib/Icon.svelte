@@ -40,7 +40,7 @@
 
 <!--
   @component
-  [Go to Document](https://shinokada.github.io/flowbite-svelte-icons/)
+  [Go to Document](https://flowbite-svelte-icons.vercel.app/)
 
   ## Props
   @prop name;
