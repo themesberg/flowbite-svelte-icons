@@ -26,7 +26,7 @@
   });
   let size="6"
 </script>
-<h1>Svelte Heros: Icons</h1>
+<h1>Flowbite Svelte Icons: Icons</h1>
 <TableSearch
   placeholder="Search by icon name"
   hoverable={true}
