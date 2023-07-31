@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.2](https://github.com/themesberg/flowbite-svelte-icons/compare/v0.3.1...v0.3.2) (2023-07-31)
+
+
+### Bug Fixes
+
+* component doc update ([34408ad](https://github.com/themesberg/flowbite-svelte-icons/commit/34408adad7ce991f84d1e6db74631412257df1b8))
+
 ### [0.3.1](https://github.com/themesberg/flowbite-svelte-icons/compare/v0.2.6...v0.3.1) (2023-07-31)
 
 
