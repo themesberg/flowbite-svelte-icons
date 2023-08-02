@@ -33,14 +33,14 @@
   bind:inputValue={searchTerm}
   divClass='relative overflow-x-auto'
 >
-<div class="xl:w-1/3 lg:w-2/5 md:w-1/2 sm:w-3/4 w-full p-4">
+<div class="lg:w-1/5 md:w-1/4 sm:w-1/3 w-full p-4">
   <Label class="text-lg py-4 ">Icon size: {size}</Label>
   <Range id="range1" min="4" max="10" step="2" bind:value={size} />
 </div>
   <Tabs style="pill" {contentClass} class="p-4">
     <TabItem open>
       <span slot="title" class="text-lg">Mono</span>
-      <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
+      <div class="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
         {#each filteredIconNames as iconName, i}
         <div class="flex gap-4 items-center text-lg">
           <svelte:component this={Icon} name={iconName} class="shrink-0 h-{size} w-{size}" />
