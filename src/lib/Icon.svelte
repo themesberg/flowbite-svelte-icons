@@ -12,14 +12,16 @@
     lg: 'w-6 h-6',
     xl: 'w-8 h-8'
   };
-  export let ariaLabel = 'address card solid';
+  export let ariaLabel = name;
 
   $: displayIcon = icons[name]
+  // if name includes 'outline', fill will be "none"; otherwise, fill will be "currentColor"
+  let fill = (name.includes('outline')) ? 'none' : 'currentColor';
 </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  fill="currentColor"
+  {fill}
   {...$$restProps}
   class={twMerge('shrink-0', sizes[size], $$props.class)}
   {role}
