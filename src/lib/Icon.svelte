@@ -16,7 +16,7 @@
 
   $: displayIcon = icons[name]
   // if name includes 'outline', fill will be "none"; otherwise, fill will be "currentColor"
-  let fill = (name.includes('outline')) ? 'none' : 'currentColor';
+  $: fill = (name.includes('outline')) ? 'none' : 'currentColor';
 </script>
 
 <svg
