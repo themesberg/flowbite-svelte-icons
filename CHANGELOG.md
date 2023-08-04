@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.5](https://github.com/themesberg/flowbite-svelte-icons/compare/v0.3.4...v0.3.5) (2023-08-04)
+
+
+### Bug Fixes
+
+* change fixed color to currentColor ([fd5120a](https://github.com/themesberg/flowbite-svelte-icons/commit/fd5120a0222558947e95ad72917b48d97970ef14))
+
 ### [0.3.4](https://github.com/themesberg/flowbite-svelte-icons/compare/v0.3.3...v0.3.4) (2023-08-04)
 
 
