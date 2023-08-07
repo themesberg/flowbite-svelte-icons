@@ -8,7 +8,7 @@
 <a href="https://www.npmjs.com/package/flowbite-svelte-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/flowbite-svelte-icons.svg" alt="npm" height="25" style="height: 25px !important;" ></a>
 </div>
 
-480+ SVG [Flowbite icons](https://github.com/themesberg/flowbite-icons) components for Svelte. 
+510+ SVG [Flowbite icons](https://github.com/themesberg/flowbite-icons) components for Svelte. 
 
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
@@ -193,7 +193,7 @@ Use `import {Icon, icons} from 'flowbite-svelte-icons`.
 
 ```html
 <script>
-  import {Icon, icons} from 'svelte-tabler';
+  import {Icon, icons} from 'flowbite-svelte-icons';
 </script>
 
 <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">

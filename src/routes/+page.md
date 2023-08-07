@@ -193,7 +193,7 @@ Use `import {Icon, icons} from 'flowbite-svelte-icons`.
 
 ```html
 <script>
-  import {Icon, icons} from 'svelte-tabler';
+  import {Icon, icons} from 'flowbite-svelte-icons';
 </script>
 
 <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
