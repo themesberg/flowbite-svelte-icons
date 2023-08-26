@@ -2,7 +2,7 @@
   import icons from './icons.js'
   import { twMerge } from 'tailwind-merge';
 
-  export let name;
+  export let name: keyof typeof icons;
   export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
   export let role: string = 'img';
   const sizes = {
