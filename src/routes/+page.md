@@ -8,7 +8,7 @@
 <a href="https://www.npmjs.com/package/flowbite-svelte-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/flowbite-svelte-icons.svg" alt="npm" height="25" style="height: 25px !important;" ></a>
 </div>
 
-510+ SVG [Flowbite icons](https://github.com/themesberg/flowbite-icons) components for Svelte. 
+480+ SVG [Flowbite icons](https://github.com/themesberg/flowbite-icons) components for Svelte. 
 
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
@@ -25,12 +25,6 @@ Thank you for considering my open-source package. If you use it in a commercial 
 [Flowbite-Svelte-Icons License](https://github.com/themesberg/flowbite-svelte-icons/blob/main/LICENSE)
 
 [Flowbite Icons License](https://github.com/themesberg/flowbite-icons/blob/main/LICENSE)
-
-## Dependencies
-
-- "svelte": "^3.54.0 || ^4.0.0",
-- "tailwind-merge": "^1.13.2",
-- "tailwindcss": "^3.3.2"
 
 ## Installation
 
@@ -57,18 +51,40 @@ In a svelte file:
 
 ```html
 <script>
-  import { Icon } from 'flowbite-svelte-icons';
+  import { AddressCardSolid } from 'flowbite-svelte-icons';
 </script>
 
-<Icon name="address-card-solid" />
+<AddressCardSolid />
+```
+
+## Faster compiling
+
+If you need only a few icons from this library in your Svelte app, import them directly. This can optimize compilation speed and improve performance by reducing the amount of code processed during compilation.
+
+```html
+<script>
+  import AddressCardSolid from 'flowbite-svelte-icons/AddressCardSolid.svelte';
+</script>
+
+<AddressCardSolid />
 ```
 
 ## Props
 
-- @prop name;
-- @prop size =  "xs" | "sm" | "md" | "lg" | "xl" = "md";
-- @prop role = "img";
-- @prop ariaLabel = 'icon file name';
+### Outline
+
+- size:  'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
+- role: string = 'img';
+- strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = 'round';
+- strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined = 'round';
+- strokeWidth = '2';
+- ariaLabel = 'icon file name';
+
+### Solid
+
+- size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
+- role: string = 'img';
+- ariaLabel = 'icon file name';
 
 ## IDE support
 
@@ -90,24 +106,117 @@ The following table provides details about the available sizes for icons:
 To change the size of an icon, use the `size` prop and specify the desired size. For example:
 
 ```html
-<Icon name="address-card-solid" size="md" />
+<AddressCardSolid size="md" />
 ```
 
 If you want to override the preconfigured size, you can add a custom size using Tailwind CSS by including the desired classes in the `class` prop. For example:
 
 ```html
-<Icon name="address-card-solid" class="h-24 w-24 text-blue-700 mr-4" />
+<AddressCardSolid class="h-24 w-24 text-blue-700 mr-4" />
 ```
+
+## Creating a Default Global Icon Setting in Svelte
+
+You can create a config file, `/src/lib/icon.config.json`.
+
+The `IconSolid` and `IconOutline` components serve as a wrapper for svelte:component, allowing you to establish a global default setting or expand the capabilities of a component.
+
+To create a default global icon setting, follow these steps:
+
+### Configuration File
+
+Start by creating a configuration file named `/src/lib/icon.config.json` with the following structure:
+
+```json
+{
+  "config1": {
+    "size": 40,
+    "color": "#FF5733"
+  },
+  "config2": {
+    "size": 50,
+    "color": "#445533"
+  }
+}
+```
+
+In this JSON file, you can define different configurations (config1 and config2 in this case) for your icons, specifying attributes like size, variation, and color.
+
+### Implementation
+
+In your Svelte page file, make use of the configurations from the JSON file:
+
+```html
+<script lang="ts">
+  type IconConfig = {
+    config1: {
+      size: number;
+      color: string;
+    };
+    config2: {
+      size: number;
+      color: string;
+    };
+  };
+  import config from '$lib/icon.config.json';
+  import { IconOutline, IconSolid, AngleLeftOutline, ArrowRightSolid } from 'flowbite-svelte-icons';
+  const iconConfig: IconConfig = config;
+  const config1 = iconConfig.config1;
+  const config2 = iconConfig.config2;
+</script>
+
+<IconOutline {...config1} icon="{AngleLeftOutline}" />
+<IconSolid {...config2} icon="{ArrowRightSolid}" />
+```
+
+We import the configurations from the JSON file and assign them to config1 and config2. We then utilize the Icon component with the spread attributes `{...config1}` and `{...config2}` to apply the respective configurations to each icon.
+
+### Custom Default Icon
+
+If you wish to create a custom default icon, you can follow these steps:
+
+Create a Svelte component named `src/lib/MyIcon.svelte`:
+
+```html
+<script lang="ts">
+  import type { ComponentType } from 'svelte';
+  const config = {
+    size: 30,
+    color: '#FF5733'
+  };
+  import { IconSolid } from 'flowbite-svelte-icons';
+  export let icon: ComponentType;
+</script>
+
+<IconSolid {...config} {icon} />
+```
+
+This component, `MyIcon.svelte`, accepts an `icon` prop which you can use to pass in the specific icon component you want to display. The default configuration is also applied to the icon.
+
+### Implementation in a Page
+
+To use your custom default icon in a Svelte page, do the following:
+
+```html
+<script>
+  import MyIcon from '$lib/MyIcon.svelte';
+  import { AngleLeftSolid } from 'flowbite-svelte-icons';
+</script>
+
+<MyIcon icon="{AngleLeftSolid}" />
+```
+
+Here, we import the `MyIcon` component and the `AngleLeftSolid` icon. By passing the `AngleLeftSolid` icon to the `icon` prop of MyIcon, you apply the default configuration to the icon.
 
 ## Color
 
 You can apply Tailwind CSS color directly to the icon component or its parent tag using the `class` prop.
 
 ```html
-<Icon name="address-card-solid" size="md" class="text-red-700 dark:text-green-300 inline m-1"/>
+<AddressCardSolid size="md" class="text-red-700 dark:text-green-300 inline m-1"/>
 
 <div class="text-red-700 dark:text-green-300 inline m-1">
-  <Icon name="address-card-solid" size="md" />
+  <AddressCardSolid size="md" />
 </div>
 ```
 
@@ -118,16 +227,16 @@ If you are using the dark mode on your website with Tailwind CSS, add your dark 
 Let's use `dark` for the dark mode class as an example.
 
 ```html
-<Icon name="address-card-solid" class="text-blue-700 dark:text-red-500" />
+<AddressCardSolid class="text-blue-700 dark:text-red-500" />
 ```
 
 ## aria-label
 
-All icons have aria-label. For example `address-card-solid` has `aria-label="address card solid"`.
+All icons have aria-label. For example `BxAbacus` has `aria-label="bx abacus"`.
 Use `ariaLabel` prop to modify the `aria-label` value.
 
 ```html
-<Icon name="address-card-solid" class="text-red-700" ariaLabel="red address card solid" />
+<AddressCardSolid ariaLabel="address card solid" />
 ```
 
 ## Unfocusable icon
@@ -135,7 +244,7 @@ Use `ariaLabel` prop to modify the `aria-label` value.
 If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 ```html
-<Icon name="address-card-solid" tabindex="-1" />
+<AddressCardSolid tabindex="-1" />
 ```
 
 ## Events
@@ -157,56 +266,53 @@ All icons have the following events:
 You can pass other attibutes as well.
 
 ```html
-<Icon name="address-card-solid" tabindex="0" />
+<AddressCardSolid tabindex="0" />
 ```
 
 ## Using svelte:component
 
 ```html
 <script>
-  import { Icon } from 'flowbite-svelte-icons';
+  import { AddressCardSolid } from 'flowbite-svelte-icons';
 </script>
 
-<svelte:component this="{Icon}" name="address-card-solid" />
+<svelte:component this="{AddressCardSolid}" />
 ```
 
 ## Using onMount
 
 ```html
 <script>
-  import { Icon } from 'flowbite-svelte-icons';
+  import { AddressCardSolid } from 'flowbite-svelte-icons';
   import { onMount } from 'svelte';
   const props = {
-    name: 'address-card-solid',
     size: '50',
     color: '#ff0000'
   };
   onMount(() => {
-    const icon = new Icon({ target: document.body, props });
+    const icon = new AddressCardSolid({ target: document.body, props });
   });
 </script>
 ```
 
 ## Import all
 
-Use `import {Icon, icons} from 'flowbite-svelte-icons`.
+Use `import * as Icon from 'flowbite-svelte-icons`.
 
 ```html
 <script>
-  import {Icon, icons} from 'flowbite-svelte-icons';
+  import * as Icon from 'flowbite-svelte-icons';
 </script>
 
-<div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
-  {#each Object.keys(icons) as name}
-    <div class="flex gap-4 items-center text-lg inline">
-      <Icon name={name} size="md" class="inline" />
-      {name}
-    </div>
-  {/each}
-</div>
+<Icon.AddressCardSolid />
+
+<h1>Size</h1>
+<Icon.AddressCardSolid size="30" />
+
+<h1>Tailwind CSS</h1>
+<Icon.AddressCardSolid class="text-blue-500" />
 ```
 
 ## Other icons
 
 - [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
-
