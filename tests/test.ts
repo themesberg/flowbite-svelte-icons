@@ -6,11 +6,11 @@ test('index page has expected h1', async ({ page }) => {
 });
 
 test('Outline page has expected h1', async ({ page }) => {
-  await page.goto('/icons');
+  await page.goto('/outline');
   await expect(page.getByRole('heading', { name: 'Flowbite Svelte Icons: Outline' })).toBeVisible();
 });
 
 test('Solid page has expected h1', async ({ page }) => {
-  await page.goto('/icons');
+  await page.goto('/solid');
   await expect(page.getByRole('heading', { name: 'Flowbite Svelte Icons: Solid' })).toBeVisible();
 });
