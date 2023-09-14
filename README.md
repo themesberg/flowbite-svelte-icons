@@ -143,7 +143,7 @@ If you set `size`, icons can be customized with different color. For example:
 ```html
 <script>
   import { setContext } from 'svelte';
-  import { AccountBookFilled } from 'svelte-ant-design-icons';
+  import { AccountBookFilled } from 'flowbite-svelte-icons';
   const iconCtx = {
     size: '50'
   };
