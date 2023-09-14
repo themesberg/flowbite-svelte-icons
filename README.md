@@ -153,7 +153,7 @@ If you set `size`, icons can be customized with different color. For example:
 <AccountBookFilled color="#ff4488" />
 ```
 
-Remember that you can set only one or more properties, allowing you to tailor icon settings to your specific design and accessibility requirements.
+Remember that you can set one or more properties, allowing you to tailor icon settings to your specific design and accessibility requirements.
 
 Feel free to mix and match these properties as needed to create visually appealing and accessible icons in your Svelte application.
 
