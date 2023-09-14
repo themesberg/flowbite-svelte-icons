@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.4](https://github.com/themesberg/flowbite-svelte-icons/compare/v0.4.3...v0.4.4) (2023-09-14)
+
+
+### Features
+
+* add svelte context ([ffcc230](https://github.com/themesberg/flowbite-svelte-icons/commit/ffcc230341af77e00e6a1eec3b753eaefce3da59))
+
 ### [0.4.3](https://github.com/themesberg/flowbite-svelte-icons/compare/v0.4.2...v0.4.3) (2023-09-04)
 
 ### [0.4.2](https://github.com/themesberg/flowbite-svelte-icons/compare/v0.4.1...v0.4.2) (2023-09-02)
