@@ -143,14 +143,14 @@ If you set `size`, icons can be customized with different color. For example:
 ```html
 <script>
   import { setContext } from 'svelte';
-  import { AccountBookFilled } from 'flowbite-svelte-icons';
+  import { MapLocationOutline } from 'flowbite-svelte-icons';
   const iconCtx = {
     size: '50'
   };
   setContext('iconCtx', iconCtx);
 </script>
 
-<AccountBookFilled color="#ff4488" />
+<MapLocationOutline color="#ff4488" />
 ```
 
 Remember that you can set one or more properties, allowing you to tailor icon settings to your specific design and accessibility requirements.
