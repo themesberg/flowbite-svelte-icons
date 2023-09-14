@@ -2,10 +2,10 @@
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
   interface CtxType {
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
-    strokeLinecap?: "round" | "inherit" | "butt" | "square" | null | undefined;
-    strokeLinejoin?: "round" | "inherit" | "miter" | "bevel" | null | undefined;
+    strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | null | undefined;
+    strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined;
     strokeWidth?: string;
   }
 
@@ -18,23 +18,22 @@
     xl: 'w-8 h-8'
   };
 
-  export let size: "xs" | "sm" | "md" | "lg" | "xl" = ctx.size || 'md';
+  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
   export let role = ctx.role || 'img';
 
-export let strokeLinecap: "round" | "inherit" | "butt" | "square" | null | undefined = ctx.strokeLinecap || "round";
-export let strokeLinejoin:"round" | "inherit" | "miter" | "bevel" | null | undefined = ctx.strokeLinejoin || "round";
-export let strokeWidth= ctx.strokeWidth || "2";
-export let ariaLabel="cog outline" </script>
+  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined =
+    ctx.strokeLinecap || 'round';
+  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
+    ctx.strokeLinejoin || 'round';
+  export let strokeWidth = ctx.strokeWidth || '2';
+  export let ariaLabel = 'cog outline';
+</script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
   {...$$restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    $$props.class
-  )}
+  class={twMerge('shrink-0', sizes[size], $$props.class)}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 20 20"
@@ -48,31 +47,28 @@ export let ariaLabel="cog outline" </script>
   on:mouseover
   on:mouseout
 >
-     <g stroke="currentColor" stroke-linecap="{strokeLinecap}" stroke-linejoin="{strokeLinejoin}" stroke-width="{strokeWidth}">     <path d="M19 11V9a1 1 0 0 0-1-1h-.757l-.707-1.707.535-.536a1 1 0 0 0 0-1.414l-1.414-1.414a1 1 0 0 0-1.414 0l-.536.535L12 2.757V2a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v.757l-1.707.707-.536-.535a1 1 0 0 0-1.414 0L2.929 4.343a1 1 0 0 0 0 1.414l.536.536L2.757 8H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h.757l.707 1.707-.535.536a1 1 0 0 0 0 1.414l1.414 1.414a1 1 0 0 0 1.414 0l.536-.535L8 17.243V18a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-.757l1.707-.708.536.536a1 1 0 0 0 1.414 0l1.414-1.414a1 1 0 0 0 0-1.414l-.535-.536.707-1.707H18a1 1 0 0 0 1-1Z"/>     <path d="M10 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>   </g>  
+  <g
+    stroke="currentColor"
+    stroke-linecap={strokeLinecap}
+    stroke-linejoin={strokeLinejoin}
+    stroke-width={strokeWidth}
+  >
+    <path
+      d="M19 11V9a1 1 0 0 0-1-1h-.757l-.707-1.707.535-.536a1 1 0 0 0 0-1.414l-1.414-1.414a1 1 0 0 0-1.414 0l-.536.535L12 2.757V2a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v.757l-1.707.707-.536-.535a1 1 0 0 0-1.414 0L2.929 4.343a1 1 0 0 0 0 1.414l.536.536L2.757 8H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h.757l.707 1.707-.535.536a1 1 0 0 0 0 1.414l1.414 1.414a1 1 0 0 0 1.414 0l.536-.535L8 17.243V18a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-.757l1.707-.708.536.536a1 1 0 0 0 1.414 0l1.414-1.414a1 1 0 0 0 0-1.414l-.535-.536.707-1.707H18a1 1 0 0 0 1-1Z"
+    /> <path d="M10 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+  </g>
 </svg>
 
-
 <!--
-  @component
-  [Go to Document](https://shinokada.github.io/flowbite-svelte-icons/)
-
-  ## Props
-  @prop size = "20";
-  @prop role = "img";
-  @prop svgClass = "text-gray-800 dark:text-white";
-  @prop strokeLinecap: "round" | "inherit" | "butt" | "square" | null | undefined = "round";
-  @prop strokeLinejoin:"round" | "inherit" | "miter" | "bevel" | null | undefined = "round";
-  @prop strokeWidth= "2";
-  @prop ariaLabel = 'icon file name';
-  - Use the `class` prop to overwrite `svgClass`.
-  ## Event
-  - on:click
-  - on:keydown
-  - on:keyup
-  - on:focus
-  - on:blur
-  - on:mouseenter
-  - on:mouseleave
-  - on:mouseover
-  - on:mouseout
+@component
+[Go to docs](https://flowbite-svelte-icons.vercel.app/)
+## Props
+@prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
+@prop export let role = ctx.role || 'img';
+@prop export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined =
+    ctx.strokeLinecap || 'round';
+@prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
+    ctx.strokeLinejoin || 'round';
+@prop export let strokeWidth = ctx.strokeWidth || '2';
+@prop export let ariaLabel = 'cog outline';
 -->

@@ -8,5 +8,5 @@
   setContext('iconCtx', iconCtx);
 </script>
 
-<AddressCardSolid color="#ff2233"/>
-<WindowRestoreOutline color="#990022"/>
+<AddressCardSolid color="#ff2233" />
+<WindowRestoreOutline color="#990022" />
