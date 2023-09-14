@@ -131,7 +131,7 @@ In your `+layout.svelte` or `+page.svelte`, you can define and set global icon p
 
   // Define your global icon settings
   const iconCtx = {
-    size: '100', // Icon size in pixels
+    size: 'xl', // Icon size in pixels
   };
   setContext('iconCtx', iconCtx);
 </script>
@@ -145,7 +145,7 @@ If you set `size`, icons can be customized with different color. For example:
   import { setContext } from 'svelte';
   import { MapLocationOutline } from 'flowbite-svelte-icons';
   const iconCtx = {
-    size: '50'
+    size: 'xl'
   };
   setContext('iconCtx', iconCtx);
 </script>
@@ -172,11 +172,11 @@ Start by creating a configuration file named `/src/lib/icon.config.json` with th
 ```json
 {
   "config1": {
-    "size": 40,
+    "size": "xl",
     "color": "#FF5733"
   },
   "config2": {
-    "size": 50,
+    "size": "md",
     "color": "#445533"
   }
 }
@@ -192,11 +192,11 @@ In your Svelte page file, make use of the configurations from the JSON file:
 <script lang="ts">
   type IconConfig = {
     config1: {
-      size: number;
+      size: string;
       color: string;
     };
     config2: {
-      size: number;
+      size: string;
       color: string;
     };
   };
@@ -223,7 +223,7 @@ Create a Svelte component named `src/lib/MyIcon.svelte`:
 <script lang="ts">
   import type { ComponentType } from 'svelte';
   const config = {
-    size: 30,
+    size: "xl",
     color: '#FF5733'
   };
   import { IconSolid } from 'flowbite-svelte-icons';
