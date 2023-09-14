@@ -1,7 +1,12 @@
 <script lang="ts">
+  import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
-  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
-  export let role: string = 'img';
+  interface CtxType {
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    role?: string;
+  }
+
+  const ctx: CtxType = getContext('iconCtx') ?? {};
   const sizes = {
     xs: 'w-3 h-3',
     sm: 'w-4 h-4',
@@ -9,17 +14,24 @@
     lg: 'w-6 h-6',
     xl: 'w-8 h-8'
   };
-  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = 'round';
-  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined = 'round';
-  export let strokeWidth = '2';
-  export let ariaLabel = 'arrow up from bracket solid';
-</script>
+
+  export let size: "xs" | "sm" | "md" | "lg" | "xl" = ctx.size || 'md';
+  export let role = ctx.role || 'img';
+
+export let strokeLinecap: "round" | "inherit" | "butt" | "square" | null | undefined = ctx.strokeLinecap || "round";
+export let strokeLinejoin:"round" | "inherit" | "miter" | "bevel" | null | undefined = ctx.strokeLinejoin || "round";
+export let strokeWidth= ctx.strokeWidth || "2";
+export let ariaLabel="arrow up from bracket solid" </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="currentColor"
   {...$$restProps}
-  class={twMerge('shrink-0', sizes[size], $$props.class)}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    $$props.class
+  )}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 16 16"
@@ -33,23 +45,26 @@
   on:mouseover
   on:mouseout
 >
-  <path
-    stroke="currentColor"
-    stroke-linecap={strokeLinecap}
-    stroke-linejoin={strokeLinejoin}
-    stroke-width={strokeWidth}
-    d="M8 12V1m0 0L4 5m4-4 4 4m3 5v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"
-  />
+     <path stroke="currentColor" stroke-linecap="{strokeLinecap}" stroke-linejoin="{strokeLinejoin}" stroke-width="{strokeWidth}" d="M8 12V1m0 0L4 5m4-4 4 4m3 5v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>  
 </svg>
 
+
 <!--
-@component
-[Go to docs](https://flowbite-svelte-icons.vercel.app/)
-## Props
-@prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
-@prop export let role: string = 'img';
-@prop export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = 'round';
-@prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined = 'round';
-@prop export let strokeWidth = '2';
-@prop export let ariaLabel = 'arrow up from bracket solid';
+  @component
+  [Go to Document](https://shinokada.github.io/flowbite-svelte-icons/)
+
+  ## Props
+  @prop size =  "xs" | "sm" | "md" | "lg" | "xl" = "md";
+  @prop role = "img";
+  @prop ariaLabel = 'icon file name';
+  ## Event
+  - on:click
+  - on:keydown
+  - on:keyup
+  - on:focus
+  - on:blur
+  - on:mouseenter
+  - on:mouseleave
+  - on:mouseover
+  - on:mouseout
 -->

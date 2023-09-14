@@ -1,3 +1,7 @@
+---
+layout: mainLayout
+---
+
 # Flowbite Svelte Icons
 
 <div class="flex gap-2 my-8">
@@ -73,18 +77,18 @@ If you need only a few icons from this library in your Svelte app, import them d
 
 ### Outline
 
-- size:  'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
-- role: string = 'img';
-- strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = 'round';
-- strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined = 'round';
-- strokeWidth = '2';
-- ariaLabel = 'icon file name';
+- @prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
+- @prop export let role = ctx.role || 'img';
+- @prop export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined = ctx.strokeLinecap || 'round';
+- @prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined = ctx.strokeLinejoin || 'round';
+- @prop export let strokeWidth = ctx.strokeWidth || '2';
+- @prop export let ariaLabel = 'zoom in outline';
 
 ### Solid
 
-- size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
-- role: string = 'img';
-- ariaLabel = 'icon file name';
+- @prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
+- @prop export let role = ctx.role || 'img';
+- @prop export let ariaLabel = 'icon file name';
 
 ## IDE support
 
@@ -115,7 +119,45 @@ If you want to override the preconfigured size, you can add a custom size using 
 <AddressCardSolid class="h-24 w-24 text-blue-700 mr-4" />
 ```
 
-## Creating a Default Global Icon Setting in Svelte
+## Setting Global Icon using setContext
+
+You can establish global icon preferences in your Svelte application using `setContext`. This allows you to configure icon-related properties once and share them across multiple components.
+
+In your `+layout.svelte` or `+page.svelte`, you can define and set global icon preferences as follows:
+
+```html
+<script>
+  import { setContext } from 'svelte';
+
+  // Define your global icon settings
+  const iconCtx = {
+    size: '100', // Icon size in pixels
+  };
+  setContext('iconCtx', iconCtx);
+</script>
+```
+
+The `size`, and `role` (for solid icons) and `size`, `role`, `strokeLinecap`, `strokeLinejoin`, `strokeWidth` (for outline icons) properties are optional, allowing you to fine-tune the appearance and accessibility of your icons as needed.
+If you set `size`, icons can be customized with different color. For example:
+
+```html
+<script>
+  import { setContext } from 'svelte';
+  import { AccountBookFilled } from 'svelte-ant-design-icons';
+  const iconCtx = {
+    size: '50'
+  };
+  setContext('iconCtx', iconCtx);
+</script>
+
+<AccountBookFilled color="#ff4488" />
+```
+
+Remember that you can set only one or more properties, allowing you to tailor icon settings to your specific design and accessibility requirements.
+
+Feel free to mix and match these properties as needed to create visually appealing and accessible icons in your Svelte application.
+
+## Creating a Default Icon Setting
 
 You can create a config file, `/src/lib/icon.config.json`.
 
@@ -171,7 +213,7 @@ In your Svelte page file, make use of the configurations from the JSON file:
 
 We import the configurations from the JSON file and assign them to config1 and config2. We then utilize the Icon component with the spread attributes `{...config1}` and `{...config2}` to apply the respective configurations to each icon.
 
-### Custom Default Icon
+## Custom Default Icon
 
 If you wish to create a custom default icon, you can follow these steps:
 
@@ -218,6 +260,14 @@ You can apply Tailwind CSS color directly to the icon component or its parent ta
 <div class="text-red-700 dark:text-green-300 inline m-1">
   <AddressCardSolid size="md" />
 </div>
+```
+
+## CSS HEX Colors
+
+Use the color attribute to change colors with HEX color code for Filled and Outlined components.
+
+```html
+<AddressCardSolid color="#ff0000" size="md"/> 
 ```
 
 ## Dark mode
