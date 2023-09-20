@@ -66,6 +66,7 @@
         </span>
       </NavBrand>
       <NavUl
+        {activeUrl}
         {hidden}
         {divClass}
         {ulClass}
@@ -73,9 +74,9 @@
         nonActiveClass="md:!pl-3 md:!py-2 lg:!pl-0 text-gray-700 hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 dark:text-white lg:dark:hover:text-primary-700 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
         activeClass="md:!pl-3 md:!py-2 lg:!pl-0 lg:text-primary-700 text-white dark:text-white dark:lg:text-primary-500 bg-primary-700 lg:bg-transparent dark:bg-primary-600 lg:dark:bg-transparent cursor-default"
       >
-        <NavLi href="/" active={activeUrl === '/'} data-sveltekit-reload>Home</NavLi>
-        <NavLi href="/outline" active={activeUrl === '/outline'}>Outline</NavLi>
-        <NavLi href="/solid" active={activeUrl === '/solid'}>Solid</NavLi>
+        <NavLi href="/" data-sveltekit-reload>Home</NavLi>
+        <NavLi href="/outline">Outline</NavLi>
+        <NavLi href="/solid">Solid</NavLi>
         <NavLi href="https://github.com/themesberg/flowbite-svelte-icons">GitHub</NavLi>
         <NavLi href="https://svelte-svg-icons.vercel.app/">Icon sets</NavLi>
       </NavUl>
