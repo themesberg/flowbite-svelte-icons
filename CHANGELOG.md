@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.5](https://github.com/themesberg/flowbite-svelte-icons/compare/v0.4.4...v0.4.5) (2023-10-31)
+
+
+### Features
+
+* add data-sveltekit-reload to Home link so that it reloads sidebar menu and afterNavigate scrollTo in the +layout.svelte ([fad3633](https://github.com/themesberg/flowbite-svelte-icons/commit/fad3633394b1b3b2ab25bc1566a75e16a877f3c5))
+
+
+### Bug Fixes
+
+* add {activeUrl} to NavUl ([1d5d493](https://github.com/themesberg/flowbite-svelte-icons/commit/1d5d49307f479a97995c5d10c6a9474343ccf889))
+
 ### [0.4.4](https://github.com/themesberg/flowbite-svelte-icons/compare/v0.4.3...v0.4.4) (2023-09-14)
 
 
