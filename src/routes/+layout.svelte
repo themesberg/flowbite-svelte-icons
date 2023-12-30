@@ -83,7 +83,7 @@
       <div class="flex items-center ml-auto">
         <DarkMode class="inline-block dark:hover:text-white hover:text-gray-900" />
       </div>
-      <NavHamburger on:click={toggle} btnClass="ml-3 m-0 lg:hidden" />
+      <NavHamburger on:click={toggle} class="ml-3 m-0 lg:hidden md:block" />
     </Navbar>
   </header>
 
