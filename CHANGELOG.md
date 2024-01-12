@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/themesberg/flowbite-svelte-icons/compare/v0.4.5...v1.0.1) (2024-01-12)
+
+
+### Bug Fixes
+
+* NavHamburger class="ml-3 m-0 lg:hidden md:block" ([561e804](https://github.com/themesberg/flowbite-svelte-icons/commit/561e80490c125c50544ddf39299b1fae9a2255f0))
+
 ### [0.4.5](https://github.com/themesberg/flowbite-svelte-icons/compare/v0.4.4...v0.4.5) (2023-10-31)
 
 
