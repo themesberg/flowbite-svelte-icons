@@ -1,6 +1,6 @@
 {
   "name": "flowbite-svelte-icons",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/index.js",
   "description": "Flowbite icon components for Svelte",
   "author": {
