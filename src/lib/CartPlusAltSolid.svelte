@@ -2,7 +2,7 @@
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
   interface CtxType {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
     role?: string;
   }
 
@@ -15,20 +15,23 @@
     xl: 'w-8 h-8'
   };
 
-  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
+  export let size: "xs" | "sm" | "md" | "lg" | "xl" = ctx.size || 'md';
   export let role = ctx.role || 'img';
 
-  export let ariaLabel = 'cart plus alt solid';
-</script>
+export let ariaLabel="cart plus alt solid" </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="currentColor"
   {...$$restProps}
-  class={twMerge('shrink-0', sizes[size], $$props.class)}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    $$props.class
+  )}
   {role}
   aria-label={ariaLabel}
-  viewBox="0 0 20 21"
+  viewBox="0 0 24 24"
   on:click
   on:keydown
   on:keyup
@@ -39,18 +42,5 @@
   on:mouseover
   on:mouseout
 >
-  <g fill="currentColor">
-    <path
-      d="M15 14H7.78l-.5-2H16a1 1 0 0 0 .962-.726l.473-1.655A2.968 2.968 0 0 1 16 10a3 3 0 0 1-3-3 3 3 0 0 1-3-3 2.97 2.97 0 0 1 .184-1H4.77L4.175.745A1 1 0 0 0 3.208 0H1a1 1 0 0 0 0 2h1.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 10 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3Zm-8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm8 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"
-    /> <path d="M19 3h-2V1a1 1 0 0 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 0 0 2 0V5h2a1 1 0 1 0 0-2Z" />
-  </g>
+     <path fill="currentColor" d="M12.3 6A2 2 0 0 0 14 9h1v1a2 2 0 0 0 3 1.7l-.3 1.5a1 1 0 0 1-1 .8h-8l.2 1H16a3 3 0 1 1-2.8 2h-2.4a3 3 0 1 1-4-1.8L4.7 5H4a1 1 0 0 1 0-2h1.5c.5 0 .9.3 1 .8L6.9 6h5.4Z"/>   <path fill="currentColor" d="M18 4a1 1 0 1 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 1 0 2 0V8h2a1 1 0 1 0 0-2h-2V4Z"/>  
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.vercel.app/)
-## Props
-@prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
-@prop export let role = ctx.role || 'img';
-@prop export let ariaLabel = 'cart plus alt solid';
--->

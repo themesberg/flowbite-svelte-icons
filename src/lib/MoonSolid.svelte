@@ -2,7 +2,7 @@
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
   interface CtxType {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
     role?: string;
   }
 
@@ -15,20 +15,23 @@
     xl: 'w-8 h-8'
   };
 
-  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
+  export let size: "xs" | "sm" | "md" | "lg" | "xl" = ctx.size || 'md';
   export let role = ctx.role || 'img';
 
-  export let ariaLabel = 'moon solid';
-</script>
+export let ariaLabel="moon solid" </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="currentColor"
   {...$$restProps}
-  class={twMerge('shrink-0', sizes[size], $$props.class)}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    $$props.class
+  )}
   {role}
   aria-label={ariaLabel}
-  viewBox="0 0 18 20"
+  viewBox="0 0 24 24"
   on:click
   on:keydown
   on:keyup
@@ -39,17 +42,5 @@
   on:mouseover
   on:mouseout
 >
-  <path
-    fill="currentColor"
-    d="M17.8 13.75a1 1 0 0 0-.859-.5A7.488 7.488 0 0 1 10.519 2a1 1 0 0 0 0-.969A1.035 1.035 0 0 0 9.687.5h-.113a9.5 9.5 0 1 0 8.222 14.247 1 1 0 0 0 .004-.997Z"
-  />
+     <path fill="currentColor" fill-rule="evenodd" d="M11.7 2a10 10 0 1 0 9.8 13.3 1 1 0 0 0-1-1.3H20a8 8 0 0 1-7.6-10.6l.1-.4a1 1 0 0 0-.8-1Z" clip-rule="evenodd"/>  
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.vercel.app/)
-## Props
-@prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
-@prop export let role = ctx.role || 'img';
-@prop export let ariaLabel = 'moon solid';
--->

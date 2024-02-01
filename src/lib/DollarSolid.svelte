@@ -2,7 +2,7 @@
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
   interface CtxType {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
     role?: string;
   }
 
@@ -15,20 +15,23 @@
     xl: 'w-8 h-8'
   };
 
-  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
+  export let size: "xs" | "sm" | "md" | "lg" | "xl" = ctx.size || 'md';
   export let role = ctx.role || 'img';
 
-  export let ariaLabel = 'dollar solid';
-</script>
+export let ariaLabel="dollar solid" </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="currentColor"
   {...$$restProps}
-  class={twMerge('shrink-0', sizes[size], $$props.class)}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    $$props.class
+  )}
   {role}
   aria-label={ariaLabel}
-  viewBox="0 0 11 20"
+  viewBox="0 0 24 24"
   on:click
   on:keydown
   on:keyup
@@ -39,17 +42,5 @@
   on:mouseover
   on:mouseout
 >
-  <path
-    fill="currentColor"
-    d="M7.146 4.688c.808.18 1.54.608 2.093 1.224a1 1 0 0 0 1.522-1.3A5.991 5.991 0 0 0 7.62 2.744c-.208-.05-.413-.068-.62-.1V1.417a1 1 0 1 0-2 0v1.257a4.5 4.5 0 0 0-3.735 3.02A3.6 3.6 0 0 0 1.7 8.526 6.322 6.322 0 0 0 5.648 11.3c1.105.24 2.073.9 2.7 1.841a1.687 1.687 0 0 1 .235 1.284c-.352 1.273-2.16 1.978-3.954 1.542a3.962 3.962 0 0 1-2.108-1.243 1 1 0 1 0-1.535 1.283 5.964 5.964 0 0 0 3.169 1.9c.28.067.563.116.849.145v.864a1 1 0 1 0 2 0v-.976a4.456 4.456 0 0 0 3.507-2.984 3.607 3.607 0 0 0-.438-2.83 6.334 6.334 0 0 0-3.946-2.773 4.357 4.357 0 0 1-2.7-1.84 1.692 1.692 0 0 1-.235-1.285c.353-1.271 2.164-1.976 3.954-1.54Z"
-  />
+     <path fill="currentColor" fill-rule="evenodd" d="M12.1 2c.6 0 1 .4 1 1v1.3a6 6 0 0 1 3.7 2 1 1 0 1 1-1.6 1.3c-.5-.6-1.2-1-2-1.3a4.2 4.2 0 0 0-1.1-.1c-1.4 0-2.4.8-2.7 1.7-.1.6 0 1.2.6 1.9.5.6 1.3 1.2 2.3 1.4 1.3.3 2.5 1.1 3.3 2.1a4 4 0 0 1 1 3.6 4.3 4.3 0 0 1-3.5 3V21a1 1 0 1 1-2 0v-1a6 6 0 0 1-3.9-2 1 1 0 1 1 1.6-1.3c.5.7 1.2 1.1 2 1.3 2 .5 3.5-.4 3.8-1.6a2 2 0 0 0-.6-1.8 4.4 4.4 0 0 0-2.2-1.5 6.4 6.4 0 0 1-3.4-2 4 4 0 0 1-.9-3.7c.4-1.7 2-2.8 3.6-3.1V3c0-.6.5-1 1-1Z" clip-rule="evenodd"/>  
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.vercel.app/)
-## Props
-@prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
-@prop export let role = ctx.role || 'img';
-@prop export let ariaLabel = 'dollar solid';
--->

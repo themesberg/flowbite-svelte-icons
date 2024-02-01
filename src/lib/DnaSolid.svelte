@@ -2,7 +2,7 @@
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
   interface CtxType {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
     role?: string;
   }
 
@@ -15,20 +15,23 @@
     xl: 'w-8 h-8'
   };
 
-  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
+  export let size: "xs" | "sm" | "md" | "lg" | "xl" = ctx.size || 'md';
   export let role = ctx.role || 'img';
 
-  export let ariaLabel = 'dna solid';
-</script>
+export let ariaLabel="dna solid" </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="currentColor"
   {...$$restProps}
-  class={twMerge('shrink-0', sizes[size], $$props.class)}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    $$props.class
+  )}
   {role}
   aria-label={ariaLabel}
-  viewBox="0 0 12 20"
+  viewBox="0 0 24 24"
   on:click
   on:keydown
   on:keyup
@@ -39,17 +42,5 @@
   on:mouseover
   on:mouseout
 >
-  <path
-    fill="currentColor"
-    d="M11 0a1 1 0 0 0-1 1v1H2V1a1 1 0 0 0-2 0v3.169a5.966 5.966 0 0 0 2.269 4.7A1.001 1.001 0 1 0 3.513 7.3a3.756 3.756 0 0 1-.3-.3h5.608a4 4 0 0 1-.76.6l-5.148 3.087A6.027 6.027 0 0 0 0 15.831V19a1 1 0 1 0 2 0v-1h8v1a1 1 0 0 0 2 0v-3.169a5.979 5.979 0 0 0-.416-2.167 1.01 1.01 0 0 0-.044-.1 6.007 6.007 0 0 0-1.891-2.494 1 1 0 0 0-1.216 1.588c.125.107.244.222.354.344h-5.6a3.97 3.97 0 0 1 .76-.6l5.145-3.088a6.015 6.015 0 0 0 2.474-2.906c.009-.02.013-.041.021-.062A5.961 5.961 0 0 0 12 4.169V1a1 1 0 0 0-1-1ZM2 16v-.169c.003-.28.037-.558.1-.831h7.8c.062.273.096.551.1.831V16H2Zm8-12v.169c-.003.28-.037.558-.1.831H2.094A3.964 3.964 0 0 1 2 4.169V4h8Z"
-  />
+     <path fill="currentColor" fill-rule="evenodd" d="M4 4a2 2 0 0 0-2 2v9c0 .6.4 1 1 1h.5v.5a3.5 3.5 0 1 0 7-.5h3v.5a3.5 3.5 0 1 0 7-.5h.5c.6 0 1-.4 1-1v-4l-.1-.4-2-4A1 1 0 0 0 19 6h-5a2 2 0 0 0-2-2H4Zm14.2 11.6.3.9a1.5 1.5 0 1 1-.3-1Zm-10 0 .3.9a1.5 1.5 0 1 1-.3-1ZM14 10V8h4.4l1 2H14Z" clip-rule="evenodd"/>  
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.vercel.app/)
-## Props
-@prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
-@prop export let role = ctx.role || 'img';
-@prop export let ariaLabel = 'dna solid';
--->

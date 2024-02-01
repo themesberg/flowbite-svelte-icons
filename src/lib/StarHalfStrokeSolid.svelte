@@ -2,7 +2,7 @@
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
   interface CtxType {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
     role?: string;
   }
 
@@ -15,20 +15,23 @@
     xl: 'w-8 h-8'
   };
 
-  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
+  export let size: "xs" | "sm" | "md" | "lg" | "xl" = ctx.size || 'md';
   export let role = ctx.role || 'img';
 
-  export let ariaLabel = 'star half stroke solid';
-</script>
+export let ariaLabel="star half stroke solid" </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="currentColor"
   {...$$restProps}
-  class={twMerge('shrink-0', sizes[size], $$props.class)}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    $$props.class
+  )}
   {role}
   aria-label={ariaLabel}
-  viewBox="0 0 22 20"
+  viewBox="0 0 24 24"
   on:click
   on:keydown
   on:keyup
@@ -39,17 +42,5 @@
   on:mouseover
   on:mouseout
 >
-  <path
-    fill="currentColor"
-    d="M10 .8a1.5 1.5 0 0 0-.376.468L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L10 17.558V.8Zm10.925 6.825a1.526 1.526 0 0 0-1.239-1.044l-5.051-.734-2.259-4.577A1.51 1.51 0 0 0 12 .8v16.758l3.518 1.85a1.533 1.533 0 0 0 2.225-1.617l-.862-5.03L20.535 9.2a1.526 1.526 0 0 0 .39-1.575Z"
-  />
+     <path fill="currentColor" d="m13 20 2.9 1.7a2 2 0 0 0 3-2.2l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.4L13.8 4a2 2 0 0 0-.8-1v17ZM11 3a2 2 0 0 0-.8 1L8.4 8.2l-4.6.4A2 2 0 0 0 2.7 12l3.5 3-1 4.4A2 2 0 0 0 8 21.7l2.9-1.8V3Z"/>  
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.vercel.app/)
-## Props
-@prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
-@prop export let role = ctx.role || 'img';
-@prop export let ariaLabel = 'star half stroke solid';
--->
