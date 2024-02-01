@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.4](https://github.com/themesberg/flowbite-svelte-icons/compare/v1.0.3...v1.0.4) (2024-02-01)
+
+
+### Bug Fixes
+
+* viewBox size update ([16aeffc](https://github.com/themesberg/flowbite-svelte-icons/commit/16aeffcca4f71a2868a466ec52cfd2a1a08838a3))
+
 ### [1.0.3](https://github.com/themesberg/flowbite-svelte-icons/compare/v1.0.2...v1.0.3) (2024-01-27)
 
 
