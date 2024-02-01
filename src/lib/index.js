@@ -297,7 +297,6 @@ export { default as GithubSolid } from './GithubSolid.svelte';
 export { default as GlobeOutline } from './GlobeOutline.svelte';
 export { default as GlobeSolid } from './GlobeSolid.svelte';
 export { default as GoogleSolid } from './GoogleSolid.svelte';
-export { default as Grid(24x24px)Outline } from './Grid(24x24px)Outline.svelte';
 export { default as GridOutline } from './GridOutline.svelte';
 export { default as GridPlusOutline } from './GridPlusOutline.svelte';
 export { default as GridPlusSolid } from './GridPlusSolid.svelte';
