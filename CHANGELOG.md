@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/themesberg/flowbite-svelte-icons/compare/v1.2.0...v1.2.1) (2024-02-02)
+
+
+### Bug Fixes
+
+* solid circle check and mobile phone update ([209ea52](https://github.com/themesberg/flowbite-svelte-icons/commit/209ea525aecb8943269a5f9bca021fc1e575977e))
+
 ## [1.2.0](https://github.com/themesberg/flowbite-svelte-icons/compare/v1.1.1...v1.2.0) (2024-02-02)
 
 
