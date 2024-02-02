@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/themesberg/flowbite-svelte-icons/compare/v1.0.4...v1.1.1) (2024-02-02)
+
+
+### Bug Fixes
+
+* MobilephoneSolid to MobliePhoneSolid ([f9109e7](https://github.com/themesberg/flowbite-svelte-icons/commit/f9109e720c76b9bf44001274be61ecafd39f0d93))
+
 ### [1.0.4](https://github.com/themesberg/flowbite-svelte-icons/compare/v1.0.3...v1.0.4) (2024-02-01)
 
 
