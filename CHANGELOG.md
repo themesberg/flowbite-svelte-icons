@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/themesberg/flowbite-svelte-icons/compare/v1.1.1...v1.2.0) (2024-02-02)
+
+
+### Features
+
+* add TwitterSolid and PauseSolid ([921dab5](https://github.com/themesberg/flowbite-svelte-icons/commit/921dab5e71dbdee84b3378af967f59c4b9c42eb6))
+
+
+### Bug Fixes
+
+* layout update add class to NavHamburger ([1a9e4e6](https://github.com/themesberg/flowbite-svelte-icons/commit/1a9e4e67dccb1af374c5acad48b976b74b360023))
+
 ### [1.1.1](https://github.com/themesberg/flowbite-svelte-icons/compare/v1.0.4...v1.1.1) (2024-02-02)
 
 
