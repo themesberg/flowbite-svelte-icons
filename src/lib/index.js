@@ -373,7 +373,7 @@ export { default as MinimizeSolid } from './MinimizeSolid.svelte';
 export { default as MinusOutline } from './MinusOutline.svelte';
 export { default as MinusSolid } from './MinusSolid.svelte';
 export { default as MobilePhoneOutline } from './MobilePhoneOutline.svelte';
-export { default as MobilephoneSolid } from './MobilephoneSolid.svelte';
+export { default as MobilePhoneSolid } from './MobilePhoneSolid.svelte';
 export { default as MoonOutline } from './MoonOutline.svelte';
 export { default as MoonSolid } from './MoonSolid.svelte';
 export { default as NewspapperOutline } from './NewspapperOutline.svelte';
