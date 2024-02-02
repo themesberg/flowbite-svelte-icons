@@ -1592,9 +1592,9 @@
       "types": "./dist/MobilePhoneOutline.svelte.d.ts",
       "svelte": "./dist/MobilePhoneOutline.svelte"
     },
-    "./MobilePhoneSolid.svelte": {
-      "types": "./dist/MobilePhoneSolid.svelte.d.ts",
-      "svelte": "./dist/MobilePhoneSolid.svelte"
+    "./MobilephoneSolid.svelte": {
+      "types": "./dist/MobilephoneSolid.svelte.d.ts",
+      "svelte": "./dist/MobilephoneSolid.svelte"
     },
     "./MoonOutline.svelte": {
       "types": "./dist/MoonOutline.svelte.d.ts",
@@ -1663,6 +1663,10 @@
     "./ParagraphSolid.svelte": {
       "types": "./dist/ParagraphSolid.svelte.d.ts",
       "svelte": "./dist/ParagraphSolid.svelte"
+    },
+    "./PauseOutline.svelte": {
+      "types": "./dist/PauseOutline.svelte.d.ts",
+      "svelte": "./dist/PauseOutline.svelte"
     },
     "./PauseSolid.svelte": {
       "types": "./dist/PauseSolid.svelte.d.ts",

@@ -4,6 +4,9 @@
   interface CtxType {
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
+    strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | null | undefined;
+    strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined;
+    strokeWidth?: string;
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -23,12 +26,12 @@
   export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
     ctx.strokeLinejoin || 'round';
   export let strokeWidth = ctx.strokeWidth || '2';
-  export let ariaLabel = 'x solid';
+  export let ariaLabel = 'pause outline';
 </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  fill="currentColor"
+  fill="none"
   {...$$restProps}
   class={twMerge('shrink-0', sizes[size], $$props.class)}
   {role}
@@ -49,7 +52,7 @@
     stroke-linecap={strokeLinecap}
     stroke-linejoin={strokeLinejoin}
     stroke-width={strokeWidth}
-    d="M6 18 18 6m0 12L6 6"
+    d="M9 6H8a1 1 0 0 0-1 1v10c0 .6.4 1 1 1h1c.6 0 1-.4 1-1V7c0-.6-.4-1-1-1Zm7 0h-1a1 1 0 0 0-1 1v10c0 .6.4 1 1 1h1c.6 0 1-.4 1-1V7c0-.6-.4-1-1-1Z"
   />
 </svg>
 
@@ -64,5 +67,5 @@
 @prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
     ctx.strokeLinejoin || 'round';
 @prop export let strokeWidth = ctx.strokeWidth || '2';
-@prop export let ariaLabel = 'x solid';
+@prop export let ariaLabel = 'pause outline';
 -->
