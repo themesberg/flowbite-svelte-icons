@@ -660,6 +660,10 @@
       "types": "./dist/ChevronUpSolid.svelte.d.ts",
       "svelte": "./dist/ChevronUpSolid.svelte"
     },
+    "./CircleCheckSolid.svelte": {
+      "types": "./dist/CircleCheckSolid.svelte.d.ts",
+      "svelte": "./dist/CircleCheckSolid.svelte"
+    },
     "./CirclePauseOutline.svelte": {
       "types": "./dist/CirclePauseOutline.svelte.d.ts",
       "svelte": "./dist/CirclePauseOutline.svelte"
@@ -675,10 +679,6 @@
     "./CirclePlusSolid.svelte": {
       "types": "./dist/CirclePlusSolid.svelte.d.ts",
       "svelte": "./dist/CirclePlusSolid.svelte"
-    },
-    "./CirclecheckSolid.svelte": {
-      "types": "./dist/CirclecheckSolid.svelte.d.ts",
-      "svelte": "./dist/CirclecheckSolid.svelte"
     },
     "./ClapperboardPlayOutline.svelte": {
       "types": "./dist/ClapperboardPlayOutline.svelte.d.ts",
@@ -1592,9 +1592,9 @@
       "types": "./dist/MobilePhoneOutline.svelte.d.ts",
       "svelte": "./dist/MobilePhoneOutline.svelte"
     },
-    "./MobilephoneSolid.svelte": {
-      "types": "./dist/MobilephoneSolid.svelte.d.ts",
-      "svelte": "./dist/MobilephoneSolid.svelte"
+    "./MobilePhoneSolid.svelte": {
+      "types": "./dist/MobilePhoneSolid.svelte.d.ts",
+      "svelte": "./dist/MobilePhoneSolid.svelte"
     },
     "./MoonOutline.svelte": {
       "types": "./dist/MoonOutline.svelte.d.ts",
