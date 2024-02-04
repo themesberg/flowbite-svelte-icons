@@ -18,7 +18,12 @@
   export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
   export let role = ctx.role || 'img';
 
-  export let ariaLabel = 'bell active solid';
+  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined =
+    ctx.strokeLinecap || 'round';
+  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
+    ctx.strokeLinejoin || 'round';
+  export let strokeWidth = ctx.strokeWidth || '2';
+  export let ariaLabel = 'close solid';
 </script>
 
 <svg
@@ -40,15 +45,12 @@
   on:mouseout
 >
   <path
-    fill="currentColor"
-    d="M11.2 3.8a1 1 0 0 0-2 .4l.4 1.7a5.3 5.3 0 0 0-2.8 5.8l.2 1.5.1.3c.3 1.3-.2 2.2-.6 3-.3.5-.6 1-.5 1.4.1.6.3 1.2.8 1l12.7-2.3c.5-.1.4-.7.3-1.3-.1-.5-.6-1-1.2-1.7a5.2 5.2 0 0 1-1.4-2l-.3-1.6v-.2a5.3 5.3 0 0 0-5.4-4.4l-.3-1.6Z"
+    stroke="currentColor"
+    stroke-linecap={strokeLinecap}
+    stroke-linejoin={strokeLinejoin}
+    stroke-width={strokeWidth}
+    d="M6 18 18 6m0 12L6 6"
   />
-  <path
-    fill="currentColor"
-    fill-rule="evenodd"
-    d="M6.5 4.3c.4.3.5 1 .1 1.4A6.9 6.9 0 0 0 4.8 10a1 1 0 0 1-2-.2c.1-2.1 1-3.9 2.3-5.5a1 1 0 0 1 1.4 0Z"
-    clip-rule="evenodd"
-  /> <path fill="currentColor" d="M9 19.7c.7.8 1.7 1.3 2.8 1.3 1.5 0 2.8-1.1 3.3-2.5L9 19.7Z" />
 </svg>
 
 <!--
@@ -57,5 +59,10 @@
 ## Props
 @prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
 @prop export let role = ctx.role || 'img';
-@prop export let ariaLabel = 'bell active solid';
+@prop export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined =
+    ctx.strokeLinecap || 'round';
+@prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
+    ctx.strokeLinejoin || 'round';
+@prop export let strokeWidth = ctx.strokeWidth || '2';
+@prop export let ariaLabel = 'close solid';
 -->

@@ -92,6 +92,14 @@
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
     },
+    "./AddressBookOutline.svelte": {
+      "types": "./dist/AddressBookOutline.svelte.d.ts",
+      "svelte": "./dist/AddressBookOutline.svelte"
+    },
+    "./AddressBookSolid.svelte": {
+      "types": "./dist/AddressBookSolid.svelte.d.ts",
+      "svelte": "./dist/AddressBookSolid.svelte"
+    },
     "./AdjustmentsHorizontalOutline.svelte": {
       "types": "./dist/AdjustmentsHorizontalOutline.svelte.d.ts",
       "svelte": "./dist/AdjustmentsHorizontalOutline.svelte"
@@ -107,14 +115,6 @@
     "./AdjustmentsVerticalSolid.svelte": {
       "types": "./dist/AdjustmentsVerticalSolid.svelte.d.ts",
       "svelte": "./dist/AdjustmentsVerticalSolid.svelte"
-    },
-    "./AdressBookOutline.svelte": {
-      "types": "./dist/AdressBookOutline.svelte.d.ts",
-      "svelte": "./dist/AdressBookOutline.svelte"
-    },
-    "./AdressBookSolid.svelte": {
-      "types": "./dist/AdressBookSolid.svelte.d.ts",
-      "svelte": "./dist/AdressBookSolid.svelte"
     },
     "./AlignCenterOutline.svelte": {
       "types": "./dist/AlignCenterOutline.svelte.d.ts",
@@ -436,6 +436,14 @@
       "types": "./dist/CalendarMonthSolid.svelte.d.ts",
       "svelte": "./dist/CalendarMonthSolid.svelte"
     },
+    "./CalendarPlusOutline.svelte": {
+      "types": "./dist/CalendarPlusOutline.svelte.d.ts",
+      "svelte": "./dist/CalendarPlusOutline.svelte"
+    },
+    "./CalendarPlusSolid.svelte": {
+      "types": "./dist/CalendarPlusSolid.svelte.d.ts",
+      "svelte": "./dist/CalendarPlusSolid.svelte"
+    },
     "./CalendarWeekOutline.svelte": {
       "types": "./dist/CalendarWeekOutline.svelte.d.ts",
       "svelte": "./dist/CalendarWeekOutline.svelte"
@@ -720,6 +728,14 @@
       "types": "./dist/ClockSolid.svelte.d.ts",
       "svelte": "./dist/ClockSolid.svelte"
     },
+    "./CloseOutline.svelte": {
+      "types": "./dist/CloseOutline.svelte.d.ts",
+      "svelte": "./dist/CloseOutline.svelte"
+    },
+    "./CloseSolid.svelte": {
+      "types": "./dist/CloseSolid.svelte.d.ts",
+      "svelte": "./dist/CloseSolid.svelte"
+    },
     "./CloudArrowUpOutline.svelte": {
       "types": "./dist/CloudArrowUpOutline.svelte.d.ts",
       "svelte": "./dist/CloudArrowUpOutline.svelte"
@@ -844,10 +860,6 @@
       "types": "./dist/DnaOutline.svelte.d.ts",
       "svelte": "./dist/DnaOutline.svelte"
     },
-    "./DnaSolid.svelte": {
-      "types": "./dist/DnaSolid.svelte.d.ts",
-      "svelte": "./dist/DnaSolid.svelte"
-    },
     "./DollarOutline.svelte": {
       "types": "./dist/DollarOutline.svelte.d.ts",
       "svelte": "./dist/DollarOutline.svelte"
@@ -920,6 +932,14 @@
       "types": "./dist/EnvelopeSolid.svelte.d.ts",
       "svelte": "./dist/EnvelopeSolid.svelte"
     },
+    "./EuroOutline.svelte": {
+      "types": "./dist/EuroOutline.svelte.d.ts",
+      "svelte": "./dist/EuroOutline.svelte"
+    },
+    "./EuroSolid.svelte": {
+      "types": "./dist/EuroSolid.svelte.d.ts",
+      "svelte": "./dist/EuroSolid.svelte"
+    },
     "./ExclamationCircleOutline.svelte": {
       "types": "./dist/ExclamationCircleOutline.svelte.d.ts",
       "svelte": "./dist/ExclamationCircleOutline.svelte"
@@ -980,9 +1000,9 @@
       "types": "./dist/FaceLaughOutline.svelte.d.ts",
       "svelte": "./dist/FaceLaughOutline.svelte"
     },
-    "./FaceLaughzSolid.svelte": {
-      "types": "./dist/FaceLaughzSolid.svelte.d.ts",
-      "svelte": "./dist/FaceLaughzSolid.svelte"
+    "./FaceLaughSolid.svelte": {
+      "types": "./dist/FaceLaughSolid.svelte.d.ts",
+      "svelte": "./dist/FaceLaughSolid.svelte"
     },
     "./FacebookSolid.svelte": {
       "types": "./dist/FacebookSolid.svelte.d.ts",
@@ -1516,6 +1536,10 @@
       "types": "./dist/MagicWandOutline.svelte.d.ts",
       "svelte": "./dist/MagicWandOutline.svelte"
     },
+    "./MagicWandSolid.svelte": {
+      "types": "./dist/MagicWandSolid.svelte.d.ts",
+      "svelte": "./dist/MagicWandSolid.svelte"
+    },
     "./MailBoxOutline.svelte": {
       "types": "./dist/MailBoxOutline.svelte.d.ts",
       "svelte": "./dist/MailBoxOutline.svelte"
@@ -2048,6 +2072,10 @@
       "types": "./dist/TruckOutline.svelte.d.ts",
       "svelte": "./dist/TruckOutline.svelte"
     },
+    "./TruckSolid.svelte": {
+      "types": "./dist/TruckSolid.svelte.d.ts",
+      "svelte": "./dist/TruckSolid.svelte"
+    },
     "./TwitterSolid.svelte": {
       "types": "./dist/TwitterSolid.svelte.d.ts",
       "svelte": "./dist/TwitterSolid.svelte"
@@ -2196,13 +2224,9 @@
       "types": "./dist/XCircleSolid.svelte.d.ts",
       "svelte": "./dist/XCircleSolid.svelte"
     },
-    "./XOutline.svelte": {
-      "types": "./dist/XOutline.svelte.d.ts",
-      "svelte": "./dist/XOutline.svelte"
-    },
-    "./XSolid.svelte": {
-      "types": "./dist/XSolid.svelte.d.ts",
-      "svelte": "./dist/XSolid.svelte"
+    "./XCompanySolid.svelte": {
+      "types": "./dist/XCompanySolid.svelte.d.ts",
+      "svelte": "./dist/XCompanySolid.svelte"
     },
     "./YoutubeSolid.svelte": {
       "types": "./dist/YoutubeSolid.svelte.d.ts",

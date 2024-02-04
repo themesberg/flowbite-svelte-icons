@@ -18,7 +18,7 @@
   export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
   export let role = ctx.role || 'img';
 
-  export let ariaLabel = 'dna solid';
+  export let ariaLabel = 'euro solid';
 </script>
 
 <svg
@@ -42,7 +42,7 @@
   <path
     fill="currentColor"
     fill-rule="evenodd"
-    d="M4 4a2 2 0 0 0-2 2v9c0 .6.4 1 1 1h.5v.5a3.5 3.5 0 1 0 7-.5h3v.5a3.5 3.5 0 1 0 7-.5h.5c.6 0 1-.4 1-1v-4l-.1-.4-2-4A1 1 0 0 0 19 6h-5a2 2 0 0 0-2-2H4Zm14.2 11.6.3.9a1.5 1.5 0 1 1-.3-1Zm-10 0 .3.9a1.5 1.5 0 1 1-.3-1ZM14 10V8h4.4l1 2H14Z"
+    d="M7.3 9c1-3.4 3.8-6 7.3-6a7 7 0 0 1 4 1.3 1 1 0 1 1-1.2 1.6 5 5 0 0 0-2.8-.9c-2.2 0-4.3 1.6-5.2 4h5.8a1 1 0 1 1 0 2H9a8.7 8.7 0 0 0 0 2h6.3a1 1 0 1 1 0 2H9.4c1 2.4 3 4 5.2 4 1 0 2-.3 2.8-.9a1 1 0 1 1 1.2 1.6 7 7 0 0 1-4 1.3c-3.5 0-6.3-2.6-7.3-6H6a1 1 0 1 1 0-2h.9a10.4 10.4 0 0 1 0-2H6a1 1 0 1 1 0-2h1.3Z"
     clip-rule="evenodd"
   />
 </svg>
@@ -53,5 +53,5 @@
 ## Props
 @prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
 @prop export let role = ctx.role || 'img';
-@prop export let ariaLabel = 'dna solid';
+@prop export let ariaLabel = 'euro solid';
 -->

@@ -26,7 +26,7 @@
   export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
     ctx.strokeLinejoin || 'round';
   export let strokeWidth = ctx.strokeWidth || '2';
-  export let ariaLabel = 'x outline';
+  export let ariaLabel = 'address book outline';
 </script>
 
 <svg
@@ -52,7 +52,7 @@
     stroke-linecap={strokeLinecap}
     stroke-linejoin={strokeLinejoin}
     stroke-width={strokeWidth}
-    d="M6 18 18 6m0 12L6 6"
+    d="M7 6H5m2 3H5m2 3H5m2 3H5m2 3H5m11-1a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2M7 3h11c.6 0 1 .4 1 1v16c0 .6-.4 1-1 1H7a1 1 0 0 1-1-1V4c0-.6.4-1 1-1Zm8 7a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
   />
 </svg>
 
@@ -67,5 +67,5 @@
 @prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
     ctx.strokeLinejoin || 'round';
 @prop export let strokeWidth = ctx.strokeWidth || '2';
-@prop export let ariaLabel = 'x outline';
+@prop export let ariaLabel = 'address book outline';
 -->

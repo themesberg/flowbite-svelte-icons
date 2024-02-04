@@ -26,7 +26,7 @@
   export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
     ctx.strokeLinejoin || 'round';
   export let strokeWidth = ctx.strokeWidth || '2';
-  export let ariaLabel = 'caret up outline';
+  export let ariaLabel = 'euro outline';
 </script>
 
 <svg
@@ -52,7 +52,7 @@
     stroke-linecap={strokeLinecap}
     stroke-linejoin={strokeLinejoin}
     stroke-width={strokeWidth}
-    d="M16.9 16H7a1 1 0 0 1-.8-1.6l5-6a1 1 0 0 1 1.5 0l4.9 6a1 1 0 0 1-.8 1.6Z"
+    d="M6 10h9.2M6 14h9.2M18 5a6 6 0 0 0-3.4-1C11 4 7.8 7.6 7.8 12s3 8 6.8 8a6 6 0 0 0 3.4-1"
   />
 </svg>
 
@@ -67,5 +67,5 @@
 @prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
     ctx.strokeLinejoin || 'round';
 @prop export let strokeWidth = ctx.strokeWidth || '2';
-@prop export let ariaLabel = 'caret up outline';
+@prop export let ariaLabel = 'euro outline';
 -->
