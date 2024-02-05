@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/themesberg/flowbite-svelte-icons/compare/v1.3.0...v1.3.1) (2024-02-05)
+
+
+### Bug Fixes
+
+* exclude IconOutline and IconSolid from filterIconsByKeyword function ([2ea9990](https://github.com/themesberg/flowbite-svelte-icons/commit/2ea9990f52cd3e7a735f2b036ea24435a29a3d8e))
+
 ## [1.3.0](https://github.com/themesberg/flowbite-svelte-icons/compare/v1.2.1...v1.3.0) (2024-02-04)
 
 
