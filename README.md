@@ -1,3 +1,7 @@
+---
+layout: mainLayout
+---
+
 # Flowbite Svelte Icons
 
 <div class="flex gap-2 my-8">
@@ -51,10 +55,10 @@ In a svelte file:
 
 ```html
 <script>
-  import { AddressCardSolid } from 'flowbite-svelte-icons';
+  import { AddressBookOutline } from 'flowbite-svelte-icons';
 </script>
 
-<AddressCardSolid />
+<AddressBookOutline />
 ```
 
 ## Faster compiling
@@ -63,10 +67,10 @@ If you need only a few icons from this library in your Svelte app, import them d
 
 ```html
 <script>
-  import AddressCardSolid from 'flowbite-svelte-icons/AddressCardSolid.svelte';
+  import AddressBookOutline from 'flowbite-svelte-icons/AddressBookOutline.svelte';
 </script>
 
-<AddressCardSolid />
+<AddressBookOutline />
 ```
 
 ## Props
@@ -106,13 +110,13 @@ The following table provides details about the available sizes for icons:
 To change the size of an icon, use the `size` prop and specify the desired size. For example:
 
 ```html
-<AddressCardSolid size="md" />
+<AddressBookOutline size="md" />
 ```
 
 If you want to override the preconfigured size, you can add a custom size using Tailwind CSS by including the desired classes in the `class` prop. For example:
 
 ```html
-<AddressCardSolid class="h-24 w-24 text-blue-700 mr-4" />
+<AddressBookOutline class="h-24 w-24 text-blue-700 mr-4" />
 ```
 
 ## Setting Global Icon using setContext
@@ -251,10 +255,10 @@ Here, we import the `MyIcon` component and the `AngleLeftSolid` icon. By passing
 You can apply Tailwind CSS color directly to the icon component or its parent tag using the `class` prop.
 
 ```html
-<AddressCardSolid size="md" class="text-red-700 dark:text-green-300 inline m-1"/>
+<AddressBookOutline size="md" class="text-red-700 dark:text-green-300 inline m-1"/>
 
 <div class="text-red-700 dark:text-green-300 inline m-1">
-  <AddressCardSolid size="md" />
+  <AddressBookOutline size="md" />
 </div>
 ```
 
@@ -263,7 +267,7 @@ You can apply Tailwind CSS color directly to the icon component or its parent ta
 Use the color attribute to change colors with HEX color code for Filled and Outlined components.
 
 ```html
-<AddressCardSolid color="#ff0000" size="md"/> 
+<AddressBookOutline color="#ff0000" size="md"/> 
 ```
 
 ## Dark mode
@@ -273,7 +277,7 @@ If you are using the dark mode on your website with Tailwind CSS, add your dark 
 Let's use `dark` for the dark mode class as an example.
 
 ```html
-<AddressCardSolid class="text-blue-700 dark:text-red-500" />
+<AddressBookOutline class="text-blue-700 dark:text-red-500" />
 ```
 
 ## aria-label
@@ -282,7 +286,7 @@ All icons have aria-label. For example `BxAbacus` has `aria-label="bx abacus"`.
 Use `ariaLabel` prop to modify the `aria-label` value.
 
 ```html
-<AddressCardSolid ariaLabel="address card solid" />
+<AddressBookOutline ariaLabel="address card outline" />
 ```
 
 ## Unfocusable icon
@@ -290,7 +294,7 @@ Use `ariaLabel` prop to modify the `aria-label` value.
 If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 ```html
-<AddressCardSolid tabindex="-1" />
+<AddressBookOutline tabindex="-1" />
 ```
 
 ## Events
@@ -312,31 +316,31 @@ All icons have the following events:
 You can pass other attibutes as well.
 
 ```html
-<AddressCardSolid tabindex="0" />
+<AddressBookOutline tabindex="0" />
 ```
 
 ## Using svelte:component
 
 ```html
 <script>
-  import { AddressCardSolid } from 'flowbite-svelte-icons';
+  import { AddressBookOutline } from 'flowbite-svelte-icons';
 </script>
 
-<svelte:component this="{AddressCardSolid}" />
+<svelte:component this="{AddressBookOutline}" />
 ```
 
 ## Using onMount
 
 ```html
 <script>
-  import { AddressCardSolid } from 'flowbite-svelte-icons';
+  import { AddressBookOutline } from 'flowbite-svelte-icons';
   import { onMount } from 'svelte';
   const props = {
     size: '50',
     color: '#ff0000'
   };
   onMount(() => {
-    const icon = new AddressCardSolid({ target: document.body, props });
+    const icon = new AddressBookOutline({ target: document.body, props });
   });
 </script>
 ```
@@ -350,13 +354,13 @@ Use `import * as Icon from 'flowbite-svelte-icons`.
   import * as Icon from 'flowbite-svelte-icons';
 </script>
 
-<Icon.AddressCardSolid />
+<Icon.AddressBookOutline />
 
 <h1>Size</h1>
-<Icon.AddressCardSolid size="30" />
+<Icon.AddressBookOutline size="30" />
 
 <h1>Tailwind CSS</h1>
-<Icon.AddressCardSolid class="text-blue-500" />
+<Icon.AddressBookOutline class="text-blue-500" />
 ```
 
 ## Other icons

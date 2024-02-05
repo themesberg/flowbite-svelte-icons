@@ -2,7 +2,7 @@
 export function filterIconsByKeyword(icons, keyword) {
   const filteredIcons = {};
   for (const key in icons) {
-    if (key.includes(keyword)) {
+    if (key.includes(keyword) && !key.includes('IconOutline') && !key.includes('IconSolid')) {
       filteredIcons[key] = icons[key];
     }
   }
