@@ -395,7 +395,7 @@ Use `import * as Icon from 'flowbite-svelte-icons`.
   </li>
   <li class="hover:text-red-700 hover:underline">
     <a
-      href="https://svelte-5-preview.vercel.app/docs/introduction"
+      href="https://svelte.dev/"
       class="me-4 hover:underline md:me-6">Svelte: {svelteVersion}</a
     >
   </li>
