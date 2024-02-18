@@ -2,6 +2,18 @@
 layout: mainLayout
 ---
 
+<script>
+  import { removeHyphensAndCapitalize } from './utils/utils';
+  const name = __NAME__;
+  const version = __VERSION__;
+  const githuburl = __GITHUBURL__;
+  const flowbiteSvelteVersion = __FLOWBITESVELTEVERSION__;
+  const svelteVersion = __SVELTEVERSION__;
+  const svelteKitVersion = __SVELTEKITVERSION__;
+  const viteVersion = __VITEVERSION__;
+  const tailwindcssVersion =  __TAILWINDCSSVERSION__;
+</script>
+
 # Flowbite Svelte Icons
 
 <div class="flex gap-2 my-8">
@@ -366,3 +378,37 @@ Use `import * as Icon from 'flowbite-svelte-icons`.
 ## Other icons
 
 - [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
+
+## Technical information about this website
+
+<ul class="m-4 list-disc p-4 text-left text-lg dark:text-gray-400">
+  <li class="hover:text-red-700 hover:underline">
+    <a
+      href="https://svelte-5-preview.vercel.app/docs/introduction"
+      class="me-4 hover:underline md:me-6">{removeHyphensAndCapitalize(name)} : {version}</a
+    >
+  </li>
+  <li>
+    <a href="https://flowbite-svelte.com/" class="me-4 hover:underline md:me-6"
+      >Flowbite-Svelte: {flowbiteSvelteVersion}</a
+    >
+  </li>
+  <li class="hover:text-red-700 hover:underline">
+    <a
+      href="https://svelte-5-preview.vercel.app/docs/introduction"
+      class="me-4 hover:underline md:me-6">Svelte: {svelteVersion}</a
+    >
+  </li>
+  <li>
+    <a href="https://kit.svelte.dev/docs/introduction" class="me-4 hover:underline md:me-6"
+      >SvelteKit: {svelteKitVersion}</a
+    >
+  </li>
+  <li class="hover:text-red-700 hover:underline">
+    <a href="https://vitejs.dev/" class="hover:underline">Vite: {viteVersion}</a>
+  </li>
+  <li class="hover:text-red-700 hover:underline">
+    <a href="https://tailwindcss.com/" class="hover:underline">TaiwindCSS: {tailwindcssVersion}</a>
+  </li>
+</ul>
+
