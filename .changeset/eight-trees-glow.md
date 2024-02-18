@@ -2,4 +2,6 @@
 "flowbite-svelte-icons": patch
 ---
 
-update
+docs: add technical information about this website
+chore: install changeset
+
