@@ -18,7 +18,7 @@
   export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
   export let role = ctx.role || 'img';
 
-  export let ariaLabel = 'cloud arrow up solid';
+  export let ariaLabel = 'briefcase solid';
 </script>
 
 <svg
@@ -41,11 +41,9 @@
 >
   <path
     fill="currentColor"
-    d="M13.4 4a6.5 6.5 0 0 0-6.9 4A5 5 0 0 0 7 18h3v-4a2 2 0 0 1-1.4-3.4l2-2a2 2 0 0 1 2.8 0l2 2A2 2 0 0 1 14 14v4h4a4 4 0 0 0 1-7.9 6.5 6.5 0 0 0-5.6-6Z"
-  />
-  <path
-    fill="currentColor"
-    d="M12.7 9.3a1 1 0 0 0-1.4 0l-2 2a1 1 0 1 0 1.4 1.4l.3-.3V19a1 1 0 1 0 2 0v-6.6l.3.3a1 1 0 0 0 1.4-1.4l-2-2Z"
+    fill-rule="evenodd"
+    d="M10 2a3 3 0 0 0-3 3v1H5a3 3 0 0 0-3 3v2.4l1.4.7a7.7 7.7 0 0 0 .7.3 21 21 0 0 0 16.4-.3l1.5-.7V9a3 3 0 0 0-3-3h-2V5a3 3 0 0 0-3-3h-4Zm5 4V5c0-.6-.4-1-1-1h-4a1 1 0 0 0-1 1v1h6Zm6.4 7.9.6-.3V19a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-5.4l.6.3a10 10 0 0 0 .7.3 23 23 0 0 0 18-.3h.1L21 13l.4.9ZM12 10a1 1 0 1 0 0 2 1 1 0 1 0 0-2Z"
+    clip-rule="evenodd"
   />
 </svg>
 
@@ -55,5 +53,5 @@
 ## Props
 @prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
 @prop export let role = ctx.role || 'img';
-@prop export let ariaLabel = 'cloud arrow up solid';
+@prop export let ariaLabel = 'briefcase solid';
 -->

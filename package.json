@@ -110,10 +110,6 @@
       "types": "./dist/AdjustmentsHorizontalSolid.svelte.d.ts",
       "svelte": "./dist/AdjustmentsHorizontalSolid.svelte"
     },
-    "./AdjustmentsVerticalOutline.svelte": {
-      "types": "./dist/AdjustmentsVerticalOutline.svelte.d.ts",
-      "svelte": "./dist/AdjustmentsVerticalOutline.svelte"
-    },
     "./AdjustmentsVerticalSolid.svelte": {
       "types": "./dist/AdjustmentsVerticalSolid.svelte.d.ts",
       "svelte": "./dist/AdjustmentsVerticalSolid.svelte"
@@ -185,6 +181,10 @@
     "./ArchiveSolid.svelte": {
       "types": "./dist/ArchiveSolid.svelte.d.ts",
       "svelte": "./dist/ArchiveSolid.svelte"
+    },
+    "./ArrowDownOutline.svelte": {
+      "types": "./dist/ArrowDownOutline.svelte.d.ts",
+      "svelte": "./dist/ArrowDownOutline.svelte"
     },
     "./ArrowDownToBracketOutline.svelte": {
       "types": "./dist/ArrowDownToBracketOutline.svelte.d.ts",
@@ -402,6 +402,14 @@
       "types": "./dist/BrainSolid.svelte.d.ts",
       "svelte": "./dist/BrainSolid.svelte"
     },
+    "./BriefcaseOutline.svelte": {
+      "types": "./dist/BriefcaseOutline.svelte.d.ts",
+      "svelte": "./dist/BriefcaseOutline.svelte"
+    },
+    "./BriefcaseSolid.svelte": {
+      "types": "./dist/BriefcaseSolid.svelte.d.ts",
+      "svelte": "./dist/BriefcaseSolid.svelte"
+    },
     "./BugOutline.svelte": {
       "types": "./dist/BugOutline.svelte.d.ts",
       "svelte": "./dist/BugOutline.svelte"
@@ -582,6 +590,10 @@
       "types": "./dist/CheckCircleOutline.svelte.d.ts",
       "svelte": "./dist/CheckCircleOutline.svelte"
     },
+    "./CheckCircleSolid.svelte": {
+      "types": "./dist/CheckCircleSolid.svelte.d.ts",
+      "svelte": "./dist/CheckCircleSolid.svelte"
+    },
     "./CheckOutline.svelte": {
       "types": "./dist/CheckOutline.svelte.d.ts",
       "svelte": "./dist/CheckOutline.svelte"
@@ -669,10 +681,6 @@
     "./ChevronUpSolid.svelte": {
       "types": "./dist/ChevronUpSolid.svelte.d.ts",
       "svelte": "./dist/ChevronUpSolid.svelte"
-    },
-    "./CircleCheckSolid.svelte": {
-      "types": "./dist/CircleCheckSolid.svelte.d.ts",
-      "svelte": "./dist/CircleCheckSolid.svelte"
     },
     "./CirclePauseOutline.svelte": {
       "types": "./dist/CirclePauseOutline.svelte.d.ts",

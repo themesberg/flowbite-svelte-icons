@@ -26,7 +26,7 @@
   export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
     ctx.strokeLinejoin || 'round';
   export let strokeWidth = ctx.strokeWidth || '2';
-  export let ariaLabel = 'adjustments vertical outline';
+  export let ariaLabel = 'briefcase outline';
 </script>
 
 <svg
@@ -67,5 +67,5 @@
 @prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
     ctx.strokeLinejoin || 'round';
 @prop export let strokeWidth = ctx.strokeWidth || '2';
-@prop export let ariaLabel = 'adjustments vertical outline';
+@prop export let ariaLabel = 'briefcase outline';
 -->

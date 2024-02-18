@@ -2,10 +2,10 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
 import pkg from './package.json' assert { type: 'json' };
 import flowbiteSveltePackage from './node_modules/flowbite-svelte/package.json' assert { type: 'json' };
-import sveltePackage from './node_modules/svelte/package.json' assert { type: 'json' };
-import svelteKitPackage from './node_modules/@sveltejs/kit/package.json' assert { type: 'json' };
-import vitePackage from './node_modules/vite/package.json' assert { type: 'json' };
-import tailwindcssPackage from './node_modules/tailwindcss/package.json' assert { type: 'json' };
+import sveltePackage from 'svelte/package.json' assert { type: 'json' };
+import svelteKitPackage from '@sveltejs/kit/package.json' assert { type: 'json' };
+import vitePackage from 'vite/package.json' assert { type: 'json' };
+import tailwindcssPackage from 'tailwindcss/package.json' assert { type: 'json' };
 
 export default defineConfig({
   plugins: [sveltekit()],

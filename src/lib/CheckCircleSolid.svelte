@@ -18,7 +18,7 @@
   export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
   export let role = ctx.role || 'img';
 
-  export let ariaLabel = 'circle check solid';
+  export let ariaLabel = 'check circle solid';
 </script>
 
 <svg
@@ -53,5 +53,5 @@
 ## Props
 @prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
 @prop export let role = ctx.role || 'img';
-@prop export let ariaLabel = 'circle check solid';
+@prop export let ariaLabel = 'check circle solid';
 -->

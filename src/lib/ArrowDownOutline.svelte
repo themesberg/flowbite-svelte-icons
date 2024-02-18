@@ -26,7 +26,7 @@
   export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
     ctx.strokeLinejoin || 'round';
   export let strokeWidth = ctx.strokeWidth || '2';
-  export let ariaLabel = 'calendar plus outline';
+  export let ariaLabel = 'arrow down outline';
 </script>
 
 <svg
@@ -50,9 +50,15 @@
   <path
     stroke="currentColor"
     stroke-linecap={strokeLinecap}
+    stroke-width={strokeWidth}
+    d="M12 18V5"
+  />
+  <path
+    stroke="currentColor"
+    stroke-linecap="round"
     stroke-linejoin={strokeLinejoin}
     stroke-width={strokeWidth}
-    d="M4 10h16m-10 5h4m-2 2v-4m0-6V4M7 7V4m10 3V4M5 20h14c.6 0 1-.4 1-1V7c0-.5-.4-1-1-1H5a1 1 0 0 0-1 1v12c0 .6.4 1 1 1Z"
+    d="m8 15 4 4 4-4"
   />
 </svg>
 
@@ -67,5 +73,5 @@
 @prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
     ctx.strokeLinejoin || 'round';
 @prop export let strokeWidth = ctx.strokeWidth || '2';
-@prop export let ariaLabel = 'calendar plus outline';
+@prop export let ariaLabel = 'arrow down outline';
 -->
