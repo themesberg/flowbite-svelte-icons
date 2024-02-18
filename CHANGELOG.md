@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.0
+
+### Minor Changes
+
+- feat: add ArrowDownOutline, BriefcaseOutline, BriefcaseSolid, and CheckCircleSolid ([`3e0312a96d3bef99793e016714b3db09bc6eb047`](https://github.com/themesberg/flowbite-svelte-icons/commit/3e0312a96d3bef99793e016714b3db09bc6eb047))
+
 ## 1.3.2
 
 ### Patch Changes
