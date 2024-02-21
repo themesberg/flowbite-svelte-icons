@@ -1,19 +1,13 @@
 <script lang="ts">
-  import type { ComponentType } from 'svelte';
-  export let icon: ComponentType;
-  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
-  export let role: string = 'img';
-  export let ariaLabel = 'Icon';
+	import type { ComponentType } from 'svelte';
+	interface Props {
+		icon: ComponentType;
+		size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+		role?: string;
+		ariaLabel?: string;
+		class?: string;
+	}
+	let { icon, size, role, ariaLabel, class: classname, ...restProps } = $props<Props>();
 </script>
 
-<svelte:component this={icon} {...$$restProps} {role} {size} class={$$props.class} {ariaLabel} />
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.vercel.app/)
-## Props
-@prop export let icon: ComponentType;
-@prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
-@prop export let role: string = 'img';
-@prop export let ariaLabel = 'Icon';
--->
+<svelte:component this={icon} {...restProps} {role} {size} class={classname} {ariaLabel} />
