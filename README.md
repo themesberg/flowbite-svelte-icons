@@ -301,7 +301,7 @@ If you want to make an icon unfocusable, add `tabindex="-1"`.
 <AddressBookOutline tabindex="-1" />
 ```
 
-## Events
+## Events for Svelte 4
 
 All icons have the following events:
 
@@ -370,4 +370,3 @@ Use `import * as Icon from 'flowbite-svelte-icons`.
 ## Other icons
 
 - [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
-

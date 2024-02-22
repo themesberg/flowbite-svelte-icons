@@ -317,7 +317,7 @@ If you want to make an icon unfocusable, add `tabindex="-1"`.
 <AddressBookOutline tabindex="-1" />
 ```
 
-## Events
+## Events for Svelte 4
 
 All icons have the following events:
 
