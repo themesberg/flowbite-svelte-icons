@@ -1,7 +1,3 @@
----
-layout: mainLayout
----
-
 # Flowbite Svelte Icons
 
 <div class="flex gap-2 my-8">
@@ -12,7 +8,7 @@ layout: mainLayout
 <a href="https://www.npmjs.com/package/flowbite-svelte-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/flowbite-svelte-icons.svg" alt="npm" ></a>
 </div>
 
-480+ SVG [Flowbite icons](https://github.com/themesberg/flowbite-icons) components for Svelte. 
+480+ SVG [Flowbite icons](https://github.com/themesberg/flowbite-icons) components for Svelte 3/4/5/Runes.
 
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
@@ -32,12 +28,20 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 ## Installation
 
+### Svelte 3/4/5:
+
 ```sh
 pnpm i -D flowbite-svelte-icons
 ```
 
-To make sure the classes used by flowbite-svelte-icons are included by the Tailwindcss, add the following to tailwind.config.cjs.
+### Svelte 5 Runes
+After installing Svelte-5 and updating `svelte.config.js` to enable `runes`:
 
+```sh
+pnpm i -D flowbite-svelte-icons@2.0.0-next.1
+```
+
+To make sure the classes used by flowbite-svelte-icons are included by the Tailwindcss, add the following to tailwind.config.cjs.
 
 ```js
 const config = {
@@ -366,3 +370,4 @@ Use `import * as Icon from 'flowbite-svelte-icons`.
 ## Other icons
 
 - [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
+
