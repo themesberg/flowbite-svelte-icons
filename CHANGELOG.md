@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0
+
+### Patch Changes
+
+- fix: update peerDependencies for svelte to ^5.0.0 in package.json
+
 ## 2.0.0-next.1
 
 ### Major Changes
