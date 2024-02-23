@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.1
+
+### Patch Changes
+
+- docs: update README
+
 ## 2.0.0
 
 ### Patch Changes
