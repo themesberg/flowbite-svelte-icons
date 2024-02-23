@@ -28,20 +28,22 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 ## Installation
 
-### Svelte 3/4/5:
+
+### Svelte 3/4/5
 
 ```sh
 pnpm i -D flowbite-svelte-icons
 ```
 
 ### Svelte 5 Runes
-After installing Svelte-5 and updating `svelte.config.js` to enable `runes`:
 
 ```sh
-pnpm i -D flowbite-svelte-icons@2.0.0-next.1
+pnpm i -D flowbite-svelte-icons@2.0.0-next.x
 ```
 
-To make sure the classes used by flowbite-svelte-icons are included by the Tailwindcss, add the following to tailwind.config.cjs.
+Replace `x` with the latest release at [GitHub](https://github.com/themesberg/flowbite-svelte-icons/releases).
+
+Add the following to tailwind.config.cjs.
 
 ```js
 const config = {
