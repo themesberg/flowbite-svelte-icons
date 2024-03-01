@@ -36,12 +36,6 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 [themesberg/flowbite-icons](https://github.com/themesberg/flowbite-icons)
 
-## License
-
-[Flowbite-Svelte-Icons License](https://github.com/themesberg/flowbite-svelte-icons/blob/main/LICENSE)
-
-[Flowbite Icons License](https://github.com/themesberg/flowbite-icons/blob/main/LICENSE)
-
 ## Installation
 
 ### Svelte 3/4/5:
@@ -386,6 +380,13 @@ Use `import * as Icon from 'flowbite-svelte-icons`.
 ## Other icons
 
 - [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
+
+## License
+
+[Flowbite-Svelte-Icons License](https://github.com/themesberg/flowbite-svelte-icons/blob/main/LICENSE)
+
+[Flowbite Icons License](https://github.com/themesberg/flowbite-icons/blob/main/LICENSE)
+
 
 ## Technical information about this website
 

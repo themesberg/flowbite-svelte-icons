@@ -12,6 +12,15 @@
 
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
+## Docs
+
+[Docs](https://flowbite-svelte-icons.codewithshin.com/)
+
+## Icons
+
+- [Outline Icons](https://flowbite-svelte-icons.codewithshin.com/outline)
+- [Solid Icons](https://flowbite-svelte-icons.codewithshin.com/solid)
+
 ## Repo
 
 [GitHub Repo](https://github.com/themesberg/flowbite-svelte-icons)
@@ -20,11 +29,6 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 [themesberg/flowbite-icons](https://github.com/themesberg/flowbite-icons)
 
-## License
-
-[Flowbite-Svelte-Icons License](https://github.com/themesberg/flowbite-svelte-icons/blob/main/LICENSE)
-
-[Flowbite Icons License](https://github.com/themesberg/flowbite-icons/blob/main/LICENSE)
 
 ## Installation
 
@@ -371,4 +375,10 @@ Use `import * as Icon from 'flowbite-svelte-icons`.
 
 ## Other icons
 
-- [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
+- [Svelte-Icon-Sets](https://svelte-svg-icons.codewithshin.com/)
+
+## License
+
+[Flowbite-Svelte-Icons License](https://github.com/themesberg/flowbite-svelte-icons/blob/main/LICENSE)
+
+[Flowbite Icons License](https://github.com/themesberg/flowbite-icons/blob/main/LICENSE)
