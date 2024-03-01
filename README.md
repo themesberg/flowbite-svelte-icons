@@ -14,7 +14,7 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 ## Docs
 
-[Docs](https://flowbite-svelte-icons.codewithshin.com/)
+Please see the [Flowbite Svelte Icons documentation](https://flowbite-svelte-icons.codewithshin.com/) for more details on using the icons in your Svelte application.
 
 ## Icons
 
