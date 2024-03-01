@@ -1,5 +1,15 @@
 # Changelog
 
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [1.4.1](https://github.com/themesberg/flowbite-svelte-icons/compare/v1.4.0...v1.4.1) (2024-03-01)
+
+
+### Bug Fixes
+
+* link update ([938f51b](https://github.com/themesberg/flowbite-svelte-icons/commit/938f51b0fba05415fad2aee9633fd8566fbff340))
+* scripts update ([14ba4f0](https://github.com/themesberg/flowbite-svelte-icons/commit/14ba4f0cb81c864a513560bec5b29f1c5ac6b26d))
+
 ## 1.4.0
 
 ### Minor Changes
