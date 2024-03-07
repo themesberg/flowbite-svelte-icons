@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.0
+
+### Patch Changes
+
+- fix: solid icons changing fill="currentColor" to "none" ([`f129c44360356055dbb47d857706355d17cab6f8`](https://github.com/themesberg/flowbite-svelte-icons/commit/f129c44360356055dbb47d857706355d17cab6f8))
+  fix: strokeLinecap, strokeLinejon, and strokeWidth from outline to solid
+
 ## 2.0.1
 
 ### Patch Changes
