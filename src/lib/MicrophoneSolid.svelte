@@ -4,6 +4,9 @@
 	interface CtxType {
 		size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 		role?: string;
+		strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | null | undefined;
+		strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined;
+		strokeWidth?: string;
 	}
 
 	const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -27,7 +30,7 @@
 
 <svg
 	xmlns="http://www.w3.org/2000/svg"
-	fill="currentColor"
+	fill="none"
 	{...restProps}
 	class={twMerge('shrink-0', sizes[size], classname)}
 	{role}
@@ -39,6 +42,5 @@
 		fill-rule="evenodd"
 		d="M5 8c.6 0 1 .4 1 1v3a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4V9a1 1 0 1 1 2 0v3a6 6 0 0 1-6 6h-1v2h2a1 1 0 1 1 0 2H9a1 1 0 1 1 0-2h2v-2h-1a6 6 0 0 1-6-6V9c0-.6.4-1 1-1Z"
 		clip-rule="evenodd"
-	/>
-	<path fill="currentColor" d="M7 6a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v5a4 4 0 0 1-4 4h-2a4 4 0 0 1-4-4V6Z" />
+	/> <path fill="currentColor" d="M7 6a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v5a4 4 0 0 1-4 4h-2a4 4 0 0 1-4-4V6Z" />
 </svg>

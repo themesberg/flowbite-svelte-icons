@@ -4,9 +4,6 @@
 	interface CtxType {
 		size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 		role?: string;
-		strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | null | undefined;
-		strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined;
-		strokeWidth?: string;
 	}
 
 	const ctx: CtxType = getContext('iconCtx') ?? {};

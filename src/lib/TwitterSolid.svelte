@@ -4,6 +4,9 @@
 	interface CtxType {
 		size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 		role?: string;
+		strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | null | undefined;
+		strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined;
+		strokeWidth?: string;
 	}
 
 	const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -27,7 +30,7 @@
 
 <svg
 	xmlns="http://www.w3.org/2000/svg"
-	fill="currentColor"
+	fill="none"
 	{...restProps}
 	class={twMerge('shrink-0', sizes[size], classname)}
 	{role}
