@@ -2,7 +2,7 @@
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
   interface CtxType {
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
   }
 
@@ -15,23 +15,22 @@
     xl: 'w-8 h-8'
   };
 
-  export let size: "xs" | "sm" | "md" | "lg" | "xl" = ctx.size || 'md';
+  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
   export let role = ctx.role || 'img';
 
-export let strokeLinecap: "round" | "inherit" | "butt" | "square" | null | undefined = ctx.strokeLinecap || "round";
-export let strokeLinejoin:"round" | "inherit" | "miter" | "bevel" | null | undefined = ctx.strokeLinejoin || "round";
-export let strokeWidth= ctx.strokeWidth || "2";
-export let ariaLabel="fire outline" </script>
+  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined =
+    ctx.strokeLinecap || 'round';
+  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
+    ctx.strokeLinejoin || 'round';
+  export let strokeWidth = ctx.strokeWidth || '2';
+  export let ariaLabel = 'fire outline';
+</script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
   {...$$restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    $$props.class
-  )}
+  class={twMerge('shrink-0', sizes[size], $$props.class)}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 24 24"
@@ -45,5 +44,25 @@ export let ariaLabel="fire outline" </script>
   on:mouseover
   on:mouseout
 >
-     <path stroke="currentColor" stroke-linecap="{strokeLinecap}" stroke-linejoin="{strokeLinejoin}" stroke-width="{strokeWidth}" d="M18.1 17.6A7.2 7.2 0 0 1 12 21a6.6 6.6 0 0 1-5.8-3c-2.7-4.6.3-8.8.9-9.7A4.4 4.4 0 0 0 8 4c1.3 1 6.4 3.3 5.5 10.6 1.5-1.1 2.7-3 2.9-6.2 1.4 1 4 5.5 1.7 9.2Z"/>  
+  <path
+    stroke="currentColor"
+    stroke-linecap={strokeLinecap}
+    stroke-linejoin={strokeLinejoin}
+    stroke-width={strokeWidth}
+    d="M18.1 17.6A7.2 7.2 0 0 1 12 21a6.6 6.6 0 0 1-5.8-3c-2.7-4.6.3-8.8.9-9.7A4.4 4.4 0 0 0 8 4c1.3 1 6.4 3.3 5.5 10.6 1.5-1.1 2.7-3 2.9-6.2 1.4 1 4 5.5 1.7 9.2Z"
+  />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.vercel.app/)
+## Props
+@prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
+@prop export let role = ctx.role || 'img';
+@prop export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined =
+    ctx.strokeLinecap || 'round';
+@prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
+    ctx.strokeLinejoin || 'round';
+@prop export let strokeWidth = ctx.strokeWidth || '2';
+@prop export let ariaLabel = 'fire outline';
+-->

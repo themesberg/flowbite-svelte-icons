@@ -2,7 +2,7 @@
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
   interface CtxType {
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
   }
 
@@ -15,23 +15,22 @@
     xl: 'w-8 h-8'
   };
 
-  export let size: "xs" | "sm" | "md" | "lg" | "xl" = ctx.size || 'md';
+  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
   export let role = ctx.role || 'img';
 
-export let strokeLinecap: "round" | "inherit" | "butt" | "square" | null | undefined = ctx.strokeLinecap || "round";
-export let strokeLinejoin:"round" | "inherit" | "miter" | "bevel" | null | undefined = ctx.strokeLinejoin || "round";
-export let strokeWidth= ctx.strokeWidth || "2";
-export let ariaLabel="mail box outline" </script>
+  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined =
+    ctx.strokeLinecap || 'round';
+  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
+    ctx.strokeLinejoin || 'round';
+  export let strokeWidth = ctx.strokeWidth || '2';
+  export let ariaLabel = 'mail box outline';
+</script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
   {...$$restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    $$props.class
-  )}
+  class={twMerge('shrink-0', sizes[size], $$props.class)}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 24 24"
@@ -45,5 +44,25 @@ export let ariaLabel="mail box outline" </script>
   on:mouseover
   on:mouseout
 >
-     <path stroke="currentColor" stroke-linecap="{strokeLinecap}" stroke-linejoin="{strokeLinejoin}" stroke-width="{strokeWidth}" d="M11 16v-5.5C11 8.5 9.4 7 7.5 7m3.5 9H4v-5.5C4 8.5 5.6 7 7.5 7m3.5 9v4M7.5 7H14m0 0V4h2.5M14 7v3m-3.5 6H20v-6a3 3 0 0 0-3-3m-2 9v4m-8-6.5h1"/>  
+  <path
+    stroke="currentColor"
+    stroke-linecap={strokeLinecap}
+    stroke-linejoin={strokeLinejoin}
+    stroke-width={strokeWidth}
+    d="M11 16v-5.5C11 8.5 9.4 7 7.5 7m3.5 9H4v-5.5C4 8.5 5.6 7 7.5 7m3.5 9v4M7.5 7H14m0 0V4h2.5M14 7v3m-3.5 6H20v-6a3 3 0 0 0-3-3m-2 9v4m-8-6.5h1"
+  />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.vercel.app/)
+## Props
+@prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
+@prop export let role = ctx.role || 'img';
+@prop export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined =
+    ctx.strokeLinecap || 'round';
+@prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
+    ctx.strokeLinejoin || 'round';
+@prop export let strokeWidth = ctx.strokeWidth || '2';
+@prop export let ariaLabel = 'mail box outline';
+-->

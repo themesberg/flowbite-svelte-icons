@@ -2,10 +2,10 @@
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
   interface CtxType {
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
-    strokeLinecap?: "round" | "inherit" | "butt" | "square" | null | undefined;
-    strokeLinejoin?: "round" | "inherit" | "miter" | "bevel" | null | undefined;
+    strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | null | undefined;
+    strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined;
     strokeWidth?: string;
   }
 
@@ -18,20 +18,17 @@
     xl: 'w-8 h-8'
   };
 
-  export let size: "xs" | "sm" | "md" | "lg" | "xl" = ctx.size || 'md';
+  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
   export let role = ctx.role || 'img';
 
-export let ariaLabel="file word solid" </script>
+  export let ariaLabel = 'file word solid';
+</script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
   {...$$restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    $$props.class
-  )}
+  class={twMerge('shrink-0', sizes[size], $$props.class)}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 24 24"
@@ -45,5 +42,19 @@ export let ariaLabel="file word solid" </script>
   on:mouseover
   on:mouseout
 >
-     <path fill="currentColor" fill-rule="evenodd" d="M9 7V2.2a2 2 0 0 0-.5.4l-4 3.9a2 2 0 0 0-.3.5H9Zm2 0V2h7a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9h5a2 2 0 0 0 2-2Zm-1 4.8a1 1 0 1 0-2 .4l1 5a1 1 0 0 0 1.9.3l1.1-1.9 1.1 2a1 1 0 0 0 1.9-.4l1-5a1 1 0 0 0-2-.4l-.5 2.5-.6-1.1a1 1 0 0 0-1.8 0l-.6 1-.5-2.4Z" clip-rule="evenodd"/>  
+  <path
+    fill="currentColor"
+    fill-rule="evenodd"
+    d="M9 7V2.2a2 2 0 0 0-.5.4l-4 3.9a2 2 0 0 0-.3.5H9Zm2 0V2h7a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9h5a2 2 0 0 0 2-2Zm-1 4.8a1 1 0 1 0-2 .4l1 5a1 1 0 0 0 1.9.3l1.1-1.9 1.1 2a1 1 0 0 0 1.9-.4l1-5a1 1 0 0 0-2-.4l-.5 2.5-.6-1.1a1 1 0 0 0-1.8 0l-.6 1-.5-2.4Z"
+    clip-rule="evenodd"
+  />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.vercel.app/)
+## Props
+@prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
+@prop export let role = ctx.role || 'img';
+@prop export let ariaLabel = 'file word solid';
+-->

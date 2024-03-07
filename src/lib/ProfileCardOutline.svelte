@@ -2,7 +2,7 @@
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
   interface CtxType {
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
   }
 
@@ -15,23 +15,22 @@
     xl: 'w-8 h-8'
   };
 
-  export let size: "xs" | "sm" | "md" | "lg" | "xl" = ctx.size || 'md';
+  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
   export let role = ctx.role || 'img';
 
-export let strokeLinecap: "round" | "inherit" | "butt" | "square" | null | undefined = ctx.strokeLinecap || "round";
-export let strokeLinejoin:"round" | "inherit" | "miter" | "bevel" | null | undefined = ctx.strokeLinejoin || "round";
-export let strokeWidth= ctx.strokeWidth || "2";
-export let ariaLabel="profile card outline" </script>
+  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined =
+    ctx.strokeLinecap || 'round';
+  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
+    ctx.strokeLinejoin || 'round';
+  export let strokeWidth = ctx.strokeWidth || '2';
+  export let ariaLabel = 'profile card outline';
+</script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
   {...$$restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    $$props.class
-  )}
+  class={twMerge('shrink-0', sizes[size], $$props.class)}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 24 24"
@@ -45,5 +44,25 @@ export let ariaLabel="profile card outline" </script>
   on:mouseover
   on:mouseout
 >
-     <path stroke="currentColor" stroke-linecap="{strokeLinecap}" stroke-linejoin="{strokeLinejoin}" stroke-width="{strokeWidth}" d="M15 9h3m-3 3h3m-3 3h3m-6 1c-.3-.6-1-1-1.6-1H7.6c-.7 0-1.3.4-1.6 1M4 5h16c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H4a1 1 0 0 1-1-1V6c0-.6.4-1 1-1Zm7 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/>  
+  <path
+    stroke="currentColor"
+    stroke-linecap={strokeLinecap}
+    stroke-linejoin={strokeLinejoin}
+    stroke-width={strokeWidth}
+    d="M15 9h3m-3 3h3m-3 3h3m-6 1c-.3-.6-1-1-1.6-1H7.6c-.7 0-1.3.4-1.6 1M4 5h16c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H4a1 1 0 0 1-1-1V6c0-.6.4-1 1-1Zm7 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+  />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.vercel.app/)
+## Props
+@prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
+@prop export let role = ctx.role || 'img';
+@prop export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined =
+    ctx.strokeLinecap || 'round';
+@prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
+    ctx.strokeLinejoin || 'round';
+@prop export let strokeWidth = ctx.strokeWidth || '2';
+@prop export let ariaLabel = 'profile card outline';
+-->
