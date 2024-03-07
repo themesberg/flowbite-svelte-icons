@@ -58,3 +58,13 @@
 		d="m7 10 4 4 4-4 5 5m0 0h-3.2m3.2 0v-3.2"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'chart line up solid,';
+-->

@@ -51,3 +51,13 @@
 		d="M8 16V8h8v8H8Zm0-8H6a2 2 0 1 1 2-2v2Zm8 0h2a2 2 0 1 0-2-2v2Zm-8 8H6a2 2 0 1 0 2 2v-2Zm8 0h2a2 2 0 1 1-2 2v-2Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'command solid,';
+-->

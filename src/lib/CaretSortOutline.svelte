@@ -47,3 +47,13 @@
 		d="m8 10 4-6 4 6H8Zm8 4-4 6-4-6h8Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'caret sort outline,';
+-->

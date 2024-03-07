@@ -69,7 +69,7 @@
     "svelte": "5.0.0-next.72",
     "svelte-5-ui-lib": "^0.3.5",
     "svelte-check": "^3.6.6",
-    "svelte-lib-helpers": "^0.3.17",
+    "svelte-lib-helpers": "^0.4.3",
     "svelte-preprocess": "^5.1.3",
     "tslib": "^2.6.2",
     "typescript": "^5.4.2",
@@ -2258,6 +2258,7 @@
     "./ZoomOutSolid.svelte": {
       "types": "./dist/ZoomOutSolid.svelte.d.ts",
       "svelte": "./dist/ZoomOutSolid.svelte"
-    }
+    },
+    "./package.json": "./package.json"
   }
 }

@@ -50,3 +50,13 @@
 		clip-rule="evenodd"
 	/> <path fill="currentColor" d="M7.2 8.8H4v10.7h3.2V8.8Z" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'linkedin solid,';
+-->

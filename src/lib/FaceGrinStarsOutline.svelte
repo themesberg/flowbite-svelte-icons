@@ -64,3 +64,13 @@
 		d="m9 6.8.6 1.3 1.4.2-1 1 .2 1.3L9 10l-1.2.6.2-1.4-1-1 1.4-.1.6-1.3Zm6 0 .6 1.3 1.4.2-1 1 .2 1.3L15 10l-1.2.6.2-1.4-1-1 1.4-.1.6-1.3Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'face grin stars outline,';
+-->

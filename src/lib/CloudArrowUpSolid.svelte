@@ -52,3 +52,13 @@
 		d="M12.7 9.3a1 1 0 0 0-1.4 0l-2 2a1 1 0 1 0 1.4 1.4l.3-.3V19a1 1 0 1 0 2 0v-6.6l.3.3a1 1 0 0 0 1.4-1.4l-2-2Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'cloud arrow up solid,';
+-->

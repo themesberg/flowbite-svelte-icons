@@ -47,3 +47,13 @@
 		d="M7.1 8H17a1 1 0 0 1 .8 1.6l-5 6a1 1 0 0 1-1.5 0l-4.9-6A1 1 0 0 1 7.1 8Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'caret down outline,';
+-->

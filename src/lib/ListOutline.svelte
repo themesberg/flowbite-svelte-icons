@@ -46,3 +46,13 @@
 		d="M9 8h10M9 12h10M9 16h10M5 8h0m0 4h0m0 4h0"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'list outline,';
+-->

@@ -46,3 +46,13 @@
 		d="M14 4v3c0 .6-.4 1-1 1h-3m4 10v1c0 .6-.4 1-1 1H6a1 1 0 0 1-1-1V9c0-.6.4-1 1-1h2m11-3v10c0 .6-.4 1-1 1h-7a1 1 0 0 1-1-1V7.9c0-.3 0-.5.2-.7l2.5-2.9c.2-.2.5-.3.8-.3H18c.6 0 1 .4 1 1Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'file copy alt outline,';
+-->

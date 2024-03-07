@@ -52,3 +52,13 @@
 		d="m22 8-8.8 6.7a2 2 0 0 1-2.4 0L2 7.7v11.2A3 3 0 0 0 5 22h14a3 3 0 0 0 3-3V8Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'envelope open solid,';
+-->

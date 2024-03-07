@@ -51,3 +51,13 @@
 		d="M5 9h4V5m-.5 3.5L4 4m15 5h-4V5m.5 3.5L20 4M5 15h4v4m-.5-3.5L4 20m15-5h-4v4m.5-3.5L20 20"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'minimize solid,';
+-->

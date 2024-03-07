@@ -45,3 +45,13 @@
 		d="m12.2 20.8 4.3-2.4c.3-.2.5-.5.5-.9V4c0-.4-2 3.4-2.8 4.8a1 1 0 0 1-.8.5l-4.9.4a1 1 0 0 0-.5 1.7l3.5 3c.4.2.5.6.4 1l-1.1 4.3a1 1 0 0 0 1.4 1.1Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'star half outline,';
+-->

@@ -56,3 +56,13 @@
 		clip-rule="evenodd"
 	/> <path fill="currentColor" d="M10.5 14.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'cash solid,';
+-->

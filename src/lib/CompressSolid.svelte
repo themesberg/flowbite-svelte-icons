@@ -51,3 +51,13 @@
 		d="M4 8h4V4m12 4h-4V4M4 16h4v4m12-4h-4v4"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'compress solid,';
+-->

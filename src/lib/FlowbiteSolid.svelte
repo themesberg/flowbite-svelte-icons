@@ -57,3 +57,13 @@
 		d="m19.1 16.2-.3.1a60.4 60.4 0 0 1-4.7 3 4 4 0 0 1-4 0A3.8 3.8 0 0 1 8.3 16V9H8a1.8 1.8 0 0 0-.8 1.6V17c0 1.5.4 3 1.1 4.3A10.1 10.1 0 0 0 22 14c-.8.9-1.8 1.6-2.8 2.3Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'flowbite solid,';
+-->

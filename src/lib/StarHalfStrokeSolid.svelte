@@ -48,3 +48,13 @@
 		d="m13 20 2.9 1.7a2 2 0 0 0 3-2.2l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.4L13.8 4a2 2 0 0 0-.8-1v17ZM11 3a2 2 0 0 0-.8 1L8.4 8.2l-4.6.4A2 2 0 0 0 2.7 12l3.5 3-1 4.4A2 2 0 0 0 8 21.7l2.9-1.8V3Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'star half stroke solid,';
+-->

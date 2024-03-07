@@ -51,3 +51,13 @@
 		d="M16 4h4v4m-.5-3.5L15 9M8 20H4v-4m.5 3.5L9 15"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'arrow up right down left solid,';
+-->

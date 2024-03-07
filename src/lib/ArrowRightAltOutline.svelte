@@ -47,3 +47,13 @@
 		d="m16.2 19 4.8-7-4.8-7H3l4.8 7L3 19h13.2Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'arrow right alt outline,';
+-->

@@ -47,3 +47,13 @@
 		d="M21 9H8a5 5 0 0 0 0 10h9m4-10-4-4m4 4-4 4"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'redo outline,';
+-->

@@ -48,3 +48,13 @@
 		d="M14.5 3 12 7.2 9.9 3H2l10 18L22 3h-7.5Zm-10 1.5h2.4l5.1 9.3 5.1-9.3h2.4L12 18 4.5 4.5Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'vue solid,';
+-->

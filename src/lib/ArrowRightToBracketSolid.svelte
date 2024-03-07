@@ -57,3 +57,13 @@
 		d="M9 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h2m7-4 4-4-4-4"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'arrow right to bracket solid,';
+-->

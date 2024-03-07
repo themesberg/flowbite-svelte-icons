@@ -46,3 +46,13 @@
 		d="M10 3v4c0 .6-.4 1-1 1H5m14-4v16c0 .6-.4 1-1 1H6a1 1 0 0 1-1-1V8c0-.4.1-.6.3-.8l4-4 .6-.2H18c.6 0 1 .4 1 1Zm-4 1h0v0h0v0Zm-2 2h0v0h0v0Zm2 2h0v0h0v0Zm-2 2h0v0h0v0Zm2 2h0v0h0v0Zm-2 2h0v0h0v0Zm2 2h0v0h0v0Zm-2 2h0v0h0v0Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?:  string; = 'file zip outline,';
+-->
