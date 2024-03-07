@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.2](https://github.com/themesberg/flowbite-svelte-icons/compare/v1.4.1...v1.4.2) (2024-03-07)
+
+
+### Bug Fixes
+
+* solid icons changing fill="currentColor" to "none" ([4bd77f5](https://github.com/themesberg/flowbite-svelte-icons/commit/4bd77f542589eca10f911f4d837fdc9e58b74e5e))
+
 ### [1.4.1](https://github.com/themesberg/flowbite-svelte-icons/compare/v1.4.0...v1.4.1) (2024-03-01)
 
 
