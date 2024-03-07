@@ -25,7 +25,13 @@
 		ariaLabel?: string;
 	}
 
-	let { size = ctx.size || 'md', role, class: classname, ariaLabel = 'envelope solid,', ...restProps } = $props<Props>();
+	let {
+		size = ctx.size || 'md',
+		role,
+		class: classname,
+		ariaLabel = 'envelope solid,',
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg
@@ -37,6 +43,12 @@
 	aria-label={ariaLabel}
 	viewBox="0 0 24 24"
 >
-	<path fill="currentColor" d="M2 5.6V18c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V5.6l-.9.7-7.9 6a2 2 0 0 1-2.4 0l-8-6-.8-.7Z" />
-	<path fill="currentColor" d="M20.7 4.1A2 2 0 0 0 20 4H4a2 2 0 0 0-.6.1l.7.6 7.9 6 7.9-6 .8-.6Z" />
+	<path
+		fill="currentColor"
+		d="M2 5.6V18c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V5.6l-.9.7-7.9 6a2 2 0 0 1-2.4 0l-8-6-.8-.7Z"
+	/>
+	<path
+		fill="currentColor"
+		d="M20.7 4.1A2 2 0 0 0 20 4H4a2 2 0 0 0-.6.1l.7.6 7.9 6 7.9-6 .8-.6Z"
+	/>
 </svg>

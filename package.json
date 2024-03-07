@@ -9,7 +9,7 @@
     "url": "https://blog.codewithshin.com"
   },
   "bugs": "https://github.com/themesberg/flowbite-svelte-icons/issues",
-  "homepage": "https://flowbite-svelte-icons.vercel.app/",
+  "homepage": "https://flowbite-svelte-icons.codewithshin.com/",
   "license": "MIT",
   "scripts": {
     "dev": "vite dev",

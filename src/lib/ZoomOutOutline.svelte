@@ -21,7 +21,13 @@
 		class?: string;
 		ariaLabel?: string;
 	}
-	let { size = ctx.size || 'md', role, class: classname, ariaLabel = 'zoom out outline,', ...restProps } = $props<Props>();
+	let {
+		size = ctx.size || 'md',
+		role,
+		class: classname,
+		ariaLabel = 'zoom out outline,',
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg
@@ -33,5 +39,10 @@
 	aria-label={ariaLabel}
 	viewBox="0 0 24 24"
 >
-	<path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M7 10h6m4 0a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
+	<path
+		stroke="currentColor"
+		stroke-linecap="round"
+		stroke-width="2"
+		d="m21 21-3.5-3.5M7 10h6m4 0a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+	/>
 </svg>

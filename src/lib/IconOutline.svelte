@@ -7,7 +7,21 @@
 		ariaLabel?: string;
 		class?: string;
 	}
-	let { icon, size, role, ariaLabel, class: classname, ...restProps } = $props<Props>();
+	let {
+		icon,
+		size,
+		role,
+		ariaLabel,
+		class: classname,
+		...restProps
+	} = $props<Props>();
 </script>
 
-<svelte:component this={icon} {...restProps} {role} {size} class={classname} {ariaLabel} />
+<svelte:component
+	this={icon}
+	{...restProps}
+	{role}
+	{size}
+	class={classname}
+	{ariaLabel}
+/>

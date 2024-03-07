@@ -25,7 +25,13 @@
 		ariaLabel?: string;
 	}
 
-	let { size = ctx.size || 'md', role, class: classname, ariaLabel = 'atom solid,', ...restProps } = $props<Props>();
+	let {
+		size = ctx.size || 'md',
+		role,
+		class: classname,
+		ariaLabel = 'atom solid,',
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg

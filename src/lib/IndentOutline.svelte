@@ -21,7 +21,13 @@
 		class?: string;
 		ariaLabel?: string;
 	}
-	let { size = ctx.size || 'md', role, class: classname, ariaLabel = 'indent outline,', ...restProps } = $props<Props>();
+	let {
+		size = ctx.size || 'md',
+		role,
+		class: classname,
+		ariaLabel = 'indent outline,',
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg
@@ -33,5 +39,11 @@
 	aria-label={ariaLabel}
 	viewBox="0 0 24 24"
 >
-	<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6h12M6 18h12m-5-8h5m-5 4h5M6 9v6l3.5-3L6 9Z" />
+	<path
+		stroke="currentColor"
+		stroke-linecap="round"
+		stroke-linejoin="round"
+		stroke-width="2"
+		d="M6 6h12M6 18h12m-5-8h5m-5 4h5M6 9v6l3.5-3L6 9Z"
+	/>
 </svg>

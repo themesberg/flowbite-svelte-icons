@@ -21,7 +21,13 @@
 		class?: string;
 		ariaLabel?: string;
 	}
-	let { size = ctx.size || 'md', role, class: classname, ariaLabel = 'archive arrow down outline,', ...restProps } = $props<Props>();
+	let {
+		size = ctx.size || 'md',
+		role,
+		class: classname,
+		ariaLabel = 'archive arrow down outline,',
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg

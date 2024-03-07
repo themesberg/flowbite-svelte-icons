@@ -25,7 +25,13 @@
 		ariaLabel?: string;
 	}
 
-	let { size = ctx.size || 'md', role, class: classname, ariaLabel = 'caret up  solid,', ...restProps } = $props<Props>();
+	let {
+		size = ctx.size || 'md',
+		role,
+		class: classname,
+		ariaLabel = 'caret up  solid,',
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg
@@ -37,5 +43,10 @@
 	aria-label={ariaLabel}
 	viewBox="0 0 24 24"
 >
-	<path fill="currentColor" fill-rule="evenodd" d="M5.6 13.7A2 2 0 0 0 7 17h10a2 2 0 0 0 1.5-3.3l-4.9-5.9a2 2 0 0 0-3 0l-5 6Z" clip-rule="evenodd" />
+	<path
+		fill="currentColor"
+		fill-rule="evenodd"
+		d="M5.6 13.7A2 2 0 0 0 7 17h10a2 2 0 0 0 1.5-3.3l-4.9-5.9a2 2 0 0 0-3 0l-5 6Z"
+		clip-rule="evenodd"
+	/>
 </svg>

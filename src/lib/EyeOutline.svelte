@@ -21,7 +21,13 @@
 		class?: string;
 		ariaLabel?: string;
 	}
-	let { size = ctx.size || 'md', role, class: classname, ariaLabel = 'eye outline,', ...restProps } = $props<Props>();
+	let {
+		size = ctx.size || 'md',
+		role,
+		class: classname,
+		ariaLabel = 'eye outline,',
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg
@@ -33,6 +39,14 @@
 	aria-label={ariaLabel}
 	viewBox="0 0 24 24"
 >
-	<path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4 6-9 6s-9-4.8-9-6c0-1.2 4-6 9-6s9 4.8 9 6Z" />
-	<path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+	<path
+		stroke="currentColor"
+		stroke-width="2"
+		d="M21 12c0 1.2-4 6-9 6s-9-4.8-9-6c0-1.2 4-6 9-6s9 4.8 9 6Z"
+	/>
+	<path
+		stroke="currentColor"
+		stroke-width="2"
+		d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+	/>
 </svg>

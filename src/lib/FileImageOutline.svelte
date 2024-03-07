@@ -21,7 +21,13 @@
 		class?: string;
 		ariaLabel?: string;
 	}
-	let { size = ctx.size || 'md', role, class: classname, ariaLabel = 'file image outline,', ...restProps } = $props<Props>();
+	let {
+		size = ctx.size || 'md',
+		role,
+		class: classname,
+		ariaLabel = 'file image outline,',
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg
@@ -33,7 +39,10 @@
 	aria-label={ariaLabel}
 	viewBox="0 0 24 24"
 >
-	<path fill="currentColor" d="M16 18H8l2.5-6 2 4 1.5-2 2 4Zm-1-8.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z" />
+	<path
+		fill="currentColor"
+		d="M16 18H8l2.5-6 2 4 1.5-2 2 4Zm-1-8.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z"
+	/>
 	<path
 		stroke="currentColor"
 		stroke-linecap="round"

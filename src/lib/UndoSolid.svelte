@@ -25,7 +25,13 @@
 		ariaLabel?: string;
 	}
 
-	let { size = ctx.size || 'md', role, class: classname, ariaLabel = 'undo solid,', ...restProps } = $props<Props>();
+	let {
+		size = ctx.size || 'md',
+		role,
+		class: classname,
+		ariaLabel = 'undo solid,',
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg
@@ -37,6 +43,17 @@
 	aria-label={ariaLabel}
 	viewBox="0 0 24 24"
 >
-	<path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M20 9H8a5 5 0 0 0-5 5v0a5 5 0 0 0 5 5h9" />
-	<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17 5 4 4-4 4" />
+	<path
+		stroke="currentColor"
+		stroke-linecap="round"
+		stroke-width="2"
+		d="M20 9H8a5 5 0 0 0-5 5v0a5 5 0 0 0 5 5h9"
+	/>
+	<path
+		stroke="currentColor"
+		stroke-linecap="round"
+		stroke-linejoin="round"
+		stroke-width="2"
+		d="m17 5 4 4-4 4"
+	/>
 </svg>

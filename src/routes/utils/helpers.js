@@ -5,7 +5,9 @@ export function removeHyphensAndCapitalize(str) {
 	}
 
 	// Capitalize the first letter (including after hyphens)
-	const capitalized = str.replace(/(^|\s|-)\w/g, (match) => match.toUpperCase());
+	const capitalized = str.replace(/(^|\s|-)\w/g, (match) =>
+		match.toUpperCase()
+	);
 
 	// Remove hyphens and ensure spaces after words
 	return capitalized.replace(/-|\s{2,}/g, ' ');
@@ -15,7 +17,11 @@ export function removeHyphensAndCapitalize(str) {
 export function filterIconsByKeyword(icons, keyword) {
 	const filteredIcons = {};
 	for (const key in icons) {
-		if (key.includes(keyword) && !key.includes('IconOutline') && !key.includes('IconSolid')) {
+		if (
+			key.includes(keyword) &&
+			!key.includes('IconOutline') &&
+			!key.includes('IconSolid')
+		) {
 			filteredIcons[key] = icons[key];
 		}
 	}

@@ -205,7 +205,12 @@ In your Svelte page file, make use of the configurations from the JSON file:
 		};
 	};
 	import config from '$lib/icon.config.json';
-	import { IconOutline, IconSolid, AngleLeftOutline, ArrowRightSolid } from 'flowbite-svelte-icons';
+	import {
+		IconOutline,
+		IconSolid,
+		AngleLeftOutline,
+		ArrowRightSolid
+	} from 'flowbite-svelte-icons';
 	const iconConfig: IconConfig = config;
 	const config1 = iconConfig.config1;
 	const config2 = iconConfig.config2;
@@ -259,7 +264,10 @@ Here, we import the `MyIcon` component and the `AngleLeftSolid` icon. By passing
 You can apply Tailwind CSS color directly to the icon component or its parent tag using the `class` prop.
 
 ```html
-<AddressBookOutline size="md" class="text-red-700 dark:text-green-300 inline m-1" />
+<AddressBookOutline
+	size="md"
+	class="text-red-700 dark:text-green-300 inline m-1"
+/>
 
 <div class="text-red-700 dark:text-green-300 inline m-1">
 	<AddressBookOutline size="md" />

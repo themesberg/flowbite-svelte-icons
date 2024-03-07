@@ -25,7 +25,13 @@
 		ariaLabel?: string;
 	}
 
-	let { size = ctx.size || 'md', role, class: classname, ariaLabel = 'bell active solid,', ...restProps } = $props<Props>();
+	let {
+		size = ctx.size || 'md',
+		role,
+		class: classname,
+		ariaLabel = 'bell active solid,',
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg
@@ -46,5 +52,9 @@
 		fill-rule="evenodd"
 		d="M6.5 4.3c.4.3.5 1 .1 1.4A6.9 6.9 0 0 0 4.8 10a1 1 0 0 1-2-.2c.1-2.1 1-3.9 2.3-5.5a1 1 0 0 1 1.4 0Z"
 		clip-rule="evenodd"
-	/> <path fill="currentColor" d="M9 19.7c.6.8 1.7 1.3 2.8 1.3 1.5 0 2.8-1.1 3.3-2.5l-6.2 1.2Z" />
+	/>
+	<path
+		fill="currentColor"
+		d="M9 19.7c.6.8 1.7 1.3 2.8 1.3 1.5 0 2.8-1.1 3.3-2.5l-6.2 1.2Z"
+	/>
 </svg>
