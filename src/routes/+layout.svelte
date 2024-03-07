@@ -30,7 +30,7 @@
   description="Flowbite icon set for Svelte"
   openGraph={{
     type: 'website',
-    url: 'https://flowbite-svelte-icons.vercel.app/',
+    url: 'https://flowbite-svelte-icons.codewithshin.com/',
     title: 'Flowbite Svelte Icons',
     description: 'Flowbite icon set for Svelte',
     images: [
@@ -78,7 +78,7 @@
         <NavLi href="/outline">Outline</NavLi>
         <NavLi href="/solid">Solid</NavLi>
         <NavLi href="https://github.com/themesberg/flowbite-svelte-icons">GitHub</NavLi>
-        <NavLi href="https://svelte-svg-icons.vercel.app/">Icon sets</NavLi>
+        <NavLi href="https://svelte-svg-icons.codewithshin.com/">Icon sets</NavLi>
       </NavUl>
       <div class="flex items-center ml-auto">
         <DarkMode class="inline-block dark:hover:text-white hover:text-gray-900" />
@@ -94,8 +94,8 @@
   <Footer footerType="logo" class="dark:bg-neutral-900">
     <div class="sm:flex sm:items-center sm:justify-between">
       <FooterBrand
-        href="https://flowbite-svelte-icons.vercel.app/"
-        name="Flowbite Svelte Icons"
+        href="https://codewithshin.com/"
+        name="codewithshin.com"
         classSpan="text-primary-700 dark:text-primary-500"
       />
       <FooterLinkGroup

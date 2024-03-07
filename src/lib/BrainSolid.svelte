@@ -50,7 +50,7 @@
 
 <!--
 @component
-[Go to docs](https://flowbite-svelte-icons.vercel.app/)
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
 ## Props
 @prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
 @prop export let role = ctx.role || 'img';
