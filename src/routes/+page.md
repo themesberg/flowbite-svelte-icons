@@ -24,7 +24,7 @@ layout: mainLayout
 <a href="https://www.npmjs.com/package/flowbite-svelte-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/flowbite-svelte-icons.svg" alt="npm" ></a>
 </div>
 
-480+ SVG [Flowbite icons](https://github.com/themesberg/flowbite-icons) components for Svelte 3/4/5/Runes.
+540+ SVG [Flowbite icons](https://github.com/themesberg/flowbite-icons) components for Svelte 3/4/5/Runes.
 
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
@@ -32,24 +32,45 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 [GitHub Repo](https://github.com/themesberg/flowbite-svelte-icons)
 
-## Original source
+## Requirements
 
-[themesberg/flowbite-icons](https://github.com/themesberg/flowbite-icons)
+### v1 
+- Svelte 4/5 (No Runes)
+- TailwindCSS
+
+### v2
+- Svelte 5:Runes
+- TailwindCSS
 
 ## Installation
+
+Install Svelte and TailwindCSS:
+
+```sh
+npm create svelte@latest my-project
+cd my-project
+npx svelte-add@latest tailwindcss
+pnpm i
+```
+
+Check the latest version at the [GitHub Releases](https://github.com/themesberg/flowbite-svelte-icons/releases).
 
 ### Svelte 3/4/5:
 
 ```sh
-pnpm i -D flowbite-svelte-icons
+pnpm i -D flowbite-svelte-icons@1.x.x
 ```
+
+Replace `1.x.x` with the latest `v1` version.
 
 ### Svelte 5 Runes
 After installing Svelte-5 and updating `svelte.config.js` to enable `runes`:
 
 ```sh
-pnpm i -D flowbite-svelte-icons@2.0.0-next.1
+pnpm i -D flowbite-svelte-icons@2.0.0-next.x
 ```
+
+Replace `2.0.0-next.x` with the latest `v2` version.
 
 To make sure the classes used by flowbite-svelte-icons are included by the Tailwindcss, add the following to tailwind.config.cjs.
 
@@ -387,6 +408,9 @@ Use `import * as Icon from 'flowbite-svelte-icons`.
 
 [Flowbite Icons License](https://github.com/themesberg/flowbite-icons/blob/main/LICENSE)
 
+## Original source
+
+[themesberg/flowbite-icons](https://github.com/themesberg/flowbite-icons)
 
 ## Technical information about this website
 
