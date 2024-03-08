@@ -29,6 +29,15 @@ Please see the [Flowbite Svelte Icons documentation](https://flowbite-svelte-ico
 
 [themesberg/flowbite-icons](https://github.com/themesberg/flowbite-icons)
 
+## Requirements
+
+### v1 
+- Svelte 4/5
+- TailwindCSS
+
+### v2
+- Svelte 5:Runes
+- TailwindCSS
 
 ## Installation
 
