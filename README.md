@@ -42,7 +42,7 @@ Please see the [Flowbite Svelte Icons documentation](https://flowbite-svelte-ico
 ## Installation
 
 
-### Svelte 3/4/5
+### Svelte 4/5
 
 ```sh
 pnpm i -D flowbite-svelte-icons
@@ -54,6 +54,7 @@ pnpm i -D flowbite-svelte-icons
 pnpm i -D flowbite-svelte-icons@2.0.0-next.x
 ```
 
+Replace `2.0.0-next.x` with the latest `v2` version.
 Replace `x` with the latest release at [GitHub](https://github.com/themesberg/flowbite-svelte-icons/releases).
 
 Add the following to tailwind.config.cjs.
