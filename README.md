@@ -31,16 +31,17 @@ Please see the [Flowbite Svelte Icons documentation](https://flowbite-svelte-ico
 
 ## Requirements
 
-### v1 
+### v1
+
 - Svelte 4/5
 - TailwindCSS
 
 ### v2
+
 - Svelte 5:Runes
 - TailwindCSS
 
 ## Installation
-
 
 ### Svelte 3/4/5
 
@@ -60,12 +61,12 @@ Add the following to tailwind.config.cjs.
 
 ```js
 const config = {
-  content: [
-       // more lines
-        "./node_modules/flowbite-svelte-icons/**/*.{html,js,svelte,ts}",
-    ],
-    // more lines
-}  
+	content: [
+		// more lines
+		'./node_modules/flowbite-svelte-icons/**/*.{html,js,svelte,ts}'
+	]
+	// more lines
+};
 ```
 
 ## Other icons
