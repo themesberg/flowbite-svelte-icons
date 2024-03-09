@@ -53,15 +53,11 @@ npx svelte-add@latest tailwindcss
 pnpm i
 ```
 
-Check the latest version at the [GitHub Releases](https://github.com/themesberg/flowbite-svelte-icons/releases).
-
-### Svelte 3/4/5:
+### Svelte 4/5:
 
 ```sh
-pnpm i -D flowbite-svelte-icons@1.x.x
+pnpm i -D flowbite-svelte-icons
 ```
-
-Replace `1.x.x` with the latest `v1` version.
 
 ### Svelte 5 Runes
 After installing Svelte-5 and updating `svelte.config.js` to enable `runes`:
@@ -71,6 +67,8 @@ pnpm i -D flowbite-svelte-icons@2.0.0-next.x
 ```
 
 Replace `2.0.0-next.x` with the latest `v2` version.
+
+Check the latest version at the [GitHub Releases](https://github.com/themesberg/flowbite-svelte-icons/releases).
 
 To make sure the classes used by flowbite-svelte-icons are included by the Tailwindcss, add the following to tailwind.config.cjs.
 
