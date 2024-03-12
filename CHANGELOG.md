@@ -1,21 +1,26 @@
 # Changelog
 
+## 1.4.4
+
+### Patch Changes
+
+- This update is for npmjs for the latest tag.
+  docs: update README and page.
+
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ### [1.4.2](https://github.com/themesberg/flowbite-svelte-icons/compare/v1.4.1...v1.4.2) (2024-03-07)
 
-
 ### Bug Fixes
 
-* solid icons changing fill="currentColor" to "none" ([4bd77f5](https://github.com/themesberg/flowbite-svelte-icons/commit/4bd77f542589eca10f911f4d837fdc9e58b74e5e))
+- solid icons changing fill="currentColor" to "none" ([4bd77f5](https://github.com/themesberg/flowbite-svelte-icons/commit/4bd77f542589eca10f911f4d837fdc9e58b74e5e))
 
 ### [1.4.1](https://github.com/themesberg/flowbite-svelte-icons/compare/v1.4.0...v1.4.1) (2024-03-01)
 
-
 ### Bug Fixes
 
-* link update ([938f51b](https://github.com/themesberg/flowbite-svelte-icons/commit/938f51b0fba05415fad2aee9633fd8566fbff340))
-* scripts update ([14ba4f0](https://github.com/themesberg/flowbite-svelte-icons/commit/14ba4f0cb81c864a513560bec5b29f1c5ac6b26d))
+- link update ([938f51b](https://github.com/themesberg/flowbite-svelte-icons/commit/938f51b0fba05415fad2aee9633fd8566fbff340))
+- scripts update ([14ba4f0](https://github.com/themesberg/flowbite-svelte-icons/commit/14ba4f0cb81c864a513560bec5b29f1c5ac6b26d))
 
 ## 1.4.0
 
