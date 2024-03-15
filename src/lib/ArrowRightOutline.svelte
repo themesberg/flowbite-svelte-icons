@@ -40,3 +40,13 @@
 >
      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>  
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: size?: "xs" | "sm" | "md" | "lg" | "xl";
+@props:role?: string;
+@props:class?: string;
+@props:ariaLabel?: string;
+-->

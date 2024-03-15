@@ -8,36 +8,30 @@ const sizes = {
   lg: "w-6 h-6",
   xl: "w-8 h-8"
 };
-let {
-  size = ctx.size || "md",
-  role,
-  class: classname,
-  ariaLabel = "shield solid,",
-  ...restProps
-} = $props();
+let { size = ctx.size || "md", role, class: classname, ariaLabel = "shield solid", ...restProps } = $props();
 </script>
 
 <svg
-	xmlns="http://www.w3.org/2000/svg"
-	fill="none"
-	{...restProps}
-	class={twMerge('shrink-0', sizes[size], classname)}
-	{role}
-	aria-label={ariaLabel}
-	viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    classname
+  )}
+  {role}
+  aria-label={ariaLabel}
+  viewBox="0 0 24 24"
 >
-	<path
-		fill="currentColor"
-		d="M12.4 3a1 1 0 0 0-.8 0l-7 2.7a1 1 0 0 0-.6 1 17.7 17.7 0 0 0 7.4 14.1c.4.3.8.3 1.2 0A17.4 17.4 0 0 0 20 6.7a1 1 0 0 0-.6-1l-7-2.6Z"
-	/>
+     <path fill="currentColor" d="M12.356 3.066a1 1 0 0 0-.712 0l-7 2.666A1 1 0 0 0 4 6.68a17.695 17.695 0 0 0 2.022 7.98 17.405 17.405 0 0 0 5.403 6.158 1 1 0 0 0 1.15 0 17.406 17.406 0 0 0 5.402-6.157A17.694 17.694 0 0 0 20 6.68a1 1 0 0 0-.644-.949l-7-2.666Z"/>  
 </svg>
 
 <!--
 @component
 [Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
 ## Props
-@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+@props: size?: "xs" | "sm" | "md" | "lg" | "xl";
 @props:role?: string;
 @props:class?: string;
-@props:ariaLabel?:  string; = 'shield solid,';
+@props:ariaLabel?: string;
 -->

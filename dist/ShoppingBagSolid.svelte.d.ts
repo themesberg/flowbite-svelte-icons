@@ -17,10 +17,10 @@ export type ShoppingBagSolidSlots = typeof __propDef.slots;
 /**
  * [Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
  * ## Props
- * @props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
+ * @props: size?: "xs" | "sm" | "md" | "lg" | "xl";
  * @props:role?: string;
  * @props:class?: string;
- * @props:ariaLabel?:  string; = 'shopping bag solid,';
+ * @props:ariaLabel?: string;
  */
 export default class ShoppingBagSolid extends SvelteComponent<ShoppingBagSolidProps, ShoppingBagSolidEvents, ShoppingBagSolidSlots> {
 }

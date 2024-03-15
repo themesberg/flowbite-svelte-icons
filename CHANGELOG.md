@@ -4,6 +4,17 @@
 
 ### Patch Changes
 
+- fix: color for solid and outline
+  fix: remove a comma from aria-label
+  docs: add icons, color, tailwind-color page
+
+- Updating for npmjs by adding --tag next. ([`23b19ddf3a68bc5a8cd3548ff509e76afa416884`](https://github.com/themesberg/flowbite-svelte-icons/commit/23b19ddf3a68bc5a8cd3548ff509e76afa416884))
+  docs: update README and homepage
+
+## 2.0.0
+
+### Patch Changes
+
 - fix: solid icons changing fill="currentColor" to "none" ([`f129c44360356055dbb47d857706355d17cab6f8`](https://github.com/themesberg/flowbite-svelte-icons/commit/f129c44360356055dbb47d857706355d17cab6f8))
   fix: strokeLinecap, strokeLinejon, and strokeWidth from outline to solid
 
