@@ -1,60 +1,45 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
-	import { twMerge } from 'tailwind-merge';
-	interface CtxType {
-		size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-		role?: string;
-		strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | null | undefined;
-		strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined;
-		strokeWidth?: string;
-	}
+  import { getContext } from 'svelte';
+  import { twMerge } from 'tailwind-merge';
+  interface CtxType {
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    role?: string;
+    strokeLinecap?: "round" | "inherit" | "butt" | "square" | null | undefined;
+    strokeLinejoin?: "round" | "inherit" | "miter" | "bevel" | null | undefined;
+    strokeWidth?: string;
+  }
 
-	const ctx: CtxType = getContext('iconCtx') ?? {};
-	const sizes = {
-		xs: 'w-3 h-3',
-		sm: 'w-4 h-4',
-		md: 'w-5 h-5',
-		lg: 'w-6 h-6',
-		xl: 'w-8 h-8'
-	};
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  const sizes = {
+    xs: 'w-3 h-3',
+    sm: 'w-4 h-4',
+    md: 'w-5 h-5',
+    lg: 'w-6 h-6',
+    xl: 'w-8 h-8'
+  };
 
-	interface Props {
-		size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-		role?: string;
-		class?: string;
-		ariaLabel?: string;
-	}
+  interface Props{
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    role?: string;
+    class?: string;
+    ariaLabel?: string;
+  }
 
-	let {
-		size = ctx.size || 'md',
-		role,
-		class: classname,
-		ariaLabel = 'css solid,',
-		...restProps
-	} = $props<Props>();
+  let { size = ctx.size || 'md', role, class: classname, ariaLabel=  "css solid"  , ...restProps }: Props = $props();
+
 </script>
 
 <svg
-	xmlns="http://www.w3.org/2000/svg"
-	fill="none"
-	{...restProps}
-	class={twMerge('shrink-0', sizes[size], classname)}
-	{role}
-	aria-label={ariaLabel}
-	viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    classname
+  )}
+  {role}
+  aria-label={ariaLabel}
+  viewBox="0 0 24 24"
 >
-	<path
-		fill="currentColor"
-		d="m3 2 1.6 17.8L12 22l7.5-2.2L21 2H3Zm13.3 14.7L12 18l-4.3-1.2-.3-3.1h2.1l.2 1.5 2.3.6 2.3-.6.3-3H7.3l-.2-2h7.7l.1-2H7l-.2-2h10.6l-1 10.6Z"
-	/>
+     <path fill="currentColor" d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z"/>  
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
-@props:role?: string;
-@props:class?: string;
-@props:ariaLabel?:  string; = 'css solid,';
--->

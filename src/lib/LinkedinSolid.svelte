@@ -1,62 +1,45 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
-	import { twMerge } from 'tailwind-merge';
-	interface CtxType {
-		size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-		role?: string;
-		strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | null | undefined;
-		strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined;
-		strokeWidth?: string;
-	}
+  import { getContext } from 'svelte';
+  import { twMerge } from 'tailwind-merge';
+  interface CtxType {
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    role?: string;
+    strokeLinecap?: "round" | "inherit" | "butt" | "square" | null | undefined;
+    strokeLinejoin?: "round" | "inherit" | "miter" | "bevel" | null | undefined;
+    strokeWidth?: string;
+  }
 
-	const ctx: CtxType = getContext('iconCtx') ?? {};
-	const sizes = {
-		xs: 'w-3 h-3',
-		sm: 'w-4 h-4',
-		md: 'w-5 h-5',
-		lg: 'w-6 h-6',
-		xl: 'w-8 h-8'
-	};
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  const sizes = {
+    xs: 'w-3 h-3',
+    sm: 'w-4 h-4',
+    md: 'w-5 h-5',
+    lg: 'w-6 h-6',
+    xl: 'w-8 h-8'
+  };
 
-	interface Props {
-		size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-		role?: string;
-		class?: string;
-		ariaLabel?: string;
-	}
+  interface Props{
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    role?: string;
+    class?: string;
+    ariaLabel?: string;
+  }
 
-	let {
-		size = ctx.size || 'md',
-		role,
-		class: classname,
-		ariaLabel = 'linkedin solid,',
-		...restProps
-	} = $props<Props>();
+  let { size = ctx.size || 'md', role, class: classname, ariaLabel=  "linkedin solid"  , ...restProps }: Props = $props();
+
 </script>
 
 <svg
-	xmlns="http://www.w3.org/2000/svg"
-	fill="none"
-	{...restProps}
-	class={twMerge('shrink-0', sizes[size], classname)}
-	{role}
-	aria-label={ariaLabel}
-	viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    classname
+  )}
+  {role}
+  aria-label={ariaLabel}
+  viewBox="0 0 24 24"
 >
-	<path
-		fill="currentColor"
-		fill-rule="evenodd"
-		d="M12.5 8.8v1.7a3.7 3.7 0 0 1 3.3-1.7c3.5 0 4.2 2.2 4.2 5v5.7h-3.2v-5c0-1.3-.2-2.8-2.1-2.8-1.9 0-2.2 1.3-2.2 2.6v5.2H9.3V8.8h3.2ZM7.2 6.1a1.6 1.6 0 0 1-2 1.6 1.6 1.6 0 0 1-1-2.2A1.6 1.6 0 0 1 6.6 5c.3.3.5.7.5 1.1Z"
-		clip-rule="evenodd"
-	/> <path fill="currentColor" d="M7.2 8.8H4v10.7h3.2V8.8Z" />
+     <path fill="currentColor" fill-rule="evenodd" d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z" clip-rule="evenodd"/>   <path fill="currentColor" d="M7.2 8.809H4V19.5h3.2V8.809Z"/>  
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
-@props:role?: string;
-@props:class?: string;
-@props:ariaLabel?:  string; = 'linkedin solid,';
--->

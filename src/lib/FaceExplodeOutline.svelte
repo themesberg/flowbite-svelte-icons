@@ -1,60 +1,42 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
-	import { twMerge } from 'tailwind-merge';
-	interface CtxType {
-		size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-		role?: string;
-	}
+  import { getContext } from 'svelte';
+  import { twMerge } from 'tailwind-merge';
+  interface CtxType {
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    role?: string;
+  }
 
-	const ctx: CtxType = getContext('iconCtx') ?? {};
-	const sizes = {
-		xs: 'w-3 h-3',
-		sm: 'w-4 h-4',
-		md: 'w-5 h-5',
-		lg: 'w-6 h-6',
-		xl: 'w-8 h-8'
-	};
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  const sizes = {
+    xs: 'w-3 h-3',
+    sm: 'w-4 h-4',
+    md: 'w-5 h-5',
+    lg: 'w-6 h-6',
+    xl: 'w-8 h-8'
+  };
 
-	interface Props {
-		size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-		role?: string;
-		class?: string;
-		ariaLabel?: string;
-	}
-	let {
-		size = ctx.size || 'md',
-		role,
-		class: classname,
-		ariaLabel = 'face explode outline,',
-		...restProps
-	} = $props<Props>();
+  interface Props{
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    role?: string;
+    class?: string;
+    ariaLabel?: string;
+  }
+  let { size = ctx.size || 'md', role, class: classname, ariaLabel =  "face explode outline"  , ...restProps }: Props = $props();
+
 </script>
 
 <svg
-	xmlns="http://www.w3.org/2000/svg"
-	fill="none"
-	{...restProps}
-	class={twMerge('shrink-0', sizes[size], classname)}
-	{role}
-	aria-label={ariaLabel}
-	viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  {...restProps}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    classname
+  )}
+  {role}
+  aria-label={ariaLabel}
+  viewBox="0 0 24 24"
 >
-	<path fill="currentColor" d="M12 17a2 2 0 0 1 2 2h-4a2 2 0 0 1 2-2Z" />
-	<path
-		stroke="currentColor"
-		stroke-linecap="round"
-		stroke-linejoin="round"
-		stroke-width="2"
-		d="M13.8 9h2.7a2 2 0 1 0-1-3.7 1.9 1.9 0 0 0-.4-1.4 2 2 0 0 0-3.1-.2 2 2 0 0 0-3.5 1.6 2 2 0 1 0-1 3.7h3.4m3-1v3.6M10.1 9v2.6M15 16h0m-6 0h0m12-4.4a1.8 1.8 0 0 1-1.8 1.3 1.9 1.9 0 0 1-1.8-1.3 1.9 1.9 0 0 1-3.6 0 1.8 1.8 0 0 1-1.7 1.3 2 2 0 0 1-2-1.3 1.8 1.8 0 0 1-1.6 1.3 2 2 0 0 1-2-1.3 1.9 1.9 0 0 1-1.8 1.3A1.8 1.8 0 0 1 3 11.6v.4a9 9 0 0 0 18 0v-.4Z"
-	/>
+     <path fill="currentColor" d="M12 17a2 2 0 0 1 2 2h-4a2 2 0 0 1 2-2Z"/>   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.815 9H16.5a2 2 0 1 0-1.03-3.707A1.87 1.87 0 0 0 15.5 5 1.992 1.992 0 0 0 12 3.69 1.992 1.992 0 0 0 8.5 5c.002.098.012.196.03.293A2 2 0 1 0 7.5 9h3.388m2.927-.985v3.604M10.228 9v2.574M15 16h.01M9 16h.01m11.962-4.426a1.805 1.805 0 0 1-1.74 1.326 1.893 1.893 0 0 1-1.811-1.326 1.9 1.9 0 0 1-3.621 0 1.8 1.8 0 0 1-1.749 1.326 1.98 1.98 0 0 1-1.87-1.326A1.763 1.763 0 0 1 8.46 12.9a2.035 2.035 0 0 1-1.905-1.326A1.9 1.9 0 0 1 4.74 12.9 1.805 1.805 0 0 1 3 11.574V12a9 9 0 0 0 18 0l-.028-.426Z"/>  
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@props: size?:  'xs' | 'sm' | 'md' | 'lg' | 'xl'; = ctx.size || 'md';
-@props:role?: string;
-@props:class?: string;
-@props:ariaLabel?:  string; = 'face explode outline,';
--->
