@@ -13,8 +13,6 @@
   import FooterLinkGroup from 'flowbite-svelte/FooterLinkGroup.svelte';
   import FooterLink from 'flowbite-svelte/FooterLink.svelte';
   import { MetaTags } from 'svelte-meta-tags';
-  import { inject } from '@vercel/analytics';
-  inject();
 
   $: activeUrl = $page.url.pathname;
   const title = 'Flowbite Svelte Icons';
