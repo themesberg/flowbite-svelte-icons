@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- fix: align with flowbite icons
+
+## 1.4.4
+
+### Patch Changes
+
 - This update is for npmjs for the latest tag.
   docs: update README and page.
 
