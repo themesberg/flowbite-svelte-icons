@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.5
+
+### Patch Changes
+
+- fix: add color to solid and remove fill='none' ([`27de27065ab5043cfc5d1a5471ce27bbdab7b6c5`](https://github.com/themesberg/flowbite-svelte-icons/commit/27de27065ab5043cfc5d1a5471ce27bbdab7b6c5))
+
 ## 1.4.4
 
 ### Patch Changes
