@@ -47,15 +47,9 @@
   <path
     stroke="currentColor"
     stroke-linecap={strokeLinecap}
-    stroke-width={strokeWidth}
-    d="M12 18V5"
-  />
-  <path
-    stroke="currentColor"
-    stroke-linecap="round"
     stroke-linejoin={strokeLinejoin}
     stroke-width={strokeWidth}
-    d="m8 15 4 4 4-4"
+    d="M12 19V5m0 14-4-4m4 4 4-4"
   />
 </svg>
 

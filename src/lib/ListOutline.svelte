@@ -46,7 +46,7 @@
     stroke="currentColor"
     stroke-linecap={strokeLinecap}
     stroke-width={strokeWidth}
-    d="M9 8h10M9 12h10M9 16h10M5 8h0m0 4h0m0 4h0"
+    d="M9 8h10M9 12h10M9 16h10M4.99 8H5m-.02 4h.01m0 4H5"
   />
 </svg>
 

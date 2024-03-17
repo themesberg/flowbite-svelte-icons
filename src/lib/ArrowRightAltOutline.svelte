@@ -49,7 +49,7 @@
     stroke-linecap={strokeLinecap}
     stroke-linejoin={strokeLinejoin}
     stroke-width={strokeWidth}
-    d="m16.2 19 4.8-7-4.8-7H3l4.8 7L3 19h13.2Z"
+    d="M16.153 19 21 12l-4.847-7H3l4.848 7L3 19h13.153Z"
   />
 </svg>
 

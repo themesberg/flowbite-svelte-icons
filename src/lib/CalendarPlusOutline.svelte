@@ -18,11 +18,6 @@
   export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
   export let role = ctx.role || 'img';
 
-  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined =
-    ctx.strokeLinecap || 'round';
-  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
-    ctx.strokeLinejoin || 'round';
-  export let strokeWidth = ctx.strokeWidth || '2';
   export let ariaLabel = 'calendar plus outline';
 </script>
 
@@ -45,11 +40,8 @@
   on:mouseout
 >
   <path
-    stroke="currentColor"
-    stroke-linecap={strokeLinecap}
-    stroke-linejoin={strokeLinejoin}
-    stroke-width={strokeWidth}
-    d="M4 10h16m-10 5h4m-2 2v-4m0-6V4M7 7V4m10 3V4M5 20h14c.6 0 1-.4 1-1V7c0-.5-.4-1-1-1H5a1 1 0 0 0-1 1v12c0 .6.4 1 1 1Z"
+    fill="currentColor"
+    d="M4 9.05H3v2h1v-2Zm16 2h1v-2h-1v2ZM10 14a1 1 0 1 0 0 2v-2Zm4 2a1 1 0 1 0 0-2v2Zm-3 1a1 1 0 1 0 2 0h-2Zm2-4a1 1 0 1 0-2 0h2Zm-2-5.95a1 1 0 1 0 2 0h-2Zm2-3a1 1 0 1 0-2 0h2Zm-7 3a1 1 0 0 0 2 0H6Zm2-3a1 1 0 1 0-2 0h2Zm8 3a1 1 0 1 0 2 0h-2Zm2-3a1 1 0 1 0-2 0h2Zm-13 3h14v-2H5v2Zm14 0v12h2v-12h-2Zm0 12H5v2h14v-2Zm-14 0v-12H3v12h2Zm0 0H3a2 2 0 0 0 2 2v-2Zm14 0v2a2 2 0 0 0 2-2h-2Zm0-12h2a2 2 0 0 0-2-2v2Zm-14-2a2 2 0 0 0-2 2h2v-2Zm-1 6h16v-2H4v2ZM10 16h4v-2h-4v2Zm3 1v-4h-2v4h2Zm0-9.95v-3h-2v3h2Zm-5 0v-3H6v3h2Zm10 0v-3h-2v3h2Z"
   />
 </svg>
 
@@ -59,10 +51,5 @@
 ## Props
 @prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
 @prop export let role = ctx.role || 'img';
-@prop export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined =
-    ctx.strokeLinecap || 'round';
-@prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
-    ctx.strokeLinejoin || 'round';
-@prop export let strokeWidth = ctx.strokeWidth || '2';
 @prop export let ariaLabel = 'calendar plus outline';
 -->

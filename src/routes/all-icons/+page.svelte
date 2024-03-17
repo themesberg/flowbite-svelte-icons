@@ -37,22 +37,17 @@
     <Tabs style="pill" {contentClass} class="p-4">
       <TabItem open>
         <span slot="title" class="text-lg">Mono</span>
-        <div
-          class="grid grid-cols-8 p-2 dark:text-white border dark:bg-sky-950 w-72"
-        >
+        <div class="grid grid-cols-8 p-2 dark:text-white border dark:bg-sky-950 w-72">
           {#each filteredEntries.slice(50, 90) as [name, component]}
             <div class="flex gap-0 items-center text-lg">
               <svelte:component this={component} class="shrink-0 h-{size} w-{size}" />
-           
             </div>
           {/each}
         </div>
       </TabItem>
       <TabItem>
         <span slot="title" class="text-lg">Random Hex Colors</span>
-        <div
-          class="grid grid-cols-12 px-4 dark:text-white"
-        >
+        <div class="grid grid-cols-12 px-4 dark:text-white">
           {#each filteredEntries as [name, component]}
             <div class="flex gap-4 items-center text-lg">
               <svelte:component
@@ -66,16 +61,13 @@
       </TabItem>
       <TabItem>
         <span slot="title" class="text-lg">Random Tailwind CSS Colors</span>
-        <div
-          class="grid grid-cols-12 px-4 dark:text-white"
-        >
+        <div class="grid grid-cols-12 px-4 dark:text-white">
           {#each filteredEntries as [name, component]}
             <div class="flex gap-4 items-center text-lg">
               <svelte:component
                 this={component}
                 class="{random_tailwind_color()} shrink-0 h-{size} w-{size}"
               />
-            
             </div>
           {/each}
         </div>

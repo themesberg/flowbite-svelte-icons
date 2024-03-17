@@ -43,9 +43,8 @@
   on:mouseout
 >
   <path
-    fill="currentColor"
     fill-rule="evenodd"
-    d="M13.1 6H15V3h-1.9A4.1 4.1 0 0 0 9 7.1V9H7v3h2v10h3V12h2l.6-3H12V6.6a.6.6 0 0 1 .6-.6h.5Z"
+    d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
     clip-rule="evenodd"
   />
 </svg>

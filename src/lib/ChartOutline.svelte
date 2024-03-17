@@ -49,14 +49,7 @@
     stroke-linecap={strokeLinecap}
     stroke-linejoin={strokeLinejoin}
     stroke-width={strokeWidth}
-    d="M10 6a7.5 7.5 0 1 0 8 8h-8V6Z"
-  />
-  <path
-    stroke="currentColor"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    stroke-width={strokeWidth}
-    d="M13.5 3H13v8h8v-.5A7.5 7.5 0 0 0 13.5 3Z"
+    d="M4 4v15a1 1 0 0 0 1 1h15M8 16l2.5-5.5 3 3L17.273 7 20 9.667"
   />
 </svg>
 

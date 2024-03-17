@@ -49,7 +49,7 @@
     stroke-linecap={strokeLinecap}
     stroke-linejoin={strokeLinejoin}
     stroke-width={strokeWidth}
-    d="M8 16.9V7a1 1 0 0 1 1.6-.8l6 5a1 1 0 0 1 0 1.5l-6 4.9a1 1 0 0 1-1.6-.8Z"
+    d="M8 16.881V7.119a1 1 0 0 1 1.636-.772l5.927 4.881a1 1 0 0 1 0 1.544l-5.927 4.88A1 1 0 0 1 8 16.882Z"
   />
 </svg>
 

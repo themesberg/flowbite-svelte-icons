@@ -48,12 +48,11 @@
   on:mouseout
 >
   <path
-    fill="currentColor"
     stroke="currentColor"
     stroke-linecap={strokeLinecap}
     stroke-linejoin={strokeLinejoin}
     stroke-width={strokeWidth}
-    d="M12 3.9H4v16h8v-13h5v13h3v-16h-8Z"
+    d="M12 3.87H4v16h8v-13h5v13h3v-16h-8Z"
   />
 </svg>
 

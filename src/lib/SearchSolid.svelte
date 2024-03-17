@@ -42,11 +42,10 @@
   on:mouseover
   on:mouseout
 >
-  <path fill="currentColor" d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z" />
+  <path d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z" />
   <path
-    fill="currentColor"
     fill-rule="evenodd"
-    d="M21.7 21.7a1 1 0 0 1-1.4 0l-3.5-3.5a1 1 0 0 1 1.4-1.4l3.5 3.5c.4.4.4 1 0 1.4Z"
+    d="M21.707 21.707a1 1 0 0 1-1.414 0l-3.5-3.5a1 1 0 0 1 1.414-1.414l3.5 3.5a1 1 0 0 1 0 1.414Z"
     clip-rule="evenodd"
   />
 </svg>
