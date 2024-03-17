@@ -4,6 +4,7 @@
   interface CtxType {
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
+    color?: string;
     strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | null | undefined;
     strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined;
     strokeWidth?: string;
@@ -20,6 +21,7 @@
 
   export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
   export let role = ctx.role || 'img';
+  export let color = ctx.color || 'currentColor';
 
   export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined =
     ctx.strokeLinecap || 'round';
@@ -31,7 +33,7 @@
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  fill="none"
+  fill={color}
   {...$$restProps}
   class={twMerge('shrink-0', sizes[size], $$props.class)}
   {role}
@@ -62,6 +64,7 @@
 ## Props
 @prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
 @prop export let role = ctx.role || 'img';
+@prop export let color = ctx.color || 'currentColor';
 @prop export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined =
     ctx.strokeLinecap || 'round';
 @prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
