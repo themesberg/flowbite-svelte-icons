@@ -1,13 +1,22 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
   interface CtxType {
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
     color?: string;
-    strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | null | undefined;
-    strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined;
+    strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | undefined;
+    strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | undefined;
     strokeWidth?: string;
+    withEvents?: boolean;
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -22,32 +31,73 @@
   export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
   export let role = ctx.role || 'img';
   export let color = ctx.color || 'currentColor';
+  export let withEvents = ctx.withEvents || false;
+  export let title: TitleType = {};
+  export let desc: DescType = {};
+  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
 
+  let hasDescription = false;
+
+  $: if (title.id || desc.id) {
+    hasDescription = true;
+  } else {
+    hasDescription = false;
+  }
   export let ariaLabel = 'mail box solid';
 </script>
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill={color}
-  {...$$restProps}
-  class={twMerge('shrink-0', sizes[size], $$props.class)}
-  {role}
-  aria-label={ariaLabel}
-  viewBox="0 0 24 24"
-  on:click
-  on:keydown
-  on:keyup
-  on:focus
-  on:blur
-  on:mouseenter
-  on:mouseleave
-  on:mouseover
-  on:mouseout
->
-  <path
-    d="M17 6h-2V5h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2h-.541A5.965 5.965 0 0 1 14 10v4a1 1 0 1 1-2 0v-4c0-2.206-1.794-4-4-4-.075 0-.148.012-.22.028C7.686 6.022 7.596 6 7.5 6A4.505 4.505 0 0 0 3 10.5V16a1 1 0 0 0 1 1h7v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3h5a1 1 0 0 0 1-1v-6c0-2.206-1.794-4-4-4Zm-9 8.5H7a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2Z"
-  />
-</svg>
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill={color}
+    {...$$restProps}
+    class={twMerge('shrink-0', sizes[size], $$props.class)}
+    {role}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+    on:click
+    on:keydown
+    on:keyup
+    on:focus
+    on:blur
+    on:mouseenter
+    on:mouseleave
+    on:mouseover
+    on:mouseout
+  >
+    {#if title.id && title.title}
+      <title id={title.id}>{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id={desc.id}>{desc.desc}</desc>
+    {/if}
+    <path
+      d="M17 6h-2V5h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2h-.541A5.965 5.965 0 0 1 14 10v4a1 1 0 1 1-2 0v-4c0-2.206-1.794-4-4-4-.075 0-.148.012-.22.028C7.686 6.022 7.596 6 7.5 6A4.505 4.505 0 0 0 3 10.5V16a1 1 0 0 0 1 1h7v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3h5a1 1 0 0 0 1-1v-6c0-2.206-1.794-4-4-4Zm-9 8.5H7a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2Z"
+    />
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill={color}
+    {...$$restProps}
+    class={twMerge('shrink-0', sizes[size], $$props.class)}
+    {role}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+  >
+    {#if title.id && title.title}
+      <title id={title.id}>{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id={desc.id}>{desc.desc}</desc>
+    {/if}
+    <path
+      d="M17 6h-2V5h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2h-.541A5.965 5.965 0 0 1 14 10v4a1 1 0 1 1-2 0v-4c0-2.206-1.794-4-4-4-.075 0-.148.012-.22.028C7.686 6.022 7.596 6 7.5 6A4.505 4.505 0 0 0 3 10.5V16a1 1 0 0 0 1 1h7v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3h5a1 1 0 0 0 1-1v-6c0-2.206-1.794-4-4-4Zm-9 8.5H7a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2Z"
+    />
+  </svg>
+{/if}
 
 <!--
 @component
@@ -56,5 +106,8 @@
 @prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
 @prop export let role = ctx.role || 'img';
 @prop export let color = ctx.color || 'currentColor';
+@prop export let withEvents = ctx.withEvents || false;
+@prop export let title: TitleType = {};
+@prop export let desc: DescType = {};
 @prop export let ariaLabel = 'mail box solid';
 -->

@@ -1,13 +1,22 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
   interface CtxType {
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
     color?: string;
-    strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | null | undefined;
-    strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined;
+    strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | undefined;
+    strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | undefined;
     strokeWidth?: string;
+    withEvents?: boolean;
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -22,32 +31,73 @@
   export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
   export let role = ctx.role || 'img';
   export let color = ctx.color || 'currentColor';
+  export let withEvents = ctx.withEvents || false;
+  export let title: TitleType = {};
+  export let desc: DescType = {};
+  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
 
+  let hasDescription = false;
+
+  $: if (title.id || desc.id) {
+    hasDescription = true;
+  } else {
+    hasDescription = false;
+  }
   export let ariaLabel = 'X solid';
 </script>
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill={color}
-  {...$$restProps}
-  class={twMerge('shrink-0', sizes[size], $$props.class)}
-  {role}
-  aria-label={ariaLabel}
-  viewBox="0 0 24 24"
-  on:click
-  on:keydown
-  on:keyup
-  on:focus
-  on:blur
-  on:mouseenter
-  on:mouseleave
-  on:mouseover
-  on:mouseout
->
-  <path
-    d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"
-  />
-</svg>
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill={color}
+    {...$$restProps}
+    class={twMerge('shrink-0', sizes[size], $$props.class)}
+    {role}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+    on:click
+    on:keydown
+    on:keyup
+    on:focus
+    on:blur
+    on:mouseenter
+    on:mouseleave
+    on:mouseover
+    on:mouseout
+  >
+    {#if title.id && title.title}
+      <title id={title.id}>{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id={desc.id}>{desc.desc}</desc>
+    {/if}
+    <path
+      d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"
+    />
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill={color}
+    {...$$restProps}
+    class={twMerge('shrink-0', sizes[size], $$props.class)}
+    {role}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+  >
+    {#if title.id && title.title}
+      <title id={title.id}>{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id={desc.id}>{desc.desc}</desc>
+    {/if}
+    <path
+      d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"
+    />
+  </svg>
+{/if}
 
 <!--
 @component
@@ -56,5 +106,8 @@
 @prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
 @prop export let role = ctx.role || 'img';
 @prop export let color = ctx.color || 'currentColor';
+@prop export let withEvents = ctx.withEvents || false;
+@prop export let title: TitleType = {};
+@prop export let desc: DescType = {};
 @prop export let ariaLabel = 'X solid';
 -->

@@ -1,9 +1,21 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
   interface CtxType {
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
+    withEvents?: boolean;
+    strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | undefined;
+    strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | undefined;
+    strokeWidth?: string;
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -17,41 +29,87 @@
 
   export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
   export let role = ctx.role || 'img';
+  export let withEvents = ctx.withEvents || false;
+  export let title: TitleType = {};
+  export let desc: DescType = {};
 
-  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined =
+  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
+
+  let hasDescription = false;
+
+  $: if (title.id || desc.id) {
+    hasDescription = true;
+  } else {
+    hasDescription = false;
+  }
+  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | undefined =
     ctx.strokeLinecap || 'round';
-  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
+  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | undefined =
     ctx.strokeLinejoin || 'round';
   export let strokeWidth = ctx.strokeWidth || '2';
   export let ariaLabel = 'grid plus outline';
 </script>
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill="none"
-  {...$$restProps}
-  class={twMerge('shrink-0', sizes[size], $$props.class)}
-  {role}
-  aria-label={ariaLabel}
-  viewBox="0 0 24 24"
-  on:click
-  on:keydown
-  on:keyup
-  on:focus
-  on:blur
-  on:mouseenter
-  on:mouseleave
-  on:mouseover
-  on:mouseout
->
-  <path
-    stroke="currentColor"
-    stroke-linecap={strokeLinecap}
-    stroke-linejoin={strokeLinejoin}
-    stroke-width={strokeWidth}
-    d="M14 17h6m-3 3v-6M4.857 4h4.286c.473 0 .857.384.857.857v4.286a.857.857 0 0 1-.857.857H4.857A.857.857 0 0 1 4 9.143V4.857C4 4.384 4.384 4 4.857 4Zm10 0h4.286c.473 0 .857.384.857.857v4.286a.857.857 0 0 1-.857.857h-4.286A.857.857 0 0 1 14 9.143V4.857c0-.473.384-.857.857-.857Zm-10 10h4.286c.473 0 .857.384.857.857v4.286a.857.857 0 0 1-.857.857H4.857A.857.857 0 0 1 4 19.143v-4.286c0-.473.384-.857.857-.857Z"
-  />
-</svg>
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    {...$$restProps}
+    class={twMerge('shrink-0', sizes[size], $$props.class)}
+    {role}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+    on:click
+    on:keydown
+    on:keyup
+    on:focus
+    on:blur
+    on:mouseenter
+    on:mouseleave
+    on:mouseover
+    on:mouseout
+  >
+    {#if title.id && title.title}
+      <title id={title.id}>{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id={desc.id}>{desc.desc}</desc>
+    {/if}
+    <path
+      stroke="currentColor"
+      stroke-linecap={strokeLinecap}
+      stroke-linejoin={strokeLinejoin}
+      stroke-width={strokeWidth}
+      d="M14 17h6m-3 3v-6M4.857 4h4.286c.473 0 .857.384.857.857v4.286a.857.857 0 0 1-.857.857H4.857A.857.857 0 0 1 4 9.143V4.857C4 4.384 4.384 4 4.857 4Zm10 0h4.286c.473 0 .857.384.857.857v4.286a.857.857 0 0 1-.857.857h-4.286A.857.857 0 0 1 14 9.143V4.857c0-.473.384-.857.857-.857Zm-10 10h4.286c.473 0 .857.384.857.857v4.286a.857.857 0 0 1-.857.857H4.857A.857.857 0 0 1 4 19.143v-4.286c0-.473.384-.857.857-.857Z"
+    />
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    {...$$restProps}
+    class={twMerge('shrink-0', sizes[size], $$props.class)}
+    {role}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+  >
+    {#if title.id && title.title}
+      <title id={title.id}>{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id={desc.id}>{desc.desc}</desc>
+    {/if}
+    <path
+      stroke="currentColor"
+      stroke-linecap={strokeLinecap}
+      stroke-linejoin={strokeLinejoin}
+      stroke-width={strokeWidth}
+      d="M14 17h6m-3 3v-6M4.857 4h4.286c.473 0 .857.384.857.857v4.286a.857.857 0 0 1-.857.857H4.857A.857.857 0 0 1 4 9.143V4.857C4 4.384 4.384 4 4.857 4Zm10 0h4.286c.473 0 .857.384.857.857v4.286a.857.857 0 0 1-.857.857h-4.286A.857.857 0 0 1 14 9.143V4.857c0-.473.384-.857.857-.857Zm-10 10h4.286c.473 0 .857.384.857.857v4.286a.857.857 0 0 1-.857.857H4.857A.857.857 0 0 1 4 19.143v-4.286c0-.473.384-.857.857-.857Z"
+    />
+  </svg>
+{/if}
 
 <!--
 @component
@@ -59,9 +117,12 @@
 ## Props
 @prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
 @prop export let role = ctx.role || 'img';
-@prop export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | null | undefined =
+@prop export let withEvents = ctx.withEvents || false;
+@prop export let title: TitleType = {};
+@prop export let desc: DescType = {};
+@prop export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | undefined =
     ctx.strokeLinecap || 'round';
-@prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined =
+@prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | undefined =
     ctx.strokeLinejoin || 'round';
 @prop export let strokeWidth = ctx.strokeWidth || '2';
 @prop export let ariaLabel = 'grid plus outline';

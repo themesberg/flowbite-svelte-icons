@@ -1,13 +1,22 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
   interface CtxType {
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
     color?: string;
-    strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | null | undefined;
-    strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | null | undefined;
+    strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | undefined;
+    strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | undefined;
     strokeWidth?: string;
+    withEvents?: boolean;
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -22,34 +31,77 @@
   export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
   export let role = ctx.role || 'img';
   export let color = ctx.color || 'currentColor';
+  export let withEvents = ctx.withEvents || false;
+  export let title: TitleType = {};
+  export let desc: DescType = {};
+  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
 
+  let hasDescription = false;
+
+  $: if (title.id || desc.id) {
+    hasDescription = true;
+  } else {
+    hasDescription = false;
+  }
   export let ariaLabel = 'sale percent solid';
 </script>
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill={color}
-  {...$$restProps}
-  class={twMerge('shrink-0', sizes[size], $$props.class)}
-  {role}
-  aria-label={ariaLabel}
-  viewBox="0 0 24 24"
-  on:click
-  on:keydown
-  on:keyup
-  on:focus
-  on:blur
-  on:mouseenter
-  on:mouseleave
-  on:mouseover
-  on:mouseout
->
-  <path
-    fill-rule="evenodd"
-    d="M20.29 8.567c.133.323.334.613.59.85v.002a3.536 3.536 0 0 1 0 5.166 2.442 2.442 0 0 0-.776 1.868 3.534 3.534 0 0 1-3.651 3.653 2.483 2.483 0 0 0-1.87.776 3.537 3.537 0 0 1-5.164 0 2.44 2.44 0 0 0-1.87-.776 3.533 3.533 0 0 1-3.653-3.654 2.44 2.44 0 0 0-.775-1.868 3.537 3.537 0 0 1 0-5.166 2.44 2.44 0 0 0 .775-1.87 3.55 3.55 0 0 1 1.033-2.62 3.594 3.594 0 0 1 2.62-1.032 2.401 2.401 0 0 0 1.87-.775 3.535 3.535 0 0 1 5.165 0 2.444 2.444 0 0 0 1.869.775 3.532 3.532 0 0 1 3.652 3.652c-.012.35.051.697.184 1.02ZM9.927 7.371a1 1 0 1 0 0 2h.01a1 1 0 0 0 0-2h-.01Zm5.889 2.226a1 1 0 0 0-1.414-1.415L8.184 14.4a1 1 0 0 0 1.414 1.414l6.218-6.217Zm-2.79 5.028a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2h-.01Z"
-    clip-rule="evenodd"
-  />
-</svg>
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill={color}
+    {...$$restProps}
+    class={twMerge('shrink-0', sizes[size], $$props.class)}
+    {role}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+    on:click
+    on:keydown
+    on:keyup
+    on:focus
+    on:blur
+    on:mouseenter
+    on:mouseleave
+    on:mouseover
+    on:mouseout
+  >
+    {#if title.id && title.title}
+      <title id={title.id}>{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id={desc.id}>{desc.desc}</desc>
+    {/if}
+    <path
+      fill-rule="evenodd"
+      d="M20.29 8.567c.133.323.334.613.59.85v.002a3.536 3.536 0 0 1 0 5.166 2.442 2.442 0 0 0-.776 1.868 3.534 3.534 0 0 1-3.651 3.653 2.483 2.483 0 0 0-1.87.776 3.537 3.537 0 0 1-5.164 0 2.44 2.44 0 0 0-1.87-.776 3.533 3.533 0 0 1-3.653-3.654 2.44 2.44 0 0 0-.775-1.868 3.537 3.537 0 0 1 0-5.166 2.44 2.44 0 0 0 .775-1.87 3.55 3.55 0 0 1 1.033-2.62 3.594 3.594 0 0 1 2.62-1.032 2.401 2.401 0 0 0 1.87-.775 3.535 3.535 0 0 1 5.165 0 2.444 2.444 0 0 0 1.869.775 3.532 3.532 0 0 1 3.652 3.652c-.012.35.051.697.184 1.02ZM9.927 7.371a1 1 0 1 0 0 2h.01a1 1 0 0 0 0-2h-.01Zm5.889 2.226a1 1 0 0 0-1.414-1.415L8.184 14.4a1 1 0 0 0 1.414 1.414l6.218-6.217Zm-2.79 5.028a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2h-.01Z"
+      clip-rule="evenodd"
+    />
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill={color}
+    {...$$restProps}
+    class={twMerge('shrink-0', sizes[size], $$props.class)}
+    {role}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+  >
+    {#if title.id && title.title}
+      <title id={title.id}>{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id={desc.id}>{desc.desc}</desc>
+    {/if}
+    <path
+      fill-rule="evenodd"
+      d="M20.29 8.567c.133.323.334.613.59.85v.002a3.536 3.536 0 0 1 0 5.166 2.442 2.442 0 0 0-.776 1.868 3.534 3.534 0 0 1-3.651 3.653 2.483 2.483 0 0 0-1.87.776 3.537 3.537 0 0 1-5.164 0 2.44 2.44 0 0 0-1.87-.776 3.533 3.533 0 0 1-3.653-3.654 2.44 2.44 0 0 0-.775-1.868 3.537 3.537 0 0 1 0-5.166 2.44 2.44 0 0 0 .775-1.87 3.55 3.55 0 0 1 1.033-2.62 3.594 3.594 0 0 1 2.62-1.032 2.401 2.401 0 0 0 1.87-.775 3.535 3.535 0 0 1 5.165 0 2.444 2.444 0 0 0 1.869.775 3.532 3.532 0 0 1 3.652 3.652c-.012.35.051.697.184 1.02ZM9.927 7.371a1 1 0 1 0 0 2h.01a1 1 0 0 0 0-2h-.01Zm5.889 2.226a1 1 0 0 0-1.414-1.415L8.184 14.4a1 1 0 0 0 1.414 1.414l6.218-6.217Zm-2.79 5.028a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2h-.01Z"
+      clip-rule="evenodd"
+    />
+  </svg>
+{/if}
 
 <!--
 @component
@@ -58,5 +110,8 @@
 @prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
 @prop export let role = ctx.role || 'img';
 @prop export let color = ctx.color || 'currentColor';
+@prop export let withEvents = ctx.withEvents || false;
+@prop export let title: TitleType = {};
+@prop export let desc: DescType = {};
 @prop export let ariaLabel = 'sale percent solid';
 -->

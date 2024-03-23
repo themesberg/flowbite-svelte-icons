@@ -1,4 +1,5 @@
 <script>
+  import MetaTag from '../utils/MetaTag.svelte';
   import Range from 'flowbite-svelte/Range.svelte';
   import Label from 'flowbite-svelte/Label.svelte';
   import Tabs from 'flowbite-svelte/Tabs.svelte';
@@ -20,7 +21,14 @@
     return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
   });
   $: size = 6;
+  // for metatag
+  const title = 'Flowbite Svelte Icons: Outline';
+  const subtitle = 'Outline Icons';
+  const path = 'outline';
+  const description = 'Accessible SVG icons - Outline';
 </script>
+
+<MetaTag {title} {subtitle} {path} {description} />
 
 <div class="m-8 w-full">
   <h1>Flowbite Svelte Icons: Outline</h1>
@@ -38,7 +46,7 @@
       <TabItem open>
         <span slot="title" class="text-lg">Mono</span>
         <div
-          class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white"
+          class="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white"
         >
           {#each filteredEntries as [name, component]}
             <div class="flex gap-4 items-center text-lg">
