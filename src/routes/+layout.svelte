@@ -17,7 +17,6 @@
   <Navbar bind:drawerHidden />
 </header>
 <div class="lg:flex">
-  
   {#if currentUrl !== '/' && !currentUrl.startsWith('/outline') && !currentUrl.startsWith('/solid')}
     <Sidebar bind:drawerHidden />
     <div class="relative">
