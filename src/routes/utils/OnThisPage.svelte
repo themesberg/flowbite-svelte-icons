@@ -47,7 +47,10 @@
 </div>
 <div use:init>
   {#if headings.length}
-    <Dropdown triggeredBy=".on-this-page" containerClass="w-64 z-20 dark:bg-neutral-900 border border-gray-200 dark:border-gray-700 rounded-lg ">
+    <Dropdown
+      triggeredBy=".on-this-page"
+      containerClass="w-64 z-20 dark:bg-neutral-900 border border-gray-200 dark:border-gray-700 rounded-lg "
+    >
       <DropdownItem href="#top" class="ml-2">Return to top</DropdownItem>
       <DropdownDivider />
       {#each headings as { rel, href, name }}

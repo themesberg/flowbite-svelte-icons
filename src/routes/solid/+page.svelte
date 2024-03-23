@@ -16,7 +16,6 @@
 
   const contentClass = ' rounded-lg dark:bg-neutral-900 mt-4';
   let searchTerm = '';
-  
 
   $: filteredEntries = Object.entries(keyIcons).filter(([name, component]) => {
     return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;

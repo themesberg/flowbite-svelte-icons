@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.5.0
+
+### Minor Changes
+
+- feat: add withEvents props ([`da8ae9d77f955b0a464200d0ee5f9bef46ac7282`](https://github.com/themesberg/flowbite-svelte-icons/commit/da8ae9d77f955b0a464200d0ee5f9bef46ac7282))
+  feat: add A11y props, title and desc
+  test: add meta title test
+  docs: new design for website docs
+
 ## 1.4.5
 
 ### Patch Changes

@@ -14,7 +14,6 @@
   export let /** @type {string} */ subtitle;
   export let /** @type {string} */ path;
   export let /** @type {string} */ description;
-
 </script>
 
 <MetaTag {path} {title} {subtitle} {description} />
