@@ -96,7 +96,7 @@ Use `ariaLabel` prop to modify the `aria-label` value.
 
 ## Passing down other attributes
 
-Since all icons have `{...$$restProps}`, you can pass other attibutes as well.
+Since all icons have `{...restProps}`, you can pass other attibutes as well.
 
 ```html
 <AddressBookOutline id="my-svg" transform="rotate(45)"/>
