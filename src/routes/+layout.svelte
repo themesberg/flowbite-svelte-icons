@@ -17,7 +17,7 @@
   <Navbar bind:drawerHidden />
 </header>
 <div class="lg:flex">
-  {#if currentUrl !== '/' && !currentUrl.startsWith('/outline') && !currentUrl.startsWith('/solid')}
+  {#if !['/', '/outline', '/solid'].includes(currentUrl)}
     <Sidebar bind:drawerHidden />
     <div class="relative">
       <OnThisPage {extract} headingSelector="#mainContent > :where(h2, h3)" />
