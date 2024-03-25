@@ -61,6 +61,7 @@
             >Flowbite Svelte Admin Dashboard</DropdownItem
           >
         </Dropdown>
+        <NavLi href="https://svelte-svg-icons.codewithshin.com/">Icon Sets</NavLi>
       </NavUl>
     </div>
     <div class="ms-auto flex items-center text-gray-500 dark:text-gray-400 order-1 sm:order-2 mr-4">
