@@ -33,7 +33,7 @@
         alt="Flowbite Logo"
       />
       <span
-        class="ml-px self-center whitespace-nowrap text-xl font-semibold dark:text-white sm:text-2xl"
+        class="sm:text-3xl self-center whitespace-nowrap text-2xl font-semibold text-primary-800 dark:text-primary-600"
       >
         Flowbite Svelte Icons
       </span>
