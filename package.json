@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shinokada/flowbite-svelte-icons"
+    "url": "https://github.com/themesberg/flowbite-svelte-icons"
   },
   "engines": {
     "npm": ">=7.0.0",
@@ -100,8 +100,8 @@
   ],
   "contributors": [
     {
-      "name": "shinokada/flowbite-svelte-icons",
-      "url": "https://github.com/shinokada/flowbite-svelte-icons"
+      "name": "themesberg/flowbite-icons",
+      "url": "https://github.com/themesberg/flowbite-svelte-icons"
     }
   ],
   "exports": {
