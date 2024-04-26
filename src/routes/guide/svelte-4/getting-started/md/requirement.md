@@ -1,0 +1,3 @@
+- Svelte 4 or 5 (without Runes)
+- TailwindCSS
+- tailwind-merge

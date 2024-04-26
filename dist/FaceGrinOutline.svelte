@@ -1,4 +1,4 @@
-<script>import { getContext } from "svelte";
+<script lang="ts">import { getContext } from "svelte";
 import { twMerge } from "tailwind-merge";
 const ctx = getContext("iconCtx") ?? {};
 const sizes = {
@@ -8,31 +8,92 @@ const sizes = {
   lg: "w-6 h-6",
   xl: "w-8 h-8"
 };
-let { size = ctx.size || "md", role, class: classname, ariaLabel = "face grin outline", ...restProps } = $props();
+let {
+  size = ctx.size || "md",
+  role,
+  color = ctx.color || "currentColor",
+  withEvents = ctx.withEvents || false,
+  title = {},
+  strokeWidth = ctx.strokeWidth || "2",
+  desc = {},
+  class: classname,
+  ariaLabel = "face grin outline",
+  onclick,
+  onkeydown,
+  onkeyup,
+  ...restProps
+} = $props();
+let ariaDescribedby = `${title.id || ""} ${desc.id || ""}`;
+let hasDescription = $state(false);
+function updateHasDescription() {
+  hasDescription = !!(title.id || desc.id);
+}
+updateHasDescription();
+$effect(() => {
+  updateHasDescription();
+});
 </script>
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill="none"
-  {...restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    classname
-  )}
-  {role}
-  aria-label={ariaLabel}
-  viewBox="0 0 24 24"
->
-     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.99 9H15M8.99 9H9m12 3a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM7 13c0 1 .507 2.397 1.494 3.216a5.5 5.5 0 0 0 7.022 0C16.503 15.397 17 14 17 13c0 0-1.99 1-4.995 1S7 13 7 13Z"/>  
-</svg>
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    {color}
+    {...restProps}
+    class={twMerge('shrink-0', sizes[size], classname)}
+    {role}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+    {onclick}
+    {onkeydown}
+    {onkeyup}
+  >
+    {#if title.id && title.title}
+      <title id={title.id}>{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id={desc.id}>{desc.desc}</desc>
+    {/if}
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width={strokeWidth}
+      d="M14.99 9H15M8.99 9H9m12 3a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM7 13c0 1 .507 2.397 1.494 3.216a5.5 5.5 0 0 0 7.022 0C16.503 15.397 17 14 17 13c0 0-1.99 1-4.995 1S7 13 7 13Z"
+    />
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    {color}
+    {...restProps}
+    class={twMerge('shrink-0', sizes[size], classname)}
+    {role}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+  >
+    {#if title.id && title.title}
+      <title id={title.id}>{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id={desc.id}>{desc.desc}</desc>
+    {/if}
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width={strokeWidth}
+      d="M14.99 9H15M8.99 9H9m12 3a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM7 13c0 1 .507 2.397 1.494 3.216a5.5 5.5 0 0 0 7.022 0C16.503 15.397 17 14 17 13c0 0-1.99 1-4.995 1S7 13 7 13Z"
+    />
+  </svg>
+{/if}
 
 <!--
 @component
 [Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
 ## Props
-@props: size?: "xs" | "sm" | "md" | "lg" | "xl";
-@props:role?: string;
-@props:class?: string;
-@props:ariaLabel?: string;
+@props: 
 -->

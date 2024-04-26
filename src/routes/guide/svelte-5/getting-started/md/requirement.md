@@ -1,0 +1,3 @@
+- Svelte 5:Runes
+- TailwindCSS
+- tailwind-merge

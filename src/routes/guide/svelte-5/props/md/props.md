@@ -1,0 +1,13 @@
+- size?: "xs" | "sm" | "md" | "lg" | "xl" = ctx.size || 'md';
+- role?: string = ctx.role || 'img';
+- color?: string;
+- withEvents?: boolean = ctx.withEvents || false;
+- strokeWidth?: string = ctx.strokeWidth || '2'; // only for Outline icons
+- title?: TitleType;
+- desc?: DescType;
+- ariaLabel?: string ="<icon file name>"
+- onclick?: (event: MouseEvent) => void;
+- onkeydown?: (event: KeyboardEvent) => void;
+- onkeyup?: (event: KeyboardEvent) => void;
+- class?: string;
+- ...restProps

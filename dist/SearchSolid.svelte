@@ -1,4 +1,4 @@
-<script>import { getContext } from "svelte";
+<script lang="ts">import { getContext } from "svelte";
 import { twMerge } from "tailwind-merge";
 const ctx = getContext("iconCtx") ?? {};
 const sizes = {
@@ -8,30 +8,87 @@ const sizes = {
   lg: "w-6 h-6",
   xl: "w-8 h-8"
 };
-let { size = ctx.size || "md", role, class: classname, ariaLabel = "search solid", ...restProps } = $props();
+let {
+  size = ctx.size || "md",
+  role,
+  color = ctx.color || "currentColor",
+  withEvents = ctx.withEvents || false,
+  title = {},
+  desc = {},
+  class: classname,
+  ariaLabel = "search solid",
+  onclick,
+  onkeydown,
+  onkeyup,
+  ...restProps
+} = $props();
+let ariaDescribedby = `${title.id || ""} ${desc.id || ""}`;
+let hasDescription = $state(false);
+function updateHasDescription() {
+  hasDescription = !!(title.id || desc.id);
+}
+updateHasDescription();
+$effect(() => {
+  updateHasDescription();
+});
 </script>
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  {...restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    classname
-  )}
-  {role}
-  aria-label={ariaLabel}
-  viewBox="0 0 24 24"
->
-     <path fill="currentColor" d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z"/>   <path fill="currentColor" fill-rule="evenodd" d="M21.707 21.707a1 1 0 0 1-1.414 0l-3.5-3.5a1 1 0 0 1 1.414-1.414l3.5 3.5a1 1 0 0 1 0 1.414Z" clip-rule="evenodd"/>  
-</svg>
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill={color}
+    {...restProps}
+    class={twMerge('shrink-0', sizes[size], classname)}
+    {role}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+    {onclick}
+    {onkeydown}
+    {onkeyup}
+  >
+    {#if title.id && title.title}
+      <title id={title.id}>{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id={desc.id}>{desc.desc}</desc>
+    {/if}
+    <path d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z" />
+    <path
+      fill-rule="evenodd"
+      d="M21.707 21.707a1 1 0 0 1-1.414 0l-3.5-3.5a1 1 0 0 1 1.414-1.414l3.5 3.5a1 1 0 0 1 0 1.414Z"
+      clip-rule="evenodd"
+    />
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill={color}
+    {...restProps}
+    class={twMerge('shrink-0', sizes[size], classname)}
+    {role}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+  >
+    {#if title.id && title.title}
+      <title id={title.id}>{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id={desc.id}>{desc.desc}</desc>
+    {/if}
+    <path d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z" />
+    <path
+      fill-rule="evenodd"
+      d="M21.707 21.707a1 1 0 0 1-1.414 0l-3.5-3.5a1 1 0 0 1 1.414-1.414l3.5 3.5a1 1 0 0 1 0 1.414Z"
+      clip-rule="evenodd"
+    />
+  </svg>
+{/if}
 
 <!--
 @component
 [Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
 ## Props
-@props: size?: "xs" | "sm" | "md" | "lg" | "xl";
-@props:role?: string;
-@props:class?: string;
-@props:ariaLabel?: string;
+@props: 
 -->

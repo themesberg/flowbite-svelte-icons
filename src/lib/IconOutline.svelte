@@ -1,22 +1,23 @@
 <script lang="ts">
   import type { ComponentType } from 'svelte';
-  interface Props{
+  interface Props {
     icon: ComponentType;
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
+    color?: string;
     ariaLabel?: string;
     class?: string;
   }
-  let {icon, size, role, ariaLabel, class: classname, ...restProps}: Props = $props()
-
+  let { icon, size, role, color, ariaLabel, class: classname, ...restProps }: Props = $props();
 </script>
 
-<svelte:component 
-  {...restProps} 
+<svelte:component
+  this={icon}
+  fill={color}
+  {...restProps}
   {role}
-  this={icon} 
   {size}
-  class={classname} 
+  class={classname}
   {ariaLabel}
 />
 
@@ -25,8 +26,9 @@
 [Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
 ## Props
 @props: icon: ComponentType;
-@props:size?: "xs" | "sm" | "md" | "lg" | "xl";
+@props:size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 @props:role?: string;
+@props:color?: string;
 @props:ariaLabel?: string;
 @props:class?: string;
 -->

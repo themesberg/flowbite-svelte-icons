@@ -1,0 +1,180 @@
+[
+  {
+    "iconName": "Flowbite Svelte Icons",
+    "badges": ["Svelte 4/5/Runes", "A11y"],
+    "features": ["510+ mono and color SVG icons", "v1: 4/5, v2: 5:Runes"],
+    "source": ["flowbite-icons", "https://github.com/themesberg/flowbite-icons"],
+    "repo": "https://github.com/themesberg/flowbite-svelte"
+  },
+  {
+    "iconName": "Svelte Ant Design Icons",
+    "badges": ["Svelte 4/5/Runes"],
+    "features": ["780+ SVG icons", "v1: 4/5, v2: 5:Runes"],
+    "source": ["Ant Design Icons", "https://svelte-ant-design-icons.codewithshin.com"]
+  },
+  {
+    "iconName": "Svelte Awesome Icons",
+    "badges": ["Svelte 4/5/Runes", "A11y"],
+    "features": ["2000+ SVG icons", "v1: 4/5, v2: 5:Runes"],
+    "source": ["Font Awesome", "https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs"]
+  },
+  {
+    "iconName": "Svelte Supertiny",
+    "badges": ["Svelte 4/5/Runes"],
+    "features": ["340+ SVG logos for popular brands", "v1: 4/5, v2: 5:Runes"],
+    "source": ["SuperTinyIcons", "https://github.com/edent/SuperTinyIcons"]
+  },
+  {
+    "iconName": "Svelte Bootstrap Svg Icons",
+    "badges": ["Svelte 4/5"],
+    "features": ["1950+ SVG icons"],
+    "source": ["Bootstrap icons", "https://github.com/twbs/icons"]
+  },
+  {
+    "iconName": "Svelte Boxicons",
+    "badges": ["Svelte 4/5"],
+    "features": ["1500+ SVG icons"],
+    "source": ["Boxicons", "https://github.com/atisawd/boxicons/"]
+  },
+  {
+    "iconName": "Svelte Circle Flags",
+    "badges": ["Svelte 4/5"],
+    "features": ["380+ SVG Circle Flag icons"],
+    "source": ["Circle-Flags", "https://github.com/HatScripts/circle-flags"]
+  },
+  {
+    "iconName": "Svelte Coreui Icons",
+    "badges": ["Svelte 4/5"],
+    "features": ["1500+ SVG icons"],
+    "source": ["CoreUI Icons", "https://github.com/coreui/coreui-icons"]
+  },
+  {
+    "iconName": "Svelte Cryptocurrency Icons",
+    "badges": ["Svelte 4/5"],
+    "features": ["470+ SVG icons"],
+    "source": ["Cryptocurrency icons", "https://github.com/spothq/cryptocurrency-icons"]
+  },
+  {
+    "iconName": "Svelte Cssgg Icons",
+    "badges": ["Svelte 4/5"],
+    "features": ["700+ SVG icons"],
+    "source": ["css.gg", "https://github.com/astrit/css.gg"]
+  },
+  {
+    "iconName": "Svelte Evil Icons",
+    "badges": ["Svelte 4/5"],
+    "features": ["70+ SVG icons"],
+    "source": ["Evil Icons", "https://github.com/evil-icons/evil-icons"]
+  },
+  {
+    "iconName": "Svelte Feathers",
+    "badges": ["Svelte 4/5"],
+    "features": ["280+ SVG icons"],
+    "source": ["Feather-icons", "https://feathericons.com/"]
+  },
+  {
+    "iconName": "Svelte File Icons",
+    "badges": ["Svelte 4/5"],
+    "features": ["930+ SVG icons"],
+    "source": ["File icons", "https://github.com/file-icons/icons"]
+  },
+  {
+    "iconName": "Svelte Flag Icons",
+    "badges": ["Svelte 4/5"],
+    "features": ["260+ SVG icons"],
+    "source": ["Flag Icons", "https://github.com/lipis/flag-icons"]
+  },
+  {
+    "iconName": "Svelte Flags",
+    "badges": ["Svelte 4/5"],
+    "features": ["250+ SVG icons"],
+    "source": ["Country flags", "https://github.com/hampusborgos/country-flags"]
+  },
+  {
+    "iconName": "Svelte Google Materialdesign Icons",
+    "badges": ["Svelte 4/5"],
+    "features": ["2120+ SVG icons"],
+    "source": [
+      "Material-Design-Icons",
+      "https://github.com/marella/material-design-icons/tree/main/svg"
+    ]
+  },
+  {
+    "iconName": "Svelte Heros",
+    "badges": ["Svelte 4/5"],
+    "features": ["580+ SVG icons"],
+    "source": ["Heroicons", "https://heroicons.com/"]
+  },
+  {
+    "iconName": "Svelte Heros v2",
+    "badges": ["Svelte 4/5"],
+    "features": ["870+ SVG icons"],
+    "source": ["Heroicons v2", "https://heroicons.com/"]
+  },
+  {
+    "iconName": "Svelte Ionicons",
+    "badges": ["Svelte 4/5"],
+    "features": ["1330+ SVG icons"],
+    "source": ["Ionicicons", "https://ionic.io/ionicons"]
+  },
+  {
+    "iconName": "Svelte Lucide",
+    "badges": ["Svelte 4/5"],
+    "features": ["1210+ SVG icons"],
+    "source": ["Lucide icons", "https://github.com/lucide-icons/lucide"]
+  },
+  {
+    "iconName": "Svelte Materialdesign Icons",
+    "badges": ["Svelte 4/5"],
+    "features": ["7330+ SVG icons"],
+    "source": ["MaterialDesign", "https://github.com/Templarian/MaterialDesign"]
+  },
+  {
+    "iconName": "Svelte Oct",
+    "badges": ["Svelte 4/5"],
+    "features": ["270+ SVG icons"],
+    "source": ["Octicons", "https://github.com/primer/octicons"]
+  },
+  {
+    "iconName": "Svelte Radix",
+    "badges": ["Svelte 4/5"],
+    "features": ["310+ SVG icons"],
+    "source": ["Radix icons", "https://github.com/radix-ui/icons"]
+  },
+  {
+    "iconName": "Svelte Remix",
+    "badges": ["Svelte 4/5"],
+    "features": ["2270+ SVG icons"],
+    "source": ["RemixIcon", "https://github.com/Remix-Design/RemixIcon"]
+  },
+  {
+    "iconName": "Svelte Simples",
+    "badges": ["Svelte 4/5"],
+    "features": ["2620+ SVG icons for popular brands"],
+    "source": ["Simple-icons", "https://github.com/simple-icons/simple-icons/"]
+  },
+  {
+    "iconName": "Svelte Tabler",
+    "badges": ["Svelte 4/5"],
+    "features": ["4600+ SVG icons"],
+    "source": ["Tabler Icons", "https://github.com/tabler/tabler-icons"]
+  },
+  {
+    "iconName": "Svelte Teenyicons",
+    "badges": ["Svelte 4/5"],
+    "features": ["600+ SVG icons"],
+    "source": ["Teenyicons", "https://github.com/teenyicons/teenyicons"]
+  },
+  {
+    "iconName": "Svelte Twitter Emoji",
+    "badges": ["Svelte 4/5"],
+    "features": ["3600+ Twitter emoji SVG color icons"],
+    "source": ["Twemoji", "https://github.com/twitter/twemoji"]
+  },
+  {
+    "iconName": "Svelte Weather",
+    "badges": ["Svelte 4/5"],
+    "features": ["210+ Weather SVG icons"],
+    "source": ["weather-icons", "https://github.com/erikflowers/weather-icons"]
+  }
+]
