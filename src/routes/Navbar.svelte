@@ -16,10 +16,14 @@
   export let drawerHidden = false;
   export let list = false;
   $: currentUrl = $page.url.pathname;
+
+  let divClass = 'w-full ms-auto lg:block lg:w-auto order-1 lg:order-none';
+  let ulClass =
+    'flex flex-col py-3 my-4 lg:flex-row lg:my-0 text-sm font-medium text-gray-900 dark:text-gray-300 gap-4';
 </script>
 
-<Navbar {fluid} class="text-black dark:bg-neutral-900" color="default" let:NavContainer>
-  <NavContainer class="mb-px mt-px px-1" {fluid}>
+<div class="relative px-8">
+  <Navbar {fluid} color="default" let:toggle>
     {#if currentUrl !== '/'}
       <NavHamburger
         onClick={() => (drawerHidden = !drawerHidden)}
@@ -38,49 +42,33 @@
         Flowbite Svelte Icons
       </span>
     </NavBrand>
-    <div class="max-w-md mx-auto md:block md:w-auto order-1 md:order-none">
-      <NavUl
-        class="ml-2"
-        ulClass="flex flex-col py-3 my-4 md:flex-row md:my-0 font-medium gap-4 dark:md:bg-transparent md:bg-white md:border-0"
-        activeUrl="/"
-        activeClass="text-primary-600 dark:text-primary-500"
-      >
-        <NavLi href="/svelte-4/getting-started">Guide</NavLi>
-        <NavLi href="/outline">Outline</NavLi>
-        <NavLi href="/solid">Solid</NavLi>
-        <NavLi class="cursor-pointer">
-          Resources
-          <ChevronDownOutline class=" inline h-5 w-5 text-primary-800 dark:text-white" />
-        </NavLi>
-        <Dropdown class="z-20 w-64">
-          <DropdownItem href="https://flowbite-svelte.com">Flowbite Svelte</DropdownItem>
-          <DropdownItem href="https://flowbite-svelte-blocks.codewithshin.com/"
-            >Flowbite Svelte Block</DropdownItem
-          >
-          <DropdownItem href="https://flowbite-svelte-admin-dashboard.vercel.app/"
-            >Flowbite Svelte Admin Dashboard</DropdownItem
-          >
-        </Dropdown>
-        <NavLi href="https://svelte-svg-icons.codewithshin.com/">Icon Sets</NavLi>
-      </NavUl>
-    </div>
-    <div class="ms-auto flex items-center text-gray-500 dark:text-gray-400 order-1 sm:order-2 mr-4">
-      <DotsHorizontalOutline class="dots-menu dark:text-white" size="lg" />
-      <Dropdown triggeredBy=".dots-menu">
-        <DropdownItem
-          ><a href="https://twitter.com/shinokada">
-            <XSolid />
-          </a></DropdownItem
+
+    <NavUl
+      class="ml-2"
+      {divClass}
+      {ulClass}
+      nonActiveClass="md:!ps-3 md:!py-2 lg:!ps-0 text-gray-700 hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 dark:text-gray-400 lg:dark:text-white lg:dark:hover:text-primary-700 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
+      activeClass="md:!ps-3 md:!py-2 lg:!ps-0 text-white bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:dark:text-primary-700 dark:bg-primary-600 lg:dark:bg-transparent cursor-default"
+    >
+      <NavLi href="/svelte-4/getting-started">Guide</NavLi>
+      <NavLi href="/outline">Outline</NavLi>
+      <NavLi href="/solid">Solid</NavLi>
+      <NavLi class="cursor-pointer">
+        Resources
+        <ChevronDownOutline class=" inline h-5 w-5 text-primary-800 dark:text-white" />
+      </NavLi>
+      <Dropdown class="z-20 w-64">
+        <DropdownItem href="https://flowbite-svelte.com">Flowbite Svelte</DropdownItem>
+        <DropdownItem href="https://flowbite-svelte-blocks.codewithshin.com/"
+          >Flowbite Svelte Block</DropdownItem
         >
-        <DropdownItem>
-          <a href="https://github.com/themesberg/flowbite-svelte-icons">
-            <GithubSolid class="" />
-          </a>
-        </DropdownItem>
-        <DropdownItem>
-          <DarkMode btnClass="p-0 m-0 text-blue-900 dark:text-blue-400" />
-        </DropdownItem>
+        <DropdownItem href="https://flowbite-svelte-admin-dashboard.vercel.app/"
+          >Flowbite Svelte Admin Dashboard</DropdownItem
+        >
       </Dropdown>
-    </div>
-  </NavContainer>
-</Navbar>
+      <NavLi href="https://svelte-svg-icons.codewithshin.com/">Icon Sets</NavLi>
+    </NavUl>
+
+    <NavHamburger />
+  </Navbar>
+</div>

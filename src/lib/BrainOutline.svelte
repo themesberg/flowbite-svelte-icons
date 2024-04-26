@@ -9,13 +9,24 @@
     id?: string;
     desc?: string;
   };
-  interface CtxType {
+
+  interface BaseProps {
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
-    withEvents?: boolean;
-    strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | undefined;
-    strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | undefined;
+    color?: string;
     strokeWidth?: string;
+    withEvents?: boolean;
+    onclick?: (event: MouseEvent) => void;
+    onkeydown?: (event: KeyboardEvent) => void;
+    onkeyup?: (event: KeyboardEvent) => void;
+  }
+
+  interface CtxType extends BaseProps {}
+  interface Props extends BaseProps {
+    title?: TitleType;
+    desc?: DescType;
+    ariaLabel?: string;
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -27,14 +38,15 @@
     xl: 'w-8 h-8'
   };
 
-  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
-  export let role = ctx.role || 'img';
-  export let withEvents = ctx.withEvents || false;
+  export let size: Props['size'] = ctx.size || 'md';
+  export let role: Props['role'] = ctx.role || 'img';
+  export let color: Props['color'] = ctx.color || 'currentColor';
+  export let withEvents: Props['withEvents'] = ctx.withEvents || false;
   export let title: TitleType = {};
+  export let strokeWidth: Props['strokeWidth'] = ctx.strokeWidth || '2';
   export let desc: DescType = {};
 
   let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
-
   let hasDescription = false;
 
   $: if (title.id || desc.id) {
@@ -42,11 +54,6 @@
   } else {
     hasDescription = false;
   }
-  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | undefined =
-    ctx.strokeLinecap || 'round';
-  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | undefined =
-    ctx.strokeLinejoin || 'round';
-  export let strokeWidth = ctx.strokeWidth || '2';
   export let ariaLabel = 'brain outline';
 </script>
 
@@ -54,8 +61,9 @@
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
+    {color}
     {...$$restProps}
-    class={twMerge('shrink-0', sizes[size], $$props.class)}
+    class={twMerge('shrink-0', sizes[size ?? 'md'], $$props.class)}
     {role}
     aria-label={ariaLabel}
     aria-describedby={hasDescription ? ariaDescribedby : undefined}
@@ -78,8 +86,8 @@
     {/if}
     <path
       stroke="currentColor"
-      stroke-linecap={strokeLinecap}
-      stroke-linejoin={strokeLinejoin}
+      stroke-linecap="round"
+      stroke-linejoin="round"
       stroke-width={strokeWidth}
       d="M12 18.5A2.493 2.493 0 0 1 7.51 20H7.5a2.468 2.468 0 0 1-2.4-3.154 2.98 2.98 0 0 1-.85-5.274 2.468 2.468 0 0 1 .92-3.182 2.477 2.477 0 0 1 1.876-3.344 2.5 2.5 0 0 1 3.41-1.856A2.5 2.5 0 0 1 12 5.5m0 13v-13m0 13a2.493 2.493 0 0 0 4.49 1.5h.01a2.468 2.468 0 0 0 2.403-3.154 2.98 2.98 0 0 0 .847-5.274 2.468 2.468 0 0 0-.921-3.182 2.477 2.477 0 0 0-1.875-3.344A2.5 2.5 0 0 0 14.5 3 2.5 2.5 0 0 0 12 5.5m-8 5a2.5 2.5 0 0 1 3.48-2.3m-.28 8.551a3 3 0 0 1-2.953-5.185M20 10.5a2.5 2.5 0 0 0-3.481-2.3m.28 8.551a3 3 0 0 0 2.954-5.185"
     />
@@ -88,8 +96,9 @@
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
+    {color}
     {...$$restProps}
-    class={twMerge('shrink-0', sizes[size], $$props.class)}
+    class={twMerge('shrink-0', sizes[size ?? 'md'], $$props.class)}
     {role}
     aria-label={ariaLabel}
     aria-describedby={hasDescription ? ariaDescribedby : undefined}
@@ -103,8 +112,8 @@
     {/if}
     <path
       stroke="currentColor"
-      stroke-linecap={strokeLinecap}
-      stroke-linejoin={strokeLinejoin}
+      stroke-linecap="round"
+      stroke-linejoin="round"
       stroke-width={strokeWidth}
       d="M12 18.5A2.493 2.493 0 0 1 7.51 20H7.5a2.468 2.468 0 0 1-2.4-3.154 2.98 2.98 0 0 1-.85-5.274 2.468 2.468 0 0 1 .92-3.182 2.477 2.477 0 0 1 1.876-3.344 2.5 2.5 0 0 1 3.41-1.856A2.5 2.5 0 0 1 12 5.5m0 13v-13m0 13a2.493 2.493 0 0 0 4.49 1.5h.01a2.468 2.468 0 0 0 2.403-3.154 2.98 2.98 0 0 0 .847-5.274 2.468 2.468 0 0 0-.921-3.182 2.477 2.477 0 0 0-1.875-3.344A2.5 2.5 0 0 0 14.5 3 2.5 2.5 0 0 0 12 5.5m-8 5a2.5 2.5 0 0 1 3.48-2.3m-.28 8.551a3 3 0 0 1-2.953-5.185M20 10.5a2.5 2.5 0 0 0-3.481-2.3m.28 8.551a3 3 0 0 0 2.954-5.185"
     />
@@ -115,15 +124,12 @@
 @component
 [Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
 ## Props
-@prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
-@prop export let role = ctx.role || 'img';
-@prop export let withEvents = ctx.withEvents || false;
+@prop export let size: Props['size'] = ctx.size || 'md';
+@prop export let role: Props['role'] = ctx.role || 'img';
+@prop export let color: Props['color'] = ctx.color || 'currentColor';
+@prop export let withEvents: Props['withEvents'] = ctx.withEvents || false;
 @prop export let title: TitleType = {};
+@prop export let strokeWidth: Props['strokeWidth'] = ctx.strokeWidth || '2';
 @prop export let desc: DescType = {};
-@prop export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | undefined =
-    ctx.strokeLinecap || 'round';
-@prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | undefined =
-    ctx.strokeLinejoin || 'round';
-@prop export let strokeWidth = ctx.strokeWidth || '2';
 @prop export let ariaLabel = 'brain outline';
 -->

@@ -9,14 +9,23 @@
     id?: string;
     desc?: string;
   };
-  interface CtxType {
+
+  interface BaseProps {
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
     color?: string;
-    strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | undefined;
-    strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | undefined;
-    strokeWidth?: string;
     withEvents?: boolean;
+    onclick?: (event: MouseEvent) => void;
+    onkeydown?: (event: KeyboardEvent) => void;
+    onkeyup?: (event: KeyboardEvent) => void;
+  }
+
+  interface CtxType extends BaseProps {}
+  interface Props extends BaseProps {
+    title?: TitleType;
+    desc?: DescType;
+    ariaLabel?: string;
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -28,14 +37,14 @@
     xl: 'w-8 h-8'
   };
 
-  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
-  export let role = ctx.role || 'img';
-  export let color = ctx.color || 'currentColor';
-  export let withEvents = ctx.withEvents || false;
+  export let size: Props['size'] = ctx.size || 'md';
+  export let role: Props['role'] = ctx.role || 'img';
+  export let color: Props['color'] = ctx.color || 'currentColor';
+  export let withEvents: Props['withEvents'] = ctx.withEvents || false;
   export let title: TitleType = {};
   export let desc: DescType = {};
-  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
 
+  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
   let hasDescription = false;
 
   $: if (title.id || desc.id) {
@@ -51,7 +60,7 @@
     xmlns="http://www.w3.org/2000/svg"
     fill={color}
     {...$$restProps}
-    class={twMerge('shrink-0', sizes[size], $$props.class)}
+    class={twMerge('shrink-0', sizes[size ?? 'md'], $$props.class)}
     {role}
     aria-label={ariaLabel}
     aria-describedby={hasDescription ? ariaDescribedby : undefined}
@@ -87,7 +96,7 @@
     xmlns="http://www.w3.org/2000/svg"
     fill={color}
     {...$$restProps}
-    class={twMerge('shrink-0', sizes[size], $$props.class)}
+    class={twMerge('shrink-0', sizes[size ?? 'md'], $$props.class)}
     {role}
     aria-label={ariaLabel}
     aria-describedby={hasDescription ? ariaDescribedby : undefined}
@@ -115,10 +124,10 @@
 @component
 [Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
 ## Props
-@prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
-@prop export let role = ctx.role || 'img';
-@prop export let color = ctx.color || 'currentColor';
-@prop export let withEvents = ctx.withEvents || false;
+@prop export let size: Props['size'] = ctx.size || 'md';
+@prop export let role: Props['role'] = ctx.role || 'img';
+@prop export let color: Props['color'] = ctx.color || 'currentColor';
+@prop export let withEvents: Props['withEvents'] = ctx.withEvents || false;
 @prop export let title: TitleType = {};
 @prop export let desc: DescType = {};
 @prop export let ariaLabel = 'eye slash solid';

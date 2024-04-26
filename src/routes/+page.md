@@ -46,7 +46,7 @@ description: 480+ SVG Flowbite icons components for Svelte 3/4/5/Runes.
   <BadgeCheckOutline class="w-8 h-8 mb-3 text-green-500 dark:text-green-400" />
   <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Solid & Outline Icon Variations</h3>
   <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">
-  480+ Solid and Outline SVG Icons.
+  520+ Solid and Outline SVG Icons.
   </p>
   </Card>
 

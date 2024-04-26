@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  export let analyticsId:string ='';
+  export let analyticsId: string = '';
 
   onMount(async () => {
     const script = document.createElement('script');

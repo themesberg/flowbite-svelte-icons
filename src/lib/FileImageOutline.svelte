@@ -9,13 +9,24 @@
     id?: string;
     desc?: string;
   };
-  interface CtxType {
+
+  interface BaseProps {
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
-    withEvents?: boolean;
-    strokeLinecap?: 'round' | 'inherit' | 'butt' | 'square' | undefined;
-    strokeLinejoin?: 'round' | 'inherit' | 'miter' | 'bevel' | undefined;
+    color?: string;
     strokeWidth?: string;
+    withEvents?: boolean;
+    onclick?: (event: MouseEvent) => void;
+    onkeydown?: (event: KeyboardEvent) => void;
+    onkeyup?: (event: KeyboardEvent) => void;
+  }
+
+  interface CtxType extends BaseProps {}
+  interface Props extends BaseProps {
+    title?: TitleType;
+    desc?: DescType;
+    ariaLabel?: string;
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -27,14 +38,15 @@
     xl: 'w-8 h-8'
   };
 
-  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
-  export let role = ctx.role || 'img';
-  export let withEvents = ctx.withEvents || false;
+  export let size: Props['size'] = ctx.size || 'md';
+  export let role: Props['role'] = ctx.role || 'img';
+  export let color: Props['color'] = ctx.color || 'currentColor';
+  export let withEvents: Props['withEvents'] = ctx.withEvents || false;
   export let title: TitleType = {};
+  export let strokeWidth: Props['strokeWidth'] = ctx.strokeWidth || '2';
   export let desc: DescType = {};
 
   let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
-
   let hasDescription = false;
 
   $: if (title.id || desc.id) {
@@ -42,11 +54,6 @@
   } else {
     hasDescription = false;
   }
-  export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | undefined =
-    ctx.strokeLinecap || 'round';
-  export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | undefined =
-    ctx.strokeLinejoin || 'round';
-  export let strokeWidth = ctx.strokeWidth || '2';
   export let ariaLabel = 'file image outline';
 </script>
 
@@ -54,8 +61,9 @@
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
+    {color}
     {...$$restProps}
-    class={twMerge('shrink-0', sizes[size], $$props.class)}
+    class={twMerge('shrink-0', sizes[size ?? 'md'], $$props.class)}
     {role}
     aria-label={ariaLabel}
     aria-describedby={hasDescription ? ariaDescribedby : undefined}
@@ -82,8 +90,8 @@
     />
     <path
       stroke="currentColor"
-      stroke-linecap={strokeLinecap}
-      stroke-linejoin={strokeLinejoin}
+      stroke-linecap="round"
+      stroke-linejoin="round"
       stroke-width={strokeWidth}
       d="M10 3v4a1 1 0 0 1-1 1H5m14-4v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1ZM8 18h8l-2-4-1.5 2-2-4L8 18Zm7-8.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z"
     />
@@ -92,8 +100,9 @@
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
+    {color}
     {...$$restProps}
-    class={twMerge('shrink-0', sizes[size], $$props.class)}
+    class={twMerge('shrink-0', sizes[size ?? 'md'], $$props.class)}
     {role}
     aria-label={ariaLabel}
     aria-describedby={hasDescription ? ariaDescribedby : undefined}
@@ -111,8 +120,8 @@
     />
     <path
       stroke="currentColor"
-      stroke-linecap={strokeLinecap}
-      stroke-linejoin={strokeLinejoin}
+      stroke-linecap="round"
+      stroke-linejoin="round"
       stroke-width={strokeWidth}
       d="M10 3v4a1 1 0 0 1-1 1H5m14-4v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1ZM8 18h8l-2-4-1.5 2-2-4L8 18Zm7-8.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z"
     />
@@ -123,15 +132,12 @@
 @component
 [Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
 ## Props
-@prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
-@prop export let role = ctx.role || 'img';
-@prop export let withEvents = ctx.withEvents || false;
+@prop export let size: Props['size'] = ctx.size || 'md';
+@prop export let role: Props['role'] = ctx.role || 'img';
+@prop export let color: Props['color'] = ctx.color || 'currentColor';
+@prop export let withEvents: Props['withEvents'] = ctx.withEvents || false;
 @prop export let title: TitleType = {};
+@prop export let strokeWidth: Props['strokeWidth'] = ctx.strokeWidth || '2';
 @prop export let desc: DescType = {};
-@prop export let strokeLinecap: 'round' | 'inherit' | 'butt' | 'square' | undefined =
-    ctx.strokeLinecap || 'round';
-@prop export let strokeLinejoin: 'round' | 'inherit' | 'miter' | 'bevel' | undefined =
-    ctx.strokeLinejoin || 'round';
-@prop export let strokeWidth = ctx.strokeWidth || '2';
 @prop export let ariaLabel = 'file image outline';
 -->
