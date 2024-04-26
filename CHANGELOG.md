@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.6.0
+
+### Minor Changes
+
+- BREAKING: remove strokeLinecap and strokeLinejoin props ([`6765e700ad5e3081c43e591948139ccf21f6c4be`](https://github.com/themesberg/flowbite-svelte-icons/commit/6765e700ad5e3081c43e591948139ccf21f6c4be))
+
 ## 1.5.0
 
 ### Minor Changes
