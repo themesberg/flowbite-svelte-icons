@@ -5,10 +5,10 @@ import { metaTitle, metaDescription, metaImg } from 'runes-meta-tags';
 export const load = ({ url }) => {
   const siteName = metaTitle('/', __NAME__);
   const title = metaTitle(url.pathname, __NAME__);
-  const basicDesc = 'A quick start for a Svelte Runes project.';
+  const basicDesc = 'Flowbite icon components for Svelte 5 Runes.';
   const description = metaDescription(url.pathname, basicDesc);
   const image = metaImg(url.pathname, __NAME__);
-  const keywords = 'svelte, runes, webkit, ui, components';
+  const keywords = 'svelte, runes, flowbite, icons, svg';
 
   const layoutMetaTags: MetaProps = {
     title,
