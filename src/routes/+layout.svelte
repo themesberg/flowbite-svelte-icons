@@ -59,7 +59,7 @@
   const urlsToIncludeSwitcherAndSidebar = ['/guide/', '/guide2/', '/how-to-use'];
   const siteName = removeHyphensAndCapitalize(__NAME__);
   const twitterUrl = 'https://twitter.com/shinokada';
-  const githubUrl = `https://github.com/shinokada/${__NAME__}`;
+  const githubUrl = `https://github.com/themesberg/${__NAME__}`;
 </script>
 
 <RunesMetaTags {...metaTags} />
