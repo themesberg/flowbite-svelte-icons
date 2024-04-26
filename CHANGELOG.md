@@ -1,5 +1,12 @@
 # svelte-icon-webkit
 
+## 2.0.0
+
+### Patch Changes
+
+- feat: add a11y's title and desc props ([`a37241d2a957717ad78382dc7437c95f836de094`](https://github.com/themesberg/flowbite-svelte-icons/commit/a37241d2a957717ad78382dc7437c95f836de094))
+  feat: add new icons from the upstream
+
 ## 0.4.23
 
 ### Patch Changes

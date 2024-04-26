@@ -9,7 +9,6 @@ declare const __propDef: {
         onkeydown?: ((event: KeyboardEvent) => void) | undefined;
         onkeyup?: ((event: KeyboardEvent) => void) | undefined;
         class?: string | undefined;
-    } & {
         title?: {
             id?: string | undefined;
             title?: string | undefined;
@@ -19,7 +18,6 @@ declare const __propDef: {
             desc?: string | undefined;
         } | undefined;
         ariaLabel?: string | undefined;
-        size?: "xs" | "sm" | "md" | "lg" | "xl" | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;
@@ -35,5 +33,24 @@ export type FileExportSolidSlots = typeof __propDef.slots;
  * @props:
  */
 export default class FileExportSolid extends SvelteComponent<FileExportSolidProps, FileExportSolidEvents, FileExportSolidSlots> {
+    constructor(options?: import("svelte").ComponentConstructorOptions<{
+        size?: "xs" | "sm" | "md" | "lg" | "xl" | undefined;
+        role?: string | undefined;
+        color?: string | undefined;
+        withEvents?: boolean | undefined;
+        onclick?: ((event: MouseEvent) => void) | undefined;
+        onkeydown?: ((event: KeyboardEvent) => void) | undefined;
+        onkeyup?: ((event: KeyboardEvent) => void) | undefined;
+        class?: string | undefined;
+        title?: {
+            id?: string | undefined;
+            title?: string | undefined;
+        } | undefined;
+        desc?: {
+            id?: string | undefined;
+            desc?: string | undefined;
+        } | undefined;
+        ariaLabel?: string | undefined;
+    }>);
 }
 export {};

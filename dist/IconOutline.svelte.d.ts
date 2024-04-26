@@ -28,5 +28,13 @@ export type IconOutlineSlots = typeof __propDef.slots;
  * @props:class?: string;
  */
 export default class IconOutline extends SvelteComponent<IconOutlineProps, IconOutlineEvents, IconOutlineSlots> {
+    constructor(options?: import("svelte").ComponentConstructorOptions<{
+        icon: ComponentType;
+        size?: "xs" | "sm" | "md" | "lg" | "xl" | undefined;
+        role?: string | undefined;
+        color?: string | undefined;
+        ariaLabel?: string | undefined;
+        class?: string | undefined;
+    }>);
 }
 export {};

@@ -30,5 +30,14 @@ export type IconSolidSlots = typeof __propDef.slots;
  * @props:class?: string;
  */
 export default class IconSolid extends SvelteComponent<IconSolidProps, IconSolidEvents, IconSolidSlots> {
+    constructor(options?: import("svelte").ComponentConstructorOptions<{
+        icon: ComponentType;
+        size?: "xs" | "sm" | "md" | "lg" | "xl" | undefined;
+        role?: string | undefined;
+        color?: string | undefined;
+        ariaLabel?: string | undefined;
+        strokeWidth?: string | undefined;
+        class?: string | undefined;
+    }>);
 }
 export {};
