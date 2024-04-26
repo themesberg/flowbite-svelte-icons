@@ -34,7 +34,8 @@
   const lis = [
     { name: 'Guide', href: '/guide/svelte-4/getting-started' },
     { name: 'Outline', href: '/outline-icons' },
-    { name: 'Solid', href: '/solid-icons' }
+    { name: 'Solid', href: '/solid-icons' },
+    { name: 'Icon Sets', href: 'https://svelte-svg-icons.codewithshin.com/'}
   ];
   const extra: ListType[] = [
     {
