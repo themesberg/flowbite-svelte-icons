@@ -14,7 +14,7 @@
   });
 </script>
 
-<h1>Props: v2</h1>
+<h1>Flowbite Svelte Icons v2: Props</h1>
 
 <H2>Outline/Solid Icons</H2>
 

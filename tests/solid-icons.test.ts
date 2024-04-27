@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
   console.log(`Running ${test.info().title}`);
-  await page.goto('/solid');
+  await page.goto('/solid-icons');
 });
 
 test('Solid Icons page has expected h1, meta title', async ({ page }) => {
@@ -26,11 +26,11 @@ test('Solid Icons page has expected meta og', async ({ page }) => {
   const metaOgDescription = page.locator('meta[property="og:description"]');
   await expect(metaOgDescription).toHaveAttribute('content', 'Solid Icons - Flowbite Svelte Icons');
   const metaOgUrl = page.locator('meta[property="og:url"]');
-  await expect(metaOgUrl).toHaveAttribute('content', 'http://localhost:4173/icons');
+  await expect(metaOgUrl).toHaveAttribute('content', 'http://localhost:4173/solid-icons');
   const metaOgImage = page.locator('meta[property="og:image"]');
   await expect(metaOgImage).toHaveAttribute(
     'content',
-    'https://open-graph-vercel.vercel.app/api/flowbite-svelte-icons?title=solid'
+    'https://open-graph-vercel.vercel.app/api/flowbite-svelte-icons?title=Solid Icons'
   );
 });
 
@@ -45,6 +45,6 @@ test('Solid Icons page has expected meta twitter', async ({ page }) => {
   const metaTwitterImage = page.locator('meta[name="twitter:image"]');
   await expect(metaTwitterImage).toHaveAttribute(
     'content',
-    'https://open-graph-vercel.vercel.app/api/flowbite-svelte-icons?title=solid'
+    'https://open-graph-vercel.vercel.app/api/flowbite-svelte-icons?title=Solid Icons'
   );
 });

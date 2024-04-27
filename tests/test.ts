@@ -5,22 +5,28 @@ test('svelte-4/getting-started page has expected h1', async ({ page }) => {
   await expect(page.locator('h1')).toHaveText('Flowbite Svelte Icons: v1');
 });
 
-// test('three-tabs page has expected h1', async ({ page }) => {
-//   await page.goto('/three-tabs');
-//   await expect(page.locator('h1')).toHaveText('Three Tabs');
-// });
-
-test('icons page has expected h1', async ({ page }) => {
-  await page.goto('/icons');
-  await expect(page.locator('h1')).toHaveText('Icons');
+test('guide/svelte-4/props page has expected h1', async ({ page }) => {
+  await page.goto('/guide/svelte-4/props');
+  await expect(page.locator('h1')).toHaveText('Flowbite Svelte Icons v1: Props');
 });
 
-// test('no-tabs page has expected h1', async ({ page }) => {
-//   await page.goto('/no-tabs');
-//   await expect(page.locator('h1')).toHaveText('No Tabs');
-// });
+test('guide/svelte-5/props page has expected h1', async ({ page }) => {
+  await page.goto('/guide/svelte-5/props');
+  await expect(page.locator('h1')).toHaveText('Flowbite Svelte Icons v2: Props');
+});
 
-// test('how to use page has expected h1', async ({ page }) => {
-//   await page.goto('/how-to-use');
-//   await expect(page.locator('h1')).toHaveText('Documentation');
-// });
+test('guide/svelte-5/getting-started page has expected h1', async ({ page }) => {
+  await page.goto('/guide/svelte-5/getting-started');
+  await expect(page.locator('h1')).toHaveText('Flowbite Svelte Icons: v2');
+});
+
+test('guide/global-icons page has expected h1', async ({ page }) => {
+  await page.goto('/guide/global-icons');
+  await expect(page.locator('h1')).toHaveText('Setting Global Icon using setContext');
+});
+
+test('guide/custom-icons page has expected h1', async ({ page }) => {
+  await page.goto('/guide/custom-icons');
+  await expect(page.locator('h1')).toHaveText('Custom Default Icons');
+});
+
