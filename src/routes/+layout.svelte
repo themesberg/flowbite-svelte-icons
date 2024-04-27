@@ -1,3 +1,21 @@
+<script context="module">
+
+export const extra: ListType[] = [
+  {
+    name: 'Solid Icons',
+    icon: RocketOutline as ComponentType,
+    href: '/solid-icons'
+  },
+  {
+    name: 'Outline Icons',
+    icon: PaletteOutline as ComponentType,
+    href: '/outline-icons'
+  }
+];
+export const newSidebarList: ListType[] = [
+  ...sidebarList, ...extra 
+];
+</script>
 <script lang="ts">
   import '../app.pcss';
   import { page } from '$app/stores';
@@ -37,22 +55,7 @@
     { name: 'Solid', href: '/solid-icons' },
     { name: 'Icon Sets', href: 'https://svelte-svg-icons.codewithshin.com/'}
   ];
-  const extra: ListType[] = [
-    {
-      name: 'Solid Icons',
-      icon: RocketOutline as ComponentType,
-      href: '/solid-icons'
-    },
-    {
-      name: 'Outline Icons',
-      icon: PaletteOutline as ComponentType,
-      href: '/outline-icons'
-    }
-  ];
-  const newSidebarList: ListType[] = [
-    ...sidebarList, // Spread the existing sidebarList
-    ...extra // Spread the extra items
-  ];
+  
   const brand = {
     name: 'codewithshin.com',
     href: 'https://codewithshin.com'

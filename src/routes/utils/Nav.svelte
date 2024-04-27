@@ -23,6 +23,7 @@
   } from 'runes-webkit';
   import DynamicCodeBlockStyle from './DynamicCodeBlockStyle.svelte';
   import { sineIn } from 'svelte/easing';
+  import { newSidebarList } from '../+layout.svelte';
 
   function isIncluded(url: string, allowedUrls: string[]): boolean {
     return allowedUrls.some((allowedUrl) => url.startsWith(allowedUrl));
@@ -217,7 +218,7 @@
     </button>
   </div>
   <Sidebar
-    {sidebarList}
+    sidebarList={newSidebarList}
     s_b_aside="w-48 p-0 border-none mt-20 ml-4 !important"
     s_b_div="bg-transparent p-0"
     sidebarClose={closeNavDrawer}
