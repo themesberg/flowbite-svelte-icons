@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- docs: README update ([`c15c6e60f2bd4ba0eedfc504de01f10b29e6b887`](https://github.com/themesberg/flowbite-svelte-icons/commit/c15c6e60f2bd4ba0eedfc504de01f10b29e6b887))
+
+## 2.0.0
+
+### Patch Changes
+
 - feat: add a11y's title and desc props ([`a37241d2a957717ad78382dc7437c95f836de094`](https://github.com/themesberg/flowbite-svelte-icons/commit/a37241d2a957717ad78382dc7437c95f836de094))
   feat: add new icons from the upstream
 
