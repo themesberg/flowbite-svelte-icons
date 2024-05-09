@@ -5,21 +5,24 @@
     SupportBanner,
     TechInfo,
     BellActiveAltOutline,
+    GlobeOutline,
     insertObjectToArray,
     excludeByTitle,
     cards,
     info,
     pkg
   } from 'runes-webkit';
-  import { A } from 'svelte-5-ui-lib';
-  const cardsToExclude = ['Seven Props'];
-  const brand = {
-    title: 'Brands, Regular, and Solid Icons',
-    description: '2000+ SVG Icons.',
-    icon: BellActiveAltOutline,
-    icon_class: 'text-green-500'
+
+  const cardsToExclude = ['Seven Props', 'Global Icon'];
+
+  const global_icons = {
+    title: 'Global Icons',
+    description: 'Use <code>IconSolid</code> and <code>IconOutline</code> to careat default icons.',
+    icon: GlobeOutline,
+    icon_class: 'text-purple-500'
   };
-  let filteredCards = $state(excludeByTitle(cards, cardsToExclude));
+  let filteredCards = $state(insertObjectToArray(excludeByTitle(cards, cardsToExclude), global_icons, 6))
+  // let filteredCards = $state(excludeByTitle(cards, cardsToExclude));
 
   const runaticsVersion = __RUNATICS_VERSION__;
   const runesMetaTagsVersion = __RUNES_METATAGS_VERSION__;
