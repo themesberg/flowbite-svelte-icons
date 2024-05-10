@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.6.1
+
+### Patch Changes
+
+- fix: publish as latestet ([`4e074dd12da89bf662374b98a72f1e6f30fd38df`](https://github.com/themesberg/flowbite-svelte-icons/commit/4e074dd12da89bf662374b98a72f1e6f30fd38df))
+  chore: dependencies update
+
 ## 1.6.0
 
 ### Minor Changes
