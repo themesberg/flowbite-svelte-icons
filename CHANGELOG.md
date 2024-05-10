@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0-next.8
+
+### Patch Changes
+
+- chore: Enter prerelease mode and version packages ([`e68b5ebdfec94c90c9b0dddba4ac30ad8b8b7337`](https://github.com/themesberg/flowbite-svelte-icons/commit/e68b5ebdfec94c90c9b0dddba4ac30ad8b8b7337))
+
 ## 2.0.0-next.7
 
 ### Patch Changes

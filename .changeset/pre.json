@@ -4,5 +4,7 @@
   "initialVersions": {
     "flowbite-svelte-icons": "2.0.0-next.7"
   },
-  "changesets": []
+  "changesets": [
+    "rude-ads-battle"
+  ]
 }
