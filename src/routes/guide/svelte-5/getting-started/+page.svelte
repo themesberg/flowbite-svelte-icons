@@ -48,14 +48,9 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/installation.md'] as string} />
 
-<p>Install <Code>flowbite-svelte-icons v2</Code>:</p>
+<p>Install <Code>flowbite-svelte-icons:next</Code>:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/installation-2.md'] as string} />
-
-<p>
-  Replace <Code>2.0.0-next.x</Code> with the latest <Code>v2</Code> version. Check the latest version
-  at the <A href="https://github.com/themesberg/flowbite-svelte-icons/releases">GitHub Releases</A>.
-</p>
 
 <p>Enable Runes in <Code>svelte.config.js</Code>:</p>
 
