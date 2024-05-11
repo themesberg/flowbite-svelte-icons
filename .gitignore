@@ -9,3 +9,4 @@ node_modules
 .vercel
 src/routes/testdir
 /dist
+/test-results
