@@ -111,3 +111,10 @@ strokeWidth= ctx.strokeWidth || "2",
      <path stroke="currentColor" stroke-linecap="round" stroke-width="{strokeWidth}" d="M5 7h14M5 12h14M5 17h14"/>  
 </svg>
 {/if}
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@props: 
+-->

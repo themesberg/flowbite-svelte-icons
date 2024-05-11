@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.0-next.9
+
+### Patch Changes
+
+- fix: change hasDescription to derived ([`047ab0f2efaacc1192b6c46d637e4ba2c828a31a`](https://github.com/themesberg/flowbite-svelte-icons/commit/047ab0f2efaacc1192b6c46d637e4ba2c828a31a))
+  fix: add test-results to .gitignore
+
 ## 2.0.0-next.8
 
 ### Patch Changes
