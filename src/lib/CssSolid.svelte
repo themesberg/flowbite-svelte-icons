@@ -11,7 +11,7 @@
   };
 
   interface BaseProps {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
     role?: string;
     color?: string;
     withEvents?: boolean;
@@ -22,11 +22,11 @@
   }
 
   interface CtxType extends BaseProps {}
-  interface Props extends BaseProps {
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -38,85 +38,72 @@
     xl: 'w-8 h-8'
   };
 
-  let {
-    size = ctx.size || 'md',
-    role,
-    color = ctx.color || 'currentColor',
-    withEvents = ctx.withEvents || false,
-    title = {},
-    desc = {},
-    class: classname,
-    ariaLabel = 'css solid',
-    onclick,
-    onkeydown,
-    onkeyup,
-    ...restProps
-  }: Props = $props();
+  let { 
+    size = ctx.size || 'md', 
+    role, 
+    color = ctx.color || 'currentColor', 
+    withEvents = ctx.withEvents || false, 
+    title = {}, 
+    desc = {},  
+    class: classname, 
+    ariaLabel =  "css solid" , 
+    onclick, 
+    onkeydown, 
+    onkeyup, 
+    ...restProps 
+    }: Props = $props();
 
   let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
-  let hasDescription = $state(false);
-
-  function updateHasDescription() {
-    // Double negation converts truthy values to true, falsy to false
-    hasDescription = !!(title.id || desc.id);
-  }
-  updateHasDescription();
-
-  $effect(() => {
-    updateHasDescription();
-  });
+  const hasDescription = $derived(!!(title.id || desc.id));
 </script>
 
 {#if withEvents}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill={color}
-    {...restProps}
-    class={twMerge('shrink-0', sizes[size], classname)}
-    {role}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-    {onclick}
-    {onkeydown}
-    {onkeyup}
-  >
-    {#if title.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z"
-    />
-  </svg>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill={color}
+{...restProps}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    classname
+  )}
+  {role}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 24 24"
+  onclick={onclick}
+  onkeydown={onkeydown}
+  onkeyup={onkeyup}
+>
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+     <path d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z"/>  
+</svg>
 {:else}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill={color}
-    {...restProps}
-    class={twMerge('shrink-0', sizes[size], classname)}
-    {role}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-  >
-    {#if title.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z"
-    />
-  </svg>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill={color}
+{...restProps}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    classname
+  )}
+  {role}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 24 24"
+>
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+     <path d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z"/>  
+</svg>
 {/if}
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@props: 
--->

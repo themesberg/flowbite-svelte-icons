@@ -11,10 +11,10 @@
   };
 
   interface BaseProps {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
     role?: string;
     color?: string;
-    strokeWidth?: string;
+strokeWidth?: string;
     withEvents?: boolean;
     onclick?: (event: MouseEvent) => void;
     onkeydown?: (event: KeyboardEvent) => void;
@@ -23,11 +23,11 @@
   }
 
   interface CtxType extends BaseProps {}
-  interface Props extends BaseProps {
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -39,96 +39,75 @@
     xl: 'w-8 h-8'
   };
 
-  let {
-    size = ctx.size || 'md',
-    role,
-    color = ctx.color || 'currentColor',
-    withEvents = ctx.withEvents || false,
-    title = {},
-    strokeWidth = ctx.strokeWidth || '2',
-    desc = {},
-    class: classname,
-    ariaLabel = 'thumbs up outline',
-    onclick,
-    onkeydown,
-    onkeyup,
-    ...restProps
-  }: Props = $props();
+  let { 
+    size = ctx.size || 'md', 
+    role, 
+    color = ctx.color || 'currentColor', 
+    withEvents = ctx.withEvents || false, 
+    title = {}, 
+strokeWidth= ctx.strokeWidth || "2",
+    desc = {},  
+    class: classname, 
+    ariaLabel =  "thumbs up outline" , 
+    onclick, 
+    onkeydown, 
+    onkeyup, 
+    ...restProps 
+    }: Props = $props();
 
   let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
-  let hasDescription = $state(false);
-
-  function updateHasDescription() {
-    // Double negation converts truthy values to true, falsy to false
-    hasDescription = !!(title.id || desc.id);
-  }
-  updateHasDescription();
-
-  $effect(() => {
-    updateHasDescription();
-  });
+  const hasDescription = $derived(!!(title.id || desc.id));
 </script>
 
 {#if withEvents}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    {color}
-    {...restProps}
-    class={twMerge('shrink-0', sizes[size], classname)}
-    {role}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-    {onclick}
-    {onkeydown}
-    {onkeyup}
-  >
-    {#if title.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width={strokeWidth}
-      d="M7 11c.889-.086 1.416-.543 2.156-1.057a22.323 22.323 0 0 0 3.958-5.084 1.6 1.6 0 0 1 .582-.628 1.549 1.549 0 0 1 1.466-.087c.205.095.388.233.537.406a1.64 1.64 0 0 1 .384 1.279l-1.388 4.114M7 11H4v6.5A1.5 1.5 0 0 0 5.5 19v0A1.5 1.5 0 0 0 7 17.5V11Zm6.5-1h4.915c.286 0 .372.014.626.15.254.135.472.332.637.572a1.874 1.874 0 0 1 .215 1.673l-2.098 6.4C17.538 19.52 17.368 20 16.12 20c-2.303 0-4.79-.943-6.67-1.475"
-    />
-  </svg>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+{color}
+{...restProps}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    classname
+  )}
+  {role}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 24 24"
+  onclick={onclick}
+  onkeydown={onkeydown}
+  onkeyup={onkeyup}
+>
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="{strokeWidth}" d="M7 11c.889-.086 1.416-.543 2.156-1.057a22.323 22.323 0 0 0 3.958-5.084 1.6 1.6 0 0 1 .582-.628 1.549 1.549 0 0 1 1.466-.087c.205.095.388.233.537.406a1.64 1.64 0 0 1 .384 1.279l-1.388 4.114M7 11H4v6.5A1.5 1.5 0 0 0 5.5 19v0A1.5 1.5 0 0 0 7 17.5V11Zm6.5-1h4.915c.286 0 .372.014.626.15.254.135.472.332.637.572a1.874 1.874 0 0 1 .215 1.673l-2.098 6.4C17.538 19.52 17.368 20 16.12 20c-2.303 0-4.79-.943-6.67-1.475"/>  
+</svg>
 {:else}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    {color}
-    {...restProps}
-    class={twMerge('shrink-0', sizes[size], classname)}
-    {role}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-  >
-    {#if title.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width={strokeWidth}
-      d="M7 11c.889-.086 1.416-.543 2.156-1.057a22.323 22.323 0 0 0 3.958-5.084 1.6 1.6 0 0 1 .582-.628 1.549 1.549 0 0 1 1.466-.087c.205.095.388.233.537.406a1.64 1.64 0 0 1 .384 1.279l-1.388 4.114M7 11H4v6.5A1.5 1.5 0 0 0 5.5 19v0A1.5 1.5 0 0 0 7 17.5V11Zm6.5-1h4.915c.286 0 .372.014.626.15.254.135.472.332.637.572a1.874 1.874 0 0 1 .215 1.673l-2.098 6.4C17.538 19.52 17.368 20 16.12 20c-2.303 0-4.79-.943-6.67-1.475"
-    />
-  </svg>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+{color}
+{...restProps}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    classname
+  )}
+  {role}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 24 24"
+>
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="{strokeWidth}" d="M7 11c.889-.086 1.416-.543 2.156-1.057a22.323 22.323 0 0 0 3.958-5.084 1.6 1.6 0 0 1 .582-.628 1.549 1.549 0 0 1 1.466-.087c.205.095.388.233.537.406a1.64 1.64 0 0 1 .384 1.279l-1.388 4.114M7 11H4v6.5A1.5 1.5 0 0 0 5.5 19v0A1.5 1.5 0 0 0 7 17.5V11Zm6.5-1h4.915c.286 0 .372.014.626.15.254.135.472.332.637.572a1.874 1.874 0 0 1 .215 1.673l-2.098 6.4C17.538 19.52 17.368 20 16.12 20c-2.303 0-4.79-.943-6.67-1.475"/>  
+</svg>
 {/if}
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@props: 
--->

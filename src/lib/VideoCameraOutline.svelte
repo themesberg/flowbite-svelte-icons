@@ -11,10 +11,10 @@
   };
 
   interface BaseProps {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
     role?: string;
     color?: string;
-    strokeWidth?: string;
+strokeWidth?: string;
     withEvents?: boolean;
     onclick?: (event: MouseEvent) => void;
     onkeydown?: (event: KeyboardEvent) => void;
@@ -23,11 +23,11 @@
   }
 
   interface CtxType extends BaseProps {}
-  interface Props extends BaseProps {
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -39,96 +39,75 @@
     xl: 'w-8 h-8'
   };
 
-  let {
-    size = ctx.size || 'md',
-    role,
-    color = ctx.color || 'currentColor',
-    withEvents = ctx.withEvents || false,
-    title = {},
-    strokeWidth = ctx.strokeWidth || '2',
-    desc = {},
-    class: classname,
-    ariaLabel = 'video camera outline',
-    onclick,
-    onkeydown,
-    onkeyup,
-    ...restProps
-  }: Props = $props();
+  let { 
+    size = ctx.size || 'md', 
+    role, 
+    color = ctx.color || 'currentColor', 
+    withEvents = ctx.withEvents || false, 
+    title = {}, 
+strokeWidth= ctx.strokeWidth || "2",
+    desc = {},  
+    class: classname, 
+    ariaLabel =  "video camera outline" , 
+    onclick, 
+    onkeydown, 
+    onkeyup, 
+    ...restProps 
+    }: Props = $props();
 
   let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
-  let hasDescription = $state(false);
-
-  function updateHasDescription() {
-    // Double negation converts truthy values to true, falsy to false
-    hasDescription = !!(title.id || desc.id);
-  }
-  updateHasDescription();
-
-  $effect(() => {
-    updateHasDescription();
-  });
+  const hasDescription = $derived(!!(title.id || desc.id));
 </script>
 
 {#if withEvents}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    {color}
-    {...restProps}
-    class={twMerge('shrink-0', sizes[size], classname)}
-    {role}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-    {onclick}
-    {onkeydown}
-    {onkeyup}
-  >
-    {#if title.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width={strokeWidth}
-      d="M14 6H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1Zm7 11-6-2V9l6-2v10Z"
-    />
-  </svg>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+{color}
+{...restProps}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    classname
+  )}
+  {role}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 24 24"
+  onclick={onclick}
+  onkeydown={onkeydown}
+  onkeyup={onkeyup}
+>
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="{strokeWidth}" d="M14 6H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1Zm7 11-6-2V9l6-2v10Z"/>  
+</svg>
 {:else}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    {color}
-    {...restProps}
-    class={twMerge('shrink-0', sizes[size], classname)}
-    {role}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-  >
-    {#if title.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width={strokeWidth}
-      d="M14 6H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1Zm7 11-6-2V9l6-2v10Z"
-    />
-  </svg>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+{color}
+{...restProps}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    classname
+  )}
+  {role}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 24 24"
+>
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="{strokeWidth}" d="M14 6H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1Zm7 11-6-2V9l6-2v10Z"/>  
+</svg>
 {/if}
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@props: 
--->

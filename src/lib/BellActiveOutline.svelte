@@ -11,10 +11,10 @@
   };
 
   interface BaseProps {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
     role?: string;
     color?: string;
-    strokeWidth?: string;
+strokeWidth?: string;
     withEvents?: boolean;
     onclick?: (event: MouseEvent) => void;
     onkeydown?: (event: KeyboardEvent) => void;
@@ -23,11 +23,11 @@
   }
 
   interface CtxType extends BaseProps {}
-  interface Props extends BaseProps {
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -39,96 +39,75 @@
     xl: 'w-8 h-8'
   };
 
-  let {
-    size = ctx.size || 'md',
-    role,
-    color = ctx.color || 'currentColor',
-    withEvents = ctx.withEvents || false,
-    title = {},
-    strokeWidth = ctx.strokeWidth || '2',
-    desc = {},
-    class: classname,
-    ariaLabel = 'bell active outline',
-    onclick,
-    onkeydown,
-    onkeyup,
-    ...restProps
-  }: Props = $props();
+  let { 
+    size = ctx.size || 'md', 
+    role, 
+    color = ctx.color || 'currentColor', 
+    withEvents = ctx.withEvents || false, 
+    title = {}, 
+strokeWidth= ctx.strokeWidth || "2",
+    desc = {},  
+    class: classname, 
+    ariaLabel =  "bell active outline" , 
+    onclick, 
+    onkeydown, 
+    onkeyup, 
+    ...restProps 
+    }: Props = $props();
 
   let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
-  let hasDescription = $state(false);
-
-  function updateHasDescription() {
-    // Double negation converts truthy values to true, falsy to false
-    hasDescription = !!(title.id || desc.id);
-  }
-  updateHasDescription();
-
-  $effect(() => {
-    updateHasDescription();
-  });
+  const hasDescription = $derived(!!(title.id || desc.id));
 </script>
 
 {#if withEvents}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    {color}
-    {...restProps}
-    class={twMerge('shrink-0', sizes[size], classname)}
-    {role}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-    {onclick}
-    {onkeydown}
-    {onkeyup}
-  >
-    {#if title.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width={strokeWidth}
-      d="m10.827 5.465-.435-2.324m.435 2.324a5.338 5.338 0 0 1 6.033 4.333l.331 1.769c.44 2.345 2.383 2.588 2.6 3.761.11.586.22 1.171-.31 1.271l-12.7 2.377c-.529.099-.639-.488-.749-1.074C5.813 16.73 7.538 15.8 7.1 13.455c-.219-1.169.218 1.162-.33-1.769a5.338 5.338 0 0 1 4.058-6.221Zm-7.046 4.41c.143-1.877.822-3.461 2.086-4.856m2.646 13.633a3.472 3.472 0 0 0 6.728-.777l.09-.5-6.818 1.277Z"
-    />
-  </svg>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+{color}
+{...restProps}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    classname
+  )}
+  {role}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 24 24"
+  onclick={onclick}
+  onkeydown={onkeydown}
+  onkeyup={onkeyup}
+>
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="{strokeWidth}" d="m10.827 5.465-.435-2.324m.435 2.324a5.338 5.338 0 0 1 6.033 4.333l.331 1.769c.44 2.345 2.383 2.588 2.6 3.761.11.586.22 1.171-.31 1.271l-12.7 2.377c-.529.099-.639-.488-.749-1.074C5.813 16.73 7.538 15.8 7.1 13.455c-.219-1.169.218 1.162-.33-1.769a5.338 5.338 0 0 1 4.058-6.221Zm-7.046 4.41c.143-1.877.822-3.461 2.086-4.856m2.646 13.633a3.472 3.472 0 0 0 6.728-.777l.09-.5-6.818 1.277Z"/>  
+</svg>
 {:else}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    {color}
-    {...restProps}
-    class={twMerge('shrink-0', sizes[size], classname)}
-    {role}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-  >
-    {#if title.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width={strokeWidth}
-      d="m10.827 5.465-.435-2.324m.435 2.324a5.338 5.338 0 0 1 6.033 4.333l.331 1.769c.44 2.345 2.383 2.588 2.6 3.761.11.586.22 1.171-.31 1.271l-12.7 2.377c-.529.099-.639-.488-.749-1.074C5.813 16.73 7.538 15.8 7.1 13.455c-.219-1.169.218 1.162-.33-1.769a5.338 5.338 0 0 1 4.058-6.221Zm-7.046 4.41c.143-1.877.822-3.461 2.086-4.856m2.646 13.633a3.472 3.472 0 0 0 6.728-.777l.09-.5-6.818 1.277Z"
-    />
-  </svg>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+{color}
+{...restProps}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    classname
+  )}
+  {role}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 24 24"
+>
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="{strokeWidth}" d="m10.827 5.465-.435-2.324m.435 2.324a5.338 5.338 0 0 1 6.033 4.333l.331 1.769c.44 2.345 2.383 2.588 2.6 3.761.11.586.22 1.171-.31 1.271l-12.7 2.377c-.529.099-.639-.488-.749-1.074C5.813 16.73 7.538 15.8 7.1 13.455c-.219-1.169.218 1.162-.33-1.769a5.338 5.338 0 0 1 4.058-6.221Zm-7.046 4.41c.143-1.877.822-3.461 2.086-4.856m2.646 13.633a3.472 3.472 0 0 0 6.728-.777l.09-.5-6.818 1.277Z"/>  
+</svg>
 {/if}
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@props: 
--->
