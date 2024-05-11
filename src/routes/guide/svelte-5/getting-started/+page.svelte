@@ -48,7 +48,7 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/installation.md'] as string} />
 
-<p>Install <Code>flowbite-svelte-icons:next</Code>:</p>
+<p>Install <Code>flowbite-svelte-icons@next</Code>:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/installation-2.md'] as string} />
 
