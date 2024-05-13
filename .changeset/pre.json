@@ -5,6 +5,7 @@
     "flowbite-svelte-icons": "2.0.0-next.7"
   },
   "changesets": [
+    "curly-zebras-glow",
     "long-yaks-promise",
     "rude-ads-battle"
   ]

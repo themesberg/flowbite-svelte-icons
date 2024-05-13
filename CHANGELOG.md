@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0-next.10
+
+### Patch Changes
+
+- fix: component docs ([`b69a8b6e96787fe88202a7db23827d3c81572d49`](https://github.com/themesberg/flowbite-svelte-icons/commit/b69a8b6e96787fe88202a7db23827d3c81572d49))
+
 ## 2.0.0-next.9
 
 ### Patch Changes
