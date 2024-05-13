@@ -1,4 +1,4 @@
-<script context="module">
+<script context="module" lang="ts">
 
 export const extra: ListType[] = [
   {
@@ -16,6 +16,7 @@ export const newSidebarList: ListType[] = [
   ...sidebarList, ...extra 
 ];
 </script>
+
 <script lang="ts">
   import '../app.pcss';
   import { page } from '$app/stores';

@@ -43,8 +43,8 @@
     role, 
     color = ctx.color || 'currentColor', 
     withEvents = ctx.withEvents || false, 
-    title = {}, 
-    desc = {},  
+    title, 
+    desc,  
     class: classname, 
     ariaLabel =  "message caption solid" , 
     onclick, 
@@ -53,8 +53,8 @@
     ...restProps 
     }: Props = $props();
 
-  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
-  const hasDescription = $derived(!!(title.id || desc.id));
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
 {#if withEvents}
@@ -75,10 +75,10 @@
   onkeydown={onkeydown}
   onkeyup={onkeyup}
 >
-  {#if title.id && title.title}
+  {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
   {/if}
-  {#if desc.id && desc.desc}
+  {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
      <path fill-rule="evenodd" d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-6.616l-2.88 2.592C8.537 20.461 7 19.776 7 18.477V17H5a2 2 0 0 1-2-2V6Zm4 2a1 1 0 0 0 0 2h5a1 1 0 1 0 0-2H7Zm8 0a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2Zm-8 3a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H7Zm5 0a1 1 0 1 0 0 2h5a1 1 0 1 0 0-2h-5Z" clip-rule="evenodd"/>  
@@ -98,10 +98,10 @@
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
-  {#if title.id && title.title}
+  {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
   {/if}
-  {#if desc.id && desc.desc}
+  {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
      <path fill-rule="evenodd" d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-6.616l-2.88 2.592C8.537 20.461 7 19.776 7 18.477V17H5a2 2 0 0 1-2-2V6Zm4 2a1 1 0 0 0 0 2h5a1 1 0 1 0 0-2H7Zm8 0a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2Zm-8 3a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H7Zm5 0a1 1 0 1 0 0 2h5a1 1 0 1 0 0-2h-5Z" clip-rule="evenodd"/>  
@@ -112,5 +112,16 @@
 @component
 [Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
 ## Props
-@props: 
+@prop size = ctx.size || 'md'
+@prop role
+@prop color = ctx.color || 'currentColor'
+@prop withEvents = ctx.withEvents || false
+@prop title
+@prop desc
+@prop class: classname
+@prop ariaLabel =  "message caption solid"
+@prop onclick
+@prop onkeydown
+@prop onkeyup
+@prop ...restProps
 -->

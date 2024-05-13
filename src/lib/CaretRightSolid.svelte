@@ -43,8 +43,8 @@
     role, 
     color = ctx.color || 'currentColor', 
     withEvents = ctx.withEvents || false, 
-    title = {}, 
-    desc = {},  
+    title, 
+    desc,  
     class: classname, 
     ariaLabel =  "caret right solid" , 
     onclick, 
@@ -53,8 +53,8 @@
     ...restProps 
     }: Props = $props();
 
-  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
-  const hasDescription = $derived(!!(title.id || desc.id));
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
 {#if withEvents}
@@ -75,10 +75,10 @@
   onkeydown={onkeydown}
   onkeyup={onkeyup}
 >
-  {#if title.id && title.title}
+  {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
   {/if}
-  {#if desc.id && desc.desc}
+  {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
      <path fill-rule="evenodd" d="M10.271 5.575C8.967 4.501 7 5.43 7 7.12v9.762c0 1.69 1.967 2.618 3.271 1.544l5.927-4.881a2 2 0 0 0 0-3.088l-5.927-4.88Z" clip-rule="evenodd"/>  
@@ -98,10 +98,10 @@
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
-  {#if title.id && title.title}
+  {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
   {/if}
-  {#if desc.id && desc.desc}
+  {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
      <path fill-rule="evenodd" d="M10.271 5.575C8.967 4.501 7 5.43 7 7.12v9.762c0 1.69 1.967 2.618 3.271 1.544l5.927-4.881a2 2 0 0 0 0-3.088l-5.927-4.88Z" clip-rule="evenodd"/>  
@@ -112,5 +112,16 @@
 @component
 [Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
 ## Props
-@props: 
+@prop size = ctx.size || 'md'
+@prop role
+@prop color = ctx.color || 'currentColor'
+@prop withEvents = ctx.withEvents || false
+@prop title
+@prop desc
+@prop class: classname
+@prop ariaLabel =  "caret right solid"
+@prop onclick
+@prop onkeydown
+@prop onkeyup
+@prop ...restProps
 -->

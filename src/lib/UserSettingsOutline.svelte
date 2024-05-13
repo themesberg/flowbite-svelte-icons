@@ -44,9 +44,9 @@ strokeWidth?: string;
     role, 
     color = ctx.color || 'currentColor', 
     withEvents = ctx.withEvents || false, 
-    title = {}, 
+    title, 
 strokeWidth= ctx.strokeWidth || "2",
-    desc = {},  
+    desc,  
     class: classname, 
     ariaLabel =  "user settings outline" , 
     onclick, 
@@ -55,8 +55,8 @@ strokeWidth= ctx.strokeWidth || "2",
     ...restProps 
     }: Props = $props();
 
-  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
-  const hasDescription = $derived(!!(title.id || desc.id));
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
 {#if withEvents}
@@ -78,13 +78,13 @@ strokeWidth= ctx.strokeWidth || "2",
   onkeydown={onkeydown}
   onkeyup={onkeyup}
 >
-  {#if title.id && title.title}
+  {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
   {/if}
-  {#if desc.id && desc.desc}
+  {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <path stroke="currentColor" stroke-linecap="square" stroke-linejoin="round" stroke-width="{strokeWidth}" d="M10 19H5a1 1 0 0 1-1-1v-1a3 3 0 0 1 3-3h2m10 1a3 3 0 0 1-3 3m3-3a3 3 0 0 0-3-3m3 3h1m-4 3a3 3 0 0 1-3-3m3 3v1m-3-4a3 3 0 0 1 3-3m-3 3h-1m4-3v-1m-2.121 1.879-.707-.707m5.656 5.656-.707-.707m-4.242 0-.707.707m5.656-5.656-.707.707M12 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>  
+     <path stroke="currentColor" stroke-linecap="square" stroke-linejoin="round" stroke-width={strokeWidth} d="M10 19H5a1 1 0 0 1-1-1v-1a3 3 0 0 1 3-3h2m10 1a3 3 0 0 1-3 3m3-3a3 3 0 0 0-3-3m3 3h1m-4 3a3 3 0 0 1-3-3m3 3v1m-3-4a3 3 0 0 1 3-3m-3 3h-1m4-3v-1m-2.121 1.879-.707-.707m5.656 5.656-.707-.707m-4.242 0-.707.707m5.656-5.656-.707.707M12 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>  
 </svg>
 {:else}
 <svg
@@ -102,13 +102,13 @@ strokeWidth= ctx.strokeWidth || "2",
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
-  {#if title.id && title.title}
+  {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
   {/if}
-  {#if desc.id && desc.desc}
+  {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <path stroke="currentColor" stroke-linecap="square" stroke-linejoin="round" stroke-width="{strokeWidth}" d="M10 19H5a1 1 0 0 1-1-1v-1a3 3 0 0 1 3-3h2m10 1a3 3 0 0 1-3 3m3-3a3 3 0 0 0-3-3m3 3h1m-4 3a3 3 0 0 1-3-3m3 3v1m-3-4a3 3 0 0 1 3-3m-3 3h-1m4-3v-1m-2.121 1.879-.707-.707m5.656 5.656-.707-.707m-4.242 0-.707.707m5.656-5.656-.707.707M12 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>  
+     <path stroke="currentColor" stroke-linecap="square" stroke-linejoin="round" stroke-width={strokeWidth} d="M10 19H5a1 1 0 0 1-1-1v-1a3 3 0 0 1 3-3h2m10 1a3 3 0 0 1-3 3m3-3a3 3 0 0 0-3-3m3 3h1m-4 3a3 3 0 0 1-3-3m3 3v1m-3-4a3 3 0 0 1 3-3m-3 3h-1m4-3v-1m-2.121 1.879-.707-.707m5.656 5.656-.707-.707m-4.242 0-.707.707m5.656-5.656-.707.707M12 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>  
 </svg>
 {/if}
 
@@ -116,5 +116,17 @@ strokeWidth= ctx.strokeWidth || "2",
 @component
 [Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
 ## Props
-@props: 
+@prop size = ctx.size || 'md'
+@prop role
+@prop color = ctx.color || 'currentColor'
+@prop withEvents = ctx.withEvents || false
+@prop title
+@prop strokeWidth= ctx.strokeWidth || "2"
+@prop desc
+@prop class: classname
+@prop ariaLabel =  "user settings outline"
+@prop onclick
+@prop onkeydown
+@prop onkeyup
+@prop ...restProps
 -->

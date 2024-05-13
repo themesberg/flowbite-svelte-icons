@@ -44,9 +44,9 @@ strokeWidth?: string;
     role, 
     color = ctx.color || 'currentColor', 
     withEvents = ctx.withEvents || false, 
-    title = {}, 
+    title, 
 strokeWidth= ctx.strokeWidth || "2",
-    desc = {},  
+    desc,  
     class: classname, 
     ariaLabel =  "share all outline" , 
     onclick, 
@@ -55,8 +55,8 @@ strokeWidth= ctx.strokeWidth || "2",
     ...restProps 
     }: Props = $props();
 
-  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
-  const hasDescription = $derived(!!(title.id || desc.id));
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
 {#if withEvents}
@@ -78,13 +78,13 @@ strokeWidth= ctx.strokeWidth || "2",
   onkeydown={onkeydown}
   onkeyup={onkeyup}
 >
-  {#if title.id && title.title}
+  {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
   {/if}
-  {#if desc.id && desc.desc}
+  {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="{strokeWidth}" d="m15.141 6 5.518 4.95a1.05 1.05 0 0 1 0 1.549l-5.612 5.088m-6.154-3.214v1.615a.95.95 0 0 0 1.525.845l5.108-4.251a1.1 1.1 0 0 0 0-1.646l-5.108-4.251a.95.95 0 0 0-1.525.846v1.7c-3.312 0-6 2.979-6 6.654v1.329a.7.7 0 0 0 1.344.353 5.174 5.174 0 0 1 4.652-3.191l.004-.003Z"/>  
+     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="m15.141 6 5.518 4.95a1.05 1.05 0 0 1 0 1.549l-5.612 5.088m-6.154-3.214v1.615a.95.95 0 0 0 1.525.845l5.108-4.251a1.1 1.1 0 0 0 0-1.646l-5.108-4.251a.95.95 0 0 0-1.525.846v1.7c-3.312 0-6 2.979-6 6.654v1.329a.7.7 0 0 0 1.344.353 5.174 5.174 0 0 1 4.652-3.191l.004-.003Z"/>  
 </svg>
 {:else}
 <svg
@@ -102,13 +102,13 @@ strokeWidth= ctx.strokeWidth || "2",
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
-  {#if title.id && title.title}
+  {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
   {/if}
-  {#if desc.id && desc.desc}
+  {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="{strokeWidth}" d="m15.141 6 5.518 4.95a1.05 1.05 0 0 1 0 1.549l-5.612 5.088m-6.154-3.214v1.615a.95.95 0 0 0 1.525.845l5.108-4.251a1.1 1.1 0 0 0 0-1.646l-5.108-4.251a.95.95 0 0 0-1.525.846v1.7c-3.312 0-6 2.979-6 6.654v1.329a.7.7 0 0 0 1.344.353 5.174 5.174 0 0 1 4.652-3.191l.004-.003Z"/>  
+     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="m15.141 6 5.518 4.95a1.05 1.05 0 0 1 0 1.549l-5.612 5.088m-6.154-3.214v1.615a.95.95 0 0 0 1.525.845l5.108-4.251a1.1 1.1 0 0 0 0-1.646l-5.108-4.251a.95.95 0 0 0-1.525.846v1.7c-3.312 0-6 2.979-6 6.654v1.329a.7.7 0 0 0 1.344.353 5.174 5.174 0 0 1 4.652-3.191l.004-.003Z"/>  
 </svg>
 {/if}
 
@@ -116,5 +116,17 @@ strokeWidth= ctx.strokeWidth || "2",
 @component
 [Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
 ## Props
-@props: 
+@prop size = ctx.size || 'md'
+@prop role
+@prop color = ctx.color || 'currentColor'
+@prop withEvents = ctx.withEvents || false
+@prop title
+@prop strokeWidth= ctx.strokeWidth || "2"
+@prop desc
+@prop class: classname
+@prop ariaLabel =  "share all outline"
+@prop onclick
+@prop onkeydown
+@prop onkeyup
+@prop ...restProps
 -->

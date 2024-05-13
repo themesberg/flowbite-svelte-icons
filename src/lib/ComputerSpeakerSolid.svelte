@@ -43,8 +43,8 @@
     role, 
     color = ctx.color || 'currentColor', 
     withEvents = ctx.withEvents || false, 
-    title = {}, 
-    desc = {},  
+    title, 
+    desc,  
     class: classname, 
     ariaLabel =  "computer speaker solid" , 
     onclick, 
@@ -53,8 +53,8 @@
     ...restProps 
     }: Props = $props();
 
-  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
-  const hasDescription = $derived(!!(title.id || desc.id));
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
 {#if withEvents}
@@ -75,10 +75,10 @@
   onkeydown={onkeydown}
   onkeyup={onkeyup}
 >
-  {#if title.id && title.title}
+  {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
   {/if}
-  {#if desc.id && desc.desc}
+  {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
      <path fill-rule="evenodd" d="M12 8a1 1 0 0 0-1 1v10H9a1 1 0 1 0 0 2h11a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1h-8Zm4 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z" clip-rule="evenodd"/>   <path fill-rule="evenodd" d="M5 3a2 2 0 0 0-2 2v6h6V9a3 3 0 0 1 3-3h8c.35 0 .687.06 1 .17V5a2 2 0 0 0-2-2H5Zm4 10H3v2a2 2 0 0 0 2 2h4v-4Z" clip-rule="evenodd"/>  
@@ -98,10 +98,10 @@
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
-  {#if title.id && title.title}
+  {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
   {/if}
-  {#if desc.id && desc.desc}
+  {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
      <path fill-rule="evenodd" d="M12 8a1 1 0 0 0-1 1v10H9a1 1 0 1 0 0 2h11a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1h-8Zm4 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z" clip-rule="evenodd"/>   <path fill-rule="evenodd" d="M5 3a2 2 0 0 0-2 2v6h6V9a3 3 0 0 1 3-3h8c.35 0 .687.06 1 .17V5a2 2 0 0 0-2-2H5Zm4 10H3v2a2 2 0 0 0 2 2h4v-4Z" clip-rule="evenodd"/>  
@@ -112,5 +112,16 @@
 @component
 [Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
 ## Props
-@props: 
+@prop size = ctx.size || 'md'
+@prop role
+@prop color = ctx.color || 'currentColor'
+@prop withEvents = ctx.withEvents || false
+@prop title
+@prop desc
+@prop class: classname
+@prop ariaLabel =  "computer speaker solid"
+@prop onclick
+@prop onkeydown
+@prop onkeyup
+@prop ...restProps
 -->

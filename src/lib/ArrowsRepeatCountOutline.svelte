@@ -44,9 +44,9 @@ strokeWidth?: string;
     role, 
     color = ctx.color || 'currentColor', 
     withEvents = ctx.withEvents || false, 
-    title = {}, 
+    title, 
 strokeWidth= ctx.strokeWidth || "2",
-    desc = {},  
+    desc,  
     class: classname, 
     ariaLabel =  "arrows repeat count outline" , 
     onclick, 
@@ -55,8 +55,8 @@ strokeWidth= ctx.strokeWidth || "2",
     ...restProps 
     }: Props = $props();
 
-  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
-  const hasDescription = $derived(!!(title.id || desc.id));
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
 {#if withEvents}
@@ -78,13 +78,13 @@ strokeWidth= ctx.strokeWidth || "2",
   onkeydown={onkeydown}
   onkeyup={onkeyup}
 >
-  {#if title.id && title.title}
+  {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
   {/if}
-  {#if desc.id && desc.desc}
+  {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="{strokeWidth}" d="m16 4 3 3H5v3m3 10-3-3h14v-3m-9-2.5 2-1.5v4"/>  
+     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="m16 4 3 3H5v3m3 10-3-3h14v-3m-9-2.5 2-1.5v4"/>  
 </svg>
 {:else}
 <svg
@@ -102,13 +102,13 @@ strokeWidth= ctx.strokeWidth || "2",
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
-  {#if title.id && title.title}
+  {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
   {/if}
-  {#if desc.id && desc.desc}
+  {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="{strokeWidth}" d="m16 4 3 3H5v3m3 10-3-3h14v-3m-9-2.5 2-1.5v4"/>  
+     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="m16 4 3 3H5v3m3 10-3-3h14v-3m-9-2.5 2-1.5v4"/>  
 </svg>
 {/if}
 
@@ -116,5 +116,17 @@ strokeWidth= ctx.strokeWidth || "2",
 @component
 [Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
 ## Props
-@props: 
+@prop size = ctx.size || 'md'
+@prop role
+@prop color = ctx.color || 'currentColor'
+@prop withEvents = ctx.withEvents || false
+@prop title
+@prop strokeWidth= ctx.strokeWidth || "2"
+@prop desc
+@prop class: classname
+@prop ariaLabel =  "arrows repeat count outline"
+@prop onclick
+@prop onkeydown
+@prop onkeyup
+@prop ...restProps
 -->
