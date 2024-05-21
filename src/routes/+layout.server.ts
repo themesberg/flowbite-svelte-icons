@@ -1,5 +1,5 @@
 import type { MetaProps } from 'runes-meta-tags';
-import { ANALYTICS_ID } from '$env/static/private';
+import { ANALYTICS_ID_ICONS } from '$env/static/private';
 import { metaTitle, metaDescription, metaImg } from 'runes-meta-tags';
 
 export const load = ({ url }) => {
@@ -37,6 +37,6 @@ export const load = ({ url }) => {
   };
   return {
     layoutMetaTags,
-    ANALYTICS_ID
+    ANALYTICS_ID_ICONS
   };
 };
