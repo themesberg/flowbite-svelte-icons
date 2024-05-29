@@ -1,16 +1,21 @@
 import type { MetaProps } from 'runes-meta-tags';
+const title = 'Props - Flowbite Svelte Icons v1'
+const description = 'How to use Flowbite Svelte Icons v1 props'
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-remix'
 
 export const load = () => {
   const pageMetaTags = Object.freeze({
-    title: 'Props - Flowbite Svelte Icons v1',
-    description: 'How to use props with Flowbite Svelte Icons v1',
+    title,
+    description,
     og: {
-      title: 'Props - Flowbite Svelte Icons v1',
-      description: 'How to use props with Flowbite Svelte Icons v1'
+      title,
+      description,
+      image: imgUrl
     },
     twitter: {
-      title: 'Props - Flowbite Svelte Icons v1',
-      description: 'How to use props with Flowbite Svelte Icons v1'
+      title,
+      description,
+      image: imgUrl
     }
   }) satisfies MetaProps;
   return { pageMetaTags };

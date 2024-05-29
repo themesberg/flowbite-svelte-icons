@@ -8,7 +8,7 @@
   });
 </script>
 
-<h1>Setting Global Icon using setContext</h1>
+<h1>Setting Global Icon - Flowbite Svelte Icons</h1>
 
 <p>
   You can create global icon preferences in your Svelte application using <Code>setContext</Code>.
