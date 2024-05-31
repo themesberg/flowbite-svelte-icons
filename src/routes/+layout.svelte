@@ -3,12 +3,12 @@
 export const extra: ListType[] = [
   {
     name: 'Solid Icons',
-    icon: RocketOutline as ComponentType,
+    icon: RocketOutline as Component,
     href: '/solid-icons'
   },
   {
     name: 'Outline Icons',
-    icon: PaletteOutline as ComponentType,
+    icon: PaletteOutline as Component,
     href: '/outline-icons'
   }
 ];
@@ -20,7 +20,7 @@ export const newSidebarList: ListType[] = [
 <script lang="ts">
   import '../app.pcss';
   import { page } from '$app/stores';
-  import type { ComponentType } from 'svelte';
+  import type { Component } from 'svelte';
   import type { ListType } from 'runes-webkit';
   import {
     Footer,

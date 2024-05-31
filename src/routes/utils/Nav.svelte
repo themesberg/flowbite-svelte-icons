@@ -1,6 +1,6 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  import type { ComponentType } from 'svelte';
+  import type { Component } from 'svelte';
   import {
     Navbar,
     NavLi,
@@ -32,7 +32,7 @@
   type LiType = {
     name: string;
     href: string;
-    icon?: ComponentType;
+    icon?: Component;
   };
   interface Props {
     lis?: LiType[];
