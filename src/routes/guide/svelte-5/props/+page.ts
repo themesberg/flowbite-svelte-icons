@@ -4,7 +4,7 @@ const description = 'How to use Flowbite Svelte Icons v2 props'
 const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-remix'
 
 export const load = () => {
-  const pageMetaTags = Object.freeze({
+  const pageMetaTags: MetaProps = {
     title,
     description,
     og: {
@@ -17,6 +17,6 @@ export const load = () => {
       description,
       image: imgUrl
     }
-  }) satisfies MetaProps;
+  };
   return { pageMetaTags };
 };

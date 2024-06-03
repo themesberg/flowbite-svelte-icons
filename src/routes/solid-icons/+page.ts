@@ -9,7 +9,7 @@ export const load = ({ url }) => {
   const image = metaImg(url.pathname, __NAME__);
   // const keywords = 'svelte, runes, webkit, ui, components';
 
-  const pageMetaTags = Object.freeze({
+  const pageMetaTags: MetaProps = {
     title,
     description,
     og: {
@@ -22,6 +22,6 @@ export const load = ({ url }) => {
       description,
       image
     }
-  }) satisfies MetaProps;
+  };
   return { pageMetaTags };
 };

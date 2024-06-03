@@ -7,7 +7,7 @@ export const load = ({ url }) => {
   const description = metaDescription(url.pathname, basicDesc);
   const image = metaImg(url.pathname, __NAME__);
 
-  const pageMetaTags = Object.freeze({
+  const pageMetaTags: MetaProps = {
     title,
     description,
     og: {
@@ -18,6 +18,6 @@ export const load = ({ url }) => {
       title,
       description
     }
-  }) satisfies MetaProps;
+  };
   return { pageMetaTags };
 };
