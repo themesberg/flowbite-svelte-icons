@@ -85,14 +85,14 @@ importers:
         specifier: ^0.2.5
         version: 0.2.5(svelte@5.0.0-next.147)
       runes-webkit:
-        specifier: ^0.7.6
-        version: 0.7.6(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147)
+        specifier: ^0.8.0
+        version: 0.8.0(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147)
       svelte:
         specifier: 5.0.0-next.147
         version: 5.0.0-next.147
       svelte-5-ui-lib:
-        specifier: ^0.4.13
-        version: 0.4.13(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147)(tailwindcss@3.4.3)
+        specifier: ^0.5.0
+        version: 0.5.0(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147)(tailwindcss@3.4.3)
       svelte-check:
         specifier: ^3.8.0
         version: 3.8.0(postcss-load-config@5.1.0(jiti@1.21.0)(postcss@8.4.38))(postcss@8.4.38)(svelte@5.0.0-next.147)
@@ -828,8 +828,8 @@ packages:
     resolution: {integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==}
     engines: {node: '>=6'}
 
-  caniuse-lite@1.0.30001625:
-    resolution: {integrity: sha512-4KE9N2gcRH+HQhpeiRZXd+1niLB/XNLAhSy4z7fI8EzcbcPoAqjNInxVHTiTwWfTIV4w096XG8OtCOCQQKPv3w==}
+  caniuse-lite@1.0.30001627:
+    resolution: {integrity: sha512-4zgNiB8nTyV/tHhwZrFs88ryjls/lHiqFhrxCW4qSTeuRByBVnPYpDInchOIySWknznucaf31Z4KYqjfbrecVw==}
 
   chai@4.4.1:
     resolution: {integrity: sha512-13sOfMv2+DWduEU+/xbun3LScLoqN17nBeTLUsmDfKdoiC1fr0n9PU4guu4AhRcOVFk/sW8LyZWHuhWtQZiF+g==}
@@ -2157,8 +2157,8 @@ packages:
     peerDependencies:
       svelte: ^5.0.0
 
-  runes-webkit@0.7.6:
-    resolution: {integrity: sha512-mjdmfsuCVclfDvohWLOuXXqmSXBumsTwY5uQQuFAjVAT7kJKB0jZgeY+V2+ic1Kgu/nNSf5vdP2Jny5MqwBmmg==}
+  runes-webkit@0.8.0:
+    resolution: {integrity: sha512-6+ZmONbgNoPpKBVvALdzHPSkAXKLjdviO+vde4EKg8/663g6PHfYXrmXuVa5EilJfwe5D+MYFwjF9YPyFZNDdA==}
     engines: {node: '>=18.0.0', npm: '>=7.0.0'}
     peerDependencies:
       '@sveltejs/kit': ^2.5.5
@@ -2346,8 +2346,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  svelte-5-ui-lib@0.4.13:
-    resolution: {integrity: sha512-hCSj1OFmjXWMAoENPz+1OT4Do/v+I/BbdWhCY0qzzwWQFJPN6aKZA5y60NCZRerVssW8kcR08kax1V9+Jmcypg==}
+  svelte-5-ui-lib@0.5.0:
+    resolution: {integrity: sha512-7HZXm7eXyYbLT5lhBIgQITVu/JVctI1/uLyUSCDo0RFLG149mOupdWdPUTNOfCB3qW08GjztgVqZoFqxU8NHHQ==}
     engines: {node: '>=20.0.0', npm: '>=10.0.0'}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
@@ -2741,8 +2741,8 @@ packages:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
 
-  yaml@2.4.2:
-    resolution: {integrity: sha512-B3VqDZ+JAg1nZpaEmWtTXUlBneoGx6CPM9b0TENK6aoSu5t73dItudwdgmi6tHlIZZId4dZ9skcAQ2UbcyAeVA==}
+  yaml@2.4.3:
+    resolution: {integrity: sha512-sntgmxj8o7DE7g/Qi60cqpLBA3HG3STcDA0kO+WfB05jEKhZMbY7umNm2rBpQvsmZ16/lPXCJGW2672dgOUkrg==}
     engines: {node: '>= 14'}
     hasBin: true
 
@@ -3493,7 +3493,7 @@ snapshots:
   autoprefixer@10.4.19(postcss@8.4.38):
     dependencies:
       browserslist: 4.23.0
-      caniuse-lite: 1.0.30001625
+      caniuse-lite: 1.0.30001627
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.1
@@ -3535,7 +3535,7 @@ snapshots:
 
   browserslist@4.23.0:
     dependencies:
-      caniuse-lite: 1.0.30001625
+      caniuse-lite: 1.0.30001627
       electron-to-chromium: 1.4.788
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.0)
@@ -3564,7 +3564,7 @@ snapshots:
 
   camelcase@5.3.1: {}
 
-  caniuse-lite@1.0.30001625: {}
+  caniuse-lite@1.0.30001627: {}
 
   chai@4.4.1:
     dependencies:
@@ -4714,14 +4714,14 @@ snapshots:
   postcss-load-config@4.0.2(postcss@8.4.38):
     dependencies:
       lilconfig: 3.1.1
-      yaml: 2.4.2
+      yaml: 2.4.3
     optionalDependencies:
       postcss: 8.4.38
 
   postcss-load-config@5.1.0(jiti@1.21.0)(postcss@8.4.38):
     dependencies:
       lilconfig: 3.1.1
-      yaml: 2.4.2
+      yaml: 2.4.3
     optionalDependencies:
       jiti: 1.21.0
       postcss: 8.4.38
@@ -4898,7 +4898,7 @@ snapshots:
     dependencies:
       svelte: 5.0.0-next.147
 
-  runes-webkit@0.7.6(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147):
+  runes-webkit@0.8.0(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147):
     dependencies:
       '@sveltejs/kit': 2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147)(vite@5.2.12)
       svelte: 5.0.0-next.147
@@ -5106,7 +5106,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-5-ui-lib@0.4.13(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147)(tailwindcss@3.4.3):
+  svelte-5-ui-lib@0.5.0(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147)(tailwindcss@3.4.3):
     dependencies:
       '@floating-ui/dom': 1.6.5
       '@sveltejs/kit': 2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.147)(vite@5.2.12))(svelte@5.0.0-next.147)(vite@5.2.12)
@@ -5526,7 +5526,7 @@ snapshots:
 
   yaml@1.10.2: {}
 
-  yaml@2.4.2: {}
+  yaml@2.4.3: {}
 
   yargs-parser@18.1.3:
     dependencies:
