@@ -140,7 +140,9 @@
       {/if}
       <div class="ml-auto flex items-center lg:order-1">
         {#if include}
+        <div class="hidden sm:block">
           <DynamicCodeBlockStyle />
+        </div>
         {/if}
         <DotsHorizontalOutline
           withEvents
