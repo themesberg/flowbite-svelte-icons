@@ -2,7 +2,7 @@ import type { MetaProps } from 'runes-meta-tags';
 
 const title = 'Getting Started - Flowbite Svelte Icons v2'
 const description = 'How to get started with Flowbite Svelte Icons v2'
-const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-remix'
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/flowbite-svelte-icons'
 
 export const load = ({ url }) => {
   const pageMetaTags: MetaProps = {

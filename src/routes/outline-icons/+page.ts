@@ -1,27 +1,28 @@
 import type { MetaProps } from 'runes-meta-tags';
 import { metaTitle, metaDescription, metaImg } from 'runes-meta-tags';
 
-export const load = ({ url }) => {
-  const siteName = metaTitle('/', __NAME__);
-  const title = metaTitle(url.pathname, __NAME__);
-  // const basicDesc = 'A quick start for a Svelte Runes project.'
-  const description = metaDescription(url.pathname, siteName);
-  const image = metaImg(url.pathname, __NAME__);
-  // const keywords = 'svelte, runes, webkit, ui, components';
+const title = 'Outline Icons - Flowbite Svelte Icons';
+const description = 'Easily Find & Copy SVG Icon name for Your Project';
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/flowbite-svelte-icons';
+  
 
+export const load = ({ url }) => {
+  const ogUrl = url.href
   const pageMetaTags: MetaProps = {
     title,
     description,
     og: {
       title,
       description,
-      image
+      image: imgUrl,
+      url: ogUrl
     },
     twitter: {
       title,
       description,
-      image
+      image: imgUrl
     }
   };
   return { pageMetaTags };
 };
+

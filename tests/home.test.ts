@@ -28,16 +28,14 @@ test('index page has expected meta keywords', async ({ page }) => {
   await expect(metaKeywords).toHaveAttribute('content', 'svelte, runes, flowbite, icons, svg');
 });
 
-test('index page has expected meta og', async ({ page }) => {
+test('index page has expected meta og', async ({ page, baseURL }) => {
   const metaOgTitle = page.locator('meta[property="og:title"]');
   await expect(metaOgTitle).toHaveAttribute('content', 'Flowbite Svelte Icons');
   const metaOgDescription = page.locator('meta[property="og:description"]');
-  await expect(metaOgDescription).toHaveAttribute(
-    'content',
-    'Flowbite icon components for Svelte 5 Runes.'
-  );
+  await expect(metaOgDescription).toHaveAttribute('content', 'Flowbite icon components for Svelte 5 Runes.');
   const metaOgUrl = page.locator('meta[property="og:url"]');
-  await expect(metaOgUrl).toHaveAttribute('content', 'http://localhost:4173/');
+  const url = baseURL + '/';
+  await expect(metaOgUrl).toHaveAttribute('content', url);
   const metaOgImage = page.locator('meta[property="og:image"]');
   await expect(metaOgImage).toHaveAttribute(
     'content',
