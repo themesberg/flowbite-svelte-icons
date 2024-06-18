@@ -3,7 +3,7 @@
 			{
 					"source": "/",
 					"destination": "https://flowbite-svelte.com/icons/svelte-4",
-					"permanent": false
+					"permanent": true
 			},
 			{
 					"source": "/solid-icons",
