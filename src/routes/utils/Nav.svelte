@@ -135,7 +135,7 @@
       {#if siteName}
         <NavBrand
           {siteName}
-          spanclass="self-center whitespace-nowrap text-2xl font-semibold text-primary-700 dark:text-primary-700"
+          spanClass="self-center whitespace-nowrap text-2xl font-semibold text-primary-700 dark:text-primary-700"
         />
       {/if}
       <div class="ml-auto flex items-center lg:order-1">
@@ -155,7 +155,7 @@
             {dropdownStatus}
             {closeDropdown}
             transitionParams={dropdownTransitionParams}
-            divclass="absolute -left-[47px] top-8 w-12 pl-1.5"
+            divClass="absolute -left-[47px] top-8 w-12 pl-1.5"
           >
             {#if twitterUrl}
               <DropdownItem href={twitterUrl} target="_blank" aclass="p-2 m-0"
@@ -175,7 +175,7 @@
       </div>
     {/snippet}
     {#if lis}
-      <NavUl {ulclass}>
+      <NavUl class={ulclass}>
         {@render navLi(lis)}
       </NavUl>
     {/if}
@@ -187,7 +187,7 @@
   drawerStatus={navDrawerStatus}
   closeDrawer={closeNavDrawer}
   {transitionParams}
-  divclass="dark:bg-stone-900"
+  divClass="dark:bg-stone-900"
 >
   <div class="flex items-center pb-4">
     <h5

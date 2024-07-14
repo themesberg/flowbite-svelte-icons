@@ -12,7 +12,7 @@
     desc?: string;
   };
 
-  interface BaseProps {
+  interface BaseProps extends SVGAttributes<SVGElement>{
     size?: "xs" | "sm" | "md" | "lg" | "xl";
     color?: string | undefined | null;
 strokeWidth?: string;
@@ -21,7 +21,7 @@ strokeWidth?: string;
   }
 
   interface CtxType extends BaseProps {}
-  interface Props extends BaseProps, SVGAttributes<SVGElement> {
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
