@@ -1,6 +1,8 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
+  import type { SVGAttributes } from 'svelte/elements';
+
   type TitleType = {
     id?: string;
     title?: string;
@@ -12,17 +14,13 @@
 
   interface BaseProps {
     size?: "xs" | "sm" | "md" | "lg" | "xl";
-    role?: string;
-    color?: string;
+    color?: string | undefined | null;
     withEvents?: boolean;
-    onclick?: (event: MouseEvent) => void;
-    onkeydown?: (event: KeyboardEvent) => void;
-    onkeyup?: (event: KeyboardEvent) => void;
-    class?: string;
+    class?:  string | undefined | null;
   }
 
   interface CtxType extends BaseProps {}
-  interface Props extends BaseProps{
+  interface Props extends BaseProps, SVGAttributes<SVGElement> {
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
@@ -40,16 +38,12 @@
 
   let { 
     size = ctx.size || 'md', 
-    role, 
     color = ctx.color || 'currentColor', 
     withEvents = ctx.withEvents || false, 
     title, 
     desc,  
-    class: classname, 
-    ariaLabel =  "thumbs up solid" , 
-    onclick, 
-    onkeydown, 
-    onkeyup, 
+    class: className, 
+    ariaLabel =  "address book outline" , 
     ...restProps 
     }: Props = $props();
 
@@ -65,15 +59,11 @@
   class={twMerge(
     'shrink-0',
     sizes[size],
-    classname
+    className
   )}
-  {role}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
-  onclick={onclick}
-  onkeydown={onkeydown}
-  onkeyup={onkeyup}
 >
   {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
@@ -91,9 +81,8 @@
   class={twMerge(
     'shrink-0',
     sizes[size],
-    classname
+    className
   )}
-  {role}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
@@ -113,15 +102,11 @@
 [Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
 ## Props
 @prop size = ctx.size || 'md'
-@prop role
 @prop color = ctx.color || 'currentColor'
 @prop withEvents = ctx.withEvents || false
 @prop title
 @prop desc
-@prop class: classname
-@prop ariaLabel =  "thumbs up solid"
-@prop onclick
-@prop onkeydown
-@prop onkeyup
+@prop class: className
+@prop ariaLabel =  "address book outline"
 @prop ...restProps
 -->
