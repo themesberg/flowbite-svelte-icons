@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.0-next.12
+
+### Patch Changes
+
+- fix: run lib-helpers ([`a9b36bfe012109489cecea2ef6e9faf0ed6f67e1`](https://github.com/themesberg/flowbite-svelte-icons/commit/a9b36bfe012109489cecea2ef6e9faf0ed6f67e1))
+
+- fix: extends BaseProps instead of Props ([`aafb85100e10b4c754d50f3a31ba911188ea440f`](https://github.com/themesberg/flowbite-svelte-icons/commit/aafb85100e10b4c754d50f3a31ba911188ea440f))
+
 ## 2.0.0-next.11
 
 ### Patch Changes
