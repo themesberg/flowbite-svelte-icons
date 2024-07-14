@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.0-next.11
+
+### Patch Changes
+
+- feat: extends SVGAttributes from svelte/elements ([`4b0750c1654d1e45800f232dcc108d01e6548b2e`](https://github.com/themesberg/flowbite-svelte-icons/commit/4b0750c1654d1e45800f232dcc108d01e6548b2e))
+
+- fix: update runes-webkit and svelte@next ([`cbddf360460d5c4e71df14cce622396c030d514d`](https://github.com/themesberg/flowbite-svelte-icons/commit/cbddf360460d5c4e71df14cce622396c030d514d))
+
 ## 2.0.0-next.10
 
 ### Patch Changes
