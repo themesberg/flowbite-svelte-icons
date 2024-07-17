@@ -1,6 +1,8 @@
 <script lang="ts">
   import type { Component } from 'svelte';
-  interface Props {
+  import type { SVGAttributes } from 'svelte/elements';
+
+  interface Props extends SVGAttributes<SVGElement> {
     icon: Component;
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
