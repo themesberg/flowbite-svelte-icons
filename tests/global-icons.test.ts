@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
-const title = 'Setting Global Icon - Flowbite Svelte Icons'
-const description = 'How to create a global icon using setContext with Flowbite Svelte Icons'
-const imgUrl = 'https://open-graph-vercel.vercel.app/api/flowbite-svelte-icons'
+const title = 'Setting Global Icon - Flowbite Svelte Icons';
+const description = 'How to create a global icon using setContext with Flowbite Svelte Icons';
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/flowbite-svelte-icons';
 
 test.beforeEach(async ({ page }) => {
   console.log(`Running ${test.info().title}`);
@@ -30,10 +30,7 @@ test('Global icons page has expected meta og', async ({ page, baseURL }) => {
   const url = baseURL + '/guide/global-icons';
   await expect(metaOgUrl).toHaveAttribute('content', url);
   const metaOgImage = page.locator('meta[property="og:image"]');
-  await expect(metaOgImage).toHaveAttribute(
-    'content',
-    imgUrl
-  );
+  await expect(metaOgImage).toHaveAttribute('content', imgUrl);
 });
 
 test('Global icons page has expected meta twitter', async ({ page }) => {
@@ -42,8 +39,5 @@ test('Global icons page has expected meta twitter', async ({ page }) => {
   const metaTwitterDescription = page.locator('meta[name="twitter:description"]');
   await expect(metaTwitterDescription).toHaveAttribute('content', description);
   const metaTwitterImage = page.locator('meta[name="twitter:image"]');
-  await expect(metaTwitterImage).toHaveAttribute(
-    'content',
-    imgUrl
-  );
+  await expect(metaTwitterImage).toHaveAttribute('content', imgUrl);
 });

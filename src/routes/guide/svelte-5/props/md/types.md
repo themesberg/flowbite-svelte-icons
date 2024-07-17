@@ -9,13 +9,8 @@ type DescType = {
 
 interface BaseProps {
   size?: "xs" | "sm" | "md" | "lg" | "xl";
-  role?: string;
   color?: string;
-  withEvents?: boolean;
-  strokeWidth?: string;
-  onclick?: (event: MouseEvent) => void;
-  onkeydown?: (event: KeyboardEvent) => void;
-  onkeyup?: (event: KeyboardEvent) => void;
+  strokeWidth?: string; // only for Outline icons
   class?: string;
 }
 

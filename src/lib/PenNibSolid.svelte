@@ -12,19 +12,18 @@
     desc?: string;
   };
 
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+  interface BaseProps extends SVGAttributes<SVGElement> {
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     color?: string | undefined | null;
-    withEvents?: boolean;
-    class?:  string | undefined | null;
+    class?: string | undefined | null;
   }
 
   interface CtxType extends BaseProps {}
-  interface Props extends BaseProps{
+  interface Props extends BaseProps {
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -36,31 +35,25 @@
     xl: 'w-8 h-8'
   };
 
-  let { 
-    size = ctx.size || 'md', 
-    color = ctx.color || 'currentColor', 
-    withEvents = ctx.withEvents || false, 
-    title, 
-    desc,  
-    class: className, 
-    ariaLabel =  "address book outline" , 
-    ...restProps 
-    }: Props = $props();
+  let {
+    size = ctx.size || 'md',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    class: className,
+    ariaLabel = 'address book outline',
+    ...restProps
+  }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#if withEvents}
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill={color}
-{...restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    className
-  )}
+  {...restProps}
+  class={twMerge('shrink-0', sizes[size], className)}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
@@ -71,31 +64,12 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <path fill-rule="evenodd" d="M15.514 3.293a1 1 0 0 0-1.415 0L12.151 5.24a.93.93 0 0 1 .056.052l6.5 6.5a.97.97 0 0 1 .052.056L20.707 9.9a1 1 0 0 0 0-1.415l-5.193-5.193ZM7.004 8.27l3.892-1.46 6.293 6.293-1.46 3.893a1 1 0 0 1-.603.591l-9.494 3.355a1 1 0 0 1-.98-.18l6.452-6.453a1 1 0 0 0-1.414-1.414l-6.453 6.452a1 1 0 0 1-.18-.98l3.355-9.494a1 1 0 0 1 .591-.603Z" clip-rule="evenodd"/>  
+  <path
+    fill-rule="evenodd"
+    d="M15.514 3.293a1 1 0 0 0-1.415 0L12.151 5.24a.93.93 0 0 1 .056.052l6.5 6.5a.97.97 0 0 1 .052.056L20.707 9.9a1 1 0 0 0 0-1.415l-5.193-5.193ZM7.004 8.27l3.892-1.46 6.293 6.293-1.46 3.893a1 1 0 0 1-.603.591l-9.494 3.355a1 1 0 0 1-.98-.18l6.452-6.453a1 1 0 0 0-1.414-1.414l-6.453 6.452a1 1 0 0 1-.18-.98l3.355-9.494a1 1 0 0 1 .591-.603Z"
+    clip-rule="evenodd"
+  />
 </svg>
-{:else}
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill={color}
-{...restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    className
-  )}
-  aria-label={ariaLabel}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  viewBox="0 0 24 24"
->
-  {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
-  {/if}
-     <path fill-rule="evenodd" d="M15.514 3.293a1 1 0 0 0-1.415 0L12.151 5.24a.93.93 0 0 1 .056.052l6.5 6.5a.97.97 0 0 1 .052.056L20.707 9.9a1 1 0 0 0 0-1.415l-5.193-5.193ZM7.004 8.27l3.892-1.46 6.293 6.293-1.46 3.893a1 1 0 0 1-.603.591l-9.494 3.355a1 1 0 0 1-.98-.18l6.452-6.453a1 1 0 0 0-1.414-1.414l-6.453 6.452a1 1 0 0 1-.18-.98l3.355-9.494a1 1 0 0 1 .591-.603Z" clip-rule="evenodd"/>  
-</svg>
-{/if}
 
 <!--
 @component
@@ -103,10 +77,9 @@
 ## Props
 @prop size = ctx.size || 'md'
 @prop color = ctx.color || 'currentColor'
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop desc
 @prop class: className
-@prop ariaLabel =  "address book outline"
+@prop ariaLabel = 'address book outline'
 @prop ...restProps
 -->

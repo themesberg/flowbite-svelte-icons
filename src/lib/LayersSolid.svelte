@@ -12,19 +12,18 @@
     desc?: string;
   };
 
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+  interface BaseProps extends SVGAttributes<SVGElement> {
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     color?: string | undefined | null;
-    withEvents?: boolean;
-    class?:  string | undefined | null;
+    class?: string | undefined | null;
   }
 
   interface CtxType extends BaseProps {}
-  interface Props extends BaseProps{
+  interface Props extends BaseProps {
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -36,31 +35,25 @@
     xl: 'w-8 h-8'
   };
 
-  let { 
-    size = ctx.size || 'md', 
-    color = ctx.color || 'currentColor', 
-    withEvents = ctx.withEvents || false, 
-    title, 
-    desc,  
-    class: className, 
-    ariaLabel =  "address book outline" , 
-    ...restProps 
-    }: Props = $props();
+  let {
+    size = ctx.size || 'md',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    class: className,
+    ariaLabel = 'address book outline',
+    ...restProps
+  }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#if withEvents}
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill={color}
-{...restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    className
-  )}
+  {...restProps}
+  class={twMerge('shrink-0', sizes[size], className)}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
@@ -71,31 +64,15 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <path fill-rule="evenodd" d="M5.005 10.19a1 1 0 0 1 1 1v.233l5.998 3.464L18 11.423v-.232a1 1 0 1 1 2 0V12a1 1 0 0 1-.5.866l-6.997 4.042a1 1 0 0 1-1 0l-6.998-4.042a1 1 0 0 1-.5-.866v-.81a1 1 0 0 1 1-1ZM5 15.15a1 1 0 0 1 1 1v.232l5.997 3.464 5.998-3.464v-.232a1 1 0 1 1 2 0v.81a1 1 0 0 1-.5.865l-6.998 4.042a1 1 0 0 1-1 0L4.5 17.824a1 1 0 0 1-.5-.866v-.81a1 1 0 0 1 1-1Z" clip-rule="evenodd"/>   <path d="M12.503 2.134a1 1 0 0 0-1 0L4.501 6.17A1 1 0 0 0 4.5 7.902l7.002 4.047a1 1 0 0 0 1 0l6.998-4.04a1 1 0 0 0 0-1.732l-6.997-4.042Z"/>  
+  <path
+    fill-rule="evenodd"
+    d="M5.005 10.19a1 1 0 0 1 1 1v.233l5.998 3.464L18 11.423v-.232a1 1 0 1 1 2 0V12a1 1 0 0 1-.5.866l-6.997 4.042a1 1 0 0 1-1 0l-6.998-4.042a1 1 0 0 1-.5-.866v-.81a1 1 0 0 1 1-1ZM5 15.15a1 1 0 0 1 1 1v.232l5.997 3.464 5.998-3.464v-.232a1 1 0 1 1 2 0v.81a1 1 0 0 1-.5.865l-6.998 4.042a1 1 0 0 1-1 0L4.5 17.824a1 1 0 0 1-.5-.866v-.81a1 1 0 0 1 1-1Z"
+    clip-rule="evenodd"
+  />
+  <path
+    d="M12.503 2.134a1 1 0 0 0-1 0L4.501 6.17A1 1 0 0 0 4.5 7.902l7.002 4.047a1 1 0 0 0 1 0l6.998-4.04a1 1 0 0 0 0-1.732l-6.997-4.042Z"
+  />
 </svg>
-{:else}
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill={color}
-{...restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    className
-  )}
-  aria-label={ariaLabel}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  viewBox="0 0 24 24"
->
-  {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
-  {/if}
-     <path fill-rule="evenodd" d="M5.005 10.19a1 1 0 0 1 1 1v.233l5.998 3.464L18 11.423v-.232a1 1 0 1 1 2 0V12a1 1 0 0 1-.5.866l-6.997 4.042a1 1 0 0 1-1 0l-6.998-4.042a1 1 0 0 1-.5-.866v-.81a1 1 0 0 1 1-1ZM5 15.15a1 1 0 0 1 1 1v.232l5.997 3.464 5.998-3.464v-.232a1 1 0 1 1 2 0v.81a1 1 0 0 1-.5.865l-6.998 4.042a1 1 0 0 1-1 0L4.5 17.824a1 1 0 0 1-.5-.866v-.81a1 1 0 0 1 1-1Z" clip-rule="evenodd"/>   <path d="M12.503 2.134a1 1 0 0 0-1 0L4.501 6.17A1 1 0 0 0 4.5 7.902l7.002 4.047a1 1 0 0 0 1 0l6.998-4.04a1 1 0 0 0 0-1.732l-6.997-4.042Z"/>  
-</svg>
-{/if}
 
 <!--
 @component
@@ -103,10 +80,9 @@
 ## Props
 @prop size = ctx.size || 'md'
 @prop color = ctx.color || 'currentColor'
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop desc
 @prop class: className
-@prop ariaLabel =  "address book outline"
+@prop ariaLabel = 'address book outline'
 @prop ...restProps
 -->

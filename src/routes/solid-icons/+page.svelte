@@ -14,5 +14,5 @@
   defaultSize="6"
   maxSize="10"
   minSize="4"
-  i_p_tabitem_div_1="md:grid-cols-2 lg:grid-cols-3"
+  div1Class="md:grid-cols-2 lg:grid-cols-3"
 />

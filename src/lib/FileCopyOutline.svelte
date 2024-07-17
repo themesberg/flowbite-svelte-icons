@@ -12,20 +12,19 @@
     desc?: string;
   };
 
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+  interface BaseProps extends SVGAttributes<SVGElement> {
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     color?: string | undefined | null;
-strokeWidth?: string;
-    withEvents?: boolean;
-    class?:  string | undefined | null;
+    strokeWidth?: string | undefined | null;
+    class?: string | undefined | null;
   }
 
   interface CtxType extends BaseProps {}
-  interface Props extends BaseProps{
+  interface Props extends BaseProps {
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -37,33 +36,27 @@ strokeWidth?: string;
     xl: 'w-8 h-8'
   };
 
-  let { 
-    size = ctx.size || 'md', 
-    color = ctx.color || 'currentColor', 
-    withEvents = ctx.withEvents || false, 
-    title, 
-strokeWidth= ctx.strokeWidth || "2",
-    desc,  
-    class: className, 
-    ariaLabel =  "address book outline" , 
-    ...restProps 
-    }: Props = $props();
+  let {
+    size = ctx.size || 'md',
+    color = ctx.color || 'currentColor',
+    title,
+    strokeWidth = ctx.strokeWidth || '2',
+    desc,
+    class: className,
+    ariaLabel = 'address book outline',
+    ...restProps
+  }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#if withEvents}
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
-{color}
-{...restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    className
-  )}
+  {color}
+  {...restProps}
+  class={twMerge('shrink-0', sizes[size], className)}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
@@ -74,32 +67,13 @@ strokeWidth= ctx.strokeWidth || "2",
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <path stroke="currentColor" stroke-linejoin="round" stroke-width={strokeWidth} d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"/>  
+  <path
+    stroke="currentColor"
+    stroke-linejoin="round"
+    stroke-width={strokeWidth}
+    d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"
+  />
 </svg>
-{:else}
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill="none"
-{color}
-{...restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    className
-  )}
-  aria-label={ariaLabel}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  viewBox="0 0 24 24"
->
-  {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
-  {/if}
-     <path stroke="currentColor" stroke-linejoin="round" stroke-width={strokeWidth} d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"/>  
-</svg>
-{/if}
 
 <!--
 @component
@@ -107,11 +81,10 @@ strokeWidth= ctx.strokeWidth || "2",
 ## Props
 @prop size = ctx.size || 'md'
 @prop color = ctx.color || 'currentColor'
-@prop withEvents = ctx.withEvents || false
 @prop title
-@prop strokeWidth= ctx.strokeWidth || "2"
+@prop strokeWidth = ctx.strokeWidth || '2'
 @prop desc
 @prop class: className
-@prop ariaLabel =  "address book outline"
+@prop ariaLabel = 'address book outline'
 @prop ...restProps
 -->

@@ -12,19 +12,18 @@
     desc?: string;
   };
 
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+  interface BaseProps extends SVGAttributes<SVGElement> {
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     color?: string | undefined | null;
-    withEvents?: boolean;
-    class?:  string | undefined | null;
+    class?: string | undefined | null;
   }
 
   interface CtxType extends BaseProps {}
-  interface Props extends BaseProps{
+  interface Props extends BaseProps {
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -36,31 +35,25 @@
     xl: 'w-8 h-8'
   };
 
-  let { 
-    size = ctx.size || 'md', 
-    color = ctx.color || 'currentColor', 
-    withEvents = ctx.withEvents || false, 
-    title, 
-    desc,  
-    class: className, 
-    ariaLabel =  "address book outline" , 
-    ...restProps 
-    }: Props = $props();
+  let {
+    size = ctx.size || 'md',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    class: className,
+    ariaLabel = 'address book outline',
+    ...restProps
+  }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#if withEvents}
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill={color}
-{...restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    className
-  )}
+  {...restProps}
+  class={twMerge('shrink-0', sizes[size], className)}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
@@ -71,31 +64,10 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <path d="M14.502 7.046h-2.5v-.928a2.122 2.122 0 0 0-1.199-1.954 1.827 1.827 0 0 0-1.984.311L3.71 8.965a2.2 2.2 0 0 0 0 3.24L8.82 16.7a1.829 1.829 0 0 0 1.985.31 2.121 2.121 0 0 0 1.199-1.959v-.928h1a2.025 2.025 0 0 1 1.999 2.047V19a1 1 0 0 0 1.275.961 6.59 6.59 0 0 0 4.662-7.22 6.593 6.593 0 0 0-6.437-5.695Z"/>  
+  <path
+    d="M14.502 7.046h-2.5v-.928a2.122 2.122 0 0 0-1.199-1.954 1.827 1.827 0 0 0-1.984.311L3.71 8.965a2.2 2.2 0 0 0 0 3.24L8.82 16.7a1.829 1.829 0 0 0 1.985.31 2.121 2.121 0 0 0 1.199-1.959v-.928h1a2.025 2.025 0 0 1 1.999 2.047V19a1 1 0 0 0 1.275.961 6.59 6.59 0 0 0 4.662-7.22 6.593 6.593 0 0 0-6.437-5.695Z"
+  />
 </svg>
-{:else}
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill={color}
-{...restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    className
-  )}
-  aria-label={ariaLabel}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  viewBox="0 0 24 24"
->
-  {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
-  {/if}
-     <path d="M14.502 7.046h-2.5v-.928a2.122 2.122 0 0 0-1.199-1.954 1.827 1.827 0 0 0-1.984.311L3.71 8.965a2.2 2.2 0 0 0 0 3.24L8.82 16.7a1.829 1.829 0 0 0 1.985.31 2.121 2.121 0 0 0 1.199-1.959v-.928h1a2.025 2.025 0 0 1 1.999 2.047V19a1 1 0 0 0 1.275.961 6.59 6.59 0 0 0 4.662-7.22 6.593 6.593 0 0 0-6.437-5.695Z"/>  
-</svg>
-{/if}
 
 <!--
 @component
@@ -103,10 +75,9 @@
 ## Props
 @prop size = ctx.size || 'md'
 @prop color = ctx.color || 'currentColor'
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop desc
 @prop class: className
-@prop ariaLabel =  "address book outline"
+@prop ariaLabel = 'address book outline'
 @prop ...restProps
 -->

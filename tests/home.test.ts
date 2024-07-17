@@ -32,7 +32,10 @@ test('index page has expected meta og', async ({ page, baseURL }) => {
   const metaOgTitle = page.locator('meta[property="og:title"]');
   await expect(metaOgTitle).toHaveAttribute('content', 'Flowbite Svelte Icons');
   const metaOgDescription = page.locator('meta[property="og:description"]');
-  await expect(metaOgDescription).toHaveAttribute('content', 'Flowbite icon components for Svelte 5 Runes.');
+  await expect(metaOgDescription).toHaveAttribute(
+    'content',
+    'Flowbite icon components for Svelte 5 Runes.'
+  );
   const metaOgUrl = page.locator('meta[property="og:url"]');
   const url = baseURL + '/';
   await expect(metaOgUrl).toHaveAttribute('content', url);

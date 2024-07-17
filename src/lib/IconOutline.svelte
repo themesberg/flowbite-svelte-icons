@@ -1,24 +1,23 @@
 <script lang="ts">
   import type { Component } from 'svelte';
-  interface Props{
+  interface Props {
     icon: Component;
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
     color?: string;
     ariaLabel?: string;
     class?: string;
   }
-  let {icon, size, role, color, ariaLabel, class: classname, ...restProps}: Props = $props()
-
+  let { icon, size, role, color, ariaLabel, class: classname, ...restProps }: Props = $props();
 </script>
 
-<svelte:component 
-fill={color}
-  {...restProps} 
+<svelte:component
+  this={icon}
+  fill={color}
+  {...restProps}
   {role}
-  this={icon} 
   {size}
-  class={classname} 
+  class={classname}
   {ariaLabel}
 />
 

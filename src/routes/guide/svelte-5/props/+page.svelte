@@ -1,12 +1,7 @@
 <script lang="ts">
-  import {
-    HighlightCompo,
-    CodeWrapper,
-    Code,
-    H2,
-    H3,
-    removeHyphensAndCapitalize
-  } from 'runes-webkit';
+  import { HighlightCompo, CodeWrapper, Code, H2 } from 'runes-webkit';
+  import { A } from 'svelte-5-ui-lib';
+  import { AddressBookOutline } from '$lib';
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
     import: 'default',
@@ -17,6 +12,12 @@
 <h1>Props - Flowbite Svelte Icons v2</h1>
 
 <H2>Outline/Solid Icons</H2>
+<p>
+  All icons are extended <A
+    href="https://github.com/sveltejs/svelte/blob/main/packages/svelte/elements.d.ts"
+    >SVGAttributes from svelte/elements</A
+  >.
+</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} />
 
@@ -91,6 +92,21 @@
 
 <H2>Passing down other attributes</H2>
 
-<p>Since all icons have <Code>...restProps</Code>, you can pass other attibutes as well.</p>
+<p>
+  Since all icons have <Code>...restProps</Code>, you can pass other <A
+    target="_blank"
+    href="https://github.com/sveltejs/svelte/blob/main/packages/svelte/elements.d.ts"
+    >SVGAttributes</A
+  >.
+</p>
+
+<CodeWrapper>
+  <AddressBookOutline
+    id="my-svg"
+    transform="rotate(45)"
+    class="hover:cursor-pointer dark:text-white"
+    onclick={() => alert('hello')}
+  />
+</CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/other-attributes.md'] as string} />

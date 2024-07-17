@@ -6,7 +6,7 @@ const description = 'Easily Find & Copy SVG Icon name for Your Project';
 const imgUrl = 'https://open-graph-vercel.vercel.app/api/flowbite-svelte-icons';
 
 export const load = ({ url }) => {
-  const ogUrl = url.href
+  const ogUrl = url.href;
   const pageMetaTags: MetaProps = {
     title,
     description,

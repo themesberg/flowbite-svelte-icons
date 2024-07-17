@@ -1,20 +1,17 @@
 <script context="module" lang="ts">
-
-export const extra: ListType[] = [
-  {
-    name: 'Solid Icons',
-    icon: RocketOutline as Component,
-    href: '/solid-icons'
-  },
-  {
-    name: 'Outline Icons',
-    icon: PaletteOutline as Component,
-    href: '/outline-icons'
-  }
-];
-export const newSidebarList: ListType[] = [
-  ...sidebarList, ...extra 
-];
+  export const extra: ListType[] = [
+    {
+      name: 'Solid Icons',
+      icon: RocketOutline as Component,
+      href: '/solid-icons'
+    },
+    {
+      name: 'Outline Icons',
+      icon: PaletteOutline as Component,
+      href: '/outline-icons'
+    }
+  ];
+  export const newSidebarList: ListType[] = [...sidebarList, ...extra];
 </script>
 
 <script lang="ts">
@@ -54,9 +51,9 @@ export const newSidebarList: ListType[] = [
     { name: 'Guide', href: '/guide/svelte-4/getting-started' },
     { name: 'Outline', href: '/outline-icons' },
     { name: 'Solid', href: '/solid-icons' },
-    { name: 'Icon Sets', href: 'https://svelte-svg-icons.codewithshin.com/'}
+    { name: 'Icon Sets', href: 'https://svelte-svg-icons.codewithshin.com/' }
   ];
-  
+
   const brand = {
     name: 'codewithshin.com',
     href: 'https://codewithshin.com'
@@ -67,8 +64,8 @@ export const newSidebarList: ListType[] = [
   const githubUrl = `https://github.com/themesberg/${__NAME__}`;
 </script>
 
-<RunesMetaTags {...metaTags} />
 <Runatics {analyticsId} />
+<RunesMetaTags {...metaTags} />
 
 <Nav
   {lis}
@@ -81,8 +78,8 @@ export const newSidebarList: ListType[] = [
   {#if urlsToIncludeSwitcherAndSidebar.some((path) => currentUrl.startsWith(path))}
     <Sidebar
       sidebarList={newSidebarList}
-      s_b_aside="fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible lg:pt-0 lg:block hidden"
-      s_b_div="fixed top-20 px-2 w-60"
+      asideClass="fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible lg:pt-0 lg:block hidden"
+      divClass="fixed top-20 px-2 w-60 dark_bg_theme"
     />
     <div class="relative">
       <OnThisPage {extract} headingSelector="#mainContent > :where(h2, h3)" />
