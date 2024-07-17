@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0-next.14
+
+### Patch Changes
+
+- fix: IconSolid and IconOutline ([`f79d47174c42a98a874b15d4cb09723c778e05b9`](https://github.com/themesberg/flowbite-svelte-icons/commit/f79d47174c42a98a874b15d4cb09723c778e05b9))
+
 ## 2.0.0-next.13
 
 ### Patch Changes
