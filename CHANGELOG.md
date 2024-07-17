@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0-next.13
+
+### Patch Changes
+
+- fix: extends Props from svelte SVGAttributes ([`3448d91dd192f8f9fb1421706d6dba018f241ed6`](https://github.com/themesberg/flowbite-svelte-icons/commit/3448d91dd192f8f9fb1421706d6dba018f241ed6))
+
 ## 2.0.0-next.12
 
 ### Patch Changes
