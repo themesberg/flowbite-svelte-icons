@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0-next.15
+
+### Patch Changes
+
+- fix: add ^5.0.0-next.1 to peerDependencies ([`4feca80710b503553635287fab0629b2ec5e72af`](https://github.com/themesberg/flowbite-svelte-icons/commit/4feca80710b503553635287fab0629b2ec5e72af))
+
 ## 2.0.0-next.14
 
 ### Patch Changes
