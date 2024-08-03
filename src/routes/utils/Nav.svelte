@@ -97,7 +97,7 @@
     'flex items-center p-2 text-base font-normal text-white bg-primary-500 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-100 dark:hover:bg-gray-700';
 </script>
 
-{#snippet navLi(lis)}
+{#snippet navLi(lis: NonNullable<Props['lis']>)}
   {#each lis as { name, href, icon }}
     {#if icon}
       <svelte:component this={icon} class="mb-3 h-8 w-8 {random_tailwind_color()}" />
