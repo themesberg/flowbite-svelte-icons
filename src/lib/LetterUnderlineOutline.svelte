@@ -73,3 +73,17 @@ strokeWidth= ctx.strokeWidth || "2",
   {/if}
      <path stroke="currentColor" stroke-linecap="round" stroke-width={strokeWidth} d="M6 19h12M8 5v9a4 4 0 0 0 8 0V5M6 5h4m4 0h4"/>  
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth= ctx.strokeWidth || "2"
+@prop desc
+@prop class: className
+@prop ariaLabel = "letter underline outline"
+@prop ...restProps
+-->

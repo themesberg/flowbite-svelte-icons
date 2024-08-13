@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.0-next.16
+
+### Patch Changes
+
+- fix: remove svelte:component from IconSolid and IconOutline ([`8e616bde74d6026be703e13f1da5868274519a46`](https://github.com/themesberg/flowbite-svelte-icons/commit/8e616bde74d6026be703e13f1da5868274519a46))
+
+- docs: update for custom icons page ([`8098c5386e3d4fec237813a9011d6f478c3f2ada`](https://github.com/themesberg/flowbite-svelte-icons/commit/8098c5386e3d4fec237813a9011d6f478c3f2ada))
+
 ## 2.0.0-next.15
 
 ### Patch Changes

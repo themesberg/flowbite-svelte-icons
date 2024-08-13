@@ -32,3 +32,17 @@
   class={classname}
   {ariaLabel}
 />
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop Icon
+@prop size
+@prop role
+@prop color = 'currentColor'
+@prop ariaLabel
+@prop strokeWidth
+@prop class: classname
+@prop ...restProps
+-->
