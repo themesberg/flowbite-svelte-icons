@@ -12,18 +12,18 @@
     desc?: string;
   };
 
-  interface BaseProps extends SVGAttributes<SVGElement> {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  interface BaseProps extends SVGAttributes<SVGElement>{
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
     color?: string | undefined | null;
-    class?: string | undefined | null;
+    class?:  string | undefined | null;
   }
 
   interface CtxType extends BaseProps {}
-  interface Props extends BaseProps {
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -35,15 +35,15 @@
     xl: 'w-8 h-8'
   };
 
-  let {
-    size = ctx.size || 'md',
-    color = ctx.color || 'currentColor',
-    title,
-    desc,
-    class: className,
-    ariaLabel = 'address book outline',
-    ...restProps
-  }: Props = $props();
+  let { 
+    size = ctx.size || 'md', 
+    color = ctx.color || 'currentColor', 
+    title, 
+    desc,  
+    class: className, 
+    ariaLabel = "wand magic sparkles solid" , 
+    ...restProps 
+    }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
@@ -52,8 +52,12 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill={color}
-  {...restProps}
-  class={twMerge('shrink-0', sizes[size], className)}
+{...restProps}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    className
+  )}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
@@ -64,25 +68,5 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-  <path
-    fill-rule="evenodd"
-    d="M17.44 3a1 1 0 0 1 .707.293l2.56 2.56a1 1 0 0 1 0 1.414L18.194 9.78 14.22 5.806l2.513-2.513A1 1 0 0 1 17.44 3Zm-4.634 4.22-9.513 9.513a1 1 0 0 0 0 1.414l2.56 2.56a1 1 0 0 0 1.414 0l9.513-9.513-3.974-3.974ZM6 6a1 1 0 0 1 1 1v1h1a1 1 0 0 1 0 2H7v1a1 1 0 1 1-2 0v-1H4a1 1 0 0 1 0-2h1V7a1 1 0 0 1 1-1Zm9 9a1 1 0 0 1 1 1v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0v-1h-1a1 1 0 1 1 0-2h1v-1a1 1 0 0 1 1-1Z"
-    clip-rule="evenodd"
-  />
-  <path
-    d="M19 13h-2v2h2v-2ZM13 3h-2v2h2V3Zm-2 2H9v2h2V5ZM9 3H7v2h2V3Zm12 8h-2v2h2v-2Zm0 4h-2v2h2v-2Z"
-  />
+     <path fill-rule="evenodd" d="M17.44 3a1 1 0 0 1 .707.293l2.56 2.56a1 1 0 0 1 0 1.414L18.194 9.78 14.22 5.806l2.513-2.513A1 1 0 0 1 17.44 3Zm-4.634 4.22-9.513 9.513a1 1 0 0 0 0 1.414l2.56 2.56a1 1 0 0 0 1.414 0l9.513-9.513-3.974-3.974ZM6 6a1 1 0 0 1 1 1v1h1a1 1 0 0 1 0 2H7v1a1 1 0 1 1-2 0v-1H4a1 1 0 0 1 0-2h1V7a1 1 0 0 1 1-1Zm9 9a1 1 0 0 1 1 1v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0v-1h-1a1 1 0 1 1 0-2h1v-1a1 1 0 0 1 1-1Z" clip-rule="evenodd"/>   <path d="M19 13h-2v2h2v-2ZM13 3h-2v2h2V3Zm-2 2H9v2h2V5ZM9 3H7v2h2V3Zm12 8h-2v2h2v-2Zm0 4h-2v2h2v-2Z"/>  
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || 'md'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop desc
-@prop class: className
-@prop ariaLabel = 'address book outline'
-@prop ...restProps
--->

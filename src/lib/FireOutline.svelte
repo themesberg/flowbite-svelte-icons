@@ -12,19 +12,19 @@
     desc?: string;
   };
 
-  interface BaseProps extends SVGAttributes<SVGElement> {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  interface BaseProps extends SVGAttributes<SVGElement>{
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
     color?: string | undefined | null;
-    strokeWidth?: string | undefined | null;
-    class?: string | undefined | null;
+strokeWidth?: string | undefined | null;
+    class?:  string | undefined | null;
   }
 
   interface CtxType extends BaseProps {}
-  interface Props extends BaseProps {
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -36,16 +36,16 @@
     xl: 'w-8 h-8'
   };
 
-  let {
-    size = ctx.size || 'md',
-    color = ctx.color || 'currentColor',
-    title,
-    strokeWidth = ctx.strokeWidth || '2',
-    desc,
-    class: className,
-    ariaLabel = 'address book outline',
-    ...restProps
-  }: Props = $props();
+  let { 
+    size = ctx.size || 'md', 
+    color = ctx.color || 'currentColor', 
+    title, 
+strokeWidth= ctx.strokeWidth || "2",
+    desc,  
+    class: className, 
+    ariaLabel = "fire outline" , 
+    ...restProps 
+    }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
@@ -54,9 +54,13 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
-  {color}
-  {...restProps}
-  class={twMerge('shrink-0', sizes[size], className)}
+{color}
+{...restProps}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    className
+  )}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
@@ -67,25 +71,5 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-  <path
-    stroke="currentColor"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    stroke-width={strokeWidth}
-    d="M18.122 17.645a7.185 7.185 0 0 1-2.656 2.495 7.06 7.06 0 0 1-3.52.853 6.617 6.617 0 0 1-3.306-.718 6.73 6.73 0 0 1-2.54-2.266c-2.672-4.57.287-8.846.887-9.668A4.448 4.448 0 0 0 8.07 6.31 4.49 4.49 0 0 0 7.997 4c1.284.965 6.43 3.258 5.525 10.631 1.496-1.136 2.7-3.046 2.846-6.216 1.43 1.061 3.985 5.462 1.754 9.23Z"
-  />
+     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="M18.122 17.645a7.185 7.185 0 0 1-2.656 2.495 7.06 7.06 0 0 1-3.52.853 6.617 6.617 0 0 1-3.306-.718 6.73 6.73 0 0 1-2.54-2.266c-2.672-4.57.287-8.846.887-9.668A4.448 4.448 0 0 0 8.07 6.31 4.49 4.49 0 0 0 7.997 4c1.284.965 6.43 3.258 5.525 10.631 1.496-1.136 2.7-3.046 2.846-6.216 1.43 1.061 3.985 5.462 1.754 9.23Z"/>  
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || 'md'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop strokeWidth = ctx.strokeWidth || '2'
-@prop desc
-@prop class: className
-@prop ariaLabel = 'address book outline'
-@prop ...restProps
--->

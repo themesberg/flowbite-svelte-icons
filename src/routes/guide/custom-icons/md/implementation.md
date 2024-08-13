@@ -1,5 +1,5 @@
 <script>
-  import MyIcon from '$lib/MyIcon.svelte';
+  import MyIcon from 'path/to/MyIcon.svelte';
   import { AngleLeftOutline } from 'flowbite-svelte-icons';
 </script>
 

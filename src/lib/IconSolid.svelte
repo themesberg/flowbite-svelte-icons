@@ -3,7 +3,7 @@
   import type { SVGAttributes } from 'svelte/elements';
 
   interface Props extends SVGAttributes<SVGElement> {
-    icon: Component;
+    Icon: Component;
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
     color?: string;
@@ -12,10 +12,10 @@
     class?: string;
   }
   let {
-    icon,
+    Icon,
     size,
     role,
-    color,
+    color = 'currentColor',
     ariaLabel,
     strokeWidth,
     class: classname,
@@ -23,10 +23,8 @@
   }: Props = $props();
 </script>
 
-<svelte:component
-  this={icon}
-  fill="none"
-  {color}
+<Icon
+  fill={color}
   {...restProps}
   {role}
   {size}
@@ -34,17 +32,3 @@
   class={classname}
   {ariaLabel}
 />
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@prop icon
-@prop size
-@prop role
-@prop color
-@prop ariaLabel
-@prop strokeWidth
-@prop class: classname
-@prop ...restProps
--->

@@ -12,18 +12,18 @@
     desc?: string;
   };
 
-  interface BaseProps extends SVGAttributes<SVGElement> {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  interface BaseProps extends SVGAttributes<SVGElement>{
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
     color?: string | undefined | null;
-    class?: string | undefined | null;
+    class?:  string | undefined | null;
   }
 
   interface CtxType extends BaseProps {}
-  interface Props extends BaseProps {
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -35,15 +35,15 @@
     xl: 'w-8 h-8'
   };
 
-  let {
-    size = ctx.size || 'md',
-    color = ctx.color || 'currentColor',
-    title,
-    desc,
-    class: className,
-    ariaLabel = 'address book outline',
-    ...restProps
-  }: Props = $props();
+  let { 
+    size = ctx.size || 'md', 
+    color = ctx.color || 'currentColor', 
+    title, 
+    desc,  
+    class: className, 
+    ariaLabel = "mail box solid" , 
+    ...restProps 
+    }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
@@ -52,8 +52,12 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill={color}
-  {...restProps}
-  class={twMerge('shrink-0', sizes[size], className)}
+{...restProps}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    className
+  )}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
@@ -64,20 +68,5 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-  <path
-    d="M17 6h-2V5h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2h-.541A5.965 5.965 0 0 1 14 10v4a1 1 0 1 1-2 0v-4c0-2.206-1.794-4-4-4-.075 0-.148.012-.22.028C7.686 6.022 7.596 6 7.5 6A4.505 4.505 0 0 0 3 10.5V16a1 1 0 0 0 1 1h7v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3h5a1 1 0 0 0 1-1v-6c0-2.206-1.794-4-4-4Zm-9 8.5H7a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2Z"
-  />
+     <path d="M17 6h-2V5h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2h-.541A5.965 5.965 0 0 1 14 10v4a1 1 0 1 1-2 0v-4c0-2.206-1.794-4-4-4-.075 0-.148.012-.22.028C7.686 6.022 7.596 6 7.5 6A4.505 4.505 0 0 0 3 10.5V16a1 1 0 0 0 1 1h7v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3h5a1 1 0 0 0 1-1v-6c0-2.206-1.794-4-4-4Zm-9 8.5H7a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2Z"/>  
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || 'md'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop desc
-@prop class: className
-@prop ariaLabel = 'address book outline'
-@prop ...restProps
--->

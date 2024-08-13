@@ -8,20 +8,20 @@ test.beforeEach(async ({ page }) => {
   await page.goto('/solid-icons');
 });
 
-test('Solid Icons page  has expected h1, meta title', async ({ page }) => {
+test('Solid Icons page has expected h1, meta title', async ({ page }) => {
   await expect(page.getByRole('heading', { name: title })).toBeVisible();
 });
 
-test('Solid Icons page  has expected meta title', async ({ page }) => {
+test('Solid Icons page has expected meta title', async ({ page }) => {
   await expect(page).toHaveTitle(title);
 });
 
-test('Solid Icons page  has expected meta description', async ({ page }) => {
+test('Solid Icons page has expected meta description', async ({ page }) => {
   const metaDescription = page.locator('meta[name="description"]');
   await expect(metaDescription).toHaveAttribute('content', description);
 });
 
-test('Solid Icons page  has expected meta og', async ({ page, baseURL }) => {
+test('Solid Icons page has expected meta og', async ({ page, baseURL }) => {
   const metaOgTitle = page.locator('meta[property="og:title"]');
   await expect(metaOgTitle).toHaveAttribute('content', title);
   const metaOgDescription = page.locator('meta[property="og:description"]');
@@ -33,7 +33,7 @@ test('Solid Icons page  has expected meta og', async ({ page, baseURL }) => {
   await expect(metaOgImage).toHaveAttribute('content', imgUrl);
 });
 
-test('Solid Icons page  has expected meta twitter', async ({ page }) => {
+test('Solid Icons page has expected meta twitter', async ({ page }) => {
   const metaTwitterTitle = page.locator('meta[name="twitter:title"]');
   await expect(metaTwitterTitle).toHaveAttribute('content', title);
   const metaTwitterDescription = page.locator('meta[name="twitter:description"]');

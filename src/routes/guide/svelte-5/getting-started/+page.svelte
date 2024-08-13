@@ -81,16 +81,15 @@
 
 <H2>Passing down other attributes</H2>
 
-<p>Since all icons have <Code>...$$restProps</Code>, you can pass other attibutes as well.</p>
+<p>Since all icons have <Code>...restProps</Code>, you can pass other attibutes as well.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} />
-
-<H2>Using svelte:component</H2>
-
-<HighlightCompo codeLang="ts" code={modules['./md/using-svelte-component.md'] as string} />
 
 <H2>Import all</H2>
 
 <p>Use <Code>import * as Icon from 'flowbite-svelte-icons</Code>.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/import-all.md'] as string} />
+
+<H2>IconSolid and IconOutline</H2>
+<p>You can use <Code>IconSolid</Code> and <Code>IconOutline</Code> to create a custom icon.</p>

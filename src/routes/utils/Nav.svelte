@@ -100,7 +100,7 @@
 {#snippet navLi(lis: NonNullable<Props['lis']>)}
   {#each lis as { name, href, icon }}
     {#if icon}
-      <svelte:component this={icon} class="mb-3 h-8 w-8 {random_tailwind_color()}" />
+      <icon class="mb-3 h-8 w-8 {random_tailwind_color()}"></icon>
     {/if}
     <NavLi {href}>{name}</NavLi>
   {/each}
