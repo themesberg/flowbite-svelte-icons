@@ -49,7 +49,7 @@
   };
 </script>
 
-<div class="relative mx-auto h-full max-w-7xl overflow-y-auto px-8 pb-20">
+<div class="relative mx-auto h-full max-w-7xl overflow-y-auto px-8 pb-20 mt-8">
   <SupportBanner>
     To Keep It Going, Please Show Your Love.<a href="https://ko-fi.com/Z8Z2CHALG" target="_blank"
       ><img

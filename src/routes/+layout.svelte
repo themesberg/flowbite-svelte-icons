@@ -1,36 +1,17 @@
-<script context="module" lang="ts">
-  export const extra: ListType[] = [
-    {
-      name: 'Solid Icons',
-      icon: RocketOutline as Component,
-      href: '/solid-icons'
-    },
-    {
-      name: 'Outline Icons',
-      icon: PaletteOutline as Component,
-      href: '/outline-icons'
-    }
-  ];
-  export const newSidebarList: ListType[] = [...sidebarList, ...extra];
-</script>
-
 <script lang="ts">
   import '../app.pcss';
   import { page } from '$app/stores';
-  import type { Component } from 'svelte';
-  import type { ListType } from 'runes-webkit';
   import {
     Footer,
     OnThisPage,
     extract,
     Sidebar,
-    removeHyphensAndCapitalize,
-    sidebarList
+    removeHyphensAndCapitalize
   } from 'runes-webkit';
+  import { newSidebarList } from './utils/helpers';
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
   import { Runatics } from 'runatics';
-  import { RocketOutline, PaletteOutline } from '$lib';
 
   let { children, data } = $props();
   const analyticsId = data.ANALYTICS_ID_ICONS;
