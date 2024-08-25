@@ -5,7 +5,7 @@
     color: '#FF5733'
   };
   import { IconSolid } from 'flowbite-svelte-icons';
-  export let icon: Component;
+  export let Icon: Component;
 </script>
 
 <IconSolid {...config} {icon} />
