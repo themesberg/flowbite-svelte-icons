@@ -7,6 +7,6 @@
   let { children }: Props = $props();
 </script>
 
-<DocPage>
+<DocPage mainClass='lg:pl-64'>
   {@render children()}
 </DocPage>
