@@ -51,7 +51,7 @@
   let navStatus = $state(false);
   let toggleNav = nav.toggle;
   let closeNav = nav.close;
-  let headerCls = 'sticky top-0 z-40 mx-auto w-full flex-none border-b border-gray-200 bg-gray-100 dark:border-gray-600 dark:bg-sky-950';
+  let headerCls = 'sticky top-0 z-40 mx-auto w-full flex-none border-b border-gray-200 bg-gray-100 dark:border-gray-600 dark_bg_theme';
   let navClass = 'w-full divide-gray-200 border-gray-200 bg-gray-50 dark_bg_theme text-gray-500 dark:divide-gray-700 dark:border-gray-700 dark:transparent dark:text-gray-400 sm:px-4';
   let divClass = 'ml-auto w-full';
   let ulclass = 'dark:lg:bg-transparent lg:space-x-4';
@@ -69,8 +69,7 @@
     duration: 200,
     easing: sineIn
   };
-  // sidebar
-  let iconClass = 'fixed inset-0 z-30 flex-none h-full lg:static lg:h-auto lg:overflow-y-visible bg-white dark_bg_theme lg:pt-0 lg:block'
+  
   $effect(() => {
     navStatus = nav.isOpen;
     dropdownStatus = dropdown.isOpen;
@@ -173,11 +172,11 @@
 
 <div class="lg:flex">
   {#if urlsToIncludeSwitcherAndSidebar.some((path) => currentUrl.startsWith(path))}
-    <Sidebar {isOpen} {closeSidebar} breakpoint="lg" activeClass="flex items-center p-1 text-base font-normal text-white dark:hover:text-white hover:text-gray-900 bg-primary-700 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" nonActiveClass="p-1 hover:bg-gray-200" divClass="dark:bg-gray-900 bg-gray-50" class="lg:top-[70px] h-screen dark:bg-gray-900">
+    <Sidebar {isOpen} {closeSidebar} breakpoint="lg" activeClass="flex items-center p-1 text-base font-normal text-white dark:hover:text-white hover:text-gray-900 bg-primary-700 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" nonActiveClass="p-1 hover:bg-gray-200" divClass="dark_bg_theme bg-gray-50" class="lg:top-[70px] h-screen dark_bg_theme border-r dark:border-gray-700 border-gray-50">
       <CloseButton onclick={closeSidebar} color="gray" class="absolute right-1 top-3 p-2 lg:hidden" />
       <SidebarGroup>
         <SidebarBrand>
-          <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Runes Webkit</span>
+          <span class="self-center whitespace-nowrap text-lg font-semibold dark:text-white">Flowbite Svelte Icons</span>
         </SidebarBrand>
         {#each newSidebarList as { name, Icon, children, href }}
           {#if children}
