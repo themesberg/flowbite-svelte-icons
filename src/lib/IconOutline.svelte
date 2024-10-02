@@ -10,18 +10,18 @@
     ariaLabel?: string;
     class?: string;
   }
-  let { Icon, size, role, color = 'currentColor', ariaLabel, class: classname, ...restProps }: Props = $props();
+  let {
+    Icon,
+    size,
+    role,
+    color = 'currentColor',
+    ariaLabel,
+    class: classname,
+    ...restProps
+  }: Props = $props();
 </script>
 
-<Icon
-  fill="none"
-  {color}
-  {...restProps}
-  {role}
-  {size}
-  class={classname}
-  {ariaLabel}
-/>
+<Icon fill="none" {color} {...restProps} {role} {size} class={classname} {ariaLabel} />
 
 <!--
 @component

@@ -1,9 +1,5 @@
 <script lang="ts">
-  import {
-    HighlightCompo,
-    Code,
-    H2
-  } from 'runes-webkit';
+  import { HighlightCompo, Code, H2 } from 'runes-webkit';
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
     import: 'default',
@@ -14,22 +10,37 @@
 <h1>Getting Started - Flowbite Svelte Icons v2</h1>
 
 <div class="my-8 flex gap-2">
-  <a href="https://github.com/sponsors/shinokada" target="_blank" aria-label="Sponsor @shinokada on GitHub"
+  <a
+    href="https://github.com/sponsors/shinokada"
+    target="_blank"
+    aria-label="Sponsor @shinokada on GitHub"
     ><img
       src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86"
       alt="sponsor"
     /></a
   >
-  <a href="https://www.npmjs.com/package/flowbite-svelte-icons" rel="nofollow" target="_blank" aria-label="flowbite-svelte-icons on npm"
+  <a
+    href="https://www.npmjs.com/package/flowbite-svelte-icons"
+    rel="nofollow"
+    target="_blank"
+    aria-label="flowbite-svelte-icons on npm"
     ><img src="https://img.shields.io/npm/v/flowbite-svelte-icons/next" alt="npm" /></a
   >
-  <a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank" aria-label="MIT License"
+  <a
+    href="https://opensource.org/licenses/MIT"
+    rel="nofollow"
+    target="_blank"
+    aria-label="MIT License"
     ><img
       src="https://img.shields.io/github/license/shinokada/flowbite-svelte-icons"
       alt="License"
     /></a
   >
-  <a href="https://www.npmjs.com/package/flowbite-svelte-icons" rel="nofollow" target="_blank" aria-label="flowbite-svelte-icons on npm"
+  <a
+    href="https://www.npmjs.com/package/flowbite-svelte-icons"
+    rel="nofollow"
+    target="_blank"
+    aria-label="flowbite-svelte-icons on npm"
     ><img src="https://img.shields.io/npm/dw/flowbite-svelte-icons.svg" alt="npm" /></a
   >
 </div>

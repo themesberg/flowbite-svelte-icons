@@ -23,15 +23,7 @@
   }: Props = $props();
 </script>
 
-<Icon
-  fill={color}
-  {...restProps}
-  {role}
-  {size}
-  {strokeWidth}
-  class={classname}
-  {ariaLabel}
-/>
+<Icon fill={color} {...restProps} {role} {size} {strokeWidth} class={classname} {ariaLabel} />
 
 <!--
 @component

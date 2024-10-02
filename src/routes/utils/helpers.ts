@@ -21,4 +21,3 @@ export const extra: ListType[] = [
   }
 ];
 export const newSidebarList: ListType[] = [...sidebarList, ...extra];
-
