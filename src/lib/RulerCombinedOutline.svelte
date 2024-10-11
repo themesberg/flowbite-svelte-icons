@@ -19,7 +19,6 @@
     class?: string | undefined | null;
   }
 
-  interface CtxType extends BaseProps {}
   interface Props extends BaseProps {
     title?: TitleType;
     desc?: DescType;
@@ -27,7 +26,7 @@
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   }
 
-  const ctx: CtxType = getContext('iconCtx') ?? {};
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
   const sizes = {
     xs: 'w-3 h-3',
     sm: 'w-4 h-4',
@@ -75,17 +74,3 @@
     d="M9 7H7m2 3H7m2 3H7m4 2v2m3-2v2m3-2v2M4 5v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-9a1 1 0 0 1-1-1V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1Z"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || 'md'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop strokeWidth = ctx.strokeWidth || '2'
-@prop desc
-@prop class: className
-@prop ariaLabel = 'ruler combined outline'
-@prop ...restProps
--->

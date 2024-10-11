@@ -19,7 +19,6 @@
     class?: string | undefined | null;
   }
 
-  interface CtxType extends BaseProps {}
   interface Props extends BaseProps {
     title?: TitleType;
     desc?: DescType;
@@ -27,7 +26,7 @@
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   }
 
-  const ctx: CtxType = getContext('iconCtx') ?? {};
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
   const sizes = {
     xs: 'w-3 h-3',
     sm: 'w-4 h-4',
@@ -75,17 +74,3 @@
     d="m11.5 11.5 2.071 1.994M4 10h5m11 0h-1.5M12 7V4M7 7V4m10 3V4m-7 13H8v-2l5.227-5.292a1.46 1.46 0 0 1 2.065 2.065L10 17Zm-5 3h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || 'md'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop strokeWidth = ctx.strokeWidth || '2'
-@prop desc
-@prop class: className
-@prop ariaLabel = 'calendar edit outline'
-@prop ...restProps
--->

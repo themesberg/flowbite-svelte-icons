@@ -36,6 +36,7 @@
   };
 
   const newInfo = [originalSource, license, ...info];
+  /*eslint no-undef: "off"*/
   const pkg = {
     pkgName: __NAME__,
     pkgVersion: __VERSION__,

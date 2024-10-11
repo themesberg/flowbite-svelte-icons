@@ -1,5 +1,4 @@
 import type { MetaProps } from 'runes-meta-tags';
-import { metaTitle, metaDescription, metaImg } from 'runes-meta-tags';
 
 const title = 'Solid Icons - Flowbite Svelte Icons';
 const description = 'Easily Find & Copy SVG Icon name for Your Project';

@@ -1,5 +1,4 @@
 <script lang="ts">
-  import type { Component } from 'svelte';
   import { IconPage, filterIconsByKeyword, excludeItemsByKeywords } from 'runes-webkit';
   import * as icons from '$lib';
 
@@ -9,11 +8,11 @@
 </script>
 
 <IconPage
-  icons={finalIcons as Component}
+  icons={finalIcons}
   sizeByTailwind
   title="Solid Icons - Flowbite Svelte Icons"
   defaultSize="6"
   maxSize="10"
   minSize="4"
-  div1Class="md:grid-cols-2 lg:grid-cols-3"
+  tab1Class="sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
 />

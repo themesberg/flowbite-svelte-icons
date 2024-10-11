@@ -1,13 +1,5 @@
 <script lang="ts">
-  import {
-    HighlightCompo,
-    CodeWrapper,
-    Code,
-    H2,
-    H3,
-    removeHyphensAndCapitalize
-  } from 'runes-webkit';
-  import { AddressBookOutline } from '$lib';
+  import { HighlightCompo, Code, H2 } from 'runes-webkit';
 
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
