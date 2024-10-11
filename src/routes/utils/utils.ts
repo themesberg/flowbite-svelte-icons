@@ -1,4 +1,6 @@
-export function removeHyphensAndCapitalize(str) {
+import type { ComponentType } from 'svelte';
+
+export function removeHyphensAndCapitalize(str: string) {
   // Handle empty string or strings without '-'
   if (!str || !str.includes('-')) {
     return str;
@@ -12,20 +14,24 @@ export function removeHyphensAndCapitalize(str) {
 }
 
 // Function to filter items that have keyword in their keys
-export function filterIconsByKeyword(icons, keyword) {
-  const filteredIcons = {};
+export function filterIconsByKeyword(icons: { [key: string]: any }, keyword: string) {
+  const filteredIcons: { [key: string]: any } = {};
   for (const key in icons) {
-    if (key.includes(keyword) && !key.includes('IconOutline') && !key.includes('IconSolid')) {
+    if (key.includes(keyword)) {
       filteredIcons[key] = icons[key];
     }
   }
   return filteredIcons;
 }
 
-export function excludeItemsByKeywords(items, keywords) {
-  const filteredItems = {};
+export function excludeItemsByKeywords(
+  items: Record<string, ComponentType>,
+  keywords: string
+): Record<string, ComponentType> {
+  const filteredItems: Record<string, ComponentType> = {};
   for (const key in items) {
-    if (keywords.every((keyword) => !key.includes(keyword))) {
+    const doesNotContainKeyword = keywords.split(' ').every((keyword) => !key.includes(keyword));
+    if (doesNotContainKeyword) {
       filteredItems[key] = items[key];
     }
   }
