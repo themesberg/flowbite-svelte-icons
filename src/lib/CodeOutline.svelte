@@ -74,3 +74,17 @@
     d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'code outline'
+@prop ...restProps
+-->

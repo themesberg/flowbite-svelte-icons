@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0-next.17
+
+### Patch Changes
+
+- feat: add new icons ([`9066686badefbdeafc5b3864f9c0819437514871`](https://github.com/themesberg/flowbite-svelte-icons/commit/9066686badefbdeafc5b3864f9c0819437514871))
+
 ## 2.0.0-next.16
 
 ### Patch Changes

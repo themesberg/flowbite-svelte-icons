@@ -74,3 +74,17 @@
     d="M3 9h13a5 5 0 0 1 0 10H7M3 9l4-4M3 9l4 4"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'undo outline'
+@prop ...restProps
+-->

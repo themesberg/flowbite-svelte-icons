@@ -79,3 +79,17 @@
     d="M7 7h.01v.01H7V7Zm10 10h.01v.01H17V17Z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'qr code outline'
+@prop ...restProps
+-->
