@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Button, Dropdown, DropdownItem, DropdownDivider } from 'flowbite-svelte';
+  import { Dropdown, DropdownItem, DropdownDivider } from 'flowbite-svelte';
   import { ChevronDownOutline } from '$lib';
   interface LinkType {
     name: string;
@@ -14,7 +14,7 @@
   export let headingSelector: string;
 
   let headings: LinkType[] = [];
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars,  @typescript-eslint/no-explicit-any
   function init(_: any) {
     const observer: MutationObserver = new MutationObserver(toc);
     observer.observe(document.body, { childList: true, subtree: true });

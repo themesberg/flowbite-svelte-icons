@@ -14,13 +14,7 @@
     AngleUpOutline,
     ClipboardListSolid,
     CogOutline,
-    FileChartBarSolid,
-    GithubSolid,
-    LayersSolid,
-    LifeSaverSolid,
     LockSolid,
-    WandMagicSparklesSolid,
-    ChartPieSolid,
     RectangleListSolid,
     TableColumnSolid
   } from '$lib';

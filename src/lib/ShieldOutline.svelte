@@ -21,7 +21,6 @@
     onkeyup?: (event: KeyboardEvent) => void;
   }
 
-  interface CtxType extends BaseProps {}
   interface Props extends BaseProps {
     title?: TitleType;
     desc?: DescType;
@@ -29,7 +28,7 @@
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   }
 
-  const ctx: CtxType = getContext('iconCtx') ?? {};
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
   const sizes = {
     xs: 'w-3 h-3',
     sm: 'w-4 h-4',
@@ -119,17 +118,3 @@
     />
   </svg>
 {/if}
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@prop export let size: Props['size'] = ctx.size || 'md';
-@prop export let role: Props['role'] = ctx.role || 'img';
-@prop export let color: Props['color'] = ctx.color || 'currentColor';
-@prop export let withEvents: Props['withEvents'] = ctx.withEvents || false;
-@prop export let title: TitleType = {};
-@prop export let strokeWidth: Props['strokeWidth'] = ctx.strokeWidth || '2';
-@prop export let desc: DescType = {};
-@prop export let ariaLabel = 'shield outline';
--->

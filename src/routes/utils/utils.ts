@@ -14,7 +14,9 @@ export function removeHyphensAndCapitalize(str: string) {
 }
 
 // Function to filter items that have keyword in their keys
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function filterIconsByKeyword(icons: { [key: string]: any }, keyword: string) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const filteredIcons: { [key: string]: any } = {};
   for (const key in icons) {
     if (key.includes(keyword)) {
@@ -47,6 +49,6 @@ export const random_tailwind_color = () => {
 };
 
 export const random_hex_color_code = () => {
-  let n = (Math.random() * 0xfffff * 1000000).toString(16);
+  const n = (Math.random() * 0xfffff * 1000000).toString(16);
   return '#' + n.slice(0, 6);
 };

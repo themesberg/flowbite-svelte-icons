@@ -17,7 +17,7 @@
   const contentClass = ' rounded-lg dark:bg-neutral-900 mt-4';
   let searchTerm = '';
 
-  $: filteredEntries = Object.entries(keyIcons).filter(([name, component]) => {
+  $: filteredEntries = Object.entries(keyIcons).filter(([name]) => {
     return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
   });
   $: size = 6;

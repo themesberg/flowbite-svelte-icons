@@ -1,6 +1,5 @@
 <script>
   import {
-    DarkMode,
     Dropdown,
     DropdownItem,
     NavBrand,
@@ -10,7 +9,7 @@
     Navbar
   } from 'flowbite-svelte';
   import { page } from '$app/stores';
-  import { ChevronDownOutline, XSolid, DotsHorizontalOutline, GithubSolid } from '$lib';
+  import { ChevronDownOutline } from '$lib';
 
   export let fluid = true;
   export let drawerHidden = false;
@@ -23,7 +22,7 @@
 </script>
 
 <div class="relative px-8">
-  <Navbar {fluid} color="default" let:toggle>
+  <Navbar {fluid} color="default">
     {#if currentUrl !== '/'}
       <NavHamburger
         onClick={() => (drawerHidden = !drawerHidden)}
