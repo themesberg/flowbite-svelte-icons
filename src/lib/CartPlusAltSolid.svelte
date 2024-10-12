@@ -106,3 +106,16 @@
     /> <path d="M18 4a1 1 0 1 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 1 0 2 0V8h2a1 1 0 1 0 0-2h-2V4Z" />
   </svg>
 {/if}
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop export let size: Props['size'] = ctx.size || 'md';
+@prop export let role: Props['role'] = ctx.role || 'img';
+@prop export let color: Props['color'] = ctx.color || 'currentColor';
+@prop export let withEvents: Props['withEvents'] = ctx.withEvents || false;
+@prop export let title: TitleType = {};
+@prop export let desc: DescType = {};
+@prop export let ariaLabel = 'cart plus alt solid';
+-->

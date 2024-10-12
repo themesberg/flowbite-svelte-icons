@@ -102,3 +102,16 @@
     <path d="M7 5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7Z" />
   </svg>
 {/if}
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop export let size: Props['size'] = ctx.size || 'md';
+@prop export let role: Props['role'] = ctx.role || 'img';
+@prop export let color: Props['color'] = ctx.color || 'currentColor';
+@prop export let withEvents: Props['withEvents'] = ctx.withEvents || false;
+@prop export let title: TitleType = {};
+@prop export let desc: DescType = {};
+@prop export let ariaLabel = 'stop solid';
+-->

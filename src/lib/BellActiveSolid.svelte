@@ -116,3 +116,16 @@
     /> <path d="M8.95 19.7c.7.8 1.7 1.3 2.8 1.3 1.6 0 2.9-1.1 3.3-2.5l-6.1 1.2Z" />
   </svg>
 {/if}
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop export let size: Props['size'] = ctx.size || 'md';
+@prop export let role: Props['role'] = ctx.role || 'img';
+@prop export let color: Props['color'] = ctx.color || 'currentColor';
+@prop export let withEvents: Props['withEvents'] = ctx.withEvents || false;
+@prop export let title: TitleType = {};
+@prop export let desc: DescType = {};
+@prop export let ariaLabel = 'bell active solid';
+-->

@@ -110,3 +110,16 @@
     /> <path fill-rule="evenodd" d="M14 17h-4v-2h4v2Z" clip-rule="evenodd" />
   </svg>
 {/if}
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop export let size: Props['size'] = ctx.size || 'md';
+@prop export let role: Props['role'] = ctx.role || 'img';
+@prop export let color: Props['color'] = ctx.color || 'currentColor';
+@prop export let withEvents: Props['withEvents'] = ctx.withEvents || false;
+@prop export let title: TitleType = {};
+@prop export let desc: DescType = {};
+@prop export let ariaLabel = 'floppy disk alt solid';
+-->

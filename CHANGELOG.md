@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.6.2
+
+### Patch Changes
+
+- feat: new icons ([`8f7645ab8d54e6b2c20b91f4ce15c8443562881a`](https://github.com/themesberg/flowbite-svelte-icons/commit/8f7645ab8d54e6b2c20b91f4ce15c8443562881a))
+
 ## 1.6.1
 
 ### Patch Changes

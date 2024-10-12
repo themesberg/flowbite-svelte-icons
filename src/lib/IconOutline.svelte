@@ -7,3 +7,13 @@
 </script>
 
 <svelte:component this={icon} {...$$restProps} {role} {size} class={$$props.class} {ariaLabel} />
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop export let icon: ComponentType;
+@prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
+@prop export let role: string = 'img';
+@prop export let ariaLabel = 'Icon';
+-->
