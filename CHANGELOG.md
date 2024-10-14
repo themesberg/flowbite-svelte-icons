@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0-next.18
+
+### Patch Changes
+
+- types: move all type to types.ts ([`d99454dee43f6b78d79459ca49cf1f76d81d5866`](https://github.com/themesberg/flowbite-svelte-icons/commit/d99454dee43f6b78d79459ca49cf1f76d81d5866))
+
 ## 2.0.0-next.17
 
 ### Patch Changes
