@@ -1,32 +1,9 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { OutlineBaseProps, OutlineProps } from './types';
 
-  type TitleType = {
-    id?: string;
-    title?: string;
-  };
-  type DescType = {
-    id?: string;
-    desc?: string;
-  };
-
-  interface BaseProps extends SVGAttributes<SVGElement> {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-    color?: string | undefined | null;
-    strokeWidth?: string | undefined | null;
-    class?: string | undefined | null;
-  }
-
-  interface Props extends BaseProps {
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string;
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-  }
-
-  const ctx: BaseProps = getContext('iconCtx') ?? {};
+  const ctx: OutlineBaseProps = getContext('iconCtx') ?? {};
   const sizes = {
     xs: 'w-3 h-3',
     sm: 'w-4 h-4',
@@ -44,7 +21,7 @@
     class: className,
     ariaLabel = 'moon outline',
     ...restProps
-  }: Props = $props();
+  }: OutlineProps = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));

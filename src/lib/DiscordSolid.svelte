@@ -1,29 +1,7 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
-  import type { SVGAttributes } from 'svelte/elements';
-
-  type TitleType = {
-    id?: string;
-    title?: string;
-  };
-  type DescType = {
-    id?: string;
-    desc?: string;
-  };
-
-  interface BaseProps extends SVGAttributes<SVGElement> {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-    color?: string | undefined | null;
-    class?: string | undefined | null;
-  }
-
-  interface Props extends BaseProps {
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string;
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-  }
+  import type { BaseProps, Props } from './types';
 
   const ctx: BaseProps = getContext('iconCtx') ?? {};
   const sizes = {
