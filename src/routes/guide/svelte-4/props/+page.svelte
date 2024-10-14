@@ -67,7 +67,7 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/dark-mode.md'] as string} />
 
-<H2>Accessibility</H2>
+<H2>A11y</H2>
 
 <p>
   All icons have aria-label. For example <Code>BxAbacus</Code> has <Code
