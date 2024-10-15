@@ -209,7 +209,7 @@
       activeClass="flex items-center p-1 text-base font-normal text-white dark:hover:text-white hover:text-gray-900 bg-primary-700 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
       nonActiveClass="p-1 hover:bg-gray-200"
       divClass="dark_bg_theme bg-gray-50"
-      class="dark_bg_theme h-screen border-r border-gray-50 lg:top-[70px] dark:border-gray-700"
+      class="dark_bg_theme h-screen border-r border-gray-50 lg:top-[58px] dark:border-gray-700"
     >
       <CloseButton
         onclick={closeSidebar}
