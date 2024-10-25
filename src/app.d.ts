@@ -7,6 +7,8 @@ declare global {
     // interface PageData {}
     // interface Platform {}
   }
+
+  declare const __NAME__: string;
 }
 
 export {};

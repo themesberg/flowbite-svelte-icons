@@ -1,0 +1,11 @@
+- size?: "xs" | "sm" | "md" | "lg" | "xl" = ctx.size || 'md';
+- role?: string; = ctx.role || 'img';
+- ariaLabel?: string =  "<icon file name>"
+- color?: string = ctx.color || 'currentColor';
+- withEvents?: boolean = ctx.withEvents || false;
+- title?: TitleType;
+- desc?: DescType;
+- onclick?: (event: MouseEvent) => void;
+- onkeydown?: (event: KeyboardEvent) => void;
+- onkeyup?: (event: KeyboardEvent) => void;
+- ...restProps

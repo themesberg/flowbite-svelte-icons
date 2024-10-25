@@ -25,22 +25,22 @@
 }
 
 #mainContent > h2 {
-  @apply pt-8 mb-4 text-2xl font-bold text-gray-900 dark:text-white;
+  @apply mb-4 pt-8 text-2xl font-bold text-gray-900 dark:text-white;
 }
 
 #mainContent > h3,
 #mainContent > h4 {
-  @apply pt-8 mb-4 text-xl font-bold text-gray-900 dark:text-white;
+  @apply mb-4 pt-8 text-xl font-bold text-gray-900 dark:text-white;
 }
 
 #mainContent > p {
-  @apply mb-4 text-base font-normal /*text-gray-600 dark:text-gray-400*/;
+  @apply /*text-gray-600 dark:text-gray-400*/ mb-4 text-base font-normal;
 }
 
 #mainContent > p > a,
 #mainContent > ul > li > a,
 #mainContent > ol > li > a {
-  @apply font-medium text-gray-900 underline dark:text-white decoration-1 underline-offset-2 decoration-primary-700 dark:decoration-primary-700;
+  @apply font-medium text-gray-900 underline decoration-primary-700 decoration-1 underline-offset-2 dark:text-white dark:decoration-primary-700;
 }
 
 #mainContent > p > a:hover,
@@ -117,7 +117,7 @@ pre[class*='language-'] {
 /* without preview */
 .highlight pre[class*='language-'] {
   overflow: auto;
-  @apply p-6 pt-6 m-0 mt-4 mb-8 text-sm bg-gray-50 rounded-xl dark:bg-gray-800;
+  @apply m-0 mb-8 mt-4 rounded-xl bg-gray-50 p-6 pt-6 text-sm dark:bg-gray-800;
 }
 
 /* when after preview */
@@ -144,7 +144,7 @@ pre[class*='language-'] {
   > [data-code-wrapper]
   > .highlight
   > pre[class*='language-'] {
-  @apply p-4 m-0 bg-gray-50 dark:bg-gray-800;
+  @apply m-0 bg-gray-50 p-4 dark:bg-gray-800;
 }
 
 :not(pre) > code[class*='language-'],
@@ -212,7 +212,7 @@ pre[class*='language-'] {
 }
 
 .token.operator {
-  @apply text-gray-500 dark:text-gray-400 dark:bg-gray-800;
+  @apply text-gray-500 dark:bg-gray-800 dark:text-gray-400;
 }
 
 .token.entity {
@@ -405,7 +405,7 @@ pre.language-svelte .token.comment {
 /* Search */
 
 .DocSearch-Button {
-  @apply hidden p-2 m-0 w-52 h-auto !bg-gray-50 rounded-lg border border-gray-300 border-solid shadow-none xl:flex hover:!bg-gray-100 xl:w-64 hover:shadow-none focus:shadow-none dark:!bg-gray-700 dark:hover:!bg-gray-600 dark:!border-gray-600;
+  @apply m-0 hidden h-auto w-52 rounded-lg border border-solid border-gray-300 !bg-gray-50 p-2 shadow-none hover:!bg-gray-100 hover:shadow-none focus:shadow-none xl:flex xl:w-64 dark:!border-gray-600 dark:!bg-gray-700 dark:hover:!bg-gray-600;
 }
 
 .DocSearch-Button-Placeholder {
@@ -413,15 +413,15 @@ pre.language-svelte .token.comment {
 }
 
 .DocSearch-Search-Icon {
-  @apply w-3 h-3 text-gray-500 md:mr-1 dark:text-gray-400;
+  @apply h-3 w-3 text-gray-500 md:mr-1 dark:text-gray-400;
 }
 
 .DocSearch-Button-Keys {
-  @apply items-center min-w-0;
+  @apply min-w-0 items-center;
 }
 
 .DocSearch-Button-Key {
-  @apply pt-1 pb-0 m-0 w-auto text-xs font-normal text-gray-500 bg-none shadow-none dark:text-gray-400;
+  @apply m-0 w-auto bg-none pb-0 pt-1 text-xs font-normal text-gray-500 shadow-none dark:text-gray-400;
 }
 
 .DocSearch-Button .DocSearch-Search-Icon {
@@ -433,7 +433,7 @@ pre.language-svelte .token.comment {
 }
 
 .DocSearch-Hits mark {
-  @apply text-primary-600 dark:text-white decoration-2 underline-offset-2 decoration-primary-600 dark:decoration-white;
+  @apply text-primary-600 decoration-primary-600 decoration-2 underline-offset-2 dark:text-white dark:decoration-white;
 }
 
 .DocSearch-Hit[aria-selected='true'] a {
@@ -441,7 +441,7 @@ pre.language-svelte .token.comment {
 }
 
 .DocSearch-Hit-source {
-  @apply pb-1 text-gray-700 bg-white dark:bg-gray-700 dark:text-gray-400;
+  @apply bg-white pb-1 text-gray-700 dark:bg-gray-700 dark:text-gray-400;
 }
 
 .DocSearch-Container {
@@ -453,7 +453,7 @@ pre.language-svelte .token.comment {
 }
 
 .DocSearch-SearchBar {
-  @apply p-0 border-b border-gray-100 dark:border-gray-600;
+  @apply border-b border-gray-100 p-0 dark:border-gray-600;
 }
 
 .DocSearch-Form {
@@ -461,12 +461,12 @@ pre.language-svelte .token.comment {
 }
 
 .DocSearch-Input {
-  @apply text-sm text-gray-500 shadow-none dark:text-white focus:shadow-none dark:bg-gray-700 focus:!outline-none focus:!ring-0;
+  @apply text-sm text-gray-500 shadow-none focus:shadow-none focus:!outline-none focus:!ring-0 dark:bg-gray-700 dark:text-white;
 }
 
 .DocSearch-LoadingIndicator svg,
 .DocSearch-MagnifierLabel svg {
-  @apply w-4 h-4;
+  @apply h-4 w-4;
 }
 
 .DocSearch-Commands {
@@ -474,7 +474,7 @@ pre.language-svelte .token.comment {
 }
 
 .DocSearch-Footer {
-  @apply h-12 border-t border-gray-100 shadow-none dark:bg-gray-700 dark:border-gray-600;
+  @apply h-12 border-t border-gray-100 shadow-none dark:border-gray-600 dark:bg-gray-700;
 }
 
 .DocSearch-Dropdown {
@@ -486,7 +486,7 @@ pre.language-svelte .token.comment {
 }
 
 .DocSearch-Hit a {
-  @apply bg-gray-50 rounded-lg shadow-none dark:bg-gray-600 dark:hover:bg-primary-600;
+  @apply rounded-lg bg-gray-50 shadow-none dark:bg-gray-600 dark:hover:bg-primary-600;
 }
 
 .DocSearch-Hit[aria-selected='true'] .DocSearch-Hit-Select-Icon,
@@ -495,7 +495,7 @@ pre.language-svelte .token.comment {
 }
 
 .DocSearch-Hit .DocSearch-Hit-action:last-child {
-  @apply w-5 h-5;
+  @apply h-5 w-5;
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m11 9 3 3-3 3' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
@@ -522,15 +522,15 @@ pre.language-svelte .token.comment {
 }
 
 .DocSearch-Reset {
-  @apply dark:text-gray-300 dark:hover:text-white hover:text-black;
+  @apply hover:text-black dark:text-gray-300 dark:hover:text-white;
 }
 
 .formkit-alert.formkit-alert-success {
-  @apply p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-gray-800 dark:text-green-400 font-medium;
+  @apply mb-4 rounded-lg bg-green-100 p-4 text-sm font-medium text-green-700 dark:bg-gray-800 dark:text-green-400;
 }
 
 .formkit-alert.formkit-alert-error:not(:empty) {
-  @apply p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-gray-800 dark:text-red-400;
+  @apply mb-4 rounded-lg bg-red-100 p-4 text-sm text-red-700 dark:bg-gray-800 dark:text-red-400;
 }
 
 @media (max-width: 1400px) {

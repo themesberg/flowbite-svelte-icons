@@ -1,5 +1,6 @@
 # Changelog
 
+<<<<<<< HEAD
 ## 1.6.2
 
 ### Patch Changes
@@ -61,6 +62,130 @@ All notable changes to this project will be documented in this file. See [standa
 
 - link update ([938f51b](https://github.com/themesberg/flowbite-svelte-icons/commit/938f51b0fba05415fad2aee9633fd8566fbff340))
 - scripts update ([14ba4f0](https://github.com/themesberg/flowbite-svelte-icons/commit/14ba4f0cb81c864a513560bec5b29f1c5ac6b26d))
+=======
+## 2.0.0-next.18
+
+### Patch Changes
+
+- types: move all type to types.ts ([`d99454dee43f6b78d79459ca49cf1f76d81d5866`](https://github.com/themesberg/flowbite-svelte-icons/commit/d99454dee43f6b78d79459ca49cf1f76d81d5866))
+
+## 2.0.0-next.17
+
+### Patch Changes
+
+- feat: add new icons ([`9066686badefbdeafc5b3864f9c0819437514871`](https://github.com/themesberg/flowbite-svelte-icons/commit/9066686badefbdeafc5b3864f9c0819437514871))
+
+## 2.0.0-next.16
+
+### Patch Changes
+
+- fix: remove svelte:component from IconSolid and IconOutline ([`8e616bde74d6026be703e13f1da5868274519a46`](https://github.com/themesberg/flowbite-svelte-icons/commit/8e616bde74d6026be703e13f1da5868274519a46))
+
+- docs: update for custom icons page ([`8098c5386e3d4fec237813a9011d6f478c3f2ada`](https://github.com/themesberg/flowbite-svelte-icons/commit/8098c5386e3d4fec237813a9011d6f478c3f2ada))
+
+## 2.0.0-next.15
+
+### Patch Changes
+
+- fix: add ^5.0.0-next.1 to peerDependencies ([`4feca80710b503553635287fab0629b2ec5e72af`](https://github.com/themesberg/flowbite-svelte-icons/commit/4feca80710b503553635287fab0629b2ec5e72af))
+
+## 2.0.0-next.14
+
+### Patch Changes
+
+- fix: IconSolid and IconOutline ([`f79d47174c42a98a874b15d4cb09723c778e05b9`](https://github.com/themesberg/flowbite-svelte-icons/commit/f79d47174c42a98a874b15d4cb09723c778e05b9))
+
+## 2.0.0-next.13
+
+### Patch Changes
+
+- fix: extends Props from svelte SVGAttributes ([`3448d91dd192f8f9fb1421706d6dba018f241ed6`](https://github.com/themesberg/flowbite-svelte-icons/commit/3448d91dd192f8f9fb1421706d6dba018f241ed6))
+
+## 2.0.0-next.12
+
+### Patch Changes
+
+- fix: run lib-helpers ([`a9b36bfe012109489cecea2ef6e9faf0ed6f67e1`](https://github.com/themesberg/flowbite-svelte-icons/commit/a9b36bfe012109489cecea2ef6e9faf0ed6f67e1))
+
+- fix: extends BaseProps instead of Props ([`aafb85100e10b4c754d50f3a31ba911188ea440f`](https://github.com/themesberg/flowbite-svelte-icons/commit/aafb85100e10b4c754d50f3a31ba911188ea440f))
+
+## 2.0.0-next.11
+
+### Patch Changes
+
+- feat: extends SVGAttributes from svelte/elements ([`4b0750c1654d1e45800f232dcc108d01e6548b2e`](https://github.com/themesberg/flowbite-svelte-icons/commit/4b0750c1654d1e45800f232dcc108d01e6548b2e))
+
+- fix: update runes-webkit and svelte@next ([`cbddf360460d5c4e71df14cce622396c030d514d`](https://github.com/themesberg/flowbite-svelte-icons/commit/cbddf360460d5c4e71df14cce622396c030d514d))
+
+## 2.0.0-next.10
+
+### Patch Changes
+
+- fix: component docs ([`b69a8b6e96787fe88202a7db23827d3c81572d49`](https://github.com/themesberg/flowbite-svelte-icons/commit/b69a8b6e96787fe88202a7db23827d3c81572d49))
+
+## 2.0.0-next.9
+
+### Patch Changes
+
+- fix: change hasDescription to derived ([`047ab0f2efaacc1192b6c46d637e4ba2c828a31a`](https://github.com/themesberg/flowbite-svelte-icons/commit/047ab0f2efaacc1192b6c46d637e4ba2c828a31a))
+  fix: add test-results to .gitignore
+
+## 2.0.0-next.8
+
+### Patch Changes
+
+- chore: Enter prerelease mode and version packages ([`e68b5ebdfec94c90c9b0dddba4ac30ad8b8b7337`](https://github.com/themesberg/flowbite-svelte-icons/commit/e68b5ebdfec94c90c9b0dddba4ac30ad8b8b7337))
+
+## 2.0.0-next.7
+
+### Patch Changes
+
+- docs: README update ([`c15c6e60f2bd4ba0eedfc504de01f10b29e6b887`](https://github.com/themesberg/flowbite-svelte-icons/commit/c15c6e60f2bd4ba0eedfc504de01f10b29e6b887))
+
+## 2.0.0-next.6
+
+### Patch Changes
+
+- feat: add a11y's title and desc props ([`a37241d2a957717ad78382dc7437c95f836de094`](https://github.com/themesberg/flowbite-svelte-icons/commit/a37241d2a957717ad78382dc7437c95f836de094))
+  feat: add new icons from the upstream
+
+## 2.0.0-next.5
+
+### Patch Changes
+
+- fix: color for solid and outline
+  fix: remove a comma from aria-label
+  docs: add icons, color, tailwind-color page
+
+- Updating for npmjs by adding --tag next. ([`23b19ddf3a68bc5a8cd3548ff509e76afa416884`](https://github.com/themesberg/flowbite-svelte-icons/commit/23b19ddf3a68bc5a8cd3548ff509e76afa416884))
+  docs: update README and homepage
+
+## 2.0.0-next.4
+
+### Patch Changes
+
+- fix: solid icons changing fill="currentColor" to "none" ([`f129c44360356055dbb47d857706355d17cab6f8`](https://github.com/themesberg/flowbite-svelte-icons/commit/f129c44360356055dbb47d857706355d17cab6f8))
+  fix: strokeLinecap, strokeLinejon, and strokeWidth from outline to solid
+
+## 2.0.0-next.3
+
+### Patch Changes
+
+- docs: update README
+
+## 2.0.0-next.2
+
+### Patch Changes
+
+- fix: update peerDependencies for svelte to ^5.0.0 in package.json
+
+## 2.0.0-next.1
+
+### Major Changes
+
+- BREAKING: add Svelte 5 Runes
+  require Svelte 5 and runes enabled
+>>>>>>> svelte-5-runes
 
 ## 1.4.0
 

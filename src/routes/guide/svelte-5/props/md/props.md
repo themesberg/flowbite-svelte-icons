@@ -1,0 +1,9 @@
+- size?: "xs" | "sm" | "md" | "lg" | "xl" = ctx.size || 'md';
+- role?: string = ctx.role || 'img';
+- color?: string;
+- strokeWidth?: string = ctx.strokeWidth || '2'; // only for Outline icons
+- title?: TitleType;
+- desc?: DescType;
+- ariaLabel?: string ="<icon file name>"
+- class?: string;
+- ...restProps

@@ -18,8 +18,13 @@ Please see the [Flowbite Svelte Icons documentation](https://flowbite-svelte-ico
 
 ## Icons
 
+<<<<<<< HEAD
 - [Outline Icons](https://flowbite-svelte-icons.codewithshin.com/outline-icons)
 - [Solid Icons](https://flowbite-svelte-icons.codewithshin.com/solid-icons)
+=======
+- [Outline Icons](https://flowbite-svelte-icons.codewithshin.com/outline)
+- [Solid Icons](https://flowbite-svelte-icons.codewithshin.com/solid)
+>>>>>>> svelte-5-runes
 
 ## Repo
 

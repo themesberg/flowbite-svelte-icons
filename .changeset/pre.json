@@ -1,0 +1,23 @@
+{
+  "mode": "pre",
+  "tag": "next",
+  "initialVersions": {
+    "flowbite-svelte-icons": "2.0.0-next.7"
+  },
+  "changesets": [
+    "clean-cougars-check",
+    "clever-deers-tap",
+    "curly-zebras-glow",
+    "dry-foxes-hear",
+    "fluffy-dragons-move",
+    "gentle-pianos-draw",
+    "giant-keys-confess",
+    "long-yaks-promise",
+    "nasty-mails-report",
+    "rude-ads-battle",
+    "shiny-panthers-know",
+    "stale-elephants-smoke",
+    "wicked-bulldogs-give",
+    "wild-points-rhyme"
+  ]
+}

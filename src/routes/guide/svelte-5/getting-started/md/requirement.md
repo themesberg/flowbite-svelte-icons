@@ -1,0 +1,3 @@
+- Svelte 5 or later
+- TailwindCSS
+- tailwind-merge

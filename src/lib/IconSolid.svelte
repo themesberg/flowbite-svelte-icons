@@ -1,29 +1,26 @@
 <script lang="ts">
-  import type { ComponentType } from 'svelte';
-  export let icon: ComponentType;
-  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
-  export let role: string = 'img';
-  export let ariaLabel = 'Icon';
-  export let strokeWidth = '2';
+  import type { Component } from 'svelte';
+  import type { SVGAttributes } from 'svelte/elements';
+
+  interface Props extends SVGAttributes<SVGElement> {
+    Icon: Component;
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    role?: string;
+    color?: string;
+    ariaLabel?: string;
+    strokeWidth?: string;
+    class?: string;
+  }
+  let {
+    Icon,
+    size,
+    role,
+    color = 'currentColor',
+    ariaLabel,
+    strokeWidth,
+    class: classname,
+    ...restProps
+  }: Props = $props();
 </script>
 
-<svelte:component
-  this={icon}
-  {...$$restProps}
-  {role}
-  {size}
-  {strokeWidth}
-  class={$$props.class}
-  {ariaLabel}
-/>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@prop export let icon: ComponentType;
-@prop export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
-@prop export let role: string = 'img';
-@prop export let ariaLabel = 'Icon';
-@prop export let strokeWidth = '2';
--->
+<Icon fill={color} {...restProps} {role} {size} {strokeWidth} class={classname} {ariaLabel} />
