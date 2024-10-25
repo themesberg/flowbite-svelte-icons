@@ -50,3 +50,17 @@
     d="M5 5v14m14 0V8h2M3 8h6m0-2v8.5858c0 .8909 1.0771 1.3371 1.7071.7071l.5858-.5858c.3905-.3905 1.0237-.3905 1.4142 0l.5858.5858c.3905.3905 1.0237.3905 1.4142 0l.5858-.5858c.3905-.3905 1.0237-.3905 1.4142 0l.5858.5858c.63.63 1.7071.1838 1.7071-.7071V6c0-.55228-.4477-1-1-1h-8c-.55229 0-1 .44772-1 1Z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'booth curtain outline'
+@prop ...restProps
+-->

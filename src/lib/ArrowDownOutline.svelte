@@ -51,3 +51,17 @@
     d="M12 19V5m0 14-4-4m4 4 4-4"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'arrow down outline'
+@prop ...restProps
+-->

@@ -51,3 +51,17 @@
     d="M10.855 14.322a2.475 2.475 0 1 1 .133-4.241m6.053 4.241a2.475 2.475 0 1 1 .133-4.241M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'caption outline'
+@prop ...restProps
+-->

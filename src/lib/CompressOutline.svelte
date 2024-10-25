@@ -51,3 +51,17 @@
     d="M4 8h4V4m12 4h-4V4M4 16h4v4m12-4h-4v4"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'compress outline'
+@prop ...restProps
+-->

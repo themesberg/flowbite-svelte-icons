@@ -51,3 +51,17 @@
     d="M5 19V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v13H7a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h12M9 3v14m7 0v4"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'book outline'
+@prop ...restProps
+-->

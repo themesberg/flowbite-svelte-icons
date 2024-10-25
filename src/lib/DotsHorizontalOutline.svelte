@@ -49,3 +49,16 @@
     d="M6 12h.01m6 0h.01m5.99 0h.01"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop class: className
+@prop ariaLabel = 'dots horizontal outline'
+@prop ...restProps
+-->

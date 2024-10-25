@@ -56,3 +56,17 @@
     d="M5.9751 9.9585h8.9627v3.9834H5.9751V9.9585Z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'battery outline'
+@prop ...restProps
+-->

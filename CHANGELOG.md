@@ -1,6 +1,46 @@
 # Changelog
 
+## 2.0.1
+
+### Patch Changes
+
+- fix: due to version 2.0.0 is already published on npm
+
+## 2.0.0
+
+### Patch Changes
+
+- fix: extends Props from svelte SVGAttributes ([`3448d91`](https://github.com/themesberg/flowbite-svelte-icons/commit/3448d91dd192f8f9fb1421706d6dba018f241ed6))
+
+- fix: IconSolid and IconOutline ([`f79d471`](https://github.com/themesberg/flowbite-svelte-icons/commit/f79d47174c42a98a874b15d4cb09723c778e05b9))
+
+- fix: component docs ([`b69a8b6`](https://github.com/themesberg/flowbite-svelte-icons/commit/b69a8b6e96787fe88202a7db23827d3c81572d49))
+
+- fix: run lib-helpers ([`a9b36bf`](https://github.com/themesberg/flowbite-svelte-icons/commit/a9b36bfe012109489cecea2ef6e9faf0ed6f67e1))
+
+- feat: extends SVGAttributes from svelte/elements ([`4b0750c`](https://github.com/themesberg/flowbite-svelte-icons/commit/4b0750c1654d1e45800f232dcc108d01e6548b2e))
+
+- fix: remove svelte:component from IconSolid and IconOutline ([`8e616bd`](https://github.com/themesberg/flowbite-svelte-icons/commit/8e616bde74d6026be703e13f1da5868274519a46))
+
+- types: move all type to types.ts ([`d99454d`](https://github.com/themesberg/flowbite-svelte-icons/commit/d99454dee43f6b78d79459ca49cf1f76d81d5866))
+
+- fix: change hasDescription to derived ([`047ab0f`](https://github.com/themesberg/flowbite-svelte-icons/commit/047ab0f2efaacc1192b6c46d637e4ba2c828a31a))
+  fix: add test-results to .gitignore
+
+- fix: add ^5.0.0-next.1 to peerDependencies ([`4feca80`](https://github.com/themesberg/flowbite-svelte-icons/commit/4feca80710b503553635287fab0629b2ec5e72af))
+
+- chore: Enter prerelease mode and version packages ([`e68b5eb`](https://github.com/themesberg/flowbite-svelte-icons/commit/e68b5ebdfec94c90c9b0dddba4ac30ad8b8b7337))
+
+- docs: update for custom icons page ([`8098c53`](https://github.com/themesberg/flowbite-svelte-icons/commit/8098c5386e3d4fec237813a9011d6f478c3f2ada))
+
+- feat: add new icons ([`9066686`](https://github.com/themesberg/flowbite-svelte-icons/commit/9066686badefbdeafc5b3864f9c0819437514871))
+
+- fix: extends BaseProps instead of Props ([`aafb851`](https://github.com/themesberg/flowbite-svelte-icons/commit/aafb85100e10b4c754d50f3a31ba911188ea440f))
+
+- fix: update runes-webkit and svelte@next ([`cbddf36`](https://github.com/themesberg/flowbite-svelte-icons/commit/cbddf360460d5c4e71df14cce622396c030d514d))
+
 <<<<<<< HEAD
+
 ## 1.6.2
 
 ### Patch Changes
@@ -61,8 +101,8 @@ All notable changes to this project will be documented in this file. See [standa
 ### Bug Fixes
 
 - link update ([938f51b](https://github.com/themesberg/flowbite-svelte-icons/commit/938f51b0fba05415fad2aee9633fd8566fbff340))
-- scripts update ([14ba4f0](https://github.com/themesberg/flowbite-svelte-icons/commit/14ba4f0cb81c864a513560bec5b29f1c5ac6b26d))
-=======
+- # scripts update ([14ba4f0](https://github.com/themesberg/flowbite-svelte-icons/commit/14ba4f0cb81c864a513560bec5b29f1c5ac6b26d))
+
 ## 2.0.0-next.18
 
 ### Patch Changes
@@ -185,7 +225,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 - BREAKING: add Svelte 5 Runes
   require Svelte 5 and runes enabled
->>>>>>> svelte-5-runes
+  > > > > > > > svelte-5-runes
 
 ## 1.4.0
 

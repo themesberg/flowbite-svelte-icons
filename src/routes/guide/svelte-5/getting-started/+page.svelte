@@ -53,10 +53,6 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/installation.md'] as string} />
 
-<p>Install <Code>flowbite-svelte-icons</Code>:</p>
-
-<HighlightCompo codeLang="ts" code={modules['./md/installation-2.md'] as string} />
-
 <p>
   To make sure the classes used by flowbite-svelte-icons are included by the Tailwindcss, add the
   following to <Code>tailwind.config.cjs</Code>.
