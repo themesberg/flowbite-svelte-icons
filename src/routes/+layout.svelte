@@ -69,7 +69,7 @@
   const urlsToIncludeSwitcherAndSidebar = ['/guide/', '/guide2/', '/how-to-use', '/quick-start'];
   /*eslint no-undef: "off"*/
   const siteName = removeHyphensAndCapitalize(__NAME__);
-  const githubUrl = `https://github.com/shinokada/${__NAME__}`;
+  const githubUrl = 'https://github.com/themesberg/flowbite-svelte-icons';
   const twitterUrl = 'https://twitter.com/shinokada';
 
   // nav
