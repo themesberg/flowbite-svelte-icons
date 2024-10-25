@@ -8,7 +8,7 @@
 <a href="https://www.npmjs.com/package/flowbite-svelte-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/flowbite-svelte-icons.svg" alt="npm" ></a>
 </div>
 
-480+ SVG [Flowbite icons](https://github.com/themesberg/flowbite-icons) components for Svelte 3/4/5/Runes.
+590+ SVG [Flowbite icons](https://github.com/themesberg/flowbite-icons) components for Svelte 4/5/Runes.
 
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
@@ -18,13 +18,8 @@ Please see the [Flowbite Svelte Icons documentation](https://flowbite-svelte-ico
 
 ## Icons
 
-<<<<<<< HEAD
-- [Outline Icons](https://flowbite-svelte-icons.codewithshin.com/outline-icons)
-- [Solid Icons](https://flowbite-svelte-icons.codewithshin.com/solid-icons)
-=======
 - [Outline Icons](https://flowbite-svelte-icons.codewithshin.com/outline)
 - [Solid Icons](https://flowbite-svelte-icons.codewithshin.com/solid)
->>>>>>> svelte-5-runes
 
 ## Repo
 
@@ -41,26 +36,22 @@ Please see the [Flowbite Svelte Icons documentation](https://flowbite-svelte-ico
 - TailwindCSS
 
 ### v2
-- Svelte 5:Runes
+- Svelte 5 or later
 - TailwindCSS
 
 ## Installation
 
-
-### Svelte 4/5
+### Svelte 5 or later
 
 ```sh
 pnpm i -D flowbite-svelte-icons
 ```
 
-### Svelte 5 Runes
+### Svelte 4/5
 
 ```sh
-pnpm i -D flowbite-svelte-icons@2.0.0-next.x
+pnpm i -D flowbite-svelte-icons@v1-latest
 ```
-
-Replace `2.0.0-next.x` with the latest `v2` version.
-Replace `x` with the latest release at [GitHub](https://github.com/themesberg/flowbite-svelte-icons/releases).
 
 Add the following to tailwind.config.cjs.
 
