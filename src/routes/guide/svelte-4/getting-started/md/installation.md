@@ -1,5 +1,4 @@
-npm create svelte@latest my-project
-cd my-project
+npm create svelte@latest myapp
+cd myapp
 npx svelte-add@latest tailwindcss
-pnpm i
-pnpm i -D flowbite-svelte-icons
+pnpm i -D flowbite-svelte-icons@v1-latest

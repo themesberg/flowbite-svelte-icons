@@ -1,5 +1,4 @@
-// install Svelte 5
-npm create svelte@latest my-project
-cd my-project
-npx svelte-add@latest tailwindcss
-pnpm i
+npx sv create myapp
+// select tailwindcss to install
+cd myapp
+pnpm i -D flowbite-svelte-icons

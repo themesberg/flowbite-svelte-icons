@@ -51,17 +51,11 @@
 
 <H2>Installation</H2>
 
-<p>Install Svelte and TailwindCSS:</p>
-
 <HighlightCompo codeLang="ts" code={modules['./md/installation.md'] as string} />
 
-<p>Install <Code>flowbite-svelte-icons@next</Code>:</p>
+<p>Install <Code>flowbite-svelte-icons</Code>:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/installation-2.md'] as string} />
-
-<p>Enable Runes in <Code>svelte.config.js</Code>:</p>
-
-<HighlightCompo codeLang="ts" code={modules['./md/svelte-config.md'] as string} />
 
 <p>
   To make sure the classes used by flowbite-svelte-icons are included by the Tailwindcss, add the
