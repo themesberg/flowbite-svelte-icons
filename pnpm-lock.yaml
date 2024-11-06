@@ -79,14 +79,14 @@ importers:
         specifier: ^0.4.0
         version: 0.4.0(svelte@5.1.11)
       runes-webkit:
-        specifier: ^0.9.38
-        version: 0.9.38(@sveltejs/kit@2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(vite@5.4.10))(highlight.js@11.10.0)(svelte-5-ui-lib@0.9.25(@sveltejs/kit@2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(tailwindcss@3.4.14))(svelte-rune-highlight@0.5.13(svelte@5.1.11))(svelte@5.1.11)(tailwindcss@3.4.14)
+        specifier: ^0.9.41
+        version: 0.9.41(@sveltejs/kit@2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(vite@5.4.10))(highlight.js@11.10.0)(svelte-5-ui-lib@0.10.0(@sveltejs/kit@2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(tailwindcss@3.4.14))(svelte-rune-highlight@0.5.13(svelte@5.1.11))(svelte@5.1.11)(tailwindcss@3.4.14)
       svelte:
         specifier: 5.1.11
         version: 5.1.11
       svelte-5-ui-lib:
-        specifier: ^0.9.25
-        version: 0.9.25(@sveltejs/kit@2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(tailwindcss@3.4.14)
+        specifier: ^0.10.0
+        version: 0.10.0(@sveltejs/kit@2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(tailwindcss@3.4.14)
       svelte-check:
         specifier: ^4.0.5
         version: 4.0.5(svelte@5.1.11)(typescript@5.6.3)
@@ -1741,14 +1741,14 @@ packages:
     peerDependencies:
       svelte: ^5.0.0
 
-  runes-webkit@0.9.38:
-    resolution: {integrity: sha512-OoPBf1ibfHj7NcnUHMy7MI+su76Vfh7Tr3iBjvq2YmME0TDA8eBxtHDIK0N+dQox4jPR6d0aL+UwcOe1p9xO0A==}
+  runes-webkit@0.9.41:
+    resolution: {integrity: sha512-jV/YzvP9hOn8eM2jd/34RWTxO7ROe+pgJotHaJG1c1WWEfutw0WPFUmVz8pmalKdMwD0sUKq4Iu1cwqoBszNrw==}
     engines: {node: '>=18.0.0', npm: '>=7.0.0'}
     peerDependencies:
       '@sveltejs/kit': ^2.5.5
       highlight.js: ^11.10.0
       svelte: ^5.0.0-next.95
-      svelte-5-ui-lib: ^0.9.15
+      svelte-5-ui-lib: ^0.10.0
       svelte-rune-highlight: ^0.5.11
 
   sade@1.8.1:
@@ -1853,8 +1853,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  svelte-5-ui-lib@0.9.25:
-    resolution: {integrity: sha512-rOI6gHqtjLDVdHxuxDBFobmSyDPLU2If/RLoEe4V6EkPvXVGQbA1S/Gk64K2xSCa9B7p/sw4mp+KoQpNfXQxFg==}
+  svelte-5-ui-lib@0.10.0:
+    resolution: {integrity: sha512-TprUVC1CDh2smkH1Iw/p9qFtaoHPbuQDLbTszJ92wSd7EL2AEApbtjh0tUgGaeiEhWRzx5PwRwvAOsd84LlxAA==}
     engines: {node: '>=20.0.0', npm: '>=10.0.0'}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
@@ -3780,12 +3780,12 @@ snapshots:
       deepmerge: 4.3.1
       svelte: 5.1.11
 
-  runes-webkit@0.9.38(@sveltejs/kit@2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(vite@5.4.10))(highlight.js@11.10.0)(svelte-5-ui-lib@0.9.25(@sveltejs/kit@2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(tailwindcss@3.4.14))(svelte-rune-highlight@0.5.13(svelte@5.1.11))(svelte@5.1.11)(tailwindcss@3.4.14):
+  runes-webkit@0.9.41(@sveltejs/kit@2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(vite@5.4.10))(highlight.js@11.10.0)(svelte-5-ui-lib@0.10.0(@sveltejs/kit@2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(tailwindcss@3.4.14))(svelte-rune-highlight@0.5.13(svelte@5.1.11))(svelte@5.1.11)(tailwindcss@3.4.14):
     dependencies:
       '@sveltejs/kit': 2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(vite@5.4.10)
       highlight.js: 11.10.0
       svelte: 5.1.11
-      svelte-5-ui-lib: 0.9.25(@sveltejs/kit@2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(tailwindcss@3.4.14)
+      svelte-5-ui-lib: 0.10.0(@sveltejs/kit@2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(tailwindcss@3.4.14)
       svelte-rune-highlight: 0.5.13(svelte@5.1.11)
       tailwind-merge: 2.5.4
       tailwind-variants: 0.2.1(tailwindcss@3.4.14)
@@ -3881,7 +3881,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-5-ui-lib@0.9.25(@sveltejs/kit@2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(tailwindcss@3.4.14):
+  svelte-5-ui-lib@0.10.0(@sveltejs/kit@2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(tailwindcss@3.4.14):
     dependencies:
       '@floating-ui/dom': 1.6.12
       '@sveltejs/kit': 2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.11)(vite@5.4.10))(svelte@5.1.11)(vite@5.4.10)

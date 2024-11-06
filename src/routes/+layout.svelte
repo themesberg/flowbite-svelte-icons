@@ -12,7 +12,7 @@
     DotsHorizontalOutline,
     GithubSolid,
     random_tailwind_color,
-    XSolid
+    XSolid, Bluesky
   } from 'runes-webkit';
   import {
     Navbar,
@@ -71,6 +71,7 @@
   const siteName = removeHyphensAndCapitalize(__NAME__);
   const githubUrl = 'https://github.com/themesberg/flowbite-svelte-icons';
   const twitterUrl = 'https://twitter.com/shinokada';
+  const blueskyUrl = 'https://bsky.app/profile/shinichiokada.bsky.social';
 
   // nav
   let nav = uiHelpers();
@@ -166,14 +167,20 @@
           class="ml-6 mr-4 dark:text-white"
           size="lg"
         />
+        <Darkmode class="m-0 p-2" />
         <div class="relative">
           <Dropdown
             {dropdownStatus}
             {closeDropdown}
             params={dropdownTransitionParams}
-            class="absolute -left-[50px] top-2 w-12 p-1.5"
+            class="absolute -left-[88px] top-2 w-12 p-1.5"
           >
-            <DropdownUl>
+            <DropdownUl class="py-0">
+              {#if blueskyUrl}
+                <DropdownLi href={blueskyUrl} target="_blank" aClass="p-0.5 m-0">
+                  <Bluesky size="30" />
+                </DropdownLi>
+              {/if}
               {#if twitterUrl}
                 <DropdownLi href={twitterUrl} target="_blank" aClass="p-2 m-0"
                   ><XSolid /></DropdownLi
@@ -184,9 +191,6 @@
                   <GithubSolid />
                 </DropdownLi>
               {/if}
-              <DropdownLi>
-                <Darkmode class="m-0 p-2" />
-              </DropdownLi>
             </DropdownUl>
           </Dropdown>
         </div>
