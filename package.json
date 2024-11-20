@@ -37,7 +37,7 @@
     "lib-helpers": "pnpm format && pnpm gen:docs5 && pnpm package && pnpm gen:exports && pnpm copy:packagejson"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.9",
+    "@changesets/cli": "^2.27.10",
     "@playwright/test": "^1.49.0",
     "@sveltejs/adapter-auto": "^3.3.1",
     "@sveltejs/kit": "^2.8.1",
@@ -60,7 +60,7 @@
     "runes-meta-tags": "^0.4.2",
     "runes-webkit": "^0.9.41",
     "svelte": "5.2.4",
-    "svelte-5-ui-lib": "^0.10.4",
+    "svelte-5-ui-lib": "^0.10.9",
     "svelte-check": "^4.0.9",
     "svelte-lib-helpers": "^0.4.16",
     "svelte-preprocess": "^6.0.3",
