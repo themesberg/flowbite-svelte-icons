@@ -79,8 +79,8 @@ importers:
         specifier: ^0.4.2
         version: 0.4.2(svelte@5.2.4)
       runes-webkit:
-        specifier: ^0.9.41
-        version: 0.9.41(@sveltejs/kit@2.8.1(@sveltejs/vite-plugin-svelte@4.0.1(svelte@5.2.4)(vite@5.4.11))(svelte@5.2.4)(vite@5.4.11))(highlight.js@11.10.0)(svelte-5-ui-lib@0.10.9(svelte@5.2.4)(tailwindcss@3.4.15))(svelte-rune-highlight@0.5.13(svelte@5.2.4))(svelte@5.2.4)(tailwindcss@3.4.15)
+        specifier: ^0.9.42
+        version: 0.9.42(@sveltejs/kit@2.8.1(@sveltejs/vite-plugin-svelte@4.0.1(svelte@5.2.4)(vite@5.4.11))(svelte@5.2.4)(vite@5.4.11))(highlight.js@11.10.0)(svelte-5-ui-lib@0.10.9(svelte@5.2.4)(tailwindcss@3.4.15))(svelte-rune-highlight@0.5.13(svelte@5.2.4))(svelte@5.2.4)(tailwindcss@3.4.15)
       svelte:
         specifier: 5.2.4
         version: 5.2.4
@@ -1732,8 +1732,8 @@ packages:
     peerDependencies:
       svelte: ^5.0.0
 
-  runes-webkit@0.9.41:
-    resolution: {integrity: sha512-jV/YzvP9hOn8eM2jd/34RWTxO7ROe+pgJotHaJG1c1WWEfutw0WPFUmVz8pmalKdMwD0sUKq4Iu1cwqoBszNrw==}
+  runes-webkit@0.9.42:
+    resolution: {integrity: sha512-w1E9BWs/QntLF40GU+/aywlXg3dhlyIzdxv4CtBwD28N9KLHr8MKs1rfSE53hwl04PSIWWtKeV7B6ifcDA9zGw==}
     engines: {node: '>=18.0.0', npm: '>=7.0.0'}
     peerDependencies:
       '@sveltejs/kit': ^2.5.5
@@ -3733,7 +3733,7 @@ snapshots:
       deepmerge: 4.3.1
       svelte: 5.2.4
 
-  runes-webkit@0.9.41(@sveltejs/kit@2.8.1(@sveltejs/vite-plugin-svelte@4.0.1(svelte@5.2.4)(vite@5.4.11))(svelte@5.2.4)(vite@5.4.11))(highlight.js@11.10.0)(svelte-5-ui-lib@0.10.9(svelte@5.2.4)(tailwindcss@3.4.15))(svelte-rune-highlight@0.5.13(svelte@5.2.4))(svelte@5.2.4)(tailwindcss@3.4.15):
+  runes-webkit@0.9.42(@sveltejs/kit@2.8.1(@sveltejs/vite-plugin-svelte@4.0.1(svelte@5.2.4)(vite@5.4.11))(svelte@5.2.4)(vite@5.4.11))(highlight.js@11.10.0)(svelte-5-ui-lib@0.10.9(svelte@5.2.4)(tailwindcss@3.4.15))(svelte-rune-highlight@0.5.13(svelte@5.2.4))(svelte@5.2.4)(tailwindcss@3.4.15):
     dependencies:
       '@sveltejs/kit': 2.8.1(@sveltejs/vite-plugin-svelte@4.0.1(svelte@5.2.4)(vite@5.4.11))(svelte@5.2.4)(vite@5.4.11)
       highlight.js: 11.10.0
