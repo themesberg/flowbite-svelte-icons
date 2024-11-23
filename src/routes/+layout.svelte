@@ -41,7 +41,6 @@
     activeUrl = $page.url.pathname;
   });
 
-
   type LiType = {
     name: string;
     href: string;

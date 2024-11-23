@@ -17,3 +17,5 @@ playwright-report
 .vercel
 
 *.md
+*.html
+
