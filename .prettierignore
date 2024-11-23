@@ -19,3 +19,4 @@ playwright-report
 *.md
 *.html
 
+/src/routes/utils/highlight

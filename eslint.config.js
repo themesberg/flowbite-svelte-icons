@@ -27,6 +27,6 @@ export default tseslint.config(
     }
   },
   {
-    ignores: ['build/', '.svelte-kit/', 'dist/']
+    ignores: ['src/routes/utils/highlight', '.vercel/', 'build/', '.svelte-kit/', 'dist/']
   }
 );
