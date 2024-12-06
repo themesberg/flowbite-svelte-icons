@@ -9,5 +9,5 @@ declare const __RUNES_METATAGS_VERSION__: string;
 declare const __SVELTE_VERSION__: string;
 declare const __SVELTEKIT_VERSION__: string;
 declare const __SVELTE_RUNE_HIGHLIGHT_VERSION__: string;
-declare const __SVELTE_5_UI_LIB_VERSION__: string;
+declare const __FLOWBITE_SVELTE_VERSION__: string;
 declare const __VITE_VERSION__: string;
