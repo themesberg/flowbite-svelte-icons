@@ -99,6 +99,9 @@ importers:
       svelte-rune-highlight:
         specifier: ^0.5.13
         version: 0.5.13(svelte@5.7.1)
+      svelte-shields:
+        specifier: ^0.5.1
+        version: 0.5.1(svelte@5.7.1)
       tslib:
         specifier: ^2.8.1
         version: 2.8.1
@@ -2064,6 +2067,12 @@ packages:
   svelte-rune-highlight@0.5.13:
     resolution: {integrity: sha512-9SiOw+x5NhybcsttWzT12/W7cONemK31mAJ2pUO/68TYnQGo+eZ4GS+EqGdTuUsr4t9+kFVrMRn9lfubnHQeEg==}
     engines: {node: '>=20.0.0', npm: '>=8.0.0'}
+    peerDependencies:
+      svelte: ^5.0.0
+
+  svelte-shields@0.5.1:
+    resolution: {integrity: sha512-p9t+ZtMiWM0x49iLB4jmmr5mNw5hRCdVeAaGIJoIHddM4eDh+71oJj4H0m4slKMtoszdzf6CrMWNIpn1azO+rg==}
+    engines: {node: '>=18.0.0', npm: '>=7.0.0'}
     peerDependencies:
       svelte: ^5.0.0
 
@@ -4241,6 +4250,10 @@ snapshots:
   svelte-rune-highlight@0.5.13(svelte@5.7.1):
     dependencies:
       highlight.js: 11.10.0
+      svelte: 5.7.1
+
+  svelte-shields@0.5.1(svelte@5.7.1):
+    dependencies:
       svelte: 5.7.1
 
   svelte2tsx@0.7.30(svelte@5.7.1)(typescript@5.7.2):
