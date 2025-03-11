@@ -11,3 +11,4 @@ declare const __SVELTEKIT_VERSION__: string;
 declare const __SVELTE_RUNE_HIGHLIGHT_VERSION__: string;
 declare const __FLOWBITE_SVELTE_VERSION__: string;
 declare const __VITE_VERSION__: string;
+declare const __TAILWINDCSS_VERSION__: string;

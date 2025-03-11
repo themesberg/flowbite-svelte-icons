@@ -1,0 +1,84 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source "../node_modules/flowbite-svelte/dist";
+@source "../node_modules/runes-webkit/dist";
+
+@theme {
+	--z-index-100: 100;
+
+	--color-primary-50: #FFF5F2;
+	--color-primary-100: #FFF1EE;
+	--color-primary-200: #FFE4DE;
+	--color-primary-300: #FFD5CC;
+	--color-primary-400: #FFBCAD;
+	--color-primary-500: #FE795D;
+	--color-primary-600: #EF562F;
+	--color-primary-700: #EB4F27;
+	--color-primary-800: #CC4522;
+	--color-primary-900: #A5371B;
+  
+}
+
+
+html {
+  -webkit-text-size-adjust: 100%;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    Noto Sans,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol,
+    Noto Color Emoji;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+table {
+  @apply tracking-wide dark:text-white;
+}
+
+h1 {
+  @apply my-8 text-3xl text-primary-800 dark:text-primary-400;
+}
+
+h2 {
+  @apply my-6 text-2xl;
+}
+
+h3 {
+  @apply my-5 text-xl;
+}
+
+p {
+  @apply my-3 text-lg;
+}
+
+code {
+  @apply text-primary-700 dark:text-primary-400;
+}
+
+#mainContent > pre {
+  @apply mx-auto my-4 w-full overflow-auto rounded-xl border border-gray-200 bg-gray-50 bg-gradient-to-r p-2 text-sm text-gray-600 sm:p-6 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-400;
+}
+
+
+.dark_bg_theme {
+  @apply dark:bg-stone-900;
+}

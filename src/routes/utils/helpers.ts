@@ -20,4 +20,8 @@ export const extra: ListType[] = [
     href: '/outline-icons'
   }
 ];
-export const newSidebarList: ListType[] = [...sidebarList, ...extra];
+
+export const newSidebarList: ListType[] = [
+	...(Array.isArray(sidebarList) ? sidebarList : []),
+	...extra
+];
