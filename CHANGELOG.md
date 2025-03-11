@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.3
+
+### Patch Changes
+
+- fix: update svelte and tailwindcss 4, peerDependencies update
+
 ## 2.0.2
 
 ### Patch Changes
