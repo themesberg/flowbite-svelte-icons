@@ -31,7 +31,7 @@
     SidebarItem,
     CloseButton,
     SidebarBrand
-  } from 'flowbite-svelte';
+  } from 'svelte-5-ui-lib';
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import { Runatics } from 'runatics';
   import DynamicCodeBlockStyle from './utils/DynamicCodeBlockStyle.svelte';
