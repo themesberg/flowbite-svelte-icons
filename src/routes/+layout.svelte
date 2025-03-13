@@ -3,7 +3,7 @@
   import { sineIn } from 'svelte/easing';
   import type { Component } from 'svelte';
   import { page } from '$app/state';
-  import { newSidebarList } from './utils/helpers';
+  import { newSidebarList } from './utils/helper';
   import {
     Footer,
     OnThisPage,
@@ -54,7 +54,6 @@
       ? deepMerge(page.data.layoutMetaTags, page.data.pageMetaTags)
       : data.layoutMetaTags
   );
-
   // sidebar
   const sidebarUi = uiHelpers();
   let isOpen = $state(false);
@@ -66,26 +65,26 @@
   const lis: LiType[] = [
     { name: 'Guide', href: '/guide/svelte-5/getting-started' },
     { name: 'Outline', href: '/outline-icons' },
-    { name: 'Solid', href: '/solid-icons' }
+    { name: 'Solid', href: '/solid-icons' },
+    { name: 'Icon sets', href: 'https://svelte-svg-icons.codewithshin.com/' }
   ];
   const brand = {
     name: 'codewithshin.com',
     href: 'https://codewithshin.com'
   };
-  const urlsToIncludeSwitcherAndSidebar = ['/guide/', '/guide2/', '/how-to-use', '/quick-start'];
+  const urlsToIncludeSwitcherAndSidebar = ['/guide/'];
   /*eslint no-undef: "off"*/
   const siteName = removeHyphensAndCapitalize(__NAME__);
-  const githubUrl = 'https://github.com/themesberg/flowbite-svelte-icons';
+  const githubUrl = `https://github.com/shinokada/${__NAME__}`;
   const twitterUrl = 'https://twitter.com/shinokada';
   const blueskyUrl = 'https://bsky.app/profile/codewithshin.com';
-
   // nav
   let nav = uiHelpers();
   let navStatus = $state(false);
   let toggleNav = nav.toggle;
   let closeNav = nav.close;
   let headerCls =
-    'sticky top-0 z-40 mx-auto w-full flex-none border-b border-gray-200 bg-gray-100 dark:border-gray-600 dark_bg_theme';
+    'sticky top-0 z-40 mx-auto w-full flex-none border-b border-gray-200 bg-gray-100 dark:border-gray-600 dark:bg-sky-950';
   let navClass =
     'w-full divide-gray-200 border-gray-200 bg-gray-50 dark_bg_theme text-gray-500 dark:divide-gray-700 dark:border-gray-700 dark:transparent dark:text-gray-400 sm:px-4';
   let divClass = 'ml-auto w-full';
@@ -93,7 +92,7 @@
   function isIncluded(url: string, allowedUrls: string[]): boolean {
     return allowedUrls.some((allowedUrl) => url.startsWith(allowedUrl));
   }
-  let urlsToIncludeSwitcher = ['/guide', '/guide2', '/how-to-use', '/quick-start'];
+  let urlsToIncludeSwitcher = ['/guide'];
   let include = $derived(isIncluded(currentUrl, urlsToIncludeSwitcher));
   // dropdown
   let dropdown = uiHelpers();

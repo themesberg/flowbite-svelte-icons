@@ -10,7 +10,8 @@
     info,
     type CardType
   } from 'runes-webkit';
-
+  import { A } from 'svelte-5-ui-lib';
+  
   const brand = {
     title: `${removeHyphensAndCapitalize(__NAME__)}`,
     description: `${__DESCRIPTION__}`,
@@ -45,7 +46,7 @@
     runesMetaTagsVersion: __RUNES_METATAGS_VERSION__,
     svelteVersion: __SVELTE_VERSION__,
     svelteKitVersion: __SVELTEKIT_VERSION__,
-    flowbitesvelte: __FLOWBITE_SVELTE_VERSION__,
+    svelte5uilibVersion: __SVELTE_5_UI_LIB_VERSION__,
     svelteRuneHighlight: __SVELTE_RUNE_HIGHLIGHT_VERSION__,
     viteVersion: __VITE_VERSION__,
     tailwindcssVersion: __TAILWINDCSS_VERSION__,
@@ -54,10 +55,7 @@
 
 <div class="relative mx-auto mt-8 h-full max-w-7xl overflow-y-auto px-8 pb-20">
   <SupportBanner>
-    To Keep It Going, Please Show Your Love.<a
-      href="https://ko-fi.com/Z8Z2CHALG"
-      target="_blank"
-      aria-label="Buy Me a Coffee at ko-fi.com"
+    To Keep It Going, Please Show Your Love.<a href="https://ko-fi.com/Z8Z2CHALG" target="_blank"
       ><img
         height="40"
         style="border:0px;height:40px;"
@@ -67,7 +65,7 @@
     >
   </SupportBanner>
 
-  <h1 class="my-8 flex justify-center">{removeHyphensAndCapitalize(__NAME__)}</h1>
+  <h1 class="my-8 flex justify-center">Flowbite Svelte Icons</h1>
 
   <HomeCards cards={filteredCards as CardType[]} />
   <h2 class="my-8 flex justify-center">Info</h2>

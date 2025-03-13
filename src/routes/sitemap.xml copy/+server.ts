@@ -5,7 +5,7 @@ interface Page {
   lastmod?: string;
 }
 
-const site = 'https://runes-webkit-starter.codewithshin.com';
+const site = 'https://flowbite-svelte-icons.codewithshin.com';
 const pages: Page[] = [
   {
     loc: '',
@@ -39,27 +39,12 @@ const pages: Page[] = [
     priority: '0.5'
   },
   {
-    loc: 'how-to-use',
+    loc: 'outline-icons',
     changefreq: 'weekly',
     priority: '0.5'
   },
   {
-    loc: 'no-tabs',
-    changefreq: 'weekly',
-    priority: '0.5'
-  },
-  {
-    loc: 'quick-start',
-    changefreq: 'weekly',
-    priority: '0.5'
-  },
-  {
-    loc: 'three-tabs',
-    changefreq: 'weekly',
-    priority: '0.5'
-  },
-  {
-    loc: 'three-tabs-sizebytailwind',
+    loc: 'solid-icons',
     changefreq: 'weekly',
     priority: '0.5'
   }
