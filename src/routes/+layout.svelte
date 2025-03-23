@@ -76,6 +76,7 @@
 	/*eslint no-undef: "off"*/
 	const siteName = removeHyphensAndCapitalize(__NAME__);
 	const githubUrl = `https://github.com/themesberg/${__NAME__}`;
+	const twitterUrl = 'https://twitter.com/shinokada';
 	const blueskyUrl = 'https://bsky.app/profile/codewithshin.com';
 	// nav
 	let nav = uiHelpers();
