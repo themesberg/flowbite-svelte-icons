@@ -75,8 +75,7 @@
 	const urlsToIncludeSwitcherAndSidebar = ['/guide/'];
 	/*eslint no-undef: "off"*/
 	const siteName = removeHyphensAndCapitalize(__NAME__);
-	const githubUrl = `https://github.com/shinokada/${__NAME__}`;
-	const twitterUrl = 'https://twitter.com/shinokada';
+	const githubUrl = `https://github.com/themesberg/${__NAME__}`;
 	const blueskyUrl = 'https://bsky.app/profile/codewithshin.com';
 	// nav
 	let nav = uiHelpers();
