@@ -51,3 +51,17 @@
 		d="m12 12 7-8H5l7 8Zm0 0v8m-3 0h6M8.54939 8h6.95051"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'martini glass outline'
+@prop ...restProps
+-->

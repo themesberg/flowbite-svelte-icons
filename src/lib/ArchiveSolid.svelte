@@ -47,3 +47,16 @@
 		clip-rule="evenodd"
 	/> <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 1 1 0 4H4a2 2 0 0 1-2-2Z" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop class: className
+@prop ariaLabel = 'archive solid'
+@prop ...restProps
+-->

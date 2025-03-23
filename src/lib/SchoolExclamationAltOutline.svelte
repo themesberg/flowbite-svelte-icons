@@ -51,3 +51,17 @@
 		d="M17.4999 19H4.49988v-8h3m0 0 5.00002-6 5 6M7.49988 11H3.49989l3-4h4.33741l-3.33742 4Zm13.00002 8h.01m-.01-3v-3m-6.3374-6h4.3374l2 2.5m-6 3.5c0 1.1046-.8955 2-2 2-1.1046 0-2-.8954-2-2s.8954-2 2-2c1.1045 0 2 .8954 2 2Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'school exclamation alt outline'
+@prop ...restProps
+-->

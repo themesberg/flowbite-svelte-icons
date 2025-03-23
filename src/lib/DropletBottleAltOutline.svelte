@@ -51,3 +51,17 @@
 		d="M10 6v2.5C10 9 7 9.75 7 12v7c0 .9375 0 2 2.14286 2h5.71424C17 21 17 19.9375 17 19v-7c0-2.25-3-3-3-3.5V6m-4 0H9V3h6v3h-1m-4 0h4m0 10c0 1.1046-.8954 2-2 2s-2-.8954-2-2c0-1.5 1.7874-4 2-4 .2126 0 2 2.5 2 4Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'droplet bottle alt outline'
+@prop ...restProps
+-->

@@ -51,3 +51,17 @@
 		d="M7 8v6c0 .5523.44772 1 1 1h4M7 8c0-2.76142 2.23858-5 5-5 2.7614 0 5 2.23858 5 5v6c0 .5523-.4477 1-1 1h-4M7 8h2c1.1046 0 2 .89543 2 2v.5c0 .8284.6716 1.5 1.5 1.5s1.5-.6716 1.5-1.5c0-.82843.6716-1.5 1.5-1.5H17m-5 6v6"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'icecream outline'
+@prop ...restProps
+-->

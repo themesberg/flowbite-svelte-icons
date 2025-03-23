@@ -48,3 +48,16 @@
 		clip-rule="evenodd"
 	/> <path d="M5.2 6.40001 2.5 10h2.89902l3.25-3.99999H6c-.31476 0-.61115.1482-.8.4Z" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop class: className
+@prop ariaLabel = 'school flag alt solid'
+@prop ...restProps
+-->

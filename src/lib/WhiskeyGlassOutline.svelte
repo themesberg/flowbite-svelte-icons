@@ -51,3 +51,17 @@
 		d="M7 14h10M6 7l.84717 10.1661C6.93356 18.2027 7.80009 19 8.84027 19h6.31943c1.0402 0 1.9067-.7973 1.9931-1.8339L18 7H6Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'whiskey glass outline'
+@prop ...restProps
+-->

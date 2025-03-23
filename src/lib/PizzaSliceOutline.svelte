@@ -53,3 +53,17 @@
 		/>
 	</g> <defs> <clipPath id="a"> <path fill="#fff" d="M0 0h24v24H0z" /> </clipPath> </defs>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'pizza slice outline'
+@prop ...restProps
+-->

@@ -52,3 +52,16 @@
 		d="m3.12313 18-.0547.8752C2.99647 20.0266 3.91089 21 5.06453 21H15.9356c1.1537 0 2.0681-.9734 1.9961-2.1248L17.877 18H3.12313Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop class: className
+@prop ariaLabel = 'beer mug empty solid'
+@prop ...restProps
+-->

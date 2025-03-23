@@ -54,3 +54,16 @@
 		d="M21 15.5001c0 .8179-.3927 1.5441-1 2.0002v.4998c0 1.6568-1.3431 3-3 3H7.00003c-1.65686 0-3-1.3432-3-3v-.4998c-.60723-.4561-1-1.1823-1-2.0002 0-1.3807 1.11928-2.5 2.5-2.5H18.5c1.3807 0 2.5 1.1193 2.5 2.5Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop class: className
+@prop ariaLabel = 'burger solid'
+@prop ...restProps
+-->

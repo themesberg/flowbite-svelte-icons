@@ -51,3 +51,17 @@
 		d="M7 17h10M6 3l1.07554 16.133C7.14558 20.1836 8.01818 21 9.07111 21h5.85779c1.0529 0 1.9255-.8164 1.9956-1.867L18 3H6Zm8 8c0 1.1046-.8954 2-2 2s-2-.8954-2-2c0-1.10457 1.7912-4 2-4 .2088 0 2 2.89543 2 4Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'glass water droplet outline'
+@prop ...restProps
+-->

@@ -51,3 +51,17 @@
 		d="M16 6H8m8 0s3 2.5 3 5m-3-5V3H8v3m0 0s-3 2.5-3 5v8.002C5 20.6589 6.34315 22 8 22h8c1.6569 0 3-1.3411 3-2.998V11m0 0h-8v7h8v-7ZM6 6h12"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'jar outline'
+@prop ...restProps
+-->

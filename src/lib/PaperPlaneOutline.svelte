@@ -51,3 +51,17 @@
 		d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'paper plane outline'
+@prop ...restProps
+-->

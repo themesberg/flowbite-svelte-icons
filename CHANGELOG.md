@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.0
+
+### Minor Changes
+
+- feat: new icons
+
 ## 2.0.3
 
 ### Patch Changes

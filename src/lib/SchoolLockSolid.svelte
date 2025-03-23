@@ -55,3 +55,16 @@
 		d="M3.72925 11.1623 6 10.5237V21H4c-.55228 0-1-.4477-1-1v-7.875c0-.448.29797-.8414.72925-.9627Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop class: className
+@prop ariaLabel = 'school lock solid'
+@prop ...restProps
+-->

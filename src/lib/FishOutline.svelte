@@ -51,3 +51,17 @@
 		d="M6 12c0 1.6 3.35786 4 7.5 4 4.1421 0 6.9231-3.2 7.5-4-.5769-.8-3.3579-4-7.5-4C9.35786 8 6 10.4 6 12Zm0 0L3 9m3 3-3 3m12.9866-3.3723h.01M14 8c-1.7264 3.302-1.7098 5.0561 0 8"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'fish outline'
+@prop ...restProps
+-->

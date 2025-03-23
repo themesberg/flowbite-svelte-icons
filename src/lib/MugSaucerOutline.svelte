@@ -51,3 +51,17 @@
 		d="M15 8h2c1.1046 0 2 .89543 2 2 0 1.1046-.8954 2-2 2h-2.5M5 19h11M5 6l.6398 6.398C5.84428 14.4428 7.56494 16 9.61995 16H10.38c2.0551 0 3.7757-1.5572 3.9802-3.602L15 6H5Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || '2'
+@prop desc
+@prop class: className
+@prop ariaLabel = 'mug saucer outline'
+@prop ...restProps
+-->

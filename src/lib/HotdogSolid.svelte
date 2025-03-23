@@ -52,3 +52,16 @@
 		d="M8 3.02762c-2.24998.24872-4 2.15626-4 4.47253v9.00005c0 2.3162 1.75002 4.2238 4 4.4725V3.02762Zm8 17.94508c2.25-.2487 4-2.1563 4-4.4725V7.50015c0-2.31627-1.75-4.22381-4-4.47253V20.9727Z"
 	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop class: className
+@prop ariaLabel = 'hotdog solid'
+@prop ...restProps
+-->
