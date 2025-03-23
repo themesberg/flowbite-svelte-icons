@@ -12,4 +12,5 @@
 
   let { Icon }: Props = $props();
 </script>
+
 <IconOutline {...config} {Icon} />

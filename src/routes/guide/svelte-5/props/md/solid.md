@@ -1,6 +1,6 @@
 - size?: "xs" | "sm" | "md" | "lg" | "xl" = ctx.size || 'md';
 - role?: string; = ctx.role || 'img';
-- ariaLabel?: string =  "<icon file name>"
+- ariaLabel?: string = "<icon file name>"
 - color?: string = ctx.color || 'currentColor';
 - withEvents?: boolean = ctx.withEvents || false;
 - title?: TitleType;

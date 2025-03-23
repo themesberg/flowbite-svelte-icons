@@ -1,1 +1,1 @@
-<HeartSolid color="#17d336" size="md"/> 
+<HeartSolid color="#17d336" size="md"/>
