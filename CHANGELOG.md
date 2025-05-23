@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.0
+
+### Minor Changes
+
+- feat: add clsx
+
 ## 2.1.1
 
 ### Patch Changes

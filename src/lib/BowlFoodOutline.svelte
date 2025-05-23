@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
 	import { twMerge } from 'tailwind-merge';
+	import clsx from 'clsx';
 	import type { OutlineBaseProps, OutlineProps } from './types';
 
 	const ctx: OutlineBaseProps = getContext('iconCtx') ?? {};
@@ -32,7 +33,7 @@
 	fill="none"
 	{color}
 	{...restProps}
-	class={twMerge('shrink-0', sizes[size], className)}
+	class={twMerge(clsx('shrink-0', sizes[size], className))}
 	aria-label={ariaLabel}
 	aria-describedby={hasDescription ? ariaDescribedby : undefined}
 	viewBox="0 0 24 24"

@@ -1,4 +1,6 @@
 import type { SVGAttributes } from 'svelte/elements';
+import type { ClassValue } from 'clsx';
+
 export type TitleType = {
 	id?: string;
 	title?: string;
@@ -9,10 +11,10 @@ export type DescType = {
 	desc?: string;
 };
 
-export interface BaseProps extends SVGAttributes<SVGElement> {
+export interface BaseProps extends Omit<SVGAttributes<SVGElement>, 'class'> {
 	size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 	color?: string | undefined | null;
-	class?: string | undefined | null;
+	class?: ClassValue;
 }
 
 export interface OutlineBaseProps extends BaseProps {

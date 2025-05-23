@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
 	import { twMerge } from 'tailwind-merge';
+	import clsx from 'clsx';
 	import type { BaseProps, Props } from './types';
 
 	const ctx: BaseProps = getContext('iconCtx') ?? {};
@@ -30,7 +31,7 @@
 	xmlns="http://www.w3.org/2000/svg"
 	fill={color}
 	{...restProps}
-	class={twMerge('shrink-0', sizes[size], className)}
+	class={twMerge(clsx('shrink-0', sizes[size], className))}
 	aria-label={ariaLabel}
 	aria-describedby={hasDescription ? ariaDescribedby : undefined}
 	viewBox="0 0 24 24"

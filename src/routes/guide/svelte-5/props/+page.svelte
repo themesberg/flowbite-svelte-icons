@@ -21,6 +21,12 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} />
 
+<H2>Class</H2>
+
+<p>Since we are using clsx, you can use boolean, object, array, etc.</p>
+
+<HighlightCompo codeLang="ts" code={modules['./md/class.md'] as string} />
+
 <H2>Types</H2>
 
 <HighlightCompo codeLang="ts" code={modules['./md/types.md'] as string} />
