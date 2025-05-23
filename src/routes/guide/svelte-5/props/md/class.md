@@ -2,4 +2,4 @@
 
 <AddressBookOutline class={['foo', true && 'bar', 'baz']}/>
 
-<AddressBookOutline class={{ foo:true }, { bar:false }, null, { '--foobar':'hello' }}/>
+<AddressBookOutline class={[{ foo:true }, { bar:false }, null, { '--foobar':'hello' }]}/>
