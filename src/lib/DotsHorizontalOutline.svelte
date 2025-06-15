@@ -2,9 +2,9 @@
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
   import clsx from 'clsx';
-  import type { BaseProps, Props } from './types'
+  import type { OutlineBaseProps, OutlineProps } from './types'
 
-  const ctx: BaseProps = getContext('iconCtx') ?? {};
+  const ctx: OutlineBaseProps = getContext('iconCtx') ?? {};
   const sizes = {
     xs: 'w-3 h-3',
     sm: 'w-4 h-4',
@@ -17,11 +17,12 @@
     size = ctx.size || 'md', 
     color = ctx.color || 'currentColor', 
     title, 
+strokeWidth= ctx.strokeWidth || "3",
     desc,  
     class: className, 
     ariaLabel = "dots horizontal outline" , 
     ...restProps 
-    }: Props = $props();
+    }: OutlineProps = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
@@ -43,5 +44,5 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M6 12h.01m6 0h.01m5.99 0h.01"/>  
+     <path stroke="currentColor" stroke-linecap="round" stroke-width={strokeWidth} d="M6 12h.01m6 0h.01m5.99 0h.01"/>  
 </svg>
