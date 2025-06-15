@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.2.1
+
+### Patch Changes
+
+- fix: #46
+  fix: remove fill=currentColor after path
+  fix: #34
+  fix: add a prop where strokeWidth=3
+
 ## 2.2.0
 
 ### Minor Changes
