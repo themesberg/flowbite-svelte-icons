@@ -2,7 +2,7 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@source "../node_modules/svelte-5-ui-lib/dist";
+@source "../node_modules/flowbite-svelte/dist";
 @source "../node_modules/runes-webkit/dist";
 
 @theme {
