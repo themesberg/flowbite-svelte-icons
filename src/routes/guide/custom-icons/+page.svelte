@@ -17,9 +17,9 @@
 <p>Create a Svelte component named `src/lib/MyIcon.svelte`:</p>
 
 <H3>Svelte 4</H3>
-<HighlightCompo codeLang="ts" code={modules['./md/create-a-custom-component.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./md/create-a-custom-component.md'] as string} clipboardClass="top-2"/>
 <H3>Svelte 5</H3>
-<HighlightCompo codeLang="ts" code={modules['./md/create-a-custom-component-2.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./md/create-a-custom-component-2.md'] as string} clipboardClass="top-2"/>
 <p>
 	This component, `MyIcon.svelte`, accepts an `icon` prop which you can use to pass in the specific
 	icon component you want to display. The default configuration is also applied to the icon.
@@ -29,9 +29,9 @@
 
 <p>To use your custom default icon in a Svelte page, do the following:</p>
 <H3>Svelete 4</H3>
-<HighlightCompo codeLang="ts" code={modules['./md/implementation.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./md/implementation.md'] as string} clipboardClass="top-2"/>
 <H3>Svelete 5</H3>
-<HighlightCompo codeLang="ts" code={modules['./md/implementation-2.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./md/implementation-2.md'] as string} clipboardClass="top-2"/>
 <p>
 	Here, we import the `MyIcon` component and the `AngleLeftOutline` icon. By passing the
 	`AngleLeftOutline` icon to the `icon` prop of MyIcon, you apply the default configuration to the

@@ -1,22 +1,32 @@
-type TitleType = {
-id?: string;
-title?: string;
-};
-type DescType = {
-id?: string;
-desc?: string;
-};
+import type { SVGAttributes } from 'svelte/elements';
 
-interface BaseProps {
-size?: "xs" | "sm" | "md" | "lg" | "xl";
-color?: string;
-strokeWidth?: string; // only for Outline icons
-class?: string;
+export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+
+export type TitleType = {
+	id: string;
+	title?: string;
+} | undefined;
+
+export type DescType = {
+	id: string;
+	desc?: string;
+} | undefined;
+
+export interface BaseProps extends SVGAttributes<SVGElement> {
+  size?: Size;
+  color?: string | null;
 }
 
-interface CtxType extends BaseProps {}
-interface Props extends BaseProps{
-title?: TitleType;
-desc?: DescType;
-ariaLabel?: string;
+export interface OutlineBaseProps extends BaseProps{
+  strokeWidth?: number | `${number}`;
 }
+
+export interface AccessibleProps {
+	title?: TitleType;
+	desc?: DescType;
+	ariaLabel?: string;
+}
+
+export interface Props extends BaseProps, AccessibleProps {}
+
+export interface OutlineProps extends OutlineBaseProps, AccessibleProps {}
