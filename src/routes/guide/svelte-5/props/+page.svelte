@@ -21,36 +21,36 @@
 	>.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} clipboardClass="top-2"/>
+<HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} clipboardClass="top-2" />
 
 <H2>Class</H2>
 
 <p>You can use boolean, object, array, etc.</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/class.md'] as string} clipboardClass="top-2"/>
+<HighlightCompo codeLang="ts" code={modules['./md/class.md'] as string} clipboardClass="top-2" />
 
 <H2>Types</H2>
 
-<HighlightCompo codeLang="ts" code={modules['./md/types.md'] as string} clipboardClass="top-2"/>
+<HighlightCompo codeLang="ts" code={modules['./md/types.md'] as string} clipboardClass="top-2" />
 
 <H2>Size</H2>
 
 <p>The following table provides details about the available sizes for icons:</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/size.md'] as string} clipboardClass="top-2"/>
+<HighlightCompo codeLang="ts" code={modules['./md/size.md'] as string} clipboardClass="top-2" />
 
 <p>
 	To change the size of an icon, use the <Code>size</Code> prop and specify the desired size. For example:
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/size-2.md'] as string} clipboardClass="top-2"/>
+<HighlightCompo codeLang="ts" code={modules['./md/size-2.md'] as string} clipboardClass="top-2" />
 
 <p>
 	If you want to override the preconfigured size, you can add a custom size using Tailwind CSS by
 	including the desired classes in the <Code>class</Code> prop. For example:
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/size-3.md'] as string} clipboardClass="top-2"/>
+<HighlightCompo codeLang="ts" code={modules['./md/size-3.md'] as string} clipboardClass="top-2" />
 
 <H2>Color</H2>
 
@@ -60,7 +60,7 @@
 	> prop.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/color.md'] as string} clipboardClass="top-2"/>
+<HighlightCompo codeLang="ts" code={modules['./md/color.md'] as string} clipboardClass="top-2" />
 
 <H2>CSS HEX Colors</H2>
 
@@ -68,7 +68,11 @@
 	Use the color attribute to change colors with HEX color code for Filled and Outlined components.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/css-hex-colors.md'] as string} clipboardClass="top-2"/>
+<HighlightCompo
+	codeLang="ts"
+	code={modules['./md/css-hex-colors.md'] as string}
+	clipboardClass="top-2"
+/>
 
 <H2>Dark mode</H2>
 
@@ -80,29 +84,32 @@
 
 <p>Let's use <Code>dark</Code> for the dark mode class as an example.</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/dark-mode.md'] as string} clipboardClass="top-2"/>
+<HighlightCompo
+	codeLang="ts"
+	code={modules['./md/dark-mode.md'] as string}
+	clipboardClass="top-2"
+/>
 
 <H2>A11y</H2>
 
 <p>
- Use <Code>ariaLabel</Code> prop to add the <Code>aria-label</Code> value.
+	Use <Code>ariaLabel</Code> prop to add the <Code>aria-label</Code> value.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/a11y.md'] as string} clipboardClass="top-2"/>
+<HighlightCompo codeLang="ts" code={modules['./md/a11y.md'] as string} clipboardClass="top-2" />
 
 <p>
 	Use <Code>title</Code>, <Code>desc</Code>, and <Code>ariaLabel</Code> props to make your icons accessible.
 </p>
 
 <HeartSolid
-title={{ id: 'my-title', title: 'Red heart' }}
-desc={{ id: 'my-descrip', desc: 'The shape of a red heart' }}
-ariaLabel="red heart"
-color="red"
+	title={{ id: 'my-title', title: 'Red heart' }}
+	desc={{ id: 'my-descrip', desc: 'The shape of a red heart' }}
+	ariaLabel="red heart"
+	color="red"
 />
 
-
-<HighlightCompo codeLang="ts" code={modules['./md/a11y-2.md'] as string} clipboardClass="top-2"/>
+<HighlightCompo codeLang="ts" code={modules['./md/a11y-2.md'] as string} clipboardClass="top-2" />
 
 <H2>Passing down other attributes</H2>
 
@@ -123,4 +130,8 @@ color="red"
 	/>
 </CodeWrapper>
 
-<HighlightCompo codeLang="ts" code={modules['./md/other-attributes.md'] as string} clipboardClass="top-2"/>
+<HighlightCompo
+	codeLang="ts"
+	code={modules['./md/other-attributes.md'] as string}
+	clipboardClass="top-2"
+/>

@@ -1,49 +1,69 @@
 <script lang="ts">
-  import { getContext } from 'svelte';
-  import { cn } from './helpers';
-  import type { OutlineBaseProps, OutlineProps } from './types'
+	import { getContext } from 'svelte';
+	import { cn } from './helpers';
+	import type { OutlineBaseProps, OutlineProps } from './types';
 
-  const ctx: OutlineBaseProps = getContext('iconCtx') ?? {};
-  const sizes = {
-    xs: 'w-3 h-3',
-    sm: 'w-4 h-4',
-    md: 'w-5 h-5',
-    lg: 'w-6 h-6',
-    xl: 'w-8 h-8'
-  };
+	const ctx: OutlineBaseProps = getContext('iconCtx') ?? {};
+	const sizes = {
+		xs: 'w-3 h-3',
+		sm: 'w-4 h-4',
+		md: 'w-5 h-5',
+		lg: 'w-6 h-6',
+		xl: 'w-8 h-8'
+	};
 
-  let { 
-    size = ctx.size || 'md', 
-    color = ctx.color || 'currentColor', 
-    title, 
-strokeWidth= ctx.strokeWidth || 2,
-    desc,  
-    class: className, 
-    ariaLabel, 
-    ...restProps 
-    }: OutlineProps = $props();
+	let {
+		size = ctx.size || 'md',
+		color = ctx.color || 'currentColor',
+		title,
+		strokeWidth = ctx.strokeWidth || 2,
+		desc,
+		class: className,
+		ariaLabel,
+		...restProps
+	}: OutlineProps = $props();
 
-  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`.trim();
+	let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`.trim();
 	const hasDescription = !!(title?.id || desc?.id);
 	const isLabeled = !!ariaLabel || hasDescription;
 </script>
 
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill="none"
-{color}
-{...restProps}
-  class={cn('shrink-0', sizes[size], className)}
-  viewBox="0 0 24 24"
-  aria-label={ariaLabel}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+	xmlns="http://www.w3.org/2000/svg"
+	fill="none"
+	{color}
+	{...restProps}
+	class={cn('shrink-0', sizes[size], className)}
+	viewBox="0 0 24 24"
+	aria-label={ariaLabel}
+	aria-describedby={hasDescription ? ariaDescribedby : undefined}
 	aria-hidden={!isLabeled}
 >
-  {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
-  {/if}
-     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="M10 21v-9m3-4H7.5a2.5 2.5 0 1 1 0-5c1.5 0 2.875 1.25 3.875 2.5M14 21v-9m-9 0h14v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-8ZM4 8h16a1 1 0 0 1 1 1v3H3V9a1 1 0 0 1 1-1Zm12.155-5c-3 0-5.5 5-5.5 5h5.5a2.5 2.5 0 0 0 0-5Z"/>  
+	{#if title?.id && title.title}
+		<title id={title.id}>{title.title}</title>
+	{/if}
+	{#if desc?.id && desc.desc}
+		<desc id={desc.id}>{desc.desc}</desc>
+	{/if}
+	<path
+		stroke="currentColor"
+		stroke-linecap="round"
+		stroke-linejoin="round"
+		stroke-width={strokeWidth}
+		d="M10 21v-9m3-4H7.5a2.5 2.5 0 1 1 0-5c1.5 0 2.875 1.25 3.875 2.5M14 21v-9m-9 0h14v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-8ZM4 8h16a1 1 0 0 1 1 1v3H3V9a1 1 0 0 1 1-1Zm12.155-5c-3 0-5.5 5-5.5 5h5.5a2.5 2.5 0 0 0 0-5Z"
+	/>
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || 'md'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || 2
+@prop desc
+@prop class: className
+@prop ariaLabel
+@prop ...restProps
+-->

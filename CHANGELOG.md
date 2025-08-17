@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.0
+
+### Minor Changes
+
+- fix: a11y and types
+
 ## 2.2.1
 
 ### Patch Changes
