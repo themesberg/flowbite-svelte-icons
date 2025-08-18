@@ -76,6 +76,6 @@ code {
 	@apply mx-auto my-4 w-full overflow-auto rounded-xl border border-gray-200 bg-gray-50 bg-gradient-to-r p-2 text-sm text-gray-600 sm:p-6 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-400;
 }
 
-.dark_bg_theme {
+.dark-bg-theme {
 	@apply dark:bg-stone-900;
 }

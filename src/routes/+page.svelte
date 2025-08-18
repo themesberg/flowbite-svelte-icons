@@ -53,7 +53,7 @@
 </script>
 
 <div class="relative mx-auto mt-8 h-full max-w-7xl overflow-y-auto px-8 pb-20">
-	<SupportBanner class="relative mt-8">
+	<SupportBanner class="relative dark:bg-gray-800">
 		To Keep It Going, Please Show Your Love.<a href="https://ko-fi.com/Z8Z2CHALG" target="_blank"
 			><img
 				height="40"
