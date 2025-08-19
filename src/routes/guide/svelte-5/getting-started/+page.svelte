@@ -50,7 +50,7 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/requirement.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <H2>Installation</H2>
@@ -58,7 +58,7 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/installation.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <p>
@@ -69,7 +69,7 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/tailwind-config.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <H2>Basic Usages</H2>
@@ -79,7 +79,7 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/basic-usage.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <H2>Faster compiling</H2>
@@ -93,7 +93,7 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/faster-compiling.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <H2>Passing down other attributes</H2>
@@ -103,7 +103,7 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/passing-down-other-attributes.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <H2>Import all</H2>
@@ -113,7 +113,7 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/import-all.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <H2>IconSolid and IconOutline</H2>

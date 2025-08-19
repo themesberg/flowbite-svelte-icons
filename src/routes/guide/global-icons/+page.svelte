@@ -26,7 +26,7 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/setting-preferences.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <p>
@@ -44,7 +44,7 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/prop-size.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <H2>Setting more than one props</H2>

@@ -20,13 +20,13 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/create-a-custom-component.md'] as string}
-	clipboardClass="top-2"
+	
 />
 <H3>Svelte 5</H3>
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/create-a-custom-component-2.md'] as string}
-	clipboardClass="top-2"
+	
 />
 <p>
 	This component, `MyIcon.svelte`, accepts an `icon` prop which you can use to pass in the specific
@@ -40,13 +40,13 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/implementation.md'] as string}
-	clipboardClass="top-2"
+	
 />
 <H3>Svelete 5</H3>
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/implementation-2.md'] as string}
-	clipboardClass="top-2"
+	
 />
 <p>
 	Here, we import the `MyIcon` component and the `AngleLeftOutline` icon. By passing the
