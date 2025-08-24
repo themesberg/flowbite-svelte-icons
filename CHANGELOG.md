@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.0
+
+### Major Changes
+
+- feat: optional to add ariaLabel prop
+
 ## 2.3.0
 
 ### Minor Changes
