@@ -1,0 +1,14 @@
+# llms.txt
+# Documentation index for LLMs
+# See https://llmstxt.org for details
+version: 1
+llms: markdown
+
+# Main documentation sections
+/docs: https://flowbite-svelte.com/llm/icons/icons.md
+
+# Optionally point to bundles
+/context: https://flowbite-svelte.com/llm/icons/context-full.txt
+
+# Contact or repo for updates
+repo: https://github.com/themesberg/flowbite-svelte-icons

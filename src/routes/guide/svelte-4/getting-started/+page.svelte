@@ -29,7 +29,7 @@
   const downloads: NpmDownloadPropsType = {
     packageName: 'flowbite-svelte-icons'
   };
-  const modules = import.meta.glob('./md/*.md', {
+  const modules = import.meta.glob('./examples/*.svelte', {
     query: '?raw',
     import: 'default',
     eager: true
@@ -48,26 +48,26 @@
 <H2>Requirements</H2>
 
 <p>You need to use the following:</p>
-<HighlightCompo codeLang="ts" code={modules['./md/requirement.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/requirement.svelte'] as string} />
 
 <H2>Installation</H2>
 
 <p>Install Svelte and TailwindCSS:</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/installation.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/installation.svelte'] as string} />
 
 <p>
   To make sure the classes used by flowbite-svelte-icons are included by the Tailwindcss, add the
   following to tailwind.config.cjs.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/tailwind-config.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/tailwind-config.svelte'] as string} />
 
 <H2>Basic Usage</H2>
 
 <p>In a svelte file:</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/basic-usage.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/basic-usage.svelte'] as string} />
 
 <H2>A11y friendly</H2>
 
@@ -75,7 +75,7 @@
   Use <Code>title</Code>, <Code>desc</Code>, and <Code>ariaLabel</Code> props to make your icons accessible.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/a11y-friendly.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/a11y-friendly.svelte'] as string} />
 
 <p>Check out this icon in the console:</p>
 
@@ -96,23 +96,23 @@
   compilation.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/faster-compiling.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/faster-compiling.svelte'] as string} />
 
 <H2>Passing down other attributes</H2>
 
 <p>Since all icons have <Code>...$$restProps</Code>, you can pass other attibutes as well.</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/passing-down-other-attributes.svelte'] as string} />
 
 <H2>Using svelte:component</H2>
 
-<HighlightCompo codeLang="ts" code={modules['./md/using-svelte-component.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/using-svelte-component.svelte'] as string} />
 
 <H2>Using onMount</H2>
-<HighlightCompo codeLang="ts" code={modules['./md/using-onmount.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/using-onmount.svelte'] as string} />
 
 <H2>Import all</H2>
 
 <p>Use <Code>import * as Icon from 'svelte-awesome-icons</Code>.</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/import-all.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/import-all.svelte'] as string} />
