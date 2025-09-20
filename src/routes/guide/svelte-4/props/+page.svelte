@@ -1,7 +1,7 @@
 <script lang="ts">
   import { HighlightCompo, Code, H2 } from 'runes-webkit';
 
-  const modules = import.meta.glob('./examples/*.svelte', {
+  const modules = import.meta.glob('./examples/*.md', {
     query: '?raw',
     import: 'default',
     eager: true
@@ -12,30 +12,30 @@
 
 <H2>Props</H2>
 
-<HighlightCompo codeLang="ts" code={modules['./examples/props.svelte'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/props.md'] as string} />
 
 <H2>Types</H2>
 
-<HighlightCompo codeLang="ts" code={modules['./examples/types.svelte'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/types.md'] as string} />
 
 <H2>Size</H2>
 
 <p>The following table provides details about the available sizes for icons:</p>
 
-<HighlightCompo codeLang="ts" code={modules['./examples/size.svelte'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/size.md'] as string} />
 
 <p>
   To change the size of an icon, use the <Code>size</Code> prop and specify the desired size. For example:
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./examples/size-2.svelte'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/size-2.md'] as string} />
 
 <p>
   If you want to override the preconfigured size, you can add a custom size using Tailwind CSS by
   including the desired classes in the <Code>class</Code> prop. For example:
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./examples/size-3.svelte'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/size-3.md'] as string} />
 
 <H2>Color</H2>
 
@@ -45,7 +45,7 @@
   > prop.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./examples/color.svelte'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/color.md'] as string} />
 
 <H2>CSS HEX Colors</H2>
 
@@ -53,7 +53,7 @@
   Use the color attribute to change colors with HEX color code for Filled and Outlined components.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./examples/css-hex-colors.svelte'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/css-hex-colors.md'] as string} />
 
 <H2>Dark mode</H2>
 
@@ -65,7 +65,7 @@
 
 <p>Let's use <Code>dark</Code> for the dark mode class as an example.</p>
 
-<HighlightCompo codeLang="ts" code={modules['./examples/dark-mode.svelte'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/dark-mode.md'] as string} />
 
 <H2>A11y</H2>
 
@@ -75,13 +75,13 @@
   >. Use <Code>ariaLabel</Code> prop to modify the <Code>aria-label</Code> value.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./examples/a11y.svelte'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/a11y.md'] as string} />
 
 <p>
   Use <Code>title</Code>, <Code>desc</Code>, and <Code>ariaLabel</Code> props to make your icons accessible.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./examples/a11y-2.svelte'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/a11y-2.md'] as string} />
 
 <H2>withEvents</H2>
 
@@ -90,25 +90,25 @@
   icons focusable.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./examples/withevents.svelte'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/withevents.md'] as string} />
 
 <p>
   It is possible to add <Code>tabindex="0"</Code>, but it is not recommended for A11y. If you want
   to use it add <Code>withEvents</Code> prop as well.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./examples/withevents-2.svelte'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/withevents-2.md'] as string} />
 
 <H2>Events</H2>
 
 <p>Use <Code>withEvents</Code> prop to use the following events:</p>
 
-<HighlightCompo codeLang="ts" code={modules['./examples/events.svelte'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/events.md'] as string} />
 
-<HighlightCompo codeLang="ts" code={modules['./examples/events-2.svelte'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/events-2.md'] as string} />
 
 <H2>Passing down other attributes</H2>
 
 <p>Since all icons have <Code>...$$restProps</Code>, you can pass other attibutes as well.</p>
 
-<HighlightCompo codeLang="ts" code={modules['./examples/passing-down-other-attributes.svelte'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/passing-down-other-attributes.md'] as string} />

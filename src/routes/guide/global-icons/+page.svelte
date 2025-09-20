@@ -1,7 +1,7 @@
 <script lang="ts">
   import { HighlightCompo, Code, H2 } from 'runes-webkit';
 
-  const modules = import.meta.glob('./examples/*.svelte', {
+  const modules = import.meta.glob('./examples/*.md', {
     query: '?raw',
     import: 'default',
     eager: true
@@ -19,11 +19,11 @@
 <H2>Setting preferences</H2>
 
 <p>
-  In your <Code>+layout.svelte</Code> or <Code>+page.svelte</Code>, you can define and set global
+  In your <Code>+layout.md</Code> or <Code>+page.md</Code>, you can define and set global
   icon preferences as follows:
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./examples/setting-preferences.svelte'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/setting-preferences.md'] as string} />
 
 <p>
   The <Code>size</Code>, and <Code>role</Code> (for solid icons) and <Code>size</Code>, <Code
@@ -37,7 +37,7 @@
 
 <p>If you set <Code>size</Code>, icons can be customized with different color. For example:</p>
 
-<HighlightCompo codeLang="ts" code={modules['./examples/prop-size.svelte'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./examples/prop-size.md'] as string} />
 
 <H2>Setting more than one props</H2>
 
