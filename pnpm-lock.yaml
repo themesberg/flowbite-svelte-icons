@@ -28,11 +28,11 @@ importers:
         specifier: ^1.56.1
         version: 1.56.1
       '@sveltejs/adapter-auto':
-        specifier: ^6.1.1
-        version: 6.1.1(@sveltejs/kit@2.47.0(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))
+        specifier: ^7.0.0
+        version: 7.0.0(@sveltejs/kit@2.47.1(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))
       '@sveltejs/kit':
         specifier: ^2.47.0
-        version: 2.47.0(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1))
+        version: 2.47.1(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1))
       '@sveltejs/package':
         specifier: ^2.5.4
         version: 2.5.4(svelte@5.40.2)(typescript@5.9.3)
@@ -82,8 +82,8 @@ importers:
         specifier: ^3.4.0
         version: 3.4.0(prettier@3.6.2)(svelte@5.40.2)
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.14
-        version: 0.6.14(prettier-plugin-svelte@3.4.0(prettier@3.6.2)(svelte@5.40.2))(prettier@3.6.2)
+        specifier: ^0.7.0
+        version: 0.7.0(prettier-plugin-svelte@3.4.0(prettier@3.6.2)(svelte@5.40.2))(prettier@3.6.2)
       publint:
         specifier: ^0.3.14
         version: 0.3.14
@@ -95,7 +95,7 @@ importers:
         version: 0.4.5(svelte@5.40.2)
       runes-webkit:
         specifier: ^0.11.4
-        version: 0.11.4(@sveltejs/kit@2.47.0(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(tailwindcss@4.1.14)
+        version: 0.11.4(@sveltejs/kit@2.47.1(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(tailwindcss@4.1.14)
       svelte:
         specifier: ^5.40.2
         version: 5.40.2
@@ -689,13 +689,13 @@ packages:
     peerDependencies:
       acorn: ^8.9.0
 
-  '@sveltejs/adapter-auto@6.1.1':
-    resolution: {integrity: sha512-cBNt4jgH4KuaNO5gRSB2CZKkGtz+OCZ8lPjRQGjhvVUD4akotnj2weUia6imLl2v07K3IgsQRyM36909miSwoQ==}
+  '@sveltejs/adapter-auto@7.0.0':
+    resolution: {integrity: sha512-ImDWaErTOCkRS4Gt+5gZuymKFBobnhChXUZ9lhUZLahUgvA4OOvRzi3sahzYgbxGj5nkA6OV0GAW378+dl/gyw==}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
 
-  '@sveltejs/kit@2.47.0':
-    resolution: {integrity: sha512-mznN01MBXtr4T7X/E3ENkhF6GzqxTxL6/whG3OzCzUu8G8KYRNiCdoxLMVWAHJx/mDMPP3XAeKCMZHF/Xd/CDw==}
+  '@sveltejs/kit@2.47.1':
+    resolution: {integrity: sha512-1v+MbMHxTi6ctQyxmz3owLKqZGaBHyx4EQqTdq/PvDswPFzw3WlqhrOKOh2ZzH23+XpQGEF9G+KDIgYJE+byvg==}
     engines: {node: '>=18.13'}
     hasBin: true
     peerDependencies:
@@ -1926,9 +1926,9 @@ packages:
       prettier: ^3.0.0
       svelte: ^3.2.0 || ^4.0.0-next.0 || ^5.0.0-next.0
 
-  prettier-plugin-tailwindcss@0.6.14:
-    resolution: {integrity: sha512-pi2e/+ZygeIqntN+vC573BcW5Cve8zUB0SSAGxqpB4f96boZF4M3phPVoOFCeypwkpRYdi7+jQ5YJJUwrkGUAg==}
-    engines: {node: '>=14.21.3'}
+  prettier-plugin-tailwindcss@0.7.0:
+    resolution: {integrity: sha512-zpRZhkfwq1cNmbKhmKzXKuKFdkgXZXlf6p+KttD75v6pGz1FxmcKMc4RKdw97GYBKBbout4113HSLaBJAomFDw==}
+    engines: {node: '>=20.19'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
       '@prettier/plugin-hermes': '*'
@@ -1940,14 +1940,12 @@ packages:
       prettier: ^3.0
       prettier-plugin-astro: '*'
       prettier-plugin-css-order: '*'
-      prettier-plugin-import-sort: '*'
       prettier-plugin-jsdoc: '*'
       prettier-plugin-marko: '*'
       prettier-plugin-multiline-arrays: '*'
       prettier-plugin-organize-attributes: '*'
       prettier-plugin-organize-imports: '*'
       prettier-plugin-sort-imports: '*'
-      prettier-plugin-style-order: '*'
       prettier-plugin-svelte: '*'
     peerDependenciesMeta:
       '@ianvs/prettier-plugin-sort-imports':
@@ -1968,8 +1966,6 @@ packages:
         optional: true
       prettier-plugin-css-order:
         optional: true
-      prettier-plugin-import-sort:
-        optional: true
       prettier-plugin-jsdoc:
         optional: true
       prettier-plugin-marko:
@@ -1981,8 +1977,6 @@ packages:
       prettier-plugin-organize-imports:
         optional: true
       prettier-plugin-sort-imports:
-        optional: true
-      prettier-plugin-style-order:
         optional: true
       prettier-plugin-svelte:
         optional: true
@@ -3057,11 +3051,11 @@ snapshots:
     dependencies:
       acorn: 8.15.0
 
-  '@sveltejs/adapter-auto@6.1.1(@sveltejs/kit@2.47.0(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))':
+  '@sveltejs/adapter-auto@7.0.0(@sveltejs/kit@2.47.1(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))':
     dependencies:
-      '@sveltejs/kit': 2.47.0(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1))
+      '@sveltejs/kit': 2.47.1(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1))
 
-  '@sveltejs/kit@2.47.0(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1))':
+  '@sveltejs/kit@2.47.1(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1))':
     dependencies:
       '@standard-schema/spec': 1.0.0
       '@sveltejs/acorn-typescript': 1.0.6(acorn@8.15.0)
@@ -4281,7 +4275,7 @@ snapshots:
       prettier: 3.6.2
       svelte: 5.40.2
 
-  prettier-plugin-tailwindcss@0.6.14(prettier-plugin-svelte@3.4.0(prettier@3.6.2)(svelte@5.40.2))(prettier@3.6.2):
+  prettier-plugin-tailwindcss@0.7.0(prettier-plugin-svelte@3.4.0(prettier@3.6.2)(svelte@5.40.2))(prettier@3.6.2):
     dependencies:
       prettier: 3.6.2
     optionalDependencies:
@@ -4382,9 +4376,9 @@ snapshots:
     dependencies:
       svelte: 5.40.2
 
-  runes-webkit@0.11.4(@sveltejs/kit@2.47.0(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(tailwindcss@4.1.14):
+  runes-webkit@0.11.4(@sveltejs/kit@2.47.1(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(tailwindcss@4.1.14):
     dependencies:
-      '@sveltejs/kit': 2.47.0(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1))
+      '@sveltejs/kit': 2.47.1(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1))
       clsx: 2.1.1
       highlight.js: 11.11.1
       svelte: 5.40.2
