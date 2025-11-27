@@ -2,8 +2,8 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@source "../node_modules/flowbite-svelte/dist";
-@source "../node_modules/runes-webkit/dist";
+@source '../node_modules/flowbite-svelte/dist';
+@source '../node_modules/runes-webkit/dist';
 
 @theme {
   --z-index-100: 100;

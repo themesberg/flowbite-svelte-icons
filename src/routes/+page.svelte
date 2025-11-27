@@ -10,7 +10,6 @@
     info,
     type CardType
   } from 'runes-webkit';
-  import { A } from 'flowbite-svelte';
 
   const brand = {
     title: `${removeHyphensAndCapitalize(__NAME__)}`,
