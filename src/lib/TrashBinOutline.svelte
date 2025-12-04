@@ -23,9 +23,9 @@
     ...restProps
   }: OutlineProps = $props();
 
-  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`.trim();
-  const hasDescription = !!(title?.id || desc?.id);
-  const isLabeled = !!ariaLabel || hasDescription;
+  const ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
+  const hasDescription = $derived(!!(title?.id || desc?.id));
+  const isLabeled = $derived(!!ariaLabel || hasDescription);
 </script>
 
 <svg
