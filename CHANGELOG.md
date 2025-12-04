@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.1
+
+### Patch Changes
+
+- fix: replace reactive code patterns with $derived()
+
 ## 3.0.0
 
 ### Major Changes
