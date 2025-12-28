@@ -7,10 +7,12 @@ Comprehensive unit and integration tests have been generated for the Flowbite Sv
 ## Test Files Generated
 
 ### 1. **IconSizeProps.test.ts** (Primary Feature Tests)
+
 **Lines of Code:** ~400
 **Test Cases:** 40+
 
 #### Coverage Areas:
+
 - ✅ Size prop handling (xs, sm, md, lg, xl)
 - ✅ Width/height explicit dimension props
 - ✅ Priority: width/height override size classes
@@ -38,10 +40,12 @@ render(Icon, { size: 'xl', width: '48' }) → width="48", NO w-10 class
 \`\`\`
 
 ### 2. **Types.test.ts** (TypeScript Type Validation)
+
 **Lines of Code:** ~150
 **Test Cases:** 15+
 
 #### Coverage Areas:
+
 - ✅ Size union type validation
 - ✅ OutlineProps interface
 - ✅ Props interface (solid icons)
@@ -50,10 +54,12 @@ render(Icon, { size: 'xl', width: '48' }) → width="48", NO w-10 class
 - ✅ Accessibility prop types
 
 ### 3. **IconRendering.integration.test.ts** (Integration Tests)
+
 **Lines of Code:** ~450
 **Test Cases:** 35+
 
 #### Coverage Areas:
+
 - ✅ SVG structure validation (namespace, viewBox, paths)
 - ✅ Multiple icon instances
 - ✅ Different icon components
@@ -75,17 +81,19 @@ render(Icon2, { size: 'xl', color: 'blue' })
 
 // Accessibility structure
 render(Icon, {
-  title: { id: 't1', content: 'Title' },
-  desc: { id: 'd1', content: 'Desc' },
-  ariaLabel: 'Label'
+title: { id: 't1', content: 'Title' },
+desc: { id: 'd1', content: 'Desc' },
+ariaLabel: 'Label'
 }) → proper ARIA structure
 \`\`\`
 
 ### 4. **IconContext.test.ts** (Context-Based Configuration)
+
 **Lines of Code:** ~200
 **Test Cases:** 15+
 
 #### Coverage Areas:
+
 - ✅ Default values when no context
 - ✅ Context prop override
 - ✅ Width/height with context
@@ -104,10 +112,12 @@ render(Icon, { width: '50', height: '50' }) → no size classes
 \`\`\`
 
 ### 5. **Helpers.test.ts** (Utility Function Tests)
+
 **Lines of Code:** ~250
 **Test Cases:** 25+
 
 #### Coverage Areas:
+
 - ✅ Basic cn() function behavior
 - ✅ TailwindCSS class merging
 - ✅ Conflict resolution
@@ -126,7 +136,9 @@ cn('shrink-0', undefined, 'custom') → 'shrink-0 custom'
 \`\`\`
 
 ### 6. **Updated Test README.md**
+
 Comprehensive documentation including:
+
 - Test structure overview
 - Running instructions
 - Coverage details
@@ -147,6 +159,7 @@ Comprehensive documentation including:
 ## Coverage by Category
 
 ### Props Testing: 100%
+
 - ✅ size (all 5 variants)
 - ✅ width
 - ✅ height
@@ -159,6 +172,7 @@ Comprehensive documentation including:
 - ✅ All spread props (...restProps)
 
 ### Accessibility Testing: 100%
+
 - ✅ ARIA labels
 - ✅ ARIA descriptions
 - ✅ Role attributes
@@ -168,6 +182,7 @@ Comprehensive documentation including:
 - ✅ Decorative icon handling
 
 ### Edge Case Testing: 100%
+
 - ✅ Undefined values
 - ✅ Null values
 - ✅ Empty strings
@@ -177,6 +192,7 @@ Comprehensive documentation including:
 - ✅ Numeric vs string types
 
 ### Integration Testing: 100%
+
 - ✅ Multiple instances
 - ✅ Different components
 - ✅ Context integration
@@ -187,55 +203,64 @@ Comprehensive documentation including:
 ## Key Test Patterns
 
 ### 1. Size Prop Pattern
+
 \`\`\`typescript
 it('should render with specified size prop', () => {
-  const { container } = render(Icon, { size: 'xl' });
-  const svg = container.querySelector('svg');
-  expect(svg?.classList.contains('w-10')).toBe(true);
-  expect(svg?.classList.contains('h-10')).toBe(true);
+const { container } = render(Icon, { size: 'xl' });
+const svg = container.querySelector('svg');
+expect(svg?.classList.contains('w-10')).toBe(true);
+expect(svg?.classList.contains('h-10')).toBe(true);
 });
 \`\`\`
 
 ### 2. Width/Height Override Pattern
+
 \`\`\`typescript
 it('should use width and height props instead of size classes', () => {
-  const { container } = render(Icon, {
-    width: '32',
-    height: '32'
-  });
-  const svg = container.querySelector('svg');
-  expect(svg?.getAttribute('width')).toBe('32');
-  expect(svg?.classList.contains('w-6')).toBe(false);
+const { container } = render(Icon, {
+width: '32',
+height: '32'
+});
+const svg = container.querySelector('svg');
+expect(svg?.getAttribute('width')).toBe('32');
+expect(svg?.classList.contains('w-6')).toBe(false);
 });
 \`\`\`
 
 ### 3. Accessibility Pattern
+
 \`\`\`typescript
 it('should support title and desc for accessibility', () => {
-  const { container } = render(Icon, {
-    title: { id: 'title-1', content: 'Title text' },
-    desc: { id: 'desc-1', content: 'Description text' }
-  });
-  expect(svg?.getAttribute('aria-describedby')).toBe('title-1 desc-1');
+const { container } = render(Icon, {
+title: { id: 'title-1', content: 'Title text' },
+desc: { id: 'desc-1', content: 'Description text' }
+});
+expect(svg?.getAttribute('aria-describedby')).toBe('title-1 desc-1');
 });
 \`\`\`
 
 ## Running the Tests
 
 \`\`\`bash
+
 # Run all tests
+
 pnpm test:unit
 
 # Run with coverage
+
 pnpm test:unit -- --coverage
 
 # Run specific test file
+
 pnpm test:unit IconSizeProps.test.ts
 
 # Watch mode
+
 pnpm test:unit -- --watch
 
 # Browser mode (with Playwright)
+
 pnpm test:unit -- --browser
 \`\`\`
 
@@ -269,6 +294,7 @@ The major refactoring included:
 ## Conclusion
 
 The test suite provides comprehensive coverage for the Flowbite Svelte Icons library version 3.0, ensuring:
+
 - ✅ All props work correctly
 - ✅ Sizing logic functions as expected
 - ✅ Accessibility features are properly implemented

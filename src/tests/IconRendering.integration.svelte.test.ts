@@ -11,7 +11,7 @@ describe('Icon Rendering Integration Tests', () => {
     it('should render valid SVG with correct namespace', () => {
       const { container } = render(AddColumnAfterOutline);
       const svg = container.querySelector('svg');
-      
+
       expect(svg?.namespaceURI).toBe('http://www.w3.org/2000/svg');
       expect(svg?.getAttribute('viewBox')).toBe('0 0 24 24');
     });
@@ -19,7 +19,7 @@ describe('Icon Rendering Integration Tests', () => {
     it('should render path elements with correct attributes', () => {
       const { container } = render(AddColumnAfterOutline);
       const path = container.querySelector('path');
-      
+
       expect(path).toBeTruthy();
       expect(path?.getAttribute('stroke')).toBe('currentColor');
       expect(path?.getAttribute('stroke-linecap')).toBe('round');
@@ -30,7 +30,7 @@ describe('Icon Rendering Integration Tests', () => {
       const { container } = render(AddressBookSolid);
       const svg = container.querySelector('svg');
       const path = container.querySelector('path');
-      
+
       expect(svg?.getAttribute('fill')).toBe('currentColor');
       expect(path?.getAttribute('fill-rule')).toBeTruthy();
     });
@@ -46,10 +46,10 @@ describe('Icon Rendering Integration Tests', () => {
         size: 'xl',
         color: 'blue'
       });
-      
+
       const svg1 = container1.querySelector('svg');
       const svg2 = container2.querySelector('svg');
-      
+
       expect(svg1?.classList.contains('w-4')).toBe(true);
       expect(svg2?.classList.contains('w-8')).toBe(true);
       expect(svg1?.getAttribute('color')).toBe('red');
@@ -64,8 +64,8 @@ describe('Icon Rendering Integration Tests', () => {
         AddressBookSolid,
         CalendarPlusOutline
       ];
-      
-      icons.forEach(IconComponent => {
+
+      icons.forEach((IconComponent) => {
         const { container } = render(IconComponent);
         const svg = container.querySelector('svg');
         expect(svg).toBeTruthy();
@@ -78,7 +78,7 @@ describe('Icon Rendering Integration Tests', () => {
     it('should handle size changes correctly', () => {
       const sizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
       const expectedClasses = ['w-3', 'w-4', 'w-5', 'w-6', 'w-8'];
-      
+
       sizes.forEach((size, index) => {
         const { container } = render(AddColumnAfterOutline, { size });
         const svg = container.querySelector('svg');
@@ -92,7 +92,7 @@ describe('Icon Rendering Integration Tests', () => {
         { width: '40', height: '40' },
         { width: '80', height: '80' }
       ];
-      
+
       dimensions.forEach(({ width, height }) => {
         const { container } = render(AddColumnAfterOutline, { width, height });
         const svg = container.querySelector('svg');
@@ -108,7 +108,7 @@ describe('Icon Rendering Integration Tests', () => {
         class: 'text-red-500 hover:text-red-700'
       });
       const svg = container.querySelector('svg');
-      
+
       expect(svg?.classList.contains('shrink-0')).toBe(true);
       expect(svg?.classList.contains('text-red-500')).toBe(true);
       expect(svg?.classList.contains('hover:text-red-700')).toBe(true);
@@ -122,7 +122,7 @@ describe('Icon Rendering Integration Tests', () => {
         class: 'custom-icon'
       });
       const svg = container.querySelector('svg');
-      
+
       expect(svg?.classList.contains('w-6')).toBe(false);
       expect(svg?.classList.contains('h-6')).toBe(false);
       expect(svg?.classList.contains('custom-icon')).toBe(true);
@@ -137,11 +137,11 @@ describe('Icon Rendering Integration Tests', () => {
         desc: { id: 'icon-desc', desc: 'Adds a new column after the current one' },
         ariaLabel: 'Add Column After'
       });
-      
+
       const svg = container.querySelector('svg');
       const title = container.querySelector('title');
       const desc = container.querySelector('desc');
-      
+
       expect(svg?.getAttribute('aria-label')).toBe('Add Column After');
       expect(svg?.getAttribute('aria-describedby')).toBe('icon-title icon-desc');
       expect(svg?.getAttribute('role')).toBe('img');
@@ -154,7 +154,7 @@ describe('Icon Rendering Integration Tests', () => {
     it('should handle aria-hidden when no label provided', () => {
       const { container } = render(AddColumnAfterOutline);
       const svg = container.querySelector('svg');
-      
+
       expect(svg?.getAttribute('aria-hidden')).toBe('true');
       expect(svg?.hasAttribute('role')).toBe(false);
     });
@@ -164,7 +164,7 @@ describe('Icon Rendering Integration Tests', () => {
         title: { id: 'just-title', title: 'Title Only' }
       });
       const svg = container.querySelector('svg');
-      
+
       expect(svg?.getAttribute('aria-describedby')).toBe('just-title');
       expect(svg?.getAttribute('role')).toBe('img');
     });
@@ -173,7 +173,7 @@ describe('Icon Rendering Integration Tests', () => {
   describe('Performance and Optimization', () => {
     it('should render efficiently without unnecessary wrappers', () => {
       const { container } = render(AddColumnAfterOutline);
-      
+
       // Should have direct SVG element without extra wrappers
       const children = Array.from(container.children);
       expect(children.length).toBe(1);
@@ -185,10 +185,10 @@ describe('Icon Rendering Integration Tests', () => {
         title: { id: 't1', title: 'Title' },
         desc: { id: 'd1', desc: 'Desc' }
       });
-      
+
       const titles = container.querySelectorAll('title');
       const descs = container.querySelectorAll('desc');
-      
+
       expect(titles.length).toBe(1);
       expect(descs.length).toBe(1);
     });
@@ -238,7 +238,7 @@ describe('Solid vs Outline Icon Differences', () => {
   it('should render outline icon with stroke', () => {
     const { container } = render(AddColumnAfterOutline);
     const path = container.querySelector('path');
-    
+
     expect(path?.getAttribute('stroke')).toBeTruthy();
     expect(path?.hasAttribute('fill')).toBe(false);
   });
@@ -247,7 +247,7 @@ describe('Solid vs Outline Icon Differences', () => {
     const { container } = render(AddressBookSolid);
     const path = container.querySelector('path');
     const svg = container.querySelector('svg');
-    
+
     expect(svg?.getAttribute('fill')).toBe('currentColor');
     expect(path?.getAttribute('fill-rule')).toBeTruthy();
   });
@@ -257,10 +257,10 @@ describe('Solid vs Outline Icon Differences', () => {
       strokeWidth: 3
     });
     const { container: solidContainer } = render(AddressBookSolid);
-    
+
     const outlinePath = outlineContainer.querySelector('path');
     const solidPath = solidContainer.querySelector('path');
-    
+
     expect(outlinePath?.getAttribute('stroke-width')).toBe('3');
     expect(solidPath?.hasAttribute('stroke-width')).toBe(false);
   });

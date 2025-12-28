@@ -1,18 +1,12 @@
 import type { SVGAttributes } from 'svelte/elements';
 
-export type SizePreset = {
-  size?: Size;
-  width?: never;
-  height?: never;
-};
+export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
-export type ExplicitSize = {
-  size?: never;
+export type SizeAndDimensions = {
+  size?: Size;
   width?: number | string;
   height?: number | string;
 };
-
-export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 export type TitleType =
   | {
@@ -29,7 +23,7 @@ export type DescType =
   | undefined;
 
 export type BaseProps = SVGAttributes<SVGElement> &
-  (SizePreset | ExplicitSize) & {
+  SizeAndDimensions & {
     color?: string | null;
   };
 

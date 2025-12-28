@@ -1,9 +1,5 @@
 {
-  "outputFormatters": [
-    [
-      "markdownlint-cli2-formatter-json"
-    ]
-  ],
+  "outputFormatters": [["markdownlint-cli2-formatter-json"]],
   "config": {
     "default": true,
     "line-length": false,

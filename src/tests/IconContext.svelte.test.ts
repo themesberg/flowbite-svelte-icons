@@ -1,9 +1,5 @@
 import { describe, it, expect } from 'vitest';
 import { render } from '@testing-library/svelte';
-import { setContext } from 'svelte';
-
-// We'll need to create a wrapper component for context testing
-import type { OutlineBaseProps } from '$lib/types';
 
 describe('Icon Context Support', () => {
   describe('Context-based default props', () => {
@@ -12,7 +8,7 @@ describe('Icon Context Support', () => {
       const AddColumnAfterOutline = (await import('$lib/AddColumnAfterOutline.svelte')).default;
       const { container } = render(AddColumnAfterOutline);
       const svg = container.querySelector('svg');
-      
+
       // Should use built-in defaults
       expect(svg?.classList.contains('w-5')).toBe(true); // md size
       expect(svg?.getAttribute('color')).toBe('currentColor');
@@ -22,7 +18,7 @@ describe('Icon Context Support', () => {
       const AddColumnAfterOutline = (await import('$lib/AddColumnAfterOutline.svelte')).default;
       const { container } = render(AddColumnAfterOutline, { size: undefined });
       const svg = container.querySelector('svg');
-      
+
       expect(svg?.classList.contains('w-5')).toBe(true);
     });
 
@@ -30,7 +26,7 @@ describe('Icon Context Support', () => {
       const AddColumnAfterOutline = (await import('$lib/AddColumnAfterOutline.svelte')).default;
       const { container } = render(AddColumnAfterOutline);
       const path = container.querySelector('path');
-      
+
       expect(path?.getAttribute('stroke-width')).toBe('2');
     });
   });
@@ -40,7 +36,7 @@ describe('Icon Context Support', () => {
       const AddColumnAfterOutline = (await import('$lib/AddColumnAfterOutline.svelte')).default;
       const { container } = render(AddColumnAfterOutline, { size: 'xl' });
       const svg = container.querySelector('svg');
-      
+
       expect(svg?.classList.contains('w-8')).toBe(true);
     });
 
@@ -48,7 +44,7 @@ describe('Icon Context Support', () => {
       const AddColumnAfterOutline = (await import('$lib/AddColumnAfterOutline.svelte')).default;
       const { container } = render(AddColumnAfterOutline, { color: '#FF5733' });
       const svg = container.querySelector('svg');
-      
+
       expect(svg?.getAttribute('color')).toBe('#FF5733');
     });
 
@@ -56,7 +52,7 @@ describe('Icon Context Support', () => {
       const AddColumnAfterOutline = (await import('$lib/AddColumnAfterOutline.svelte')).default;
       const { container } = render(AddColumnAfterOutline, { strokeWidth: 4 });
       const path = container.querySelector('path');
-      
+
       expect(path?.getAttribute('stroke-width')).toBe('4');
     });
   });
@@ -69,7 +65,7 @@ describe('Icon Context Support', () => {
         height: '50'
       });
       const svg = container.querySelector('svg');
-      
+
       expect(svg?.getAttribute('width')).toBe('50');
       expect(svg?.getAttribute('height')).toBe('50');
       expect(svg?.classList.contains('w-6')).toBe(false);
@@ -77,12 +73,12 @@ describe('Icon Context Support', () => {
 
     it('should use effectiveSize logic correctly', async () => {
       const AddColumnAfterOutline = (await import('$lib/AddColumnAfterOutline.svelte')).default;
-      
+
       // Without width/height: should use size classes
       const { container: container1 } = render(AddColumnAfterOutline, { size: 'lg' });
       const svg1 = container1.querySelector('svg');
       expect(svg1?.classList.contains('w-6')).toBe(true);
-      
+
       // With width/height: should not use size classes
       const { container: container2 } = render(AddColumnAfterOutline, {
         size: 'lg',
@@ -99,11 +95,11 @@ describe('Icon Context Support', () => {
 describe('Context Fallback Chain', () => {
   it('should follow prop -> context -> default chain for size', async () => {
     const AddColumnAfterOutline = (await import('$lib/AddColumnAfterOutline.svelte')).default;
-    
+
     // No prop, no context -> default (md)
     const { container: c1 } = render(AddColumnAfterOutline);
     expect(c1.querySelector('svg')?.classList.contains('w-5')).toBe(true);
-    
+
     // Prop provided -> use prop
     const { container: c2 } = render(AddColumnAfterOutline, { size: 'xs' });
     expect(c2.querySelector('svg')?.classList.contains('w-3')).toBe(true);
@@ -111,11 +107,11 @@ describe('Context Fallback Chain', () => {
 
   it('should follow prop -> context -> default chain for color', async () => {
     const AddColumnAfterOutline = (await import('$lib/AddColumnAfterOutline.svelte')).default;
-    
+
     // Default color
     const { container: c1 } = render(AddColumnAfterOutline);
     expect(c1.querySelector('svg')?.getAttribute('color')).toBe('currentColor');
-    
+
     // Custom color
     const { container: c2 } = render(AddColumnAfterOutline, { color: 'red' });
     expect(c2.querySelector('svg')?.getAttribute('color')).toBe('red');
@@ -123,11 +119,11 @@ describe('Context Fallback Chain', () => {
 
   it('should follow prop -> context -> default chain for strokeWidth', async () => {
     const AddColumnAfterOutline = (await import('$lib/AddColumnAfterOutline.svelte')).default;
-    
+
     // Default strokeWidth
     const { container: c1 } = render(AddColumnAfterOutline);
     expect(c1.querySelector('path')?.getAttribute('stroke-width')).toBe('2');
-    
+
     // Custom strokeWidth
     const { container: c2 } = render(AddColumnAfterOutline, { strokeWidth: 5 });
     expect(c2.querySelector('path')?.getAttribute('stroke-width')).toBe('5');

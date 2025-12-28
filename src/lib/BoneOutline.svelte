@@ -51,6 +51,7 @@
   {...restProps}
   class={cn('shrink-0', sizeClass, className)}
   viewBox="0 0 24 24"
+  role={isLabeled ? 'img' : undefined}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   aria-hidden={!isLabeled}

@@ -6,7 +6,7 @@ describe('Type Definitions', () => {
     it('should accept valid size values', () => {
       const sizes: Size[] = ['xs', 'sm', 'md', 'lg', 'xl'];
       expect(sizes).toHaveLength(5);
-      
+
       // Type checking at compile time ensures only valid values
       const validSize: Size = 'md';
       expect(validSize).toBe('md');
@@ -22,7 +22,7 @@ describe('Type Definitions', () => {
         class: 'custom-class',
         ariaLabel: 'Icon label'
       };
-      
+
       expect(outlineProps.size).toBe('lg');
       expect(outlineProps.strokeWidth).toBe(2);
     });
@@ -33,7 +33,7 @@ describe('Type Definitions', () => {
         height: '100',
         color: 'blue'
       };
-      
+
       expect(propsWithDimensions.width).toBe('100');
       expect(propsWithDimensions.height).toBe('100');
     });
@@ -42,16 +42,16 @@ describe('Type Definitions', () => {
       const propsWithAccessibility: OutlineProps = {
         title: {
           id: 'title-1',
-          content: 'Title'
+          title: 'Title'
         },
         desc: {
           id: 'desc-1',
-          content: 'Description'
+          desc: 'Description'
         }
       };
-      
+
       expect(propsWithAccessibility.title?.id).toBe('title-1');
-      expect(propsWithAccessibility.desc?.content).toBe('Description');
+      expect(propsWithAccessibility.desc?.desc).toBe('Description');
     });
   });
 
@@ -62,7 +62,7 @@ describe('Type Definitions', () => {
         color: 'green',
         class: 'icon-class'
       };
-      
+
       expect(props.size).toBe('sm');
       expect(props.color).toBe('green');
     });
@@ -72,7 +72,7 @@ describe('Type Definitions', () => {
         width: '64',
         height: '64'
       };
-      
+
       expect(solidProps.width).toBe('64');
       expect(solidProps.height).toBe('64');
     });
@@ -80,10 +80,10 @@ describe('Type Definitions', () => {
     it('should support all accessibility features', () => {
       const accessibleProps: Props = {
         ariaLabel: 'Solid icon',
-        title: { id: 't1', content: 'Title' },
-        desc: { id: 'd1', content: 'Desc' }
+        title: { id: 't1', title: 'Title' },
+        desc: { id: 'd1', desc: 'Desc' }
       };
-      
+
       expect(accessibleProps.ariaLabel).toBe('Solid icon');
       expect(accessibleProps.title).toBeDefined();
       expect(accessibleProps.desc).toBeDefined();
@@ -95,7 +95,7 @@ describe('Type Definitions', () => {
       const propsNoSize: OutlineProps = {
         color: 'purple'
       };
-      
+
       expect(propsNoSize.size).toBeUndefined();
     });
 
@@ -105,7 +105,7 @@ describe('Type Definitions', () => {
         width: '128',
         height: '128'
       };
-      
+
       // Width/height should take precedence in component logic
       expect(mixedProps.size).toBe('xl');
       expect(mixedProps.width).toBe('128');
@@ -117,8 +117,8 @@ describe('Type Constraints and Unions', () => {
   it('should enforce Size union type', () => {
     // This test validates TypeScript compilation
     const validSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
-    
-    validSizes.forEach(size => {
+
+    validSizes.forEach((size) => {
       const props: OutlineProps = { size };
       expect(props.size).toBe(size);
     });
@@ -129,12 +129,12 @@ describe('Type Constraints and Unions', () => {
       width: '50',
       height: '50'
     };
-    
+
     const numericDimensions: OutlineProps = {
       width: 50,
       height: 50
     };
-    
+
     expect(stringDimensions.width).toBe('50');
     expect(numericDimensions.width).toBe(50);
   });

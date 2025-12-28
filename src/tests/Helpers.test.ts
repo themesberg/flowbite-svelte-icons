@@ -62,7 +62,7 @@ describe('Helpers - cn function', () => {
       // Simulating what happens in icon components
       const sizes = { md: 'w-6 h-6', lg: 'w-8 h-8' };
       const result = cn('shrink-0', sizes.md, 'custom-class');
-      
+
       expect(result).toContain('shrink-0');
       expect(result).toContain('w-6');
       expect(result).toContain('h-6');
@@ -73,7 +73,7 @@ describe('Helpers - cn function', () => {
       const hasCustomSize = true;
       const sizeClass = hasCustomSize ? 'w-10 h-10' : undefined;
       const result = cn('shrink-0', sizeClass, 'icon-base');
-      
+
       expect(result).toContain('shrink-0');
       expect(result).toContain('w-10');
       expect(result).toContain('icon-base');
@@ -82,7 +82,7 @@ describe('Helpers - cn function', () => {
     it('should handle undefined sizeClass when width/height provided', () => {
       const sizeClass = undefined; // When width/height are used
       const result = cn('shrink-0', sizeClass, 'custom');
-      
+
       expect(result).toBe('shrink-0 custom');
     });
   });
@@ -97,9 +97,9 @@ describe('Helpers - cn function', () => {
 
     it('should handle object notation', () => {
       const result = cn({
-        'active': true,
-        'disabled': false,
-        'hover': true
+        active: true,
+        disabled: false,
+        hover: true
       });
       expect(result).toContain('active');
       expect(result).toContain('hover');
@@ -144,7 +144,9 @@ describe('Helpers - cn function', () => {
 
   describe('Performance and edge cases', () => {
     it('should handle large number of classes', () => {
-      const classes = Array(100).fill(0).map((_, i) => `class-${i}`);
+      const classes = Array(100)
+        .fill(0)
+        .map((_, i) => `class-${i}`);
       const result = cn(...classes);
       expect(result).toContain('class-0');
       expect(result).toContain('class-99');
