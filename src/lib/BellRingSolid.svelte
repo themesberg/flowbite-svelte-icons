@@ -1,7 +1,7 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   import { cn } from './helpers';
-  import type { BaseProps, Props } from './types';
+  import type { BaseProps, Props, Size } from './types';
 
   const ctx: BaseProps = getContext('iconCtx') ?? {};
   const sizes = {
@@ -13,7 +13,9 @@
   };
 
   let {
-    size = ctx.size || 'md',
+    size,
+    width,
+    height,
     color = ctx.color || 'currentColor',
     title,
     desc,
@@ -21,6 +23,18 @@
     ariaLabel,
     ...restProps
   }: Props = $props();
+
+  // Type-safe size determination
+  const effectiveSize: Size = $derived(
+    width === undefined && height === undefined
+      ? (size ?? (ctx.size as Size | undefined) ?? 'md')
+      : 'md' // fallback, won't be used if width/height are set
+  );
+
+  // Only use size classes when width/height are not provided
+  const sizeClass = $derived(
+    width === undefined && height === undefined ? sizes[effectiveSize] : undefined
+  );
 
   const ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
@@ -30,8 +44,10 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill={color}
+  {width}
+  {height}
   {...restProps}
-  class={cn('shrink-0', sizes[size], className)}
+  class={cn('shrink-0', sizeClass, className)}
   viewBox="0 0 24 24"
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
@@ -47,16 +63,3 @@
     d="M17.133 12.632v-1.8a5.406 5.406 0 0 0-4.154-5.262.955.955 0 0 0 .021-.106V3.1a1 1 0 0 0-2 0v2.364a.955.955 0 0 0 .021.106 5.406 5.406 0 0 0-4.154 5.262v1.8C6.867 15.018 5 15.614 5 16.807 5 17.4 5 18 5.538 18h12.924C19 18 19 17.4 19 16.807c0-1.193-1.867-1.789-1.867-4.175ZM6 6a1 1 0 0 1-.707-.293l-1-1a1 1 0 0 1 1.414-1.414l1 1A1 1 0 0 1 6 6Zm-2 4H3a1 1 0 0 1 0-2h1a1 1 0 1 1 0 2Zm14-4a1 1 0 0 1-.707-1.707l1-1a1 1 0 1 1 1.414 1.414l-1 1A1 1 0 0 1 18 6Zm3 4h-1a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2ZM8.823 19a3.453 3.453 0 0 0 6.354 0H8.823Z"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || 'md'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop desc
-@prop class: className
-@prop ariaLabel
-@prop ...restProps
--->

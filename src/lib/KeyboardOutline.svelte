@@ -1,7 +1,7 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   import { cn } from './helpers';
-  import type { OutlineBaseProps, OutlineProps } from './types';
+  import type { OutlineBaseProps, OutlineProps, Size } from './types';
 
   const ctx: OutlineBaseProps = getContext('iconCtx') ?? {};
   const sizes = {
@@ -13,7 +13,9 @@
   };
 
   let {
-    size = ctx.size || 'md',
+    size,
+    width,
+    height,
     color = ctx.color || 'currentColor',
     title,
     strokeWidth = ctx.strokeWidth || 2,
@@ -22,6 +24,18 @@
     ariaLabel,
     ...restProps
   }: OutlineProps = $props();
+
+  // Type-safe size determination
+  const effectiveSize: Size = $derived(
+    width === undefined && height === undefined
+      ? (size ?? (ctx.size as Size | undefined) ?? 'md')
+      : 'md' // fallback, won't be used if width/height are set
+  );
+
+  // Only use size classes when width/height are not provided
+  const sizeClass = $derived(
+    width === undefined && height === undefined ? sizes[effectiveSize] : undefined
+  );
 
   const ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
@@ -32,8 +46,10 @@
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
   {color}
+  {width}
+  {height}
   {...restProps}
-  class={cn('shrink-0', sizes[size], className)}
+  class={cn('shrink-0', sizeClass, className)}
   viewBox="0 0 24 24"
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
@@ -64,17 +80,3 @@
     d="M6 9h.01v.01H6V9Zm0 3h.01v.01H6V12Zm0 3h.01v.01H6V15Zm3-6h.01v.01H9V9Zm0 3h.01v.01H9V12Zm3-3h.01v.01H12V9Zm0 3h.01v.01H12V12Zm3 0h.01v.01H15V12Zm3 0h.01v.01H18V12Zm0 3h.01v.01H18V15Zm-3-6h.01v.01H15V9Zm3 0h.01v.01H18V9Z"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || 'md'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop strokeWidth = ctx.strokeWidth || 2
-@prop desc
-@prop class: className
-@prop ariaLabel
-@prop ...restProps
--->

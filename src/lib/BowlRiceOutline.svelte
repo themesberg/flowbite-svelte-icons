@@ -1,7 +1,7 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   import { cn } from './helpers';
-  import type { OutlineBaseProps, OutlineProps } from './types';
+  import type { OutlineBaseProps, OutlineProps, Size } from './types';
 
   const ctx: OutlineBaseProps = getContext('iconCtx') ?? {};
   const sizes = {
@@ -13,7 +13,9 @@
   };
 
   let {
-    size = ctx.size || 'md',
+    size,
+    width,
+    height,
     color = ctx.color || 'currentColor',
     title,
     strokeWidth = ctx.strokeWidth || 2,
@@ -22,6 +24,18 @@
     ariaLabel,
     ...restProps
   }: OutlineProps = $props();
+
+  // Type-safe size determination
+  const effectiveSize: Size = $derived(
+    width === undefined && height === undefined
+      ? (size ?? (ctx.size as Size | undefined) ?? 'md')
+      : 'md' // fallback, won't be used if width/height are set
+  );
+
+  // Only use size classes when width/height are not provided
+  const sizeClass = $derived(
+    width === undefined && height === undefined ? sizes[effectiveSize] : undefined
+  );
 
   const ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
@@ -32,8 +46,10 @@
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
   {color}
+  {width}
+  {height}
   {...restProps}
-  class={cn('shrink-0', sizes[size], className)}
+  class={cn('shrink-0', sizeClass, className)}
   viewBox="0 0 24 24"
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
@@ -53,17 +69,3 @@
     d="M17 9.99999h.01m-5.01 0h.01m-5.01 0h.01m6.99-2h.01m-4.01 0h.01M6.5 13C5.11929 13 4 11.5609 4 9.78571c0-1.51294.45014-3.74021 2.96705-3.45229 0-2.59313 4.39355-3.02689 5.16885-1.10126.5-.64286 1.5465-1.20611 2.5405-1.09637 1.2588.13899 2.0504 1.03413 2.2104 2.19763 1.7674 0 3.3338 1.31661 3.1132 3.45229C20 11.5609 18.8807 13 17.5 13m-8.52339 5.6162V20h6.04679v-1.3838C17.68 17.6825 19.633 15.5551 20 13H4c.36697 2.5551 2.31996 4.6825 4.97661 5.6162Z"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || 'md'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop strokeWidth = ctx.strokeWidth || 2
-@prop desc
-@prop class: className
-@prop ariaLabel
-@prop ...restProps
--->

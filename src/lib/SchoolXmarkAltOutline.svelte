@@ -1,7 +1,7 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   import { cn } from './helpers';
-  import type { OutlineBaseProps, OutlineProps } from './types';
+  import type { OutlineBaseProps, OutlineProps, Size } from './types';
 
   const ctx: OutlineBaseProps = getContext('iconCtx') ?? {};
   const sizes = {
@@ -13,7 +13,9 @@
   };
 
   let {
-    size = ctx.size || 'md',
+    size,
+    width,
+    height,
     color = ctx.color || 'currentColor',
     title,
     strokeWidth = ctx.strokeWidth || 2,
@@ -22,6 +24,18 @@
     ariaLabel,
     ...restProps
   }: OutlineProps = $props();
+
+  // Type-safe size determination
+  const effectiveSize: Size = $derived(
+    width === undefined && height === undefined
+      ? (size ?? (ctx.size as Size | undefined) ?? 'md')
+      : 'md' // fallback, won't be used if width/height are set
+  );
+
+  // Only use size classes when width/height are not provided
+  const sizeClass = $derived(
+    width === undefined && height === undefined ? sizes[effectiveSize] : undefined
+  );
 
   const ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
@@ -32,8 +46,10 @@
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
   {color}
+  {width}
+  {height}
   {...restProps}
-  class={cn('shrink-0', sizes[size], className)}
+  class={cn('shrink-0', sizeClass, className)}
   viewBox="0 0 24 24"
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
@@ -53,17 +69,3 @@
     d="m16.9757 15.4642 1.7677 1.7678m0 0 1.7678 1.7678m-1.7678-1.7678-1.7677 1.7678m1.7677-1.7678 1.7678-1.7678M7.21425 11l5.00005-6 5 6M7.21425 11h-3v8H13.294m-6.07975-8H3.21426l3-4h4.33744l-3.33745 4Zm10.00005 0h3v1.5574m-3-1.5574h3.9999l-3-4h-4.3373l3.3374 4Zm-3 2c0 1.1046-.8955 2-2 2-1.1046 0-2-.8954-2-2s.8954-2 2-2c1.1045 0 2 .8954 2 2Z"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || 'md'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop strokeWidth = ctx.strokeWidth || 2
-@prop desc
-@prop class: className
-@prop ariaLabel
-@prop ...restProps
--->

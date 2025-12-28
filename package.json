@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/themesberg/flowbite-svelte-icons"
+    "url": "git+https://github.com/themesberg/flowbite-svelte-icons.git"
   },
   "keywords": [
     "svelte",
@@ -80,6 +80,7 @@
     "@tailwindcss/vite": "^4.1.18",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/svelte": "^5.2.9",
+    "@vitest/browser-playwright": "^4.0.16",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-svelte": "^3.13.1",

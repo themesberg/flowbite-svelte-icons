@@ -30,11 +30,12 @@ export default defineConfig({
     __TAILWINDCSS_VERSION__: JSON.stringify(tailwindcssPackage.version)
   },
   test: {
+    expect: { requireAssertions: true },
+
     projects: [
       {
         extends: './vite.config.ts',
         plugins: [svelteTesting()],
-
         test: {
           name: 'client',
           environment: 'jsdom',

@@ -1,5 +1,17 @@
 import type { SVGAttributes } from 'svelte/elements';
 
+export type SizePreset = {
+  size?: Size;
+  width?: never;
+  height?: never;
+};
+
+export type ExplicitSize = {
+  size?: never;
+  width?: number | string;
+  height?: number | string;
+};
+
 export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 export type TitleType =
@@ -16,14 +28,14 @@ export type DescType =
     }
   | undefined;
 
-export interface BaseProps extends SVGAttributes<SVGElement> {
-  size?: Size;
-  color?: string | null;
-}
+export type BaseProps = SVGAttributes<SVGElement> &
+  (SizePreset | ExplicitSize) & {
+    color?: string | null;
+  };
 
-export interface OutlineBaseProps extends BaseProps {
+export type OutlineBaseProps = BaseProps & {
   strokeWidth?: number | `${number}`;
-}
+};
 
 export interface AccessibleProps {
   title?: TitleType;
@@ -31,6 +43,6 @@ export interface AccessibleProps {
   ariaLabel?: string;
 }
 
-export interface Props extends BaseProps, AccessibleProps {}
+export type Props = BaseProps & AccessibleProps;
 
-export interface OutlineProps extends OutlineBaseProps, AccessibleProps {}
+export type OutlineProps = OutlineBaseProps & AccessibleProps;

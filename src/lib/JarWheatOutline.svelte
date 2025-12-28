@@ -1,7 +1,7 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   import { cn } from './helpers';
-  import type { OutlineBaseProps, OutlineProps } from './types';
+  import type { OutlineBaseProps, OutlineProps, Size } from './types';
 
   const ctx: OutlineBaseProps = getContext('iconCtx') ?? {};
   const sizes = {
@@ -13,7 +13,9 @@
   };
 
   let {
-    size = ctx.size || 'md',
+    size,
+    width,
+    height,
     color = ctx.color || 'currentColor',
     title,
     strokeWidth = ctx.strokeWidth || 2,
@@ -22,6 +24,18 @@
     ariaLabel,
     ...restProps
   }: OutlineProps = $props();
+
+  // Type-safe size determination
+  const effectiveSize: Size = $derived(
+    width === undefined && height === undefined
+      ? (size ?? (ctx.size as Size | undefined) ?? 'md')
+      : 'md' // fallback, won't be used if width/height are set
+  );
+
+  // Only use size classes when width/height are not provided
+  const sizeClass = $derived(
+    width === undefined && height === undefined ? sizes[effectiveSize] : undefined
+  );
 
   const ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
@@ -32,8 +46,10 @@
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
   {color}
+  {width}
+  {height}
   {...restProps}
-  class={cn('shrink-0', sizes[size], className)}
+  class={cn('shrink-0', sizeClass, className)}
   viewBox="0 0 24 24"
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
@@ -53,17 +69,3 @@
     d="M16 6H8m8 0s3 2.5 3 5v8.002C19 20.6589 17.6569 22 16 22H8c-1.65685 0-3-1.3411-3-2.998V11c0-2.5 3-5 3-5m8 0V3H8v3m4 3v10M6 6h12m-4.8345 9.7454c-.323.2567-.9647 1.1716-.9257 1.2279.039.0563 1.0454-.4292 1.4008-.6387.3554-.2095.9274-1.1943.9-1.2298-.0275-.0356-1.0771.4039-1.3751.6406Zm0-3.972c-.323.2567-.9647 1.1716-.9257 1.228.039.0563 1.0454-.4292 1.4008-.6387.3554-.2096.9274-1.1943.9-1.2299-.0275-.0355-1.0771.404-1.3751.6406Zm-2.331 3.972c.323.2567.9647 1.1716.9257 1.2279-.0391.0563-1.0455-.4292-1.4009-.6387-.3553-.2095-.92738-1.1943-.8999-1.2298.02748-.0356 1.0771.4039 1.3751.6406Zm0-3.972c.323.2567.9647 1.1716.9257 1.228-.0391.0563-1.0455-.4292-1.4009-.6387-.3553-.2096-.92738-1.1943-.8999-1.2299.02748-.0355 1.0771.404 1.3751.6406Z"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || 'md'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop strokeWidth = ctx.strokeWidth || 2
-@prop desc
-@prop class: className
-@prop ariaLabel
-@prop ...restProps
--->
