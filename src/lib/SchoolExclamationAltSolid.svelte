@@ -1,7 +1,7 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   import { cn } from './helpers';
-  import type { BaseProps, Props } from './types';
+  import type { BaseProps, Props, Size } from './types';
 
   const ctx: BaseProps = getContext('iconCtx') ?? {};
   const sizes = {
@@ -13,7 +13,9 @@
   };
 
   let {
-    size = ctx.size || 'md',
+    size,
+    width,
+    height,
     color = ctx.color || 'currentColor',
     title,
     desc,
@@ -21,6 +23,18 @@
     ariaLabel,
     ...restProps
   }: Props = $props();
+
+  // Type-safe size determination
+  const effectiveSize: Size = $derived(
+    width === undefined && height === undefined
+      ? (size ?? (ctx.size as Size | undefined) ?? 'md')
+      : 'md' // fallback, won't be used if width/height are set
+  );
+
+  // Only use size classes when width/height are not provided
+  const sizeClass = $derived(
+    width === undefined && height === undefined ? sizes[effectiveSize] : undefined
+  );
 
   const ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
@@ -30,9 +44,12 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill={color}
+  {width}
+  {height}
   {...restProps}
-  class={cn('shrink-0', sizes[size], className)}
+  class={cn('shrink-0', sizeClass, className)}
   viewBox="0 0 24 24"
+  role={isLabeled ? 'img' : undefined}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   aria-hidden={!isLabeled}
@@ -57,16 +74,3 @@
     d="M20.0095 10H18.601l-3.25-3.99999H18c.3148 0 .6112.1482.8.4L21.5 10h-1.4905Zm-.015 2c-.5498.003-.9945.4495-.9945 1v3c0 .0565.0047.1119.0137.1659.079.4733.4905.8341.9863.8341h.01c.4924-.0049.8997-.3656.9768-.8374.0087-.0529.0132-.1072.0132-.1626v-3c0-.5505-.4447-.997-.9945-1h-.011ZM21 18.8581c-.0013-.0092-.0027-.0183-.0043-.0273-.0803-.4717-.4911-.8308-.9857-.8308H20c-.4958 0-.9073.3608-.9863.8341-.009.054-.0137.1094-.0137.1659 0 .5523.4477 1 1 1h.0056c.5497-.003.9944-.4496.9944-1v-.1419ZM2.5 10l2.7-3.59999c.18885-.2518.48524-.4.8-.4h2.64902L5.39902 10H2.5Z"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || 'md'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop desc
-@prop class: className
-@prop ariaLabel
-@prop ...restProps
--->

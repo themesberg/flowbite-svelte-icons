@@ -1,15 +1,19 @@
 // outline
-size = ctx.size || 'md',
+size,
+width,
+height,
 color = ctx.color || 'currentColor',
 title,
-strokeWidth= ctx.strokeWidth || 2,
+strokeWidth = ctx.strokeWidth || 2,
 desc,  
 class: className,
 ariaLabel,
 ...restProps
 
 // solid
-size = ctx.size || 'md',
+size,
+width,
+height,
 color = ctx.color || 'currentColor',
 title,
 desc,  

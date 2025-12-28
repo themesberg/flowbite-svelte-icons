@@ -36,6 +36,11 @@
 
 <H2>Size</H2>
 
+<p>
+  Icons support two ways to control size: <Code>size</Code> preset or explicit <Code>width</Code
+  >/<Code>height</Code>. These are mutually exclusive - use one approach or the other, not both.
+</p>
+
 <p>The following table provides details about the available sizes for icons:</p>
 
 <HighlightCompo lang="ts" code={modules['./examples/size.md'] as string} />
