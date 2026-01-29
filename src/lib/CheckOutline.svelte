@@ -70,3 +70,19 @@
     d="M5 11.917 9.724 16.5 19 7.5"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+## Props
+@prop size
+@prop width
+@prop height
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop strokeWidth = ctx.strokeWidth || 2
+@prop desc
+@prop class: className
+@prop ariaLabel
+@prop ...restProps
+-->

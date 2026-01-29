@@ -1,5 +1,19 @@
 # Changelog
 
+## 3.1.0
+
+### Minor Changes
+
+- feat: add width/height props for explicit icon sizing
+
+  Add width/height props as an alternative to size presets for more
+  granular control over icon dimensions.
+  - Add width/height props (mutually exclusive with size)
+  - Refactor types to use discriminated unions
+  - Update all icon components with new size logic
+  - Fix visibility issues for fill-based outline icons
+  - Update documentation and examples
+
 ## 3.0.1
 
 ### Patch Changes
