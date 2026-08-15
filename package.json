@@ -10,6 +10,7 @@
   "bugs": "https://github.com/themesberg/flowbite-svelte-icons/issues",
   "homepage": "https://flowbite-svelte-icons.codewithshin.com/",
   "license": "MIT",
+  "packageManager": "pnpm@11.21.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/themesberg/flowbite-svelte-icons.git"
