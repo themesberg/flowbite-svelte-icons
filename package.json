@@ -25,7 +25,8 @@
   "contributors": [
     {
       "name": "themesberg/flowbite-icons",
-      "url": "https://github.com/themesberg/flowbite-svelte-icons"
+      "url": "https://github.com/themesberg/flowbite-svelte-icons",
+      "iconVersion": "1.5.0"
     }
   ],
   "scripts": {
